@@ -1,0 +1,146 @@
+\documentclass[diploma]{softlab-thesis}
+
+
+%%%
+%%%  The document
+%%%
+
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{amsmath}
+\graphicspath{ {./theory/figures/} }       % path for images
+\begin{document}
+
+%%%  Title page
+
+\frontmatter
+
+\title{Action Localization and Recognition in Videos}
+\author{Efstatios Galanakis}
+\date{July 2019}
+\datedefense{-1}{12}{2019}
+
+\supervisor{}
+\supervisorpos{}
+
+\committeeone{}
+\committeeonepos{}
+\committeetwo{}
+\committeetwopos{}
+\committeethree{}
+\committeethreepos{}
+
+\TRnumber{CSD-SW-TR-42-14}  % number-year, ask nickie for the number
+\department{}
+
+\maketitle
+
+
+%%%  Abstract, in English
+
+\begin{abstracten}%
+  The purpose of this diploma dissertation is on one hand the design
+  of a simple high-level language that supports programming with
+  proofs, and on the other hand the implementation of a compiler for
+  this language. This compiler will produce code for an
+  intermediate-level language suitable for creating certified
+  binaries.
+
+  The need for reliable and certifiably secure code is even more
+  pressing today than it was in the past. In many cases, security and
+  software compatibility issues put in danger the operation of large
+  systems, with substantial financial consequences. The lack of a
+  formal way of specifying and proving the correctness of programs that
+  characterizes current programming languages is one of the main reasons
+  why these issues exist. In order to address this problem, a number of
+  frameworks with support for certified binaries have recently been
+  proposed. These frameworks offer the possibility of specifying and
+  providing a formal proof of the correctness of programs. Such a proof
+  can easily be checked for validity before running the program.
+
+  The frameworks that have been proposed are intermediate-level in
+  nature, thus the process of programming in these is rather cumbersome.
+  The high-level languages that accompany some of these frameworks,
+  while very expressive, are hard to use. A simpler high-level language,
+  like the one proposed in this dissertation, would enable further use
+  of this programming idiom.
+
+  In the language we propose, the programmer specifies the partial
+  correctness of a program by annotating function definitions with pre-
+  and post-conditions that must hold for their parameters and results.
+  The programmer also provides a set of theorems, based on which proofs
+  of the proper implementation and use of the functions are constructed.
+  An implementation in OCaml of a compiler from this language to the
+  NFLINT certified binaries framework was also completed as part of this
+  dissertation.
+
+  We managed to keep the language close to the feel of the current
+  widespread functional languages, and also to fully separate the
+  programming stage from the correctness-proving stage. Thus an average
+  programmer can program in a familiar way in our language, and later an
+  expert on formal logic can prove the semi-correctness of a program.
+  As evidence of the practicality of our design, we provide a number of
+  examples in our language with full semi-correctness proofs.
+\begin{keywordsen}
+Programming languages, Programming with proofs, Secure programming
+languages, Certified code.
+\end{keywordsen}
+\end{abstracten}
+
+
+%%%  Acknowledgements
+
+% \begin{acknowledgementsgr}
+% \end{acknowledgementsgr}
+
+
+%%%  Various tables
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+
+%%%  Main part of the book
+
+\mainmatter
+
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+%%%  Bibliography
+
+\bibliographystyle{softlab-thesis}
+\bibliography{References}
+
+
+% %%%  Appendices
+
+% \backmatter
+
+% \appendix
+
+% \chapter{}
+
+% $A \rightarrow B$ : συνάρτηση από το πεδίο $A$ στο πεδίο $B$.
+
+% \chapter{}
+
+% \textbf{Haskell} : η γλώσσα της ζωής μου.
+
+% \chapter{}
+
+% 42 : life, the universe and everything.
+
+
+%%%  End of document
+
+\end{document}

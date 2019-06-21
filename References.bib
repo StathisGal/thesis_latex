@@ -1,0 +1,43 @@
+@article{Hou2017,
+abstract = {Deep learning has been demonstrated to achieve excellent results for image classification and object detection. However, the impact of deep learning on video analysis (e.g. action detection and recognition) has been limited due to complexity of video data and lack of annotations. Previous convolutional neural networks (CNN) based video action detection approaches usually consist of two major steps: frame-level action proposal detection and association of proposals across frames. Also, these methods employ two-stream CNN framework to handle spatial and temporal feature separately. In this paper, we propose an end-to-end deep network called Tube Convolutional Neural Network (T-CNN) for action detection in videos. The proposed architecture is a unified network that is able to recognize and localize action based on 3D convolution features. A video is first divided into equal length clips and for each clip a set of tube proposals are generated next based on 3D Convolutional Network (ConvNet) features. Finally, the tube proposals of different clips are linked together employing network flow and spatio-temporal action detection is performed using these linked video proposals. Extensive experiments on several video datasets demonstrate the superior performance of T-CNN for classifying and localizing actions in both trimmed and untrimmed videos compared to state-of-the-arts.},
+annote = {Important notes:
+
+Linkining score : actioness + overlap
+
+Training procedure : Hard negative clips},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1703.10664v3},
+author = {Hou, Rui and Chen, Chen and Shah, Mubarak},
+doi = {10.1109/ICCV.2017.620},
+eprint = {arXiv:1703.10664v3},
+file = {:home/stath/Documents/final citations/1703.10664.pdf:pdf},
+isbn = {9781538610329},
+issn = {15505499},
+journal = {Proceedings of the IEEE International Conference on Computer Vision},
+pages = {5823--5832},
+title = {{Tube Convolutional Neural Network (T-CNN) for Action Detection in Videos}},
+volume = {2017-October},
+year = {2017}
+}
+@article{Girdhar2017,
+abstract = {This paper addresses the problem of estimating and tracking human body keypoints in complex, multi-person video. We propose an extremely lightweight yet highly effective approach that builds upon the latest advancements in human detection and video understanding. Our method operates in two-stages: keypoint estimation in frames or short clips, followed by lightweight tracking to generate keypoint predictions linked over the entire video. For frame-level pose estimation we experiment with Mask R-CNN, as well as our own proposed 3D extension of this model, which leverages temporal information over small clips to generate more robust frame predictions. We conduct extensive ablative experiments on the newly released multi-person video pose estimation benchmark, PoseTrack, to validate various design choices of our model. Our approach achieves an accuracy of 55.2{\%} on the validation and 51.8{\%} on the test set using the Multi-Object Tracking Accuracy (MOTA) metric, and achieves state of the art performance on the ICCV 2017 PoseTrack keypoint tracking challenge.},
+annote = {First they modify the Mask-R CNN :
+They extend the 2d convolution into 3d convolution 
+( spatio-temporal operation)
+
+Input: short clip TxHxW
+Output : predicts the poses of all people in the video
+
+Features extractor : TxHxW =={\textgreater} TxH/8xW/8
+TubeProposalNetwork: input =={\textgreater} TxH/8 x W/8
+uses A (12) anchors for extracting tubes. So we have : T x W/8 x H/8 X A anchors ( duration is T for all anchors)
+and then we regress them},
+archivePrefix = {arXiv},
+arxivId = {1712.09184},
+author = {Girdhar, Rohit and Gkioxari, Georgia and Torresani, Lorenzo and Paluri, Manohar and Tran, Du},
+eprint = {1712.09184},
+file = {:home/stath/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Girdhar et al. - 2017 - Detect-and-Track Efficient Pose Estimation in Videos(3).pdf:pdf;:home/stath/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Girdhar et al. - 2017 - Detect-and-Track Efficient Pose Estimation in Videos(4).pdf:pdf;:home/stath/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Girdhar et al. - 2017 - Detect-and-Track Efficient Pose Estimation in Videos(5).pdf:pdf;:home/stath/Documents/final citations/1712.09184.pdf:pdf},
+title = {{Detect-and-Track: Efficient Pose Estimation in Videos}},
+url = {http://arxiv.org/abs/1712.09184},
+year = {2017}
+}

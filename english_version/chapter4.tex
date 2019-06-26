@@ -85,8 +85,9 @@ for each frame.
 \end{figure}
 
 For training procedure, for each video, we randomly select a part of it which has duration 16 frames. For each video, we train TPN in
-order to score all the anchors using mIoU criterion and we use Cross Entropy Loss as a loss function. For regression,
-we use smooth-L1 loss. For regression targets, we use the same implementation as Faster R-CNN does, but for 3 domains again. So we have:
+order to score all the anchors using IoU criterion (which is explained in next paragraph) and we use Cross Entropy Loss as a loss function.
+For regression, we use smooth-L1 loss. For regression targets, we use the same implementation as Faster R-CNN does, but for 3 domains again.
+So we have:
 \[ \begin{matrix}
     t_x = (x-x_a)/w_a, & t_y = (y-y_a)/h_a, & t_z= (z-z_a)/d_a, \\
     t_w= log(w/w_a), & t_h= log(h/h_a), & t_d = log(d/d_a), \\

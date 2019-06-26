@@ -1,1 +1,33 @@
+\documentclass{report}
+
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+% \usepackage{amsmath}
+
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+
+\graphicspath{ {./theory/figures/} }       % path for images
+
+\begin{document}
+
 \chapter{Connecting Tubes}
+As mentioned before, TPN gets as input a sequence of 16 frames and proposes TOIs. However, most actions in videos lasts more that 16 frames.
+This means that, in overlaping video clips, there will be consequentive TOIs that represent the entire action. So, it is essential to create
+an algorithm for finding and connecting these TOIs. Our algorithm is inspired by \cite{}, and uses a score in order to decide if a sequence of
+TOIs is possible to contain an action. This score is a combination of 2 metrics:
+\begin{description}
+\item[ Actioness,  ] which is the TOI's possibility to contain an action. This score is produced by TPN's scoring layers.
+\item [ TOIs' overlapping, ] which is the IoU of the last frames of the first TOI and the first frames of the second TOI.
+\end{description}
+
+The above scoring policy can be described by the following formula:
+\[ S = \frac{1}{m} \sum_ {i=1}^{m} Actioness_i + \frac{1}{m-1} \sum_{j=1}^{m-1} Overlap_{j,j+1} \]
+
+
+\end{document}

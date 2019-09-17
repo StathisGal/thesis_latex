@@ -31,6 +31,15 @@ where \begin{itemize}
 Intersection over Union (IoU)  measures the overlap between 2 boundaries. We use that to measure how much our predicted boundary overlaps with the ground truth (the real object boundary).
 In some datasets, we predefine an IoU threshold (say 0.5) in classifying whether the prediction is a true positive or a false positive.
 
+\subsection{mAP}
+Precision and recall are single-value metrics based on the whole list of predictions. By looking their formulas, we can see that there is
+a trade-off between precision and recall performance. This trade-off can be adjusted by the softmax threshold, used in model's final layer.
+In order to have high precision performance, we need to decrease the number of FP. But this will lead to decrease recall performance and
+vice-versa. \par
+As a result, these metrics fail to determine if a model is performing well in object detection tasks as well as action detection tasks. For
+that reason, we use mAP metric
+\par{AP (Average precision)} is a popular metric in measuring the accuracy of object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
+
 % AP (Average precision) is a popular metric in measuring the accuracy of object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
 % It sounds complicated but actually pretty simple as we illustrate it with an example.
 \subsection{Our metrics}

@@ -1,2 +1,68 @@
+\documentclass{report}
+
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{amsmath}
+
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+
+\graphicspath{ {./theory/figures/} }       % path for images
+
+\begin{document}
+
 \chapter{Related work}
 
+
+% The combination of CNN and Recurrent Neural Network (RNN) is a method widely been studied and achieved excellent results.
+% The recently proposed methods can be seperated into 2 subcategories: (1) use a CNN detector in order to localize directly
+% the action instance for each single frame and (2) modify the detector in order to get as input volute multiple frames and
+% use 3D convolution.%  Both approaches produce the same type of output : i) an actioness score of a bounding box or a proposed
+% tube ii) coordinate offsets for bounding box refinement and iii) clasification probabilities for all action classes.
+
+% The task of action classification in approaches used features based on shape or motion sucha as HOG \cite{dalal2005histogramcvpr},
+% SIFT \cite{Lowe2004}, MBH \cite{dalal2006human} and train a classifier as SVM.
+
+% \paragraph{Frame based methods}
+First approaches for action classification consisted of 2 steps a) compute complex handcrafted features from raw video frames
+such as SIFT, HOG, optical flow and b) train a classifier based on those features. These approaches made the choise of
+features a signifact factor for network's performance. That's because different action classes may appear dramatically
+different in terms of their appearences and motion patterns. Another problem was that most of those approaches take
+assumptions about the circumstances under which the video was taken because there was problems such as cluttered
+background, camera viewpoit variations etc.
+
+Recent results in deep architectures and especially in image classification made us attempt to train CNN networks for
+the task of action classification and localization. As mentioned before, Action Localization can be seen as an extention
+of object detection problem, where the outputs are action tubes that consist of a sequence of bounding boxes. So, there
+are several approaches including an object-detector network for single frame action proposal and a classifier.
+\cite{DBLP:journals/corr/GkioxariM14} uses a 2-stream R-CNN \cite{DBLP:journals/corr/GirshickDDM13} in order to generate
+action proposals for each frame.  \cite{peng:hal-01349107} NA DW TI KANEI.
+
+\cite{DBLP:journals/corr/SinghSC16} uses SSD 
+
+Some approaches include tracking \cite{DBLP:journals/corr/WeinzaepfelHS15}.
+Other approaches treat a video as a sequence of frames such as in \cite{DBLP:journals/corr/KalogeitonWFS17} and in \cite{DBLP:journals/corr/HouCS17}.
+
+\paragraph{3d-2d pose}
+
+
+
+% % \paragraph{Tube-level proposals}
+% The previous approaches do not consider the motion information enconded in multiple contiguous frames because they treat video
+% frames as still images. In \cite{pmid:22392705} was introuduce 3D Convolution which captures spatial and temporal information.
+
+% On top of that, and based also in \cite{simonyan2014two},  \cite{DBLP:journals/corr/KalogeitonWFS17} presented action tubes
+
+% % We can devide
+% % the previous methods in 3 subcategories (1) temporal modeling for action representation (2) object detection and (3) spatial-temporal
+% % localization.
+
+
+
+\bibliography{References}
+\bibliographystyle{plain}
+
+\end{document}

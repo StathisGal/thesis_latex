@@ -10,6 +10,8 @@
 \usepackage[export]{adjustbox}
 % \usepackage{amsmath}
 
+% \usepackage{array}   % for tables
+\usepackage{tabu}   % for tables 
 \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
 \graphicspath{ {./theory/figures/} }       % path for images
@@ -20,13 +22,14 @@
 
 One of the basic elements of ActionNet is \textbf{Tube Proposal Network}(TPN). The main purpose of this network is to propose
 \textbf{Tube of Interest}(TOIs). These tubes are likely to contain an known action and are consisted of some 2D boxes
-(1 for each frame). TPN is inspired from RPN but for videos instead of images. In full correspondence with RPN, the structure
-of our TPN is similar to RPN. The only difference is that we use 3D convolutional layers and 3D anchors. \par
-We designed 2 main structures for TPN. Each approach has a different definition of3D anchors. The rest structure of the TPN is mainly the same
-with some little differences in the regression layer.
+(1 for each frame). TPN is inspired from RPN introduced by FasterRCNN\cite{Ren:2015:FRT:2969239.2969250}, but instead of images, TPN
+is used in videos as show in \cite{DBLP:journals/corr/HouCS17}. In full correspondence with RPN, the structure
+of TPN is similar to RPN. The only difference, is that TPN uses 3D Convolutional Layers and 3D anchors instead of 2D. \par
+We designed 2 main structures for TPN. Each approach has a different definition of the used 3D anchors.
+The rest structure of the TPN is mainly the same with some little differences in the regression layer.
 \section{ 3D anchors as 6-dim vector}
 \subsection{First Description}
-We started desinging our TPN inspired by \cite{}. We consider each anchor as a 3D bounding box written as
+We started desinging our TPN inspired by \cite{DBLP:journals/corr/HouCS17}. We consider each anchor as a 3D bounding box written as
 $(x_1, y_1, t_1, x_2, y_2, t_2)$ where $x_1, y_1, t_1$
 are the upper front left coordinates of the 3D and $x_2, y_2, t_2$ are the lower back left as shown in figure \ref{fig:anchor_6d}.
 \begin{figure}[h]
@@ -39,7 +42,11 @@ are the upper front left coordinates of the 3D and $x_2, y_2, t_2$ are the lower
 The main advantage of this approach is that except from x-y dims, dimension of time is mutable. As a result, the proposed TOIs have
 no fixed time duration. This will help us deal with untrimmed videos, because proposed TOIs would exclude background frames.
 For this approach, we use \textbf{n=4k=60} anchors for each pixel in the feature map of TPN. We have k anchors for each sample
-duration( 5 scales of 1, 2, 4, 8, 16, 3 aspect ratios of 1:1, 1:2, 2:1 and 4 durations of 16,12,8,4 frames). So the structure of TPN is:
+duration( 5 scales of 1, 2, 4, 8, 16, 3 aspect ratios of 1:1, 1:2, 2:1 and 4 durations of 16,12,8,4 frames).
+In \cite{'DBLP:journals/corr/HouCS1},  network's anchors are defined according to the dataset most common anchors. This, however,
+creates the need to redesign the network for each dataset. We use the same anchors for both datasets, trying to generalize our
+approach.
+So the structure of TPN is:
 \begin{itemize}
 \item 1 3D Convolutional Layer
 \item 1 classification layer outputs \textit{2n scores} whether there is an action or not for \textit{n tubes}.
@@ -250,7 +257,7 @@ In figure \ref{fig:anchor_4k} we can an example of this type of anchor.
 \end{figure}
 
 The main advantage of this approach is that we don't need to translate the 3D anchors into 2D boxes. However, it has a big drawback, which is the fact that this type of anchors
-has fixed time duration. In order to deal with this problem, we set anchors with different time durations, which are 16, 12, 8 and 4. Anchors with duration >
+has fixed time duration. In order to deal with this problem, we set anchors with different time durations, which are 16, 12, 8 and 4. Anchors with duration $ < $
 sample duration (16 frames) can be written as 4k vector with zeroed coordinateds in the frames bigger that the time duration. For example, an anchor with
 2 frames duration, starting from the 2nd frame and ending at the 3rd can be written as (0, 0, 0, 0, $x_1, y_1, x'_1, y'_1, x_2, y_2, x'_2, y'_2$, 0, 0, 0, 0) if sample
 duration is 4 frames. 
@@ -259,8 +266,40 @@ duration is 4 frames.
   \centering
   \includegraphics[width=1.\textwidth]{tpn_2}
   \caption{The structure of TPN according to new approach}
-  \label{fig:anchor_4k}
+  \label{fig:New_structure}
 \end{figure}
+
+This new approach led us to change the structure of TPN. The new one can is presented in figure \ref{fig:New_structure}. As we can see, we \
+added scoring and regression layers for each duration.
+
+\subsection{Training}
+In following figures we can see recall performance for sample duration = 16 when using max or avg pooling. 
+% \begin{center}
+%   % \begin{tabu} to 0.8\textwidth { | X[l] | X[c] | X[r] | }
+%   \begin{tabular} { | c | c | c | c |}
+%     \hline
+%     \textbf{Duration} & \textbf{Type of Pooling} & \textbf{Dataset}  &  \textbf{Threshold } & \textbf{recall}\\
+%     \hline
+%     16  & Avg  & jHMDB  &  0.5 & \\
+%     \hline
+%     % \end{tabu}
+%   \end{tabular}
+% \end{center}
+From the above results, we can see that using max pooling achieves better results.
+
+\subsection{Adding regressor}
+In full correspondance with the previous approach, we added an regressor for trying to find better results. We 
+
+\subsection{Trying to  improve performance}
+
+\subsection{Changing training procedure}
+
+\subsection{Changing sample duration}
+After trying all the previous version, we noticed that we get about the same recall performances. So, we thought that we could try
+to reduce the sample duration. On top of that, we trained our network for sample duration = 8 and 4 frames. % We expect to get
+% better results because, now we will deal with less frames, which means smaller number of
+
+.......................
 
 
 \end{document}

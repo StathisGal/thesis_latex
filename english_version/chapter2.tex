@@ -1,20 +1,20 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% % \usepackage{amsmath}
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
-\chapter{Background Theory}
+\chapter{Background}
 
 
 \section{Machine Learning}
@@ -216,8 +216,15 @@ structure of the Visual Cortex. However, most ConvNets costist mainly in 2 parts
   \includegraphics[scale=0.7]{convolutional_neural_network_structure}
   \caption{Typical structure of a ConvNet}
 \end{figure}
-
-In order to extract such features, ConvNets use 2D convolution operations.
+\paragraph{Convolutional Layers}
+In order to extract such features, ConvNets use 2D convolution operations. These operations take place in convolutional layers. Convolutional
+layers consist of a set of learnable filters. Every filter is small spatially (along widht and height), but extends through the full depth of
+input. During forword pass, we slide (more precisely, convolve) each filter across the width and height of the input volume and compute dot
+products between the entries of the filter and the input at any position (as Figure \ref{fig:conv_example} shows). The objective of the
+Convolution Operation is to extract the high-level features such as edges, from the input image. ConvNets need not be limited to only one
+Convolutional Layer. Conventionally, the first ConvLayer is responsible for capturing the Low-Level features such as edges, color, gradient
+orientation, etc. With added layers, the architecture adapts to the High-Level features as well, giving us a network which has the wholesome
+understanding of images in the dataset, similar to how we would.
 
 \begin{figure}[h]
   \centering
@@ -229,9 +236,9 @@ In order to extract such features, ConvNets use 2D convolution operations.
     \includegraphics[width=\textwidth]{conv_2}
   \end{minipage}
   \caption{Convolution with kernel size:3, stride:2, padding:1}
-
+  \label{fig:conv_example}
 \end{figure}
-
+\paragraph{Pooling Layers}
 \subsection{3D Convolutional Neural Network}
 Traditionally, ConvNets are targeting RGB images (3 channels). The goal of 3D CNN is to take as input a video and extract features from it.
 When ConvNets extract the graphical characteristics of a single image and put them in a vector (a low-level representation), 3D ConvNets
@@ -300,10 +307,70 @@ depicted an exaple of some anchors
   \label{fig:anchors}
 \end{figure}
 
-\section{Action Recognition and Localization}
+For each feature map's pixel corresponds \textbf{k (k=9)} anchors (3 different scales and 3 different ratios 1:1, 1:2, 2:1). \par
+As a result, RPN gets as input feature maps extracted from the backbone CNN. Then performs 2D convolution over this input and passes
+the output to its scoring layer and regression layer. Those scores represent the confidence of existing an object in this specific position.
+On top of that, regression layer outputs 4k displacements, 4 for each anchor. Finally, we keep as output only the \textit{ n-best scoring} anchors.
 
-\subsection{Action Recognition}
-\subsection{Action Localization}
+\section{Losses and Metrics}
+In order to train our model and check its performance, we use some known Loss functions and Metrics used in Object Detection systems.
+\subsection{Losses}
+For training our network, we use \textbf{Cross Entropy Loss} for classification layers and \textbf{smooth L1-loss} for regression.
+\subsubsection{Cross Entropy Loss}
+TODO
+\subsubsection{Smooth L1-loss}
+TODO
+\subsection{Metrics}
+Evaluating our machine learning algorithm is an essential part of any project. The way we choose our metrics influences how the performance
+of machine learning algorithms is measured and compared.
+They influence how to weight the importance of different characteristics in the results and finally, the ultimate choice of which algorithm to choose. Most of the times we use classification accuracy
+to measure the performance of our model, however it is not enough to truly judge our model.
+
+\subsection{Precision, Recall \& F1 score}
+
+\begin{description}
+\item[ Precision ]  measures how accurate is your predictions. i.e. the percentage of your predictions are correct.
+\item[ Recall ] measures how good you find all the positives. For example, we can find 80\% of the possible positive cases in our top K predictions.
+\end{description}
+Their definisions are:
+\[ Precision = \frac{TP}{TP + FP} \]  
+\[  Recall = \frac{TP}{TP + FN} \] 
+\[ F1 = 2 \cdot \frac{precision \cdot recall}{precision + recall} \]
+where \begin{itemize}
+\item TP = True positive
+\item TN = True negative
+\item FP = False positive
+\item FN = False negative
+\end{itemize}
+
+\subsection{Intersection over Union}
+
+Intersection over Union (IoU)  measures the overlap between 2 boundaries. We use that to measure how much our predicted boundary overlaps with the ground truth (the real object boundary).
+In some datasets, we predefine an IoU threshold (say 0.5) in classifying whether the prediction is a true positive or a false positive.
 
 
-% \end{document}
+
+\subsection{mAP}
+Precision and recall are single-value metrics based on the whole list of predictions. By looking their formulas, we can see that there is
+a trade-off between precision and recall performance. This trade-off can be adjusted by the softmax threshold, used in model's final layer.
+In order to have high precision performance, we need to decrease the number of FP. But this will lead to decrease recall performance and
+vice-versa. \par
+As a result, these metrics fail to determine if a model is performing well in object detection tasks as well as action detection tasks. For
+that reason, we use mAP metric
+\paragraph{AP (Average precision)} is a popular metric in measuring the accuracy of object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
+
+In our case, we use the metrics presented in \cite{DBLP:journals/corr/GkioxariM14} in
+order to quantify our results:
+\begin{description}
+\item[ frame-AP ] measures the area under the precision-recallcurve of the detections for each frame (similar to the PASCAL  VOC  detection  challenge  \cite{Everingham10}).   A  detection is correct
+  if the intersection-over-union with theground truth at that frame is greater than and the ac-tion label is correctly predicted.
+\item [ video-AP ] measures the area under the precision-recallcurve of the action tubes predictions. A tube is correctif the mean per frame intersection-over-union with theground truth across the
+  frames of the video is greaterthan and the action label is correctly predicted.
+\item [ AUC ] measures the area under the ROC curve, a metricpreviously used on this task.  An action tube is correctunder the same conditions as invideo-AP. Following
+  \cite{Tian:2013:SDP:2514950.2515975} , the ROC curve is plotted until a false positive rateof 0.6, while keeping the top-3 detections per class andper video. Consequently,
+  the best possible AUC scoreis 60\%.
+\end{description}
+
+
+
+\end{document}

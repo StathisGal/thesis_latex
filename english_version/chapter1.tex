@@ -1,20 +1,20 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage[export]{adjustbox}
-% \usepackage{amsmath}
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage[export]{adjustbox}
+% % \usepackage{amsmath}
 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Introduction}
 Nowadays, the enormous increase of computing power help us deal with a lot of difficult situations appeared in our daily life.
@@ -98,8 +98,16 @@ The UCF-101 dataset contains 13320 videos from 101 action categories. We, also, 
 we have annotations with 2D bounding boxes. We seperate them in 2284 videos for training set and 910 for validation test. Each video
 is untrimmed including more that 1 simultaneous actions. 
 
-\section{Contributions}
-TODO
+\section{Motivation ans Contibutions}
+The current achievements in Object Recognition Networks and in 3D Convolution Networks for Action Recognition have triggered us to try
+to combine them in order to achieve state-of-the-art results for action localization. We introduce a new network structure inspired by
+\cite{DBLP:journals/corr/HouCS17}, \cite{DBLP:journals/corr/abs-1712-09184},\cite{Ren:2015:FRT:2969239.2969250} and for implementation
+by \cite{jjfaster2rcnn}.
+
+Our contributions are the following 1) We create a new framework for action localization extending the code taken from faster RCNN,
+2) We try to create a network for proposing sequences of bounding boxes in video clips which may containg an anction taking advantage
+of the spatio-temporal features which 3D Convolutions provide us, 3) We create a connection algorithm for linking these sequences of
+bounding boxes in order to propose a final action tube and 4) we try to find the most suitable feature maps for classifying them.
 
 \section{Thesis structure}
 The rest of Thesis is organized as follows. Chapter 2 provides an general introduction to Machine Learning techniques currently used.
@@ -107,4 +115,6 @@ Chapter 3 presents an overview of literature on human action recognition and loc
 element of our system, Tube Proposal Network (TPN) and shows all the approachs designed for this system. Chapter 5 proposes an algorithm
 for linking the proposed TOIs from every video segment. In Chapter 6, we can see the results for classification and detection of our system,
 using 2 classic clasifiers. Chapter 7 is used for conclusions, summury of our contribution alongside with possible future work.
-\end{document}
+
+
+% \end{document}

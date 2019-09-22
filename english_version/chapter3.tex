@@ -61,6 +61,15 @@ Other approaches treat a video as a sequence of frames such as in \cite{DBLP:jou
 % % localization.
 
 
+\subsection{Our implementation}
+We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architecture is consisted by the following basic elements:
+\begin{itemize}
+\item One 3D Convolutional Network, which is used for feature extraction. In our implementaion we use a 3D Resnet network which is taken from
+  \cite{hara3dcnns} and it is based on ResNet CNNs for Image Classification \cite{DBLP:journals/corr/HeZRS15}.
+\item Tube Proposal Network for proposing action tubes (based on the idea presented in \cite{DBLP:journals/corr/HouCS17}).
+\item A classifier for classifying video tubes.
+\end{itemize}
+  
 
 \bibliography{References}
 \bibliographystyle{plain}

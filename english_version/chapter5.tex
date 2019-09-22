@@ -7,6 +7,10 @@
 \usepackage{mathtools} % package for math equation
 \usepackage{mathrsfs}  % package for math font
 \usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage{multirow}  % package for tables, multirow
+\usepackage{longtable} % package for multi pages tables
+
+
 \usepackage[export]{adjustbox}
 % \usepackage{amsmath}
 
@@ -22,7 +26,8 @@ After getting TOIs for each video segment, it is time to connect them. That's be
 This means that, in overlaping video clips, there will be consequentive TOIs that represent the entire action. So, it is essential to create
 an algorithm for finding and connecting these TOIs.
 \subsection{First approach: combine overlap and actioness}
-Our algorithm is inspired by \cite{DBLP:journals/corr/HouCS17}, which calculates all possible sequences of ToIs. In order find the best candidates, it uses a score which tells us how likely a sequence of TOIs is  to contain an action. This score is a combination of 2 metrics:
+Our algorithm is inspired by \cite{DBLP:journals/corr/HouCS17}, which calculates all possible sequences of ToIs. In order find the best candidates,
+it uses a score which tells us how likely a sequence of TOIs is  to contain an action. This score is a combination of 2 metrics:
 \begin{description}
 \item[ Actioness,  ] which is the TOI's possibility to contain an action. This score is produced by TPN's scoring layers.
 \item [ TOIs' overlapping, ] which is the IoU of the last frames of the first TOI and the first frames of the second TOI.
@@ -75,33 +80,172 @@ over a predefined threshold.  These thresholds are 0.5, 0.4 and 0.3.
 
 \paragraph{sample duration = 16} At first we use as sample duration = 16 and video step = 8. As overlapping frames we count frames
 \textit{(8...15)} so we have \#8 frames. Also, we use only \#4 frames with combinations \textit{(8...11), (10...13) and (12...15)} and 
-\#2 frames with combinations \textit{(8,9), (10,11), (12,13), and (14,15)}. Then, we set video step = 12. In this case, for \#4 frames, we
-only have the combination \textit{(12...15)}, for \#2 frames we have \textit{(12,13), (13,14) and (14,15)}. Finally, we set video step = 14
-with combinations, for \#2 frames \textit{(14,15)}, for \#1 frame \textit{(14) and (15)}; and for video step = 15, the only combination in
-frame \textit{(15)}.
+\#2 frames with combinations \textit{(8,9), (10,11), (12,13), and (14,15)}. The results are shown in table \ref{table:step8_16} (in bord are
+the frames with which we calculate the overlap score).
 
-TODO table with results.
+\begin{center}
+\begin{longtable}{||c||c c c||}
 
-As we can see in the above table, in validation step, the best result is in combination for step = 15 and overlapping frames only frame \#15.
+  \hline
+  \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
+                                    &  0.3 &  0.4 & 0.5 \\         
+  \hline  \hline
+  0,1,...,\textbf{\{8,...,15\}}               & {} & {} & {} \\
+  \textbf{\{8,9,...,15\}},16,...,23           & 0.3172 & 0.4142 & 0.6418 \\
+  \hline     \hline                          
+
+
+  0,1,...,\textbf{\{8,...,11,\}}...,14,15     & {} & {} & {} \\
+  \textbf{\{8,...,11\}},12,...,22,23          & 0.3172 & 0.4142& 0.6381 \\
+  \hline
+  0,1,...,\textbf{\{10,...,13,\}}14,15,       & {} & {} & {} \\
+  8,9,\textbf{\{10,...,13\}},14,...,22,23     & 0.3209 &0.4179   & 0.6418 \\
+  \hline
+  0,1,...,\textbf{\{12,...,15,\}}             & {} & {} & {} \\
+  8,9,...,\textbf{\{12,...,15\}},16,...,23,   & 0.3284 & 0.4216 & 0.6381 \\
+  \hline     \hline                          
+
+  0,1,...,\textbf{\{8,...,11,\}},...,14,15,   & {} & {} & {} \\
+  \textbf{\{8,9,...,11,\}}12,...,22,23        & 0.3172   & 0.4142& 0.6381 \\
+  \hline
+  0,1,...,\textbf{\{10,...,13,\}}14,15,       & {} & {} & {} \\
+  \textbf{\{10,...,13\}},14,...,22,23         & 0.3209 &0.4179   & 0.6418 \\
+  \hline
+  0,1,...,\textbf{\{12,...,15\}}              & {} & {} & {} \\
+  8,9,...,\textbf{\{12,...,15\}},16,...       & 0.3284 & 0.4216 & 0.6381 \\
+  \hline \hline
+  
+  0,1,...,\textbf{\{8,9,\}},10,...,14,15,     & {} & {} & {} \\
+  \textbf{\{8,9,\}}10,11,...,22,23            & 0.3134   & 0.4104 & 0.6381 \\
+  \hline
+  0,1,...,\textbf{\{10,11,\}},12,...,14,15,   & {} & {} & {} \\
+  8,9,\textbf{\{10,11,\}}12,...,22,23         & 0.3209   & 0.4216 & 0.6418 \\
+  \hline
+  0,1,...,\textbf{\{12,13,\}},14,15,          & {} & {} & {} \\
+  8,9,...,\textbf{\{12,13,\}}14,...,22,23     & 0.3246   & 0.4179 & 0.6418 \\
+  \hline
+  0,1,...,13,\textbf{\{14,15,\}}              & {} & {} & {} \\
+  8,9,...,\textbf{\{14,15,\}}16,...,22,23     & 0.3321   & 0.4216 & 0.6306 \\
+  \hline \hline
+  \caption{Recall results for step = 8}
+  \label{table:step8_16}
+\end{longtable} 
+
+  % 0,1,...,\textbf{\{8,9,\}},10,...,14,15,     & {} & {} & {} \\
+  % \textbf{\{12,13,\}}10,11,...,22,23            & 0.3134   & 0.4104 & 0.6381 \\
+  
+  
+  % \hline  \\
+\end{center}
+As we can from the above table, generally we get very bad performance and we got the best performance when we calculate the overlap between only 2 frames (either \textit{14,15} or \textit{12,13}).
+So, we thought that we should increase the video step because, probably, the connection algorithm is too strict into big movement variations during  the video. As a results, we set video step = 12 which
+means that we have only 4 frames overlap. In this case,  for \#4 frames, we only have the combination \textit{(12...15)}, for \#2 frames we have \textit{(12,13), (13,14) and (14,15)} as shown in
+table \ref{table:step12_16}.
+
+\begin{center}
+\begin{longtable}{||c||c c c||}
+
+  \hline
+  \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
+                                    &  0.3 &  0.4 & 0.5 \\         
+  \hline  \hline
+  0,1,...,11,\textbf{\{12,...,15\}}           & {} & {} & {} \\
+  \textbf{\{12,13,...,15\}},16,...,23         & 0.3769 & 0.4627 & 0.6828 \\
+  \hline     \hline                          
+
+  0,1,...,\textbf{\{12,13,\}},14,15,          & {} & {} & {} \\
+  \textbf{\{12,13,\}}14,15,...,22,23          & 0.3694   & 0.4627 & 0.6903 \\
+  \hline                          
+  0,1,...,12\textbf{\{13,14,\}},15,           & {} & {} & {} \\
+  12,\textbf{\{13,14,\}}15,...,22,23          & 0.3843   & 0.4627 & 0.6828 \\
+  \hline                          
+  0,1,...,12,13\textbf{\{14,15,\}}            & {} & {} & {} \\
+  12,13,\textbf{\{14,15,\}}16,...,22,23       & 0.3694   & 0.459 & 0.6828 \\
+  \hline     \hline                          
+
+  \caption{Recall results for step = 12}
+  \label{table:step12_16}
+\end{longtable} 
+\end{center}
+
+As we can see, recall performance is increase so that means that our assumption was correct. So, we increase video step into 14, 15 and 16 frames
+(Table \ref{table: step_14_16}
+\begin{center}
+\begin{longtable}{||c||c c c||}
+
+  \hline
+  \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
+                                    &  0.3 &  0.4 & 0.5 \\         
+  \hline  \hline
+  0,1,...,13\textbf{\{14,15\}}                & {} & {} & {} \\
+  \textbf{\{14,15\}},16,...,23                & 0.3731 & 0.5336 & 0.6493 \\
+  \hline     \hline                          
+
+  0,1,...,13,\textbf{\{14,\}}15,              & {} & {} & {} \\
+  \textbf{\{14,\}}15,...,22,23                & 0.3694   & 0.5299 & 0.6455 \\
+  \hline                          
+  0,1,...,14,\textbf{\{15\}}                  & {} & {} & {} \\
+  14,\textbf{\{15,\}}16,...,22,23             & 0.3731   & 0.5187 & 0.6381 \\
+  \hline  \hline
+
+  0,1,...,14,\textbf{\{15\}}                & {} & {} & {} \\
+  \textbf{\{15\}},16,...,23                 & 0.3918 & 0.5187 & 0.6381 \\
+  \hline     \hline                          
+  0,1,...,14,\textbf{\{15\}}                & {} & {} & {} \\
+  \textbf{\{16\}},17,...,24                 & 0.4067 & 0.7313 & 0.8731 \\
+  \hline                          
+  \caption{Recall results for steps = 14,15 and 16}
+  \label{table:step14_16}
+\end{longtable} 
+\end{center}
+
+The results show that we get the best recall performance when we have no overlapping steps and video step = 16 = sample duration. We try to improve
+more our results, using smaller duration because, as we saw from TPN recall performance, we get better results when we have sample duration = 8 or 4.
 
 \paragraph{sample duration = 8}
+We wanted to confirm that we get the best results, when we have no overlapping frames and step = sample duration. So Table \ref{table:step4_8}
+shows recall performance for sample duration = 8 and video step = 4.
 
-\paragraph{sample duration = 4}
 
+\begin{center}
+\begin{longtable}{||c||c c c||}
 
- 
-\subsection{UCF dataset}
+  \hline
+  \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
+                                    &  0.3 &  0.4 & 0.5 \\         
+  \hline  \hline
+  0,1,2,3,13\textbf{\{4,5,6,7\}}                & {} & {} & {} \\
+  \textbf{\{4,5,6,7\}},8,9,10,11                & 0.2015   & 0.3582 & 0.5858 \\
+  \hline     \hline                          
+
+  0,1,2,3,\textbf{\{4,5,\}}6,7                  & {} & {} & {} \\
+  \textbf{\{4,5,\}}6,7,8,9,10,11                & 0.1978   & 0.3582 & 0.5933 \\
+  \hline                          
+  0,1,2,3,4\textbf{\{5,6,\}}7                   & {} & {} & {} \\
+  4,\textbf{\{5,6,\}}7,8,9,10,11                & 0.1978   & 0.3507 & 0.5821 \\
+  \hline                          
+  0,1,2,3,4,5\textbf{\{6,7\}}                   & {} & {} & {} \\
+  4,5,\textbf{\{6,7,\}}8,9,10,11                & 0.194   & 0.3433 & 0.585 \\
+  \hline                           
+  \caption{Recall results for step = 4}
+  \label{table:step4_8}
+\end{longtable} 
+\end{center}
+
+(Pending overlap for \{8\} and \{9\}... TODO)
+% \paragraph{sample duration = 4}
+% \subsection{UCF dataset}
 
 
 \subsection{Second approach: use progression and progress rate}
-As we saw before, our first connecting algorithm doesn't have very good recall results. So, we created another algorithm which is base in \cite{}. This
-algorithm introduces two 2 metrics according to \cite{}:
+As we saw before, our first connecting algorithm doesn't have very good recall results. So, we created another algorithm which is base in \cite{DBLP:journals/corr/abs-1903-00304}. This
+algorithm introduces two 2 metrics according to \cite{DBLP:journals/corr/abs-1903-00304}:
 
 % TODO add more description
 \begin{description}
 \item[ Progression,  ] which describes the probability of a specific action being performed in the TOI. 
-% We add this factor because we have noticed that actioness
-%   is tolerant to false positives. Progression is mainly a rescoring mechanism for each class.
+  We add this factor because we have noticed that actioness is tolerant to false positives. Progression is
+  mainly a rescoring mechanism for each class (as mentioned in \cite{DBLP:journals/corr/abs-1903-00304})
 
 \item [ Progress rate, ] which is defined as the progress proportion that each class has been perfomed.
   
@@ -140,7 +284,84 @@ a video with N video segments, the following steps are applied:
   
 \end{enumerate}
 
+This approach has the advantage that we don't need to perform classification again because we already know the class of
+each final tube. In order to validate our results, now, we calculate the recall only from the tubes which have the same
+class as the groundtruth tube. Again we considered as positive if there is a tube that overlaps with groudtruth over the
+predefined threshold. 
 
+\begin{center}
+\begin{longtable}{||c c||c c c||}
+  \hline
+  \multicolumn{2}{||c||}{\textbf{combination}} &\multicolumn{3}{|c||}{\textbf{overlap thresh}}\\
+
+  \hline
+  sample dur & step &  0.3 &  0.4 & 0.5 \\
+  \hline   \hline
+  8 & 4 & TODO & TODO & TODO \\
+  \hline
+  8 & 6 & TODO & TODO & TODO \\
+  \hline
+  8 & 8 & 0.3060 & 0.5672 & 0.6866 \\
+  \hline
+  16 & 8  & TODO & TODO & TODO  \\
+  \hline
+  16 & 12 & TODO & TODO & TODO \\
+  \hline
+  16 & 16 & TODO & TODO & TODO \\
+  
+  \hline     \hline                          
+  % 0,1,...,14,\textbf{\{15\}}                & {} & {} & {} \\
+  % \textbf{\{15\}},16,...,23                 & 0.3918 & 0.5187 & 0.6381 \\
+  % \hline     \hline                          
+
+
+  \caption{Recall results for second approach with step = 8, 16 and their corresponding steps }
+  \label{table:conn_app2}
+\end{longtable} 
+\end{center}
+
+
+
+(Pending Table...)
+As we can see from the table above, the results in recall are not very good either.
+\section{Third approach : use naive algorithm - only for JHMDB}
+
+As mention in first approach,  \cite{DBLP:journals/corr/HouCS17} calculates all possible sequences of ToIs in order to the find the best
+candidates. We rethought about this approach and we concluded that it could be implement for JHMDB dataset if we reduce the number of proposed
+ToIs, produced by TPN,  to 30 for each video clip. We exploited the fact that JHMDB dataset's videos are trimmed, so we do not need to look
+for action tubes starting in the second video clip which saves us a lot of memory. On top of that, we modified our code
+in order to be memory efficient at the most writing some parts in CUDA programming language, saving a lot of processing power, too. \par
+So, after computing all possible combinations starting of the first video clip and ending in the last video clip, we keep only the
+\textbf{k-best scoring tubes (k = 500) }. In the follown table, we can see the recall results for sample durations = 8 and 16. \par
+
+\begin{center}
+\begin{longtable}{||c c||c c c||}
+
+  \hline
+  \multicolumn{2}{||c||}{\textbf{combination}} &\multicolumn{3}{|c||}{\textbf{overlap thresh}}\\
+  \hline
+  sample dur & step &  0.3 &  0.4 & 0.5 \\
+  \hline   \hline
+
+  8 & 4 & TODO & TODO & TODO \\
+  \hline
+  8 & 6 & TODO & TODO & TODO \\
+  \hline
+  8 &  8 & 0.7910 & 0.8806 & 0.9515 \\
+  \hline 
+
+  16 & 8  & TODO & TODO & TODO  \\
+  \hline
+  16 & 12 & TODO & TODO & TODO \\
+  \hline
+  16 & 16 & 0.7910 & 0.8806 & 0.9478 \\
+  \hline \hline
+  \caption{Recall results for second approach with  }
+  \label{table:conn_app3}
+\end{longtable} 
+\end{center}
+
+From the above table, we notice that sample duration = 8 is slightly better that the 16.
 
 
 \end{document}

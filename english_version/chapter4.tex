@@ -26,7 +26,59 @@ One of the basic elements of ActionNet is \textbf{Tube Proposal Network}(TPN). T
 is used in videos as show in \cite{DBLP:journals/corr/HouCS17}. In full correspondence with RPN, the structure
 of TPN is similar to RPN. The only difference, is that TPN uses 3D Convolutional Layers and 3D anchors instead of 2D. \par
 We designed 2 main structures for TPN. Each approach has a different definition of the used 3D anchors.
-The rest structure of the TPN is mainly the same with some little differences in the regression layer.
+The rest structure of the TPN is mainly the same with some little differences in the regression layer. \par
+Before describing TPN, we present the preprocess procedure which is the same for both approaches.
+
+\section{Steps before TPN}
+
+\subsection{Preparing data}
+
+Our architecture gets as input a sequnece of frames which has a fixed size in widht, height and duration. However, each video has different resolution. That's creates the
+need to resize each frame before. As mentioned in previous chapter, the first element of our network is a 3D RenNet taken from \cite{hara3dcnns}. This network is designed to
+get images with dimensions (112,112). As a result, we resize each frame from datasets' videos into (112,112) frames. In order to keep aspect ratio, we pad each frame either
+left and right, either above and bellow depending which dimension is bigger. In figure  \ref{fig:Preprocess_example} we can see the original frame and the resize and padded one.
+In full correspondance, we resize the groundtruth bounding boxes for each frame (figure \ref{fig:original_image_rois} and \ref{fig:trans_image_rois} show that).
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.35\textwidth}
+    \includegraphics[width=\textwidth]{./figures/original_image.jpg}
+    \caption{}
+    \label{fig:original_image}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.35\textwidth}
+    \includegraphics[width=\textwidth]{./figures/original_image_rois.jpg}
+    \caption{}
+    \label{fig:original_image_rois}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.35\textwidth}
+    \includegraphics[width=\textwidth]{./figures/transformed_image.jpg}
+    \caption{}
+    \label{fig:trans_image}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.35\textwidth}
+    \includegraphics[width=\textwidth]{./figures/transformed_image_rois.jpg}
+    \caption{}
+    \label{fig:trans_image_rois}
+  \end{subfigure}
+
+  \caption{ At (a), (b) frame is its original size and at (c), (d) same frame after preprocessing part}
+  \label{fig:Preprocess_example}
+\end{figure}
+
+
+\subsection{3D ResNet}
+Before using Tube Proposal Network, we spatio-temporal features from the video. In order to do so, we extract the 3 first Layers of a
+pretrained 3D ResNet. It is pretrained in Kinetics dataset \cite{DBLP:journals/corr/KayCSZHVVGBNSZ17} for sample duration = 16 and
+sample size = (112,122). \par
+This network normally is used for classifying the whole video, so some of its layers use temporal stride = 2.
+We set their temporal stride equal to 1 because we don't want to miss any temporal information during the process.
+So, the output of the third layer is a feature maps with dimesions (256,16,7,7). We feed this feature map to TPN, which is described
+in following sections.
+
 \section{ 3D anchors as 6-dim vector}
 \subsection{First Description}
 We started desinging our TPN inspired by \cite{DBLP:journals/corr/HouCS17}. We consider each anchor as a 3D bounding box written as
@@ -60,6 +112,9 @@ which is shown in figure \ref{fig:tpn_1_1}
   \caption{Structure of TPN}
   \label{fig:tpn_1_1}
 \end{figure}
+
+% \subsection{Preparing Data for training}
+
 
 \subsection{Training}
 As mentioned before, TPN extracts TOIs as 6-dim vectors. For that reason, we modify out groundtruth ROIs to groundtruth Tubes.

@@ -8,6 +8,8 @@
 \usepackage{mathrsfs}  % package for math font
 \usepackage{indentfirst} % package for getting ident after section or paragraph
 \usepackage[export]{adjustbox}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
 % \usepackage{amsmath}
 
 \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
@@ -20,7 +22,6 @@
 \section{Description}
 After getting all proposed tubes, it's time to do classification. As classifiers we use several approaches includingn
 a Recursive Neural Network (RNN) Classifier, a Support Vector Machine (SVM) Classifier and a Multilayer perceptron (MLP).
-\\
 \textbf{Pending Change the sxima...}
 \\
 \begin{figure}[h]
@@ -41,55 +42,138 @@ The whole procedure of classification is consisted from the following steps:
 \end{enumerate}
 
 The general structure of the whole network is depicted in figure \ref{fig:whole_network}, in which blue arrows show that
-features go straight up to the classifier. (Pending... Change that)
-
+features go straight up to the classifier. \textbf{(Pending... Change that)} \par
+In first steps of classification stage we refer only to JHMDB dataset because it has smaller number of video than UCF dataset which
+helped us save a lot of time and resources. That's because  we performed most experiments only JHMDB and after we found the optimal
+situation, we implemented to UCF-dataset, too. 
 
 \section{Preparing data for classification - Linear and RNN Classifiers}
 
-(Pending... Introduction about Linear and RNN classifiers)
-(Pending.. also an image of Linear classifier)
-
-  
+\textbf{(Pending... Introduction about Linear and RNN classifiers)}
+\textbf{(Pending.. also an image of Linear classifier)}
 
 In order to train our classifier, we have to execute the previous steps for each video. However, each video
-has different number of frames and reserves too much memory in the GPU. In order to deal with this situation
+has different number of frames and reserves too much memory in the GPU. In order to deal with this situation,
 we give as input one video per GPU. So we can handle 4 videos simultaneously. This means that a regular
 training session takes too much time for just 1 epoch. \par
-The solution which we came with, is to precompute the features for both positive video tubes and negative video tubes.
+The solution we came with, is to precompute the features for both positive video tubes and negative video tubes.
 Then we feed those features to our classifier and we train it in order to disciminate their classes.
-Again, we mainly experiment with jHMDB dataset because it has smaller number of videos than UCF dataset, so this means
-less memory usage for saving the features.\par
 At first, we extract only groundtruth video tubes' features and the double number of background video tubes. We chose this
 ratio between positive and negative tubes inspired by \cite{jjfaster2rcnn}, in which it has 0.25 ratio between foreground
 and background rois and chooses 128 roi in total. Respectively, we chose a little bigger ratio because we have only 1 groundtruth
-video tube in each video. So, for each video we got 3 video tubes in total.
-\textbf{(Pending describe extracting procedure)}
-Also, we extracted the validation video tubes in order to do a first assesment in our classifiers's performance in ideal conditions. 
+video tube in each video. So, for each video we got 3 video tubes in total, 1 for positive and 2 for background. We considered
+background tubes those whose overlap scores with groundtruth tubes are $ \ge 0.1 $ and $ \le 0.3 $. \par
 
 Then, after extracting those features, we trained both linear and RNN classifiers. The Linear classifier needs a fixed input size,
 so we used a pooling function in the dimension of the videos. So, at first we had a feature map of 3,512,16 dimensions and then we
 get as output a feature maps of 512,16 dimensions. We used both max and mean pooling as show in the results below. For the RNN
 classifier, we do not use any pooling function before feeding it. For both classifiers, at first, we didn't considered a fixed
 threshold for confidence score.
-(Pending results in Linear... Table)
+
+\textbf{(Pending results in Linear... Table)}
 
 The results are disappointing.
 As we can see in the table, RNN classifier cannot classify very well because, probably, the duration of the videos are so small
 so we stopped using it in jHMDB dataset. In the Linear classifier, we noticed that every tube is considered as background tube.
 That means that Linear classifier gets overfitted with trained data and cannot handle unknown data. So, we thought that we
-need a classifier which can \"learn\" very easily, with little data. So we chose to try a support vector machine classifier
+need a classifier which can \"learn\" very easily, with little data. So we chose to try a support vector machine classifier.
 
 \section{Support Vector Machine (SVM)}
 \subsection{First steps}
 SVMs are classifiers defined by a separating hyperplane between trained data in a N-dimensional space. The main advantage of using a SVM
-is that can get very good classification results whenwe have few data available.
-\textbf{write more introduction and a pic, Pending...}
-The use of SVM is inspired from \cite{Girshick:2015:FR:2919332.2920125}. \par
-SVM is trained using hard negatives. This means that we have 1 classifier for each class which has only 2 labels, positive and negative.
-As positive we have tubes that contains the groundtruth action and as negative we can have  groundtruth action tubes from other classes,
-background tubes or a combination of them.
+is that can get very good classification results when we have few data available. 
+\textbf{write more introduction and a pic, Pending...} \par
+The use of SVM is inspired from \cite{Girshick:2015:FR:2919332.2920125} and it is trained using hard negative mining. 
+This means that we have 1 classifier per class which has only 2 labels, positive and negative. We mark as positive the feature maps of the
+groundtruth action, and as negative groundtruth actions from other classes, and feature maps from background classes.
+As we know, SVM is driven by small number of examples near decision boundary. Our goal is to find a set of negatives that are the closest to
+the seperating hyperplane. So in each iteration, we update this set of negatives adding those which our SVM didn't perform very well. Each
+SVM is trained independently. \par
+SVM code is take from Microsoft's Azure \href{https://github.com/Azure/ObjectDetectionUsingCntk} {github page} in which there is an implementation
+of Fast RCNN using a SVM classifier. We didn't modify its parameters which means that it has a linear kernelr, uses  L2-norm as penalty and L1-norm
+as loss during training. Also, we consider as hard-negatives the tubes that got score $ >  -1.0 $ during classification.\par
+This whole process makes the choise of the negatives a crutial factor. In order to find the best policy,  we came with 5 different cases to consider
+as negatives:
+\begin{enumerate}
+\item Negatives are other classes's positives and all the background tubes
+\item Negatives are only all the background videos
+\item Negatives are only other classes's positives
+\item Negatives are other classes's positives and background tubes taken only from videos that contain a positive tube
+\item Negatives are only background tubes taken from videos that contain a positive tube
+\end{enumerate}
 
-Pending....
+On top of that, we use 2 pooling functions in order to have a fixed input size. \par
+In the next tables, we show our architecture's  mAP performance when we follow each one of the above policies. Also,
+we experimented for 2 feature maps, \textit{(64,8,7,7)} and \textit{(256,8,7,7)} where 8 equals with the sample duration.
+Both feature maps were extracted by using 3D RoiAlign procedure from feature maps with dimensions \textit{(64,8,28,28)} and
+\textit{(256,8,7,7)} respectively (in the second case, we just add zeros in the feature map outsize from the bounding boxes for
+each frame). Table \ref{table:svm_first_results} contains the first classification results. At first column we have the dimensions
+of feature maps before pooling fuction, where k = 1,2,..5 . At second column we have feature maps' dimensions after pooling, and at
+the next 2 column, the type of pooling function and the policy we followed. Finally in the last 3 collumns we have the mAP performance
+when we have threshold equal with 0.3, 0.4 and 0.5 respectively. During validation, we keep only the best scoring tube because we know that
+we have only 1 action per video.
+
+\begin{center}
+\begin{longtable}{||c | c | c| c||c c c||}
+
+  \hline
+  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+   before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
+ \hline   \hline
+ \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  3.16 & 4.20 & 4.40    \\
+  \cline{4-7}
+  {} & {} & {} & 2 &  2.29 & 2.68 & 2.86    \\
+    \cline{4-7}
+  {} & {} & {} & 3 & 0.96 & 2.11 & 2.9     \\
+    \cline{4-7}
+  {} & {} & {} & 4 &  2.4  & 4.53 & 5.16    \\
+    \cline{4-7}
+  {} & {} & {} & 5 &  0.6  & 0.76 & 0.93    \\
+  \hline
+ \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 &  1.07 & 1.85 & 2.26    \\
+    \cline{4-7}
+  {} & {} & {} & 2 &  3.2 & 3.39 & 3.66    \\
+    \cline{4-7}
+  {} & {} & {} & 3 &  0.86 & 1.98 & 1.98    \\
+    \cline{4-7}
+  {} & {} & {} & 4 &  1.24 & 2.68 & 3.09    \\
+    \cline{4-7}
+  {} & {} & {} & 5 &  0.21 & 0.27 & 0.32    \\
+
+  \hline   \hline
+
+ \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  10.62 & 10.94 & 10.94    \\
+
+    \cline{4-7}
+  {} & {} & {} & 2 &  9.09  & 10.02 & 10.83   \\
+    \cline{4-7}
+  {} & {} & {} & 3 &  9.05  & 9.65  & 9.69    \\
+    \cline{4-7}
+  {} & {} & {} & 4 &  11.19 & 11.51 & 11.51   \\
+    \cline{4-7}
+  {} & {} & {} & 5 &  4.84  & 6.13  & 6.13   \\
+    \hline
+ \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{max}  & 1  & \bf 20.94 & \bf 24.96 & \bf 26.46   \\
+    \cline{4-7}
+  {} & {} & {} & 2  & 14.94 & 17.78 & 19.38   \\
+    \cline{4-7}
+  {} & {} & {} & 3  & 14.9 & 17.39 & 19.88   \\
+    \cline{4-7}
+  {} & {} & {} & 4  & 19.43 & 23.91 & 25.31   \\
+    \cline{4-7}
+  {} & {} & {} & 5  & 10.41 & 10.46 & 11.29   \\
+  \hline   
+  
+  \caption{Our architecture's performance using 5 different policies and 2 different feature maps while pooling in
+  tubes' dimension. With bold is the best scoring case}
+  \label{table:svm_first_results}
+\end{longtable} 
+\end{center}
+
+From the above results we notice that features map with dimension (256,8,7,7) outperform in all cases, both for mean and max pooling and
+for all the policies. Also, we can see that max pooling outperforms mean pooling in all cases, too. Last but not least, we notice that policies
+2, 3 and 5 give us the worst results which means that svm needs both data from other classes positives and from background tubes. 
 
 \subsection{Temporal pooling}
 After getting first results, we implement a temporal pooling function inspired from \cite{DBLP:journals/corr/HouCS17}. We need a
@@ -97,22 +181,143 @@ fixed input size for the SVM. However, our tubes' temporal stride varies from 2 
 with 2. As pooling function we use 3D max pooling, one for each filter of the feature map.  So for example, for an action tube
 with 4 consecutive ToIs, we  have 4,256,8,7,7 as feature size. We seperate the feature map into 2 groups using \textit{linspace}
 function and we reshape the feature map into 256,k,8,7,7 where k is the size of each group, After using 3D max pooling, we get
-a feature map 256,8,7,7 so finally we concat them and get 2,256,8,7,7.
+a feature map 256,8,7,7 so finally we concat them and get 2,256,8,7,7. In this case we didn't experiment with (64,8,7,7) feature
+maps because it wouldn't performed better that (256,8,7,7) ferature maps as noticed from the previous section.
 
-After temporal pooling, we feed again our SVM and we in the following results.
+\begin{center}
+\begin{longtable}{||c | c| c| c||c c c||}
 
-Pending...
+  \hline
+ \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
+  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
+  \hline   \hline
+
+  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,8,7,7} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+
+  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 3 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 5 & TODO & TODO & TODO \\
+  \hline
+
+  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,8,7,7} & \multirow{5}{*}{max}  & 1 & 25.07 & 26.91 & 29.11 \\
+  \cline{4-7}
+
+  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 3 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 5 & TODO & TODO & TODO \\
+
+  \hline   \hline
+  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 3 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 5 & TODO & TODO & TODO \\
+  \hline   
+
+  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{max}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 3 & 3.83 & 4.86 & 5.4   \\
+  \cline{4-7}
+  {} & {} & {} & 4 & 3.21 & 4.01 & 4.01   \\
+  \cline{4-7}
+  {} & {} & {} & 5 & 3.27 & 5.29 & 5.82   \\
+  \hline   
+
+
+  \caption{Recall results for second approach with  }
+  \label{table:svm_temp_pooling}
+\end{longtable} 
+\end{center}
+  
 \subsection{Adding more groundtruth tubes}
-From above results, we notice that SVM cannot get very good results, too. So, we thought that we should try to add more positive
-examples in our training procedure. 
+From above results, we notice that SVM improve a lot the perfomance of our model. In order to futher improve our results, we will
+add more groundtruth action tubes. We consider as groundtruth action tubes all the tubes whose overlap score  with a groundtruth tube is
+greater that 0.7 . Also, we increase the total number of tube to 8. Table \ref{table:svm_increased}
+
+\begin{center}
+\begin{longtable}{||c | c| c| c||c c c||}
+
+  \hline
+ \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
+  \hline   \hline
+
+  \multirow{2}{*}{k,64,8,7,7} & \multirow{2}{*}{2,64,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO   \\
+  \hline   
+  \multirow{2}{*}{k,256,8,7,7} & \multirow{2}{*}{2,256,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO   \\
+  \hline   
+  \caption{Results after increasing the number of total tubes }
+  \label{table:svm_increased}
+
+\end{longtable} 
+\end{center}
+
+
+\subsection{Modifying 3D Roi Align}
+As we mentioned before, we extract from each tube its activation maps using 3D Roi Align procedure and we set equal to zero the pixels outside
+of bounding boxes for each frame. We came with the idea that the enviroment surrounding the actor sometimes help us determine the class
+of the action which is performed. This is base in the idea that 3D Convolutional Networks use the whole scene in order to classify the action
+that is performed. We thought to extend a little each bounding box both in width and height. So, during Roi Align procedure, after resizing
+the bounding box into the desired spatial scale  ( in our case 1/16 because original sample size = 112 and resized sample size = 7 )
+we increase by 1 both width and height. According to that if we have a resized bounding box $( x_1,y_1,x_2,y_2) $ our new bounding box becomes
+$ (max(0,x_1-0.5),max(0,y_1-0.5),min(7,x_2+0.5),min(7,y_2+0.5)) $ ( we use \textit{ min} and \textit{max} functions in order to avoid exceeding feature maps' limits).
+We just experiment in policies 1 and 4 for both (256,8,7,7) and (64,8,7,7) feature maps as show in  Table \ref{table:svm_mod_roialign}
+
+\begin{center}
+\begin{longtable}{||c | c| c| c||c c c||}
+
+  \hline
+ \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
+  \hline   \hline
+
+  \multirow{2}{*}{k,64,8,7,7} & \multirow{2}{*}{2,64,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO   \\
+  \hline   
+  \multirow{2}{*}{k,256,8,7,7} & \multirow{2}{*}{2,256,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
+  \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO   \\
+  \hline   
+  \caption{mAP results for features extracted with modified 3D RoiAlign }
+  \label{table:svm_mod_roialign}
+
+\end{longtable} 
+\end{center}
 
 \section{MultiLayer Perceptron (MLP)}
 Last but not least approach is a Multilayer perceptorn (MLP). More specifically, we extract the 3 last residulal layers of 3D ResNet34
 and we add a classification layer.  
+
 \subsection{Extract features}
+
+
 \subsection{Regular training}
 
+\section{Classifying dataset UCF}
+As mentioned before, all the above results are from JHMDB dataset. As show
 \section{Final Improvements}
 After classification, we relize that a lot of classified tubes overlap and represent the same action. So, we use again NMS algorithm in order
 to remove unnecessary tubes. The new model can be seen in figure \ref{fig:network_nms}.

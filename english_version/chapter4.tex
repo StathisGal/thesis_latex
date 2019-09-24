@@ -214,7 +214,7 @@ in order to get fixed size feature maps from ROIs with changing sizes. In our si
 call it \textbf{3D Roi Align}.
 
 \paragraph{3D Roi Align}
-3D Roi align is a modification of roi align presented by Mask R-CNN\cite{}. The main difference between those two is that Mask R-CNN's roi align uses
+3D Roi align is a modification of roi align presented by Mask R-CNN\cite{DBLP:journals/corr/HeGDG17}. The main difference between those two is that Mask R-CNN's roi align uses
 bilinear interpolation for extracting ROI's features and ours 3D roi align uses trilinear interpolation for the same reason. Again, the 3rd dimension is
 time.
 So, we have as input a feature map extracted from ResNet34 with dimensions (64,16,28,28) and a tensor containing the proposed TOIs.
@@ -301,7 +301,7 @@ At first, we  train TPN for 40 epochs. Then, we freeze TPN and we train the regr
 
 \section{ 3D anchors as 4k-dim vector}
 In this approach, we set 3D anchors as 4k coordinates (k = 16 frames = sample duration). So a typical anchor is written as ($x_1, y_1, x'_1, y'_1, x_2, y_2, ...$)
-where $x_1, y_1, x'_1, y'_1 $ are the coordinates for the 1st frame, $x_2, y_2, x'_2, y'_2$ are the coordinates for the 2nd frame etc as presented in \cite{}.
+where $x_1, y_1, x'_1, y'_1 $ are the coordinates for the 1st frame, $x_2, y_2, x'_2, y'_2$ are the coordinates for the 2nd frame etc as presented in \cite{DBLP:journals/corr/abs-1712-09184}.
 In figure \ref{fig:anchor_4k} we can an example of this type of anchor.
 
 \begin{figure}[h]

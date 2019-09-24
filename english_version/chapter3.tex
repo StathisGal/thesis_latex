@@ -7,7 +7,15 @@
 \usepackage{mathrsfs}  % package for math font
 \usepackage{indentfirst} % package for getting ident after section or paragraph
 % \usepackage{amsmath}
-
+\usepackage[
+    backend=bibtex,
+    style=authoryear,
+    sorting=ynt,
+    % style=numeric,
+    % style=alphabetic ,
+  ]{biblatex}
+ 
+ \addbibresource{References}
 \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
 \graphicspath{ {./theory/figures/} }       % path for images
@@ -27,21 +35,48 @@
 % SIFT \cite{Lowe2004}, MBH \cite{dalal2006human} and train a classifier as SVM.
 
 % \paragraph{Frame based methods}
+\subsection{Action Recognition}
 First approaches for action classification consisted of 2 steps a) compute complex handcrafted features from raw video frames
 such as SIFT, HOG, optical flow and b) train a classifier based on those features. These approaches made the choise of
 features a signifact factor for network's performance. That's because different action classes may appear dramatically
 different in terms of their appearences and motion patterns. Another problem was that most of those approaches take
 assumptions about the circumstances under which the video was taken because there was problems such as cluttered
-background, camera viewpoit variations etc.
+background, camera viewpoit variations etc. A review techniques used until 2011 made by \cite{Aggarwal:2011:HAA:1922649.1922653}.
 
 Recent results in deep architectures and especially in image classification made us attempt to train CNN networks for
-the task of action classification and localization. As mentioned before, Action Localization can be seen as an extention
-of object detection problem, where the outputs are action tubes that consist of a sequence of bounding boxes. So, there
-are several approaches including an object-detector network for single frame action proposal and a classifier.
-\cite{DBLP:journals/corr/GkioxariM14} uses a 2-stream R-CNN \cite{DBLP:journals/corr/GirshickDDM13} in order to generate
-action proposals for each frame.  \cite{peng:hal-01349107} NA DW TI KANEI.
+the task of action classification. First significant attempt made by \cite{6909619}.  % \cite{DBLP:journals/corr/WangXW0LTG16}.
+ \cite{simonyan2014two} and \cite{DBLP:journals/corr/FeichtenhoferPZ16} both added optical flow in order to achieve better results.
+On top of that, the increase  in computing performance contributed to the design more complicated architectures including
+3D Convolutions as presented in \cite{6165309} as done by \cite{DBLP:journals/corr/TranBFTP14}.
 
-\cite{DBLP:journals/corr/SinghSC16} uses SSD 
+R(2+1) \cite{DBLP:journals/corr/abs-1711-11248}
+\textbf(Pending...More before 3D ResNet)
+Recent day 3D ResNet has been introduced by \cite{Hara_2018_CVPR} 
+\subsection{Action Localization}
+As mentioned before, Action Localization can be seen as an extention of object detection problem, where the outputs are action tubes
+that consist of a sequence of bounding boxes. So, there are several approaches including an object-detector network for single frame
+action proposal and a classifier. The introduction of R-CNN (\cite{DBLP:journals/corr/GirshickDDM13}) achieve significant improvemet
+in the performance of Object Detection Networks. This architectures, firstly, proposes regions in the image which are likely to
+contain an object and then it classify it using a SVM classifier. Inspired by this architecture, \cite{DBLP:journals/corr/GkioxariM14}
+desing a 2-stream RCNN network in order to generate action proposals for each frame, one stream for frame level and one for optical flow.
+Then they  connect them using viterbi connection algorithm. \cite{DBLP:journals/corr/WeinzaepfelHS15} extend this approach, performing
+frame-level proposals and using a tracker for connecting those proposals using both spatial and optical flow features. Also it performs
+temporal localization using a sliding window over the tracked tubes. \cite{peng:hal-01349107} used Faster R-CNN (\cite{Ren:2015:FRT:2969239.2969250})
+instead of RCNN for frame-level proposals, and they use Viterbi algorithm for linking proposals, too. For temporal localization, they
+use a maximum subarray method.
+
+
+
+
+
+
+
+\cite{6909495} introduces the tubelets.
+
+% \\
+% \cite{peng:hal-01349107} NA DW TI KANEI.
+
+\cite{singh2016online} uses SSD 
 
 Some approaches include tracking \cite{DBLP:journals/corr/WeinzaepfelHS15}.
 Other approaches treat a video as a sequence of frames such as in \cite{DBLP:journals/corr/KalogeitonWFS17} and in \cite{DBLP:journals/corr/HouCS17}.
@@ -71,7 +106,10 @@ We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architect
 \end{itemize}
   
 
-\bibliography{References}
-\bibliographystyle{plain}
+% \bibliography{References}
+% % \bibliographystyle{authortitle}
+% \bibliographystyle{verbose}
+
+\printbibliography
 
 \end{document}

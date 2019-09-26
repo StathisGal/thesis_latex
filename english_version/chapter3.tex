@@ -1,26 +1,26 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage{amsmath}
-\usepackage[
-    backend=bibtex,
-    style=authoryear,
-    sorting=ynt,
-    % style=numeric,
-    % style=alphabetic ,
-  ]{biblatex}
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% % \usepackage{amsmath}
+% \usepackage[
+%     backend=bibtex,
+%     style=authoryear,
+%     sorting=ynt,
+%     % style=numeric,
+%     % style=alphabetic ,
+%   ]{biblatex}
  
- \addbibresource{References}
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+%  \addbibresource{References}
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Related work}
 
@@ -35,7 +35,7 @@
 % SIFT \cite{Lowe2004}, MBH \cite{dalal2006human} and train a classifier as SVM.
 
 % \paragraph{Frame based methods}
-\subsection{Action Recognition}
+\section{Action Recognition}
 First approaches for action classification consisted of 2 steps a) compute complex handcrafted features from raw video frames
 such as SIFT, HOG, optical flow and b) train a classifier based on those features. These approaches made the choise of
 features a signifact factor for network's performance. That's because different action classes may appear dramatically
@@ -52,7 +52,7 @@ On top of that, the increase  in computing performance contributed to the design
 R(2+1) \cite{DBLP:journals/corr/abs-1711-11248}
 \textbf(Pending...More before 3D ResNet)
 Recent day 3D ResNet has been introduced by \cite{Hara_2018_CVPR} 
-\subsection{Action Localization}
+\section{Action Localization}
 As mentioned before, Action Localization can be seen as an extention of object detection problem, where the outputs are action tubes
 that consist of a sequence of bounding boxes. So, there are several approaches including an object-detector network for single frame
 action proposal and a classifier. The introduction of R-CNN (\cite{DBLP:journals/corr/GirshickDDM13}) achieve significant improvemet
@@ -96,7 +96,7 @@ Other approaches treat a video as a sequence of frames such as in \cite{DBLP:jou
 % % localization.
 
 
-\subsection{Our implementation}
+\section{Our implementation}
 We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architecture is consisted by the following basic elements:
 \begin{itemize}
 \item One 3D Convolutional Network, which is used for feature extraction. In our implementaion we use a 3D Resnet network which is taken from
@@ -106,10 +106,7 @@ We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architect
 \end{itemize}
   
 
-% \bibliography{References}
-% % \bibliographystyle{authortitle}
-% \bibliographystyle{verbose}
 
-\printbibliography
+% \printbibliography
 
-\end{document}
+% \end{document}

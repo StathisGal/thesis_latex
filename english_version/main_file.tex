@@ -13,9 +13,19 @@
 \usepackage{indentfirst} % package for getting ident after section or paragraph
 \usepackage{subcaption} % package for subfigures
 \usepackage[export]{adjustbox}
-% \usepackage{amsmath}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
 
 % \usepackage{amsmath}
+\usepackage[
+    backend=bibtex,
+    style=authoryear,
+    sorting=ynt,
+    % style=numeric,
+    % style=alphabetic ,
+  ]{biblatex}
+ \addbibresource{References}
+
 \graphicspath{ {./theory/figures/} }       % path for images
 \begin{document}
 
@@ -47,7 +57,7 @@
 %%%  Abstract, in English
 
 \begin{abstracten}%
-  The purpose of this diploma dissertation is the design of a simple
+  The purpose of this diploma thesis is the design of a simple
   network for recognizing and localition human actions in videos.
   This network produces a sequence of 2D boxes for each video and
   a classification label for each action. 
@@ -130,9 +140,10 @@ languages, Certified code.
 \include{chapter7}
 %%%  Bibliography
 
-\bibliographystyle{softlab-thesis}
-\bibliography{References}
-
+% \bibliographystyle{softlab-thesis}
+% \bibliography{References}
+%%% mine
+\printbibliography
 
 % %%%  Appendices
 

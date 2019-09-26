@@ -1573,7 +1573,7 @@
 \school{School of Electrical and Computer Engineering}
 \department{Department of Computer Science}
 \ifcase\c@type
-  \or\thesistype{Diploma Project}
+  \or\thesistype{Diploma THesis}
   \or\thesistype{M.Sc. Thesis}
      \institution{National and Kapodistrian University of Athens}
      \school{Department of Mathematics}

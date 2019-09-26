@@ -1,20 +1,20 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage[export]{adjustbox}
-% % \usepackage{amsmath}
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Introduction}
 Nowadays, the enormous increase of computing power help us deal with a lot of difficult situations appeared in our daily life.
@@ -87,16 +87,20 @@ challenges.
 This lead us to design datasets containing more ambigious videos such as Joint-annotated Human Motion Database(JHMDB)\cite{}
 and UCF-101\cite{}.
 \subsection{JHMDB Dataset}
-The JHMDB dataset is a fully annotated dataset for human actions and human poses. It is consisted of 21 action categories and 928
-clips extracted from Human Motion Database (HMDB51) \cite{}. Each clip is annotated for each frame using a 2D pose.
-In order to train our model for action localization, we modify 2D poses into 2D boxes containing the whole pose. We seperate them
-into 660 videos for training set and 268 for validation set. Each video is trimmed to include only 1 action, starting from the beginning
-of video and ending in the end of the video. 
+The JHMDB dataset (\cite{Jhuang:ICCV:2013}) is a fully annotated dataset for human actions and human poses. It is consisted of 21 action categories and 928
+clips extracted from Human Motion Database (HMDB51) \cite{Kuehne11}. This dataset contains trimmed videos with duration between
+15 to 40 frames. Each clip is annotated for each frame using a 2D pose and contains only 1 action.
+In order to train our model for action localization, we modify 2D poses into 2D boxes containing the whole pose in each frame.
+There are available 3 different splits for training data, proposed by the authors. We chose the first split which contains 660
+videos for training set and 268 for validation . 
 
 \subsection{UCF-101 Dataset}
-The UCF-101 dataset contains 13320 videos from 101 action categories. We, also, extract 3194 videos from 24 classes, from which
-we have annotations with 2D bounding boxes. We seperate them in 2284 videos for training set and 910 for validation test. Each video
-is untrimmed including more that 1 simultaneous actions. 
+The UCF-101 dataset(\cite{soomro2012ucf101} contains 13320 videos from 101 action categories.
+From those, for 24 classes and 3194 video spatio-temporal annotations are included. This means for each frames in which an action is taking place,
+there is a 2D bounding box surrounding the actor.  We seperate them in 2284 videos for training set and 910 for validation test according to the
+first proposed training split. For training data, there are videos up to 641 frame while in validation data max number of frames is 900.
+Each video,both training and validation, is, of course, untrimmed,  including more than 1 simultaneous actions. We took annotations from
+\cite{singh2016online} because the proposed, by the authors, annotations contains some mistakes.
 
 \section{Motivation ans Contibutions}
 The current achievements in Object Recognition Networks and in 3D Convolution Networks for Action Recognition have triggered us to try
@@ -117,4 +121,4 @@ for linking the proposed TOIs from every video segment. In Chapter 6, we can see
 using 2 classic clasifiers. Chapter 7 is used for conclusions, summury of our contribution alongside with possible future work.
 
 
-% \end{document}
+\end{document}

@@ -22,14 +22,14 @@
 
 One of the basic elements of ActionNet is \textbf{Tube Proposal Network}(TPN). The main purpose of this network is to propose
 \textbf{Tube of Interest}(TOIs). These tubes are likely to contain an known action and are consisted of some 2D boxes
-(1 for each frame). TPN is inspired from RPN introduced by FasterRCNN\cite{Ren:2015:FRT:2969239.2969250}, but instead of images, TPN
+(1 for each frame). TPN is inspired from RPN introduced by FasterRCNN (\cite{Ren:2015:FRT:2969239.2969250}), but instead of images, TPN
 is used in videos as show in \cite{DBLP:journals/corr/HouCS17}. In full correspondence with RPN, the structure
 of TPN is similar to RPN. The only difference, is that TPN uses 3D Convolutional Layers and 3D anchors instead of 2D. \par
 We designed 2 main structures for TPN. Each approach has a different definition of the used 3D anchors.
 The rest structure of the TPN is mainly the same with some little differences in the regression layer. \par
 Before describing TPN, we present the preprocess procedure which is the same for both approaches.
 
-\section{Steps before TPN}
+\section{Preparation for TPN}
 
 \subsection{Preparing data}
 
@@ -95,7 +95,7 @@ The main advantage of this approach is that except from x-y dims, dimension of t
 no fixed time duration. This will help us deal with untrimmed videos, because proposed TOIs would exclude background frames.
 For this approach, we use \textbf{n=4k=60} anchors for each pixel in the feature map of TPN. We have k anchors for each sample
 duration( 5 scales of 1, 2, 4, 8, 16, 3 aspect ratios of 1:1, 1:2, 2:1 and 4 durations of 16,12,8,4 frames).
-In \cite{'DBLP:journals/corr/HouCS1},  network's anchors are defined according to the dataset most common anchors. This, however,
+In \cite{DBLP:journals/corr/HouCS17},  network's anchors are defined according to the dataset most common anchors. This, however,
 creates the need to redesign the network for each dataset. We use the same anchors for both datasets, trying to generalize our
 approach.
 So the structure of TPN is:
@@ -214,7 +214,7 @@ in order to get fixed size feature maps from ROIs with changing sizes. In our si
 call it \textbf{3D Roi Align}.
 
 \paragraph{3D Roi Align}
-3D Roi align is a modification of roi align presented by Mask R-CNN\cite{DBLP:journals/corr/HeGDG17}. The main difference between those two is that Mask R-CNN's roi align uses
+3D Roi align is a modification of roi align presented by Mask R-CNN (\cite{DBLP:journals/corr/HeGDG17})o. The main difference between those two is that Mask R-CNN's roi align uses
 bilinear interpolation for extracting ROI's features and ours 3D roi align uses trilinear interpolation for the same reason. Again, the 3rd dimension is
 time.
 So, we have as input a feature map extracted from ResNet34 with dimensions (64,16,28,28) and a tensor containing the proposed TOIs.
@@ -284,7 +284,7 @@ As the above results show, when we translate a TOI into a sequence of ROIs, reca
 deal with this proble.
 \paragraph{From 3D to 2d}
 The first idea we thought, was to change the first Convolutional layer from 3D to 2D. This means that we consider  features  not to have temporal dependencies for
-each fra. As we can see in the figure \ref{}, we got worse results, so, we rejected this idea.
+each frame. As we can see in the figure \ref{}, we got worse results, so, we rejected this idea.
 \paragraph{Remove time-mean layer}
 The second idea was to remove the mean layer in time dimension. This means that, the input of the first linear layer after the 3D convolutional layer gets as
 input all the features outputed from 3D convolution. 

@@ -1,18 +1,18 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% % \usepackage{amsmath}
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Background}
 
@@ -235,10 +235,32 @@ understanding of images in the dataset, similar to how we would.
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{conv_2}
   \end{minipage}
-  \caption{Convolution with kernel size:3, stride:2, padding:1}
+  \caption{Convolution with kernel of 3, stride of 2 and padding of 1}
   \label{fig:conv_example}
 \end{figure}
 \paragraph{Pooling Layers}
+Pooling Layers are also refered as downsampling layers and are used to reduce the spatial dimensions, but not depth, on a convolution neural network.
+The intuitive reasoning behind this layer is that once we know that a specific feature is in the original input volume (there will be a high activation value),
+its exact location is not as important as its relative location to the other features. The main advantages of pooling layer are:
+
+\begin{itemize}
+\item We gain computation performance since the amount of parameters is reduce.
+\item Less parameters also means We deal with overfitting situations.
+\end{itemize}
+
+The pooling operation is specified, rather than learned. Two common functions used in the pooling operation are:
+\begin{description}
+\item[ Average Pooling ] Calculate the average value for each patch on the feature map.
+\item[ Maximum Pooling (or Max Pooling) ] Calculate the maximum value for each patch of the feature map.
+\end{description}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.35]{max_pooling}
+  \caption{Example of Max pooling operation with a 2x2 filter  and stride of 2}
+  \label{fig:pooling_eg}
+\end{figure}
+
 \subsection{3D Convolutional Neural Network}
 Traditionally, ConvNets are targeting RGB images (3 channels). The goal of 3D CNN is to take as input a video and extract features from it.
 When ConvNets extract the graphical characteristics of a single image and put them in a vector (a low-level representation), 3D ConvNets
@@ -317,14 +339,50 @@ In order to train our model and check its performance, we use some known Loss fu
 \subsection{Losses}
 For training our network, we use \textbf{Cross Entropy Loss} for classification layers and \textbf{smooth L1-loss} for regression.
 \subsubsection{Cross Entropy Loss}
-TODO
+Cross-entropy loss, or log loss, measures the performance of a classification model whose output is a probability value between 0 and 1. \par
+Entropy is the measure of uncertainty assosiated with a given distribution q(y) and its formula is: 
+\[ H = -\sum_{i=1}^n p_i \cdot \log p_i \]
+Intuitively, entropy tells us how \"surprised\" we are when some even E happened. When we are sure about an event E to happened ($ p_E = 1$)
+we have 0 entropy (we are not surprised) and vise versa. \par
+On top of that, let's assume that we have 2 distributions, one known (our network's distribution) \textbf{p(y)} and one unknown (the actual
+data's distribution) \textbf{q(y)}. Cross-entropy tells us how accurate is our known distribution in predicting the unknown distribution's
+results. Respectively, Cross-entropy measures how accurate is our model in predicting the test data. Its formula is:
+\[ H_p(q) = - \sum_{c=1}^C q(y_c) \cdot log(p(y_c)) \]
+
 \subsubsection{Smooth L1-loss}
-TODO
+
+Smooth L1-loss can be interpreted as a combination of L1-loss and L2-loss. It behaves as L1-loss when the absolute
+value of the argument is high, and it behaves like L2-loss when the absolute value of the argument is close to zero.
+It is usually used for doing box regression on some object detection systems like Fast-RCNN(\cite{Girshick:2015:FR:2919332.2920125}),
+Faster-RCNN(\cite{Ren:2015:FRT:2969239.2969250}) and it is less sensitive to outliers according according to \cite{Girshick:2015:FR:2919332.2920125}.
+As showm in \cite{Girshick:2015:FR:2919332.2920125}, its formula is:
+
+\[ smooth_{L1}(x) = \begin{dcases}
+    0.5x^2 & \text{ if } x < 1 \\
+    |x| - 0.5 & \text{otherwise}
+  \end{dcases}\]
+
+It is similar to Huber loss whose formula is:
+
+\[
+L_{\delta}(x) = \begin{dcases}
+    \frac{1}{2}a^2 & \text{ for } |a| \le \delta \\
+\delta(|a| - \frac{1}{2}\delta), & \text{otherwise}
+\end{dcases}
+\]
+
+if we set $\delta $ parameter equal 1. \par
+
+Smooth L1-loss combines the advantages of L1-loss (steady gradients for large values of \textit{x}) and L2-loss (less oscillations during
+updates when \textit{x} is small). 
+
 \subsection{Metrics}
 Evaluating our machine learning algorithm is an essential part of any project. The way we choose our metrics influences how the performance
 of machine learning algorithms is measured and compared.
-They influence how to weight the importance of different characteristics in the results and finally, the ultimate choice of which algorithm to choose. Most of the times we use classification accuracy
-to measure the performance of our model, however it is not enough to truly judge our model.
+They influence how to weight the importance of different characteristics in the results and finally,
+the ultimate choice of which algorithm to choose. Most of the times we use classification accuracy
+to measure the performance of our model, however it is not enough to truly judge our model. \par
+At first, we introduce some basic evaluation metrics in order to present then those we use for our assesment.
 
 \subsection{Precision, Recall \& F1 score}
 
@@ -343,11 +401,12 @@ where \begin{itemize}
 \item FN = False negative
 \end{itemize}
 
+\textbf{TODO describe how we use recall}
+
 \subsection{Intersection over Union}
 
 Intersection over Union (IoU)  measures the overlap between 2 boundaries. We use that to measure how much our predicted boundary overlaps with the ground truth (the real object boundary).
 In some datasets, we predefine an IoU threshold (say 0.5) in classifying whether the prediction is a true positive or a false positive.
-
 
 
 \subsection{mAP}
@@ -371,6 +430,17 @@ order to quantify our results:
   the best possible AUC scoreis 60\%.
 \end{description}
 
+\subsection{MABO}
+
+In order to evaluate more the quality of our proposals, both during TPN and connecting tube stages, recall metric isn't enough. That's because recall metric tells us only in how many
+known objects there was at least 1 proposal that satified the detection criterion. However, it doen't tells us how much good. This can be better clarify if we consider figure \href{fig:mabo_fig}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.25]{mabo}
+  \caption{Example of Max pooling operation with a 2x2 filter  and stride of 2}
+  \label{fig:mabo_fig}
+\end{figure}
 
 
-% \end{document}
+\end{document}

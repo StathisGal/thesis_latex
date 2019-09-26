@@ -25,6 +25,7 @@
 After getting TOIs for each video segment, it is time to connect them. That's because most actions in videos lasts more that 16 frames.
 This means that, in overlaping video clips, there will be consequentive TOIs that represent the entire action. So, it is essential to create
 an algorithm for finding and connecting these TOIs.
+
 \subsection{First approach: combine overlap and actioness}
 Our algorithm is inspired by \cite{DBLP:journals/corr/HouCS17}, which calculates all possible sequences of ToIs. In order find the best candidates,
 it uses a score which tells us how likely a sequence of TOIs is  to contain an action. This score is a combination of 2 metrics:
@@ -37,10 +38,6 @@ The above scoring policy can be described by the following formula:
 \[ S = \frac{1}{m} \sum_ {i=1}^{m} Actioness_i + \frac{1}{m-1} \sum_{j=1}^{m-1} Overlap_{j,j+1} \]
 
 For every possible combination of TOIs we calculate their score as show in figure \ref{fig:connection_algo}.
-The above approach, however, needs too much memory for all needed calculations, so a memory usage  problem is
-appeared. The reason is, for every new video segments we propose \textit{k TOIs} (16 during training and 150 during validation).
-As a result, for a small video seperated in  \textbf{10 segments}, we need to calculate 
-\textbf{  150\textsuperscript{10} scores} during validation stage. \par
 
 \begin{figure}[h]
   \centering
@@ -49,38 +46,58 @@ As a result, for a small video seperated in  \textbf{10 segments}, we need to ca
   \label{fig:connection_algo}
 \end{figure}
 
+The above approach, however, needs too much memory for all needed calculations, so a memory usage  problem is
+appeared. The reason is, for every new video segments we propose \textit{k TOIs} (16 during training and 150 during validation).
+As a result, for a small video seperated in  \textbf{10 segments}, we need to calculate 
+\textbf{  150\textsuperscript{10} scores} during validation stage. This causes our system to overload and it takes too much time to process
+just one video. \par
+
 In order to deal with this problem, we create a greedy algorithm in order to find the candidates tubes. Inituitively, this algorithm after
-a new video segment keeps tubes with score higher than a threshold, and deletes the rest.
-So, we don't need to calculate combinations with very low score. This algorithm is described below:
+a new video segment keeps tubes with score higher than a threshold, and deletes the rest. So, we don't need to calculate combinations with
+very low score. We wrote code for calculating tubes' scores in CUDA language, which has the ability to
+parallel process the same code using different data. Our algorithm is described below:
+
 \begin{enumerate}
-\item Firstly, initialize empty lists for the final tubes, their scores, active tubes, their overlapping sum and actioness sum where:
+\item Firstly,  initialize empty lists for the final tubes, final tubes' duratio, their scores, active tubes, their correnspondig duration,
+  active tubes' overlapping sum and actioness sum where:
   \begin{itemize}
-  \item Final tubes list contains all tubes which are the most possible to contain an action, and their score list contains their
-    corresponding scores.
+  \item Final tubes list contains all tubes which are the most likely to contain an action, and their score list contains their
+    corresponding scores. We refer to each tube by its index which is related a tensor, in which we saved all the ToIs proposed
+    from TPN for each video segment.
   \item Active tubes list contains all tubes that will be match with the new TOIs. Their overlapping sum list and actioness sum list
     contain their sums in order to avoid calculating then for each loop. 
   \end{itemize}
 Also, we initialize threshold equal to 0.5 .
 \item For the first video segment, we add all the TOIs to both active tubes and final tubes. Their scores are only their actioness because
   there are no tubes for calculating their overlapping score. So, we set their overlaping sum equal to 0.
-\item For each next video, firstly we calculate their overlapping score with each active tube. Then, we empty active tubes, overlapping
-  sum and actioness score lists.  For each new tube that has score higher than the threshold we add to final tubes and to active tubes.
-\item If the number of active tubes is higher than a threshold (1000 in our situation), we set the threshold equal to the score of
+\item For each next video, after getting the proposed ToIs, firstly we calculate their overlapping score with each active tube. Then, we
+  empty active tubes, active tubes' duration, overlapping sum and actioness score lists.  For each new tube that has score higher than the threshold
+  we add both to final tubes and to active tubes, and we increase their duration.
+\item If the number of active tubes is higher than a threshold, we set the threshold equal to the score of
   the 100th higher score. On top of that, we update the final tubes list, removing all tubes that have score lower than the threshold.
 \item After that, we add in active tubes, the current video segment's proposed TOIs. Also their actioness scores in actioness sum list and
   zero values in corrensponding positions in overlaps sum list (such as in the 1st step).
 \item We repeat the previous 3 steps until there is no video segment left.
+\item Finally, as we mentioned before, we have a list which contains the indexes of the saved tubes. So, we modify them in order to have
+  the final bounding boxes. However, 2 succeeding ToIs do not have extactly the same bounding boxes in the frames that overlap. For example,
+  ToIs from the $1^{st}$ video segment start from frame 1 to frame 16. If we have video step equal with 8, it overlaps with the ToIs from the
+  succeeding video segment in frames 8-16. In those frames, in final tube, we choose the area that contains both bounding boxes which is
+  denoted as $(min(x_1,x'_1), min(y_1,y'_1), max(x_2,x'_2), max(y_2,y'_2))$ for bounding boxes $(x_1,y_1,x_2,y_2)$ and $(x'_1,y'_1,x'_2,y'_2)$.
 \end{enumerate}
 % We implement this algorithm using CUDA language for counting the scores. In \cite{DBLP:journals/corr/HouCS17}, they use temporal \textit{stride = sample duration} during testing. We want 
 \section{Some results}
 
 In order to validate our algorithm, we firstly experiment in JHMDB dataset's videos in order to define the best overlapping policy and
-the video overlapping step. We consider as positive if there is at least 1 video tube which overlaps with the groundtruth video tube
-over a predefined threshold.  These thresholds are 0.5, 0.4 and 0.3. 
+the video overlapping step. Again, we use recall as evaluation metrinc. A groundtruth action tube is considered to be found, as well as positive,
+if there is at least 1 video tube which overlaps with it over a predefined threshold, otherwise it .  These thresholds are again 0.5, 0.4 and 0.3.
+We set TPN to return 30 ToIs per video segment.
+We chose to update threshold when active tubes are more than 500 and to keep the first 100 tubes as active. We did so, because, a big part of the
+code is performing in CPU. That's because, we use lists, which are very easy to handle for adding and removing elements. So, if we use bigger update
+limits, it takes much more time to process them.
 
 \paragraph{sample duration = 16} At first we use as sample duration = 16 and video step = 8. As overlapping frames we count frames
 \textit{(8...15)} so we have \#8 frames. Also, we use only \#4 frames with combinations \textit{(8...11), (10...13) and (12...15)} and 
-\#2 frames with combinations \textit{(8,9), (10,11), (12,13), and (14,15)}. The results are shown in table \ref{table:step8_16} (in bord are
+\#2 frames with combinations \textit{(8,9), (10,11), (12,13), and (14,15)}. The results are shown in Table \ref{table:step8_16} (in bold are
 the frames with which we calculate the overlap score).
 
 \begin{center}
@@ -130,17 +147,12 @@ the frames with which we calculate the overlap score).
   \caption{Recall results for step = 8}
   \label{table:step8_16}
 \end{longtable} 
-
-  % 0,1,...,\textbf{\{8,9,\}},10,...,14,15,     & {} & {} & {} \\
-  % \textbf{\{12,13,\}}10,11,...,22,23            & 0.3134   & 0.4104 & 0.6381 \\
-  
-  
-  % \hline  \\
 \end{center}
+
 As we can from the above table, generally we get very bad performance and we got the best performance when we calculate the overlap between only 2 frames (either \textit{14,15} or \textit{12,13}).
 So, we thought that we should increase the video step because, probably, the connection algorithm is too strict into big movement variations during  the video. As a results, we set video step = 12 which
 means that we have only 4 frames overlap. In this case,  for \#4 frames, we only have the combination \textit{(12...15)}, for \#2 frames we have \textit{(12,13), (13,14) and (14,15)} as shown in
-table \ref{table:step12_16}.
+Table \ref{table:step12_16}.
 
 \begin{center}
 \begin{longtable}{||c||c c c||}
@@ -150,17 +162,17 @@ table \ref{table:step12_16}.
                                     &  0.3 &  0.4 & 0.5 \\         
   \hline  \hline
   0,1,...,11,\textbf{\{12,...,15\}}           & {} & {} & {} \\
-  \textbf{\{12,13,...,15\}},16,...,23         & 0.3769 & 0.4627 & 0.6828 \\
+  \textbf{\{12,13,...,15\}},16,...,26,27         & 0.3769 & 0.4627 & 0.6828 \\
   \hline     \hline                          
 
   0,1,...,\textbf{\{12,13,\}},14,15,          & {} & {} & {} \\
-  \textbf{\{12,13,\}}14,15,...,22,23          & 0.3694   & 0.4627 & 0.6903 \\
+  \textbf{\{12,13,\}}14,15,...,26,27          & 0.3694   & 0.4627 & 0.6903 \\
   \hline                          
   0,1,...,12\textbf{\{13,14,\}},15,           & {} & {} & {} \\
-  12,\textbf{\{13,14,\}}15,...,22,23          & 0.3843   & 0.4627 & 0.6828 \\
+  12,\textbf{\{13,14,\}}15,...,26,27          & 0.3843   & 0.4627 & 0.6828 \\
   \hline                          
   0,1,...,12,13\textbf{\{14,15,\}}            & {} & {} & {} \\
-  12,13,\textbf{\{14,15,\}}16,...,22,23       & 0.3694   & 0.459 & 0.6828 \\
+  12,13,\textbf{\{14,15,\}}16,...,26,27       & 0.3694   & 0.459 & 0.6828 \\
   \hline     \hline                          
 
   \caption{Recall results for step = 12}
@@ -168,8 +180,8 @@ table \ref{table:step12_16}.
 \end{longtable} 
 \end{center}
 
-As we can see, recall performance is increase so that means that our assumption was correct. So, we increase video step into 14, 15 and 16 frames
-(Table \ref{table: step_14_16}
+As we can see, recall performance is increase so that means that our assumption was correct. So again, we increase video step into 14, 15 and 16 frames
+and recall score is shown at Table \ref{table: step_14_16}
 \begin{center}
 \begin{longtable}{||c||c c c||}
 
@@ -178,23 +190,23 @@ As we can see, recall performance is increase so that means that our assumption 
                                     &  0.3 &  0.4 & 0.5 \\         
   \hline  \hline
   0,1,...,13\textbf{\{14,15\}}                & {} & {} & {} \\
-  \textbf{\{14,15\}},16,...,23                & 0.3731 & 0.5336 & 0.6493 \\
+  \textbf{\{14,15\}},16,...,28,29                & 0.3731 & 0.5336 & 0.6493 \\
   \hline     \hline                          
 
   0,1,...,13,\textbf{\{14,\}}15,              & {} & {} & {} \\
-  \textbf{\{14,\}}15,...,22,23                & 0.3694   & 0.5299 & 0.6455 \\
+  \textbf{\{14,\}}15,...,28,29                & 0.3694   & 0.5299 & 0.6455 \\
   \hline                          
   0,1,...,14,\textbf{\{15\}}                  & {} & {} & {} \\
-  14,\textbf{\{15,\}}16,...,22,23             & 0.3731   & 0.5187 & 0.6381 \\
+  14,\textbf{\{15,\}}16,...,28,29             & 0.3731   & 0.5187 & 0.6381 \\
   \hline  \hline
 
   0,1,...,14,\textbf{\{15\}}                & {} & {} & {} \\
-  \textbf{\{15\}},16,...,23                 & 0.3918 & 0.5187 & 0.6381 \\
+  \textbf{\{15\}},16,...,30                 & 0.3918 & 0.5187 & 0.6381 \\
   \hline     \hline                          
   0,1,...,14,\textbf{\{15\}}                & {} & {} & {} \\
-  \textbf{\{16\}},17,...,24                 & 0.4067 & 0.7313 & 0.8731 \\
+  \textbf{\{16\}},17,...,31                 & 0.4067 & 0.7313 & 0.8731 \\
   \hline                          
-  \caption{Recall results for steps = 14,15 and 16}
+  \caption{Recall results for steps = 14, 15 and 16}
   \label{table:step14_16}
 \end{longtable} 
 \end{center}
@@ -204,7 +216,7 @@ more our results, using smaller duration because, as we saw from TPN recall perf
 
 \paragraph{sample duration = 8}
 We wanted to confirm that we get the best results, when we have no overlapping frames and step = sample duration. So Table \ref{table:step4_8}
-shows recall performance for sample duration = 8 and video step = 4.
+shows recall performance for sample duration = 8 and video step = 4 and Table \ref{table:step8_678 } for video steps = 6, 7 and 8.
 
 
 \begin{center}
@@ -232,10 +244,111 @@ shows recall performance for sample duration = 8 and video step = 4.
 \end{longtable} 
 \end{center}
 
-(Pending overlap for \{8\} and \{9\}... TODO)
-% \paragraph{sample duration = 4}
-% \subsection{UCF dataset}
+\begin{center}
+\begin{longtable}{||c||c c c||}
 
+  \hline
+  \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
+                                    &  0.3 &  0.4 & 0.5 \\         
+  \hline  \hline
+  0,1,2,3,4,5\textbf{\{6,7\}}           & {} & {} & {} \\
+  \textbf{\{6,7\}},8,9,10,11,12,13      & TODO   & TODO & TODO \\
+  \hline     \hline                          
+
+  0,1,2,3,4,5,\textbf{\{6,\}}7          & {} & {} & {} \\
+  \textbf{\{6,\}}7,8,9,10,11,12,13      & TODO   & TODO & TODO \\
+  \hline                          
+  0,1,2,3,4,5,6,\textbf{\{7\}}          & {} & {} & {} \\
+  6,\textbf{\{7\}}8,9,10,11,12,13       & TODO   & TODO & TODO \\
+  \hline                          
+  0,1,2,3,4,5,6\textbf{\{7\}}           & {} & {} & {} \\
+  \textbf{\{7,\}}8,9,10,11,12,13,14     & TODO   & TODO & TODO \\
+  \hline                           
+  0,1,2,3,4,5,6\textbf{\{7\}}           & {} & {} & {} \\
+  \textbf{\{8\}}9,10,11,12,13,14,15     & TODO   & TODO & TODO \\
+  \hline                           
+  \caption{Recall results for steps = 6, 7 and 8}
+  \label{table:step8_678 }
+\end{longtable} 
+\end{center}
+
+\subsection{UCF dataset}
+In previous steps, we tried to find the best overlap policy for our algorithm in JHMDB dataset. After that, it's time to apply our algorithm in UCF dataset using the best scoring
+overlap policy. We did some modifications in the code, in order to save memory and move most parts of the code to GPU. This happened by using tensors instead of lists for scores and
+most operations are, from now on, matrix operations. On top that, last step of the algorith, which is the modification from indices to actual action tubes was written in CUDA code so
+it takes place in GPU, too. So, we are now able to increase the number of tubes returned by TPN, the max number of active tubes before updating threshold and the max number of final
+tubes. In Table \ref{table:ucf_recall}
+
+\begin{center}
+\begin{longtable}{||c | c | c ||c c c | c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.5 &  0.4 & 0.3 & {}\\         
+  \hline
+  
+  
+
+  \multirow{4}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,14,15 }  & \multirow{3}{*}{30} & 500   & 0.2829  & 0.4395 & 0.5817  & 0.3501 \\
+  \cline{3-7}
+                                    {} &  {}   & 2000   & 0.3567  & 0.4996 & 0.6289 & 0.3815\\
+  \cline{3-7}
+                                    {} &  {}   & \multirow{2}{*}{400}   & 0.3749  & 0.5316 & 0.6487 & 0.3934 \\
+  \cline{2-2}   \cline{4-7}
+                                    {} &  150   & {}   & TODO  & TODO & TODO & TODO \\
+
+  \hline                                    
+  \multirow{4}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,18,...,23 }  & \multirow{3}{*}{30} & 500   & TODO  & TODO & TODO & TODO\\
+  \cline{3-7}
+                                    {} &  {}   & 2000   & TODO  & TODO & TODO & TODO\\
+  \cline{3-7}
+                                    {} &  {}   & \multirow{2}{*}{400}   & 0.4281  & 0.5589  & 0.6779 & 0.4182 \\
+  \cline{2-2} \cline{4-7}
+                                    {} &  150   & {}   & 0.4266  & 0.5521 & 0.6722 & 0.4162\\
+
+  \hline                                    
+
+  \caption{Recall results for UCF dataset}
+  \label{table:ucf_recall }
+\end{longtable} 
+\end{center}
+
+\begin{center}
+\begin{longtable}{||c | c | c ||c c c| c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
+  \hline
+  
+  
+  \multirow{4}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }  & \multirow{3}{*}{30} & 500   & 0.4464  & 0.581 & 0.6844  & 0.7787 \\
+  \cline{3-7}
+                                    {} &  {}   & 2000   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
+  \cline{3-7}
+                                    {} &  {}   & \multirow{2}{*}{4000}   & 0.7034  & 0.8228 & 0.8875 & 0.8973 \\
+  \cline{2-2}   \cline{4-7}
+                                    {} &  150   & {}   & TODO  & TODO & TODO & TODO \\
+
+  \hline                                    
+  \multirow{4}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,18,...,23 }  & \multirow{3}{*}{30} & 500   & TODO  & TODO & TODO & TODO\\
+  \cline{3-7}
+                                    {} &  {}   & 2000   & TODO  & TODO & TODO & TODO\\
+  \cline{3-7}
+                                    {} &  {}   & \multirow{2}{*}{4000}   & 0.7567  & 0.8745  & 0.9255 & 0.9211 \\
+  \cline{2-2} \cline{4-7}
+                                    {} &  150   & {}   & 0.8403  & 0.9179 & 0.9437 & 0.9389\\
+
+  \hline                                    
+
+  \caption{Temporal Recall results for UCF dataset}
+  \label{table:ucf_temp_recall }
+\end{longtable} 
+\end{center}
 
 \subsection{Second approach: use progression and progress rate}
 As we saw before, our first connecting algorithm doesn't have very good recall results. So, we created another algorithm which is base in \cite{DBLP:journals/corr/abs-1903-00304}. This

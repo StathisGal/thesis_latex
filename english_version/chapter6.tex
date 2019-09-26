@@ -1,22 +1,22 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage[export]{adjustbox}
-\usepackage{longtable} % package for multi pages tables
-\usepackage{multirow}  % package for tables, multirow
-% \usepackage{amsmath}
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage[export]{adjustbox}
+% \usepackage{longtable} % package for multi pages tables
+% \usepackage{multirow}  % package for tables, multirow
+% % \usepackage{amsmath}
 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Classification stage}
 \section{Description}
@@ -312,12 +312,12 @@ Last but not least approach is a Multilayer perceptorn (MLP). More specifically,
 and we add a classification layer.  
 
 \subsection{Extract features}
-
+We
 
 \subsection{Regular training}
 
 \section{Classifying dataset UCF}
-As mentioned before, all the above results are from JHMDB dataset. As show
+As mentioned before, all the above results are from JHMDB dataset. As shown
 \section{Final Improvements}
 After classification, we relize that a lot of classified tubes overlap and represent the same action. So, we use again NMS algorithm in order
 to remove unnecessary tubes. The new model can be seen in figure \ref{fig:network_nms}.
@@ -330,4 +330,4 @@ to remove unnecessary tubes. The new model can be seen in figure \ref{fig:networ
   \label{fig:network_nms}
 \end{figure}
 
-\end{document}
+% \end{document}

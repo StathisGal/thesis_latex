@@ -1,22 +1,22 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage[export]{adjustbox}
-% \usepackage{longtable} % package for multi pages tables
-% \usepackage{multirow}  % package for tables, multirow
-% % \usepackage{amsmath}
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Classification stage}
 \section{Description}
@@ -215,10 +215,50 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
   {} & {} & {} & 4 & TODO & TODO & TODO \\
   \cline{4-7}
   {} & {} & {} & 5 & TODO & TODO & TODO \\
+  \hline
+  % \hline   \hline
+  % \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO \\
+  % \cline{4-7}
+  % {} & {} & {} & 2 & TODO & TODO & TODO \\
+  % \cline{4-7}
+  % {} & {} & {} & 3 & TODO & TODO & TODO \\
+  % \cline{4-7}
+  % {} & {} & {} & 4 & TODO & TODO & TODO \\
+  % \cline{4-7}
+  % {} & {} & {} & 5 & TODO & TODO & TODO \\
+  % \hline   
 
+  % \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{max}  & 1 & TODO & TODO & TODO \\
+  % \cline{4-7}
+  % {} & {} & {} & 2 & TODO & TODO & TODO \\
+  % \cline{4-7}
+  % {} & {} & {} & 3 & 3.83 & 4.86 & 5.4   \\
+  % \cline{4-7}
+  % {} & {} & {} & 4 & 3.21 & 4.01 & 4.01   \\
+  % \cline{4-7}
+  % {} & {} & {} & 5 & 3.27 & 5.29 & 5.82   \\
+  % \hline   
+
+
+  \caption{mAP results for second approach using temporal pooling }
+  \label{table:svm_temp_pooling}
+\end{longtable} 
+\end{center}
+
+\subsection{Increasing sample duration to 16 frames}
+
+\begin{center}
+\begin{longtable}{||c | c| c| c||c c c||}
+
+  \hline
+ \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{4.5em}{\textbf{Temporal Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
   \hline   \hline
-  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO \\
+
+  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{1,256,16,7,7} & \multirow{5}{*}{No}  & 1 & TODO & TODO & TODO \\
   \cline{4-7}
+
   {} & {} & {} & 2 & TODO & TODO & TODO \\
   \cline{4-7}
   {} & {} & {} & 3 & TODO & TODO & TODO \\
@@ -226,25 +266,24 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
   {} & {} & {} & 4 & TODO & TODO & TODO \\
   \cline{4-7}
   {} & {} & {} & 5 & TODO & TODO & TODO \\
-  \hline   
+  \hline
 
-  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{max}  & 1 & TODO & TODO & TODO \\
+  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{2,256,16,7,7} & \multirow{5}{*}{Yes}  & 1 & 25.07 & 26.91 & 29.11 \\
   \cline{4-7}
+
   {} & {} & {} & 2 & TODO & TODO & TODO \\
   \cline{4-7}
-  {} & {} & {} & 3 & 3.83 & 4.86 & 5.4   \\
+  {} & {} & {} & 3 & TODO & TODO & TODO \\
   \cline{4-7}
-  {} & {} & {} & 4 & 3.21 & 4.01 & 4.01   \\
+  {} & {} & {} & 4 & TODO & TODO & TODO \\
   \cline{4-7}
-  {} & {} & {} & 5 & 3.27 & 5.29 & 5.82   \\
-  \hline   
-
-
-  \caption{Recall results for second approach with  }
+  {} & {} & {} & 5 & TODO & TODO & TODO \\
+  \hline
+  \caption{mAP results for   }
   \label{table:svm_temp_pooling}
 \end{longtable} 
 \end{center}
-  
+
 \subsection{Adding more groundtruth tubes}
 From above results, we notice that SVM improve a lot the perfomance of our model. In order to futher improve our results, we will
 add more groundtruth action tubes. We consider as groundtruth action tubes all the tubes whose overlap score  with a groundtruth tube is
@@ -330,4 +369,4 @@ to remove unnecessary tubes. The new model can be seen in figure \ref{fig:networ
   \label{fig:network_nms}
 \end{figure}
 
-% \end{document}
+\end{document}

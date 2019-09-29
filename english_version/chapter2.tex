@@ -1,19 +1,19 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage{amsmath}
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% % \usepackage{amsmath}
 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Background}
 
@@ -335,6 +335,10 @@ As a result, RPN gets as input feature maps extracted from the backbone CNN. The
 the output to its scoring layer and regression layer. Those scores represent the confidence of existing an object in this specific position.
 On top of that, regression layer outputs 4k displacements, 4 for each anchor. Finally, we keep as output only the \textit{ n-best scoring} anchors.
 
+\subsection{Roi Align}
+
+\subsection{Non-maximum suppression (NMS) algorithm}
+
 \section{Losses and Metrics}
 In order to train our model and check its performance, we use some known Loss functions and Metrics used in Object Detection systems.
 \subsection{Losses}
@@ -429,15 +433,15 @@ Area of overlap and area of union can be defined as:
 On top of that, we can implement IoU for 1 dimension and for 3 dimensions.
 \paragraph{1D IoU} We can name 1D IoU as temporal overlap. Let's consider 2 temporal segments $(t_1,t_2)$ and $(t_3,t_4)$, between which we want to
 estimate their overlap score. Their IoU can be described as:
-\[ \text { Area of overlap } = \lVert(min(t_2,t_4) - max(t_1,t_3))\rVert  \]
-\[ \text { Area of union } = \lVert(max(t_2,t_4) - min(t_1,t_3))\rVert  \]
+\[ \text { Length of overlap } = \lVert(min(t_2,t_4) - max(t_1,t_3))\rVert  \]
+\[ \text { Length of union } = \lVert(max(t_2,t_4) - min(t_1,t_3))\rVert  \]
 \paragraph{3D IoU} 3-dimentional Intersection over Union which can, also, be named as spatiotemporal IoU, can be defined by 2 ways:
 % categories: whether the $3^{rd}$ dimension is continuous or discrete.
 \begin{description}
 \item[3D boxes are cuboids] In this case, 3D boxes can be written  as $(x,y,z,x',y',z')$. So, the IoU overlap between 2 boxes, $(x_1,y_1,z_1,x_2,y_2,z_2)$
   and $(x_3,y_3,z_3,x_4,y_4,z_4)$, is defined as:
-\[ \text { Area of overlap } = \lVert(min(x_2,x_4) - max(x_1,x_3),min(y_2,y_4) -  max(y_1,y_3), min(z_2,z_4) -  max(z_1,z_3) ) \rVert \]
-\[ \text { Area of union } = \lVert(max(x_2,x_4) - min(x_1,x_3), max(y_2,y_4) - min(y_1,y_3), max(z_2,z_4) - min(z_1,z_3)  \]
+\[ \text { Volume of overlap } = \lVert(min(x_2,x_4) - max(x_1,x_3),min(y_2,y_4) -  max(y_1,y_3), min(z_2,z_4) -  max(z_1,z_3) ) \rVert \]
+\[ \text { Volume of union } = \lVert(max(x_2,x_4) - min(x_1,x_3), max(y_2,y_4) - min(y_1,y_3), max(z_2,z_4) - min(z_1,z_3)  \]
 
 \item[x-y are continuous and z discrete] In this case 3D boxes is defined as a sequence of 2D boxes $(x,y,x',y')$. For this definition, z-dimension is
   discrete, and IoU can be defined with 2 ways, which both result in the same overlapping score. Let's cosider 2 sequences of boxes, with temporal limits
@@ -500,13 +504,13 @@ that reason, we use mAP metric
 In our case, we use the metrics presented in \cite{DBLP:journals/corr/GkioxariM14} in
 order to quantify our results:
 \begin{description}
-\item[ frame-AP ] measures the area under the precision-recallcurve of the detections for each frame (similar to the PASCAL  VOC  detection  challenge  \cite{Everingham10}).   A  detection is correct
-  if the intersection-over-union with theground truth at that frame is greater than and the ac-tion label is correctly predicted.
+% \item[ frame-AP ] measures the area under the precision-recallcurve of the detections for each frame (similar to the PASCAL  VOC  detection  challenge  \cite{Everingham10}).   A  detection is correct
+%   if the intersection-over-union with theground truth at that frame is greater than and the ac-tion label is correctly predicted.
 \item [ video-AP ] measures the area under the precision-recallcurve of the action tubes predictions. A tube is correctif the mean per frame intersection-over-union with theground truth across the
   frames of the video is greaterthan and the action label is correctly predicted.
-\item [ AUC ] measures the area under the ROC curve, a metricpreviously used on this task.  An action tube is correctunder the same conditions as invideo-AP. Following
-  \cite{Tian:2013:SDP:2514950.2515975} , the ROC curve is plotted until a false positive rateof 0.6, while keeping the top-3 detections per class andper video. Consequently,
-  the best possible AUC scoreis 60\%.
+% \item [ AUC ] measures the area under the ROC curve, a metricpreviously used on this task.  An action tube is correctunder the same conditions as invideo-AP. Following
+%   \cite{Tian:2013:SDP:2514950.2515975} , the ROC curve is plotted until a false positive rateof 0.6, while keeping the top-3 detections per class andper video. Consequently,
+%   the best possible AUC scoreis 60\%.
 \end{description}
 
 \subsection{MABO}
@@ -522,4 +526,4 @@ known objects there was at least 1 proposal that satified the detection criterio
 \end{figure}
 
 
-\end{document}
+% \end{document}

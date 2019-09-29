@@ -8,10 +8,9 @@
 \usepackage{mathrsfs}  % package for math font
 \usepackage{indentfirst} % package for getting ident after section or paragraph
 \usepackage[export]{adjustbox}
-% \usepackage{amsmath}
-
-% \usepackage{array}   % for tables
-\usepackage{tabu}   % for tables 
+\usepackage{multirow}  % package for tables, multir
+\usepackage{amssymb}
+% \usepackage{tabu}   % for tables 
 \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
 \graphicspath{ {./theory/figures/} }       % path for images
@@ -96,11 +95,12 @@ no fixed time duration. This will help us deal with untrimmed videos, because pr
 For this approach, we use \textbf{n=4k=60} anchors for each pixel in the feature map of TPN. We have k anchors for each sample
 duration( 5 scales of 1, 2, 4, 8, 16, 3 aspect ratios of 1:1, 1:2, 2:1 and 4 durations of 16,12,8,4 frames).
 In \cite{DBLP:journals/corr/HouCS17},  network's anchors are defined according to the dataset most common anchors. This, however,
-creates the need to redesign the network for each dataset. We use the same anchors for both datasets, trying to generalize our
-approach.
+creates the need to redesign the network for each dataset. In our approach, we use the same anchors for both datasets, because we want our network not
+to be dataset-specific but to be able to generalize for several datasets. As sample duration, we chose 16 frames per video segment because
+our pre-trained ResNet is trained for video clips with that duration.
 So the structure of TPN is:
 \begin{itemize}
-\item 1 3D Convolutional Layer
+\item 1 3D Convolutional Layer with kernel size = 3, stride = 3 and padding = 1
 \item 1 classification layer outputs \textit{2n scores} whether there is an action or not for \textit{n tubes}.
 \item 1 regression layer outputs \textit{6n coordinates} ($x_1,y_1,t_1,x_2,y_2,t_2$) for \textit{n tubes}.
 \end{itemize}
@@ -113,6 +113,7 @@ which is shown in figure \ref{fig:tpn_1_1}
   \label{fig:tpn_1_1}
 \end{figure}
 
+The output of TPN is the k-best scoring cuboid, in which it is likely to contain an action.
 % \subsection{Preparing Data for training}
 
 
@@ -147,8 +148,9 @@ for each frame.
 \end{figure}
 
 For training procedure, for each video, we randomly select a part of it which has duration 16 frames. For each video, we train TPN in
-order to score all the anchors using IoU criterion (which is explained in next paragraph) and we use Cross Entropy Loss as a loss function.
-For regression, we use smooth-L1 loss. For regression targets, we use the same implementation as Faster R-CNN does, but for 3 domains again.
+order to score all the anchors using IoU criterion (as explained in chapter 2 when 3D boxes are cubboids) and we use Cross Entropy Loss as a loss function.
+For regression, we use smooth-L1 loss. For regression targets, we use pytorch FasterRCNN implementation (\cite{jjfaster2rcnn}) for bounding box regression.
+We modified the code in order to extend it for 3 dimensions. \textbf{TODO more details}
 So we have:
 \[ \begin{matrix}
     t_x = (x-x_a)/w_a, & t_y = (y-y_a)/h_a, & t_z= (z-z_a)/d_a, \\
@@ -161,100 +163,60 @@ So we have:
 where \textit{x, y, z, w, h, d} denote the 3D box's center coordinates and its widht, height and duration. Variables $x, x_a, \text{ and } x^*$
 are for the predicted box, anchor box, and groundthruth box respectively (likewise for \textit{y, z, w, h, d}). \par
 
-\paragraph{Modified Intersection over Union(mIoU)}
+\textbf{TODO Training Loss formula}
+
+\subsection{Validation}
+
+Validation procedure is a bit similar to training procedure.
+We randomly select 16 frames from a validation video and we examine if there is at least 1 proposed TOI
+which overlaps $\ge$ 0.5 with each groundtruth action tube and we get recall score. 
+In order to get good proposals, after TPN we use Non-Maximum Suppresion (NMS) algorith. We set NMS threshold equal with 0.7, so we reject
+thems with overlapping score > 0.7 .
+
+\subsection{Modified Intersection over Union(mIoU) TODO check again} 
 During training, we get numerous anchors. We have to classify them as foreground anchors or
-background anchors. Foreground anchors are those which contain some action. We need a criterion
-for evaluating them if we know the groundtruth tubes. We can see an extend of Intersection over Union
-criterion, which is used in Object Detection algorithms. So, we will consider as foreground those which
-have Intersection Over Union $\ge$ 0.5 . \\
-One first approach would be to consider instead of areas, the volume of 2 candidate tubes. So IoU would be:
-\[ IoU = \frac{\text{ Volume of Overlap} }{\text{Volume of Union}} \]
-Intuitively, the above criterion is good for evaluating 2 tubes if they overlap but it has one big drawback:
+background anchors. Foreground anchors are those which contain some action, and, respectively, background
+don't. As presented before, IoU for cuboids calculates the ratio between volume of overlap and volume of
+union.
+Intuitively, this criterion is good for evaluating 2 tubes if they overlap but it has one big drawback:
 it considers x-y dimesions to have same importance with time dimension, which we do not desire. That's becase
 firstly we care to be accurate in time dimension, and then we can fix x-y domain.
 As a result, we change the way we calculate the Intesection Over Union. We calculate seperately
 the IoU in x-y domain (IoU-xy) and in t-domain (IoU-t). Finally, we multiply them in order to get the final IoU.
 So the formula for 2 tubes ($x_1, y_1, t_1, x_2, y_2, t_2$) and ($x'_1, y'_1, t'_1, x'_2, y'_2, t'_2$) is:
-\[ IoU_{xy} = \frac{ \text{Area of Overlap in x-y}} { \text{Area of Union in x-y}} \]
+\[ IoU_{xy} = \frac{ \text{Area of Overlap in x-y}} { \text{Area of Union in x-y}}  \]
 \[ IoU_t = \frac { max(t_1, t'_1) - min(t_2, t'_2)} {min(t_1,t'_1) - max(t_2,t'_2)} \]
 \[ IoU = IoU_{xy} \cdot  IoU_t \]
 The above criterion help us balance the impact of time domain in IoU. For example, let us consider 2 anchors:
 a = (22, 41, 1, 34, 70, 5) and b = (20, 45, 2, 32, 72, 5). These 2 anchors in x-y domain have IoU score equal to 0.61.
 But they are not exactly overlaped in time dim. Using the first approach we get 0.5057 IoU score and using the
 second approach we get 0.4889. So, the second criterion would reject this anchor, because there is a difference in time
-duration. 
-% On top of that, we can add a $\lambda$ factor in order to balance better the ratio between time and x-y domains. So this
-% formula is written as:
-% \[ IoU = \lambda \cdot IoU_{xy} \cdot  IoU_t \]
+duration.  \par
 
+In order to verify our idea, we train TPN using both IoU and mIoU criterion for tube-overlapping. At Table \ref{table:iou_miou}
+we can see the performance in each case for both datasets, JHMDB and UCF. Recall threshold for this case is 0.5 and during validation,
+we use regular IoU for defining if 2 tubes overlap.
+\begin{table}[h]
+\centering
+  \begin{tabular}{|| c | c | c ||}
+    \hline
+    \textbf{Dataset} & \textbf{Criterion} & \textbf{Recall(0.5)} \\
+    \hline  \hline
+    \multirow{2}{4em}{JHMDB} & IoU & TODO \\
+    \cline{2-3}
+    {} & mIoU & TODO \\
+    \hline
+    \multirow{2}{4em}{UCF} & IoU & TODO \\
+    \cline{2-3}
+    {} & mIoU & TODO \\
+    \hline      
+  \end{tabular}
+  \caption{Recall results for both datasets using IoU and mIoU metrics}
+  \label{table:iou_miou}
+\end{table}
 
-\par
-
-% \begin{itemize}
-% \item 1 3D Convolutional Layer
-% \item 2 classification layers
-%   \begin{itemize}
-%   \item 1 classification layer outputs \textit{2n scores} whether there is an action or not for \textit{n tubes}.
-%   \item 1 classification layer outputs \textit{2k scores} whether there is an action or not for \textit{k tubes}.
-%   \end{itemize}
-% \item 2 regression layers
-%   \begin{itemize}
-%   \item 1 regression layer outputs \textit{6n coordinates} ($x_1,y_1,t_1,x_2,y_2,t_2$) for \textit{n tubes}.
-%   \item 1 regression layer outputs \textit{6k coordinates} ($x_1,y_1,t_1,x_2,y_2,t_2$) for \textit{k tubes}.
-%   \end{itemize}
-% \end{itemize}
-
-%% TODO add picture of structure
-
-\subsection{Adding regressor}
-The output of TPN is $\alpha$-highest scoring anchors moved according to their regression prediction. After that, we have to translate the anchor into tubes.
-In order to do so, we add a regressor system which gets as input TOIs' feature maps and returns a sequence of 2D boxes, each for every frame.
-The only problem is that the regressor needs a fixed input size of featuremaps. This problem is already solven by R-CNNs which use roi pooling and roi align
-in order to get fixed size feature maps from ROIs with changing sizes. In our situation, we extend roi align operation, presented by Mask R-CNN, and we
-call it \textbf{3D Roi Align}.
-
-\paragraph{3D Roi Align}
-3D Roi align is a modification of roi align presented by Mask R-CNN (\cite{DBLP:journals/corr/HeGDG17})o. The main difference between those two is that Mask R-CNN's roi align uses
-bilinear interpolation for extracting ROI's features and ours 3D roi align uses trilinear interpolation for the same reason. Again, the 3rd dimension is
-time.
-So, we have as input a feature map extracted from ResNet34 with dimensions (64,16,28,28) and a tensor containing the proposed TOIs.
-For each TOI, we get as output a feature map with size (64, 16, 7, 7). \par
-On top of that, for each proposed TOI we give its feature map as input to a regressor. This regressor, returns 16 $\cdot$ 4 predicted translations, 4 for each frame.
-We keep only the predicted translations, for the frames that are $\ge t_1$ and $< t_2$. 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.5]{regressor_1_3d}
-  \caption{Structure of Regressor}
-  \label{fig:regressor_3d}
-\end{figure}
-
-Finally, for the frames, contained by the anchors, we set a 2D box ($x_1,y_1,x_2,y_2$) where $x_1, y_1, x_2, y_2$ are the reggressed values from the anchor,
-and the frames which are not contained, we set a zero-ed 2D box. The previous regressor is also trainable. It is consisted of 1 2D convolutional layer followed by a
-Relu function and another Linear Layer as shown in figure \ref{fig:regressor_3d}. After getting proposed TOIs from TPN, we pick, randomly, 16 tubes which will be input in the regressor.
-Finally, we find the traslation for each rois and, again, we use smooth-L1 loss for loss function.\par
-
-\subsection{Validation}
-
-Validation procedure is a bit similar to training procedure.
-We randomly select 16 frames from a validation video and we examine if there is at least 1 proposed TOI
-which overlaps $\ge$ 0.5 with the groundtruth tubes. If there is, we consider this tube as True Positive (TP) else as False Negative (FN).
-
-After we run one epochfor the whole validation dataset we calculate the \textbf{recall} metric which is:
-\[ recall = \frac{\text{TP}} {\textbf{TP + FN}} \]
-
-In order to count overlaps we use 2 kinds of Iou metrics.
-\begin{enumerate}
-\item 3D IoU which was mentioned before, which counts tubes' Volumes' Intersection of Union (without the modification we made during training).
-\item the mean ROIs'  IoU for each frame.
-\end{enumerate}
-Respectively, we calculate 2 kinds of recall. The first one tells as how good were our proposed TOIs. The second one tells us how many tubes,
-we managed to detect during our proposals. \textbf{We count another one recall, which tells us how many from the good Proposed TOIs
-   managed to correspond to an actual tube. In other words, this metric shows us the performance of the regressor.}
-
-  
-\paragraph{}
-In order to get good proposal, after TPN we use Non-Maximum Suppresion (NMS) algorith. This algoriths removes at the proposed TOIs which have overlap > 0.7 with the
-high-scoring proposed TOIs. As we can see in table {}, we get better recall scores when using NMS algorithm.
+Table \ref{table:iou_miou} shows that modified-IoU give us slightly better recall performance, so that's the overlapping scoring policy
+for now on, during Training mode.
 
 \subsection{Improving TPN score}
 After first test, we came with the idea that in a video lasting 16 frames, in time domain, all kind of actions can be seperated in the following categories:
@@ -277,27 +239,168 @@ steady.
 
 Training and Validation procedures remain the same. The only big difference is that now we have from 2 difference system proposed TOIs. So, we first concate
 them and, then, we follow the same procedure. For training loss, we have 2 different cross-entropy losses and 2 different smooth-L1 losses, each for every
-layer correspondly. The regressor does not change at all.
+layer correspondly. \\
 
-\subsection{Changing Regressor}
-As the above results show, when we translate a TOI into a sequence of ROIs, recall reduces about 20-30\%. As a result, we should find a solution, in order to
-deal with this proble.
-\paragraph{From 3D to 2d}
-The first idea we thought, was to change the first Convolutional layer from 3D to 2D. This means that we consider  features  not to have temporal dependencies for
-each frame. As we can see in the figure \ref{}, we got worse results, so, we rejected this idea.
-\paragraph{Remove time-mean layer}
-The second idea was to remove the mean layer in time dimension. This means that, the input of the first linear layer after the 3D convolutional layer gets as
-input all the features outputed from 3D convolution. 
-\paragraph{Use max pooling instead of mean layer}
+\textbf{TODO Training Loss formula}
+
+\paragraph {2 approaches}
+
+\textbf{Kernel vs mean}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{||c | c | c | c ||}
+    \hline
+    \textbf{Dataset} & \textbf{Fix-time anchors} & \textbf{Type} & \textbf{Recall(0.5)} \\
+    \hline  \hline
+    \multirow{3}{4em}{JHMDB} & No &  - & TODO \\
+    \cline{2-4}
+    {} & \multirow{2}{*}{Yes} & Kernel & TODO \\
+    \cline{3-4}
+    {} & {} & Mean & TODO \\
+    \hline
+    \multirow{3}{4em}{UCF} & No & - & TODO \\
+    \cline{2-4}
+    {} & \multirow{2}{*}{Yes} & Kernel & TODO \\
+    \cline{3-4}
+    {} & {} & Mean & TODO \\
+    \hline      
+  \end{tabular}
+  \caption{Recall results after adding fixed time duration anchors}
+  \label{table:add_16}
+\end{table}
+
+AS we can see from the previous results, the new layers increased recall performance significantly.
+
+\subsection{Adding regressor}
+The output of TPN is $\alpha$-highest scoring anchors moved according to their regression prediction. After that, we have to translate the anchor into tubes.
+In order to do so, we add a regressor system which gets as input TOIs' feature maps and returns a sequence of 2D boxes, each for every frame.
+The only problem is that the regressor needs a fixed input size of featuremaps. This problem is already solven by R-CNNs which use roi pooling and roi align
+in order to get fixed size feature maps from ROIs with changing sizes. In our situation, we extend roi align operation, presented by Mask R-CNN, and we
+call it \textbf{3D Roi Align}.
+
+\paragraph{3D Roi Align}
+3D Roi align is a modification of roi align presented by Mask R-CNN (\cite{DBLP:journals/corr/HeGDG17}). The main difference between those two is that Mask R-CNN's roi align uses
+bilinear interpolation for extracting ROI's features and ours 3D roi align uses trilinear interpolation for the same reason. Again, the 3rd dimension is
+time.
+So, we have as input a feature map extracted from ResNet34 with dimensions (64,16,28,28) and a tensor containing the proposed TOIs.
+For each TOI whose actiovation map whose size is (64,16,7,7), we get as output a feature map with size (64, 16, 7, 7). \par
+\subsubsection{Regression procedure}
+At first, for each proposed ToI, we get its corresponding activation maps using 3D Roi Align. These features are given as input to a regressor. This regressor returns 16 $\cdot$ 4 predicted
+transforms $(\delta_x,\delta_y, \delta_w,\delta_h)$, 4 for each frame, where $ \delta_x, \delta_y$ specify the coordinates of proposal's center and $\delta_w, \delta_h$ its width and height, as specified
+in \cite{DBLP:journals/corr/GirshickDDM13}.  We keep only the predicted translations, for the frames that are $\ge t_1$ and $< t_2$ and for the other frames, we set a zero-ed 2D box. 
+After that, we modify each anchor from a cuboid written like $(x_1,y_1,t_1, x_2, y_2, t_2)$ to a sequence of 2D boxes, like: \\
+$(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ..., x_{T_2},y_{T_2},x'_{T_2},y'_{T_2}, 0,0,0,0, ....)$, where
+\begin{itemize}
+\item $ T_1 \le i \le T_2$, for $T_1 < t_1 + 1,  T_2 < t_2 \text{ and }T_1,T_2 \in \mathbb{Z} $
+\item $ x_i = x_1, y_i= y_1, x'_i = x_2, y'_i = y_2 $.
+\end{itemize}
+
+\paragraph{ Training}
+mIou, 16mean
+After getting proposed TOIs from TPN, we pick, randomly, 16 tubes which will be input in the regressor.
+Finally, we find the traslation for each rois and, again, we use smooth-L1 loss for loss function.\par
+
+\textbf{TODO Training Loss formula}
+
+\subsubsection{First regression Network} \textbf{Na pw gia to normalize kai to pooling kernel}\par
+The architecture of reggression network is show in Figure \ref{fig:regressor_3d}, and it is described below:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.48]{regressor_1_1}
+  \caption{Structure of Regressor}
+  \label{fig:regressor_3d}
+\end{figure}
+
+\begin{enumerate}
+\item Regressor is consisted, at first, with a 3D convolutional layer with kernel = 1, stride = 1 and no padding. This layer gets as input ToI's activation map extracted by 3D Roi Align.
+\item After that, we calculate the average value in time domain, so from a feature map with dimensions (64,16,7,7), we get as output a feature map (64,7,7).
+\item These feature maps are given as input to a Linear layer followerd by a Relu Layer, a Dropout Layer, another Linear Layer and Relu Layer and a final Linear.
+\end{enumerate}
+
+\textbf{NA DW TA FEATURE MAPS POIA XRISIMOPOIISA}
+\begin{table}[h]
+  \centering
+  \begin{tabular} {||c | c | c ||}
+    \hline
+    \textbf{Dataset} & \textbf{Pooling} & Recall \\
+    \hline                
+    \multirow{2}{*}{JHMDB} & avg & TODO \\
+    \cline{2-3}
+    {} & mean & TODO \\
+    \cline{1-3}
+    \multirow{2}{*}{UCF} & avg & TODO \\
+    \cline{2-3}
+    {} & mean & TODO \\
+    \cline{1-3}
+                                   
+  \end{tabular}
+  \caption{}
+  \label{table:reg_1_1}
+\end{table}
+
+\textbf{TODO sxoliasmos apotelesmatwn}
+As the above results show, when we translate a TOI into a sequence of ROIs, recall reduces about 20-30\%, which is a big problem. 
+ % As a result, we should find a solution, in order to
+\subsection{Changing Regressor - from 3D to 2d}
+After getting first recall results, we experiment using another architecture for the regressor network. Instead of having a 3D Convolutional
+Layer, we will use a 2D Convolutional Layer in order to treat the whole time dimension as one during convolution operation. So, as shown in Figure \ref{fig:reg_1_2},
+the $2^{nd}$ Regression Network is about the same with first one, with 2 big differences:
+\begin{enumerate}
+\item We performing a pooling operation at the feature maps extracted by 3D Roi Align operation
+\item Instead of a 3D Convolutional Layer, we have a 2D Convolutional Layer with kernel size = 1, stride = 1 and no padding.
+\end{enumerate}
+
+\begin{figure}[h]
+
+  \centering
+  \includegraphics[scale=0.48]{regressor_1_2}
+  \caption{Structure of Regressor}
+  \label{fig:regressor_2d}
+\end{figure}
+
+On top of that, we tried to determine which feature map is the most suitable  for getting best-scorig recall performance. This feature map will be given as
+input to Roi Algin operation.  At Table \ref{table:reg_1_2}, we can see the recall performance for different feature maps and different pooling methods.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{||c | c | c || c||}
+    \textbf{Dataset} & \textbf{Pooling} & \textbf{Feature Map} & \textbf{Recall (0.5)} \\
+    \hline
+    \multirow{6}{*}{JHMDB} & \multirow{3}{*}{mean} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \cline{2-4}
+    {} & \multirow{3}{*}{max} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \hline
+    \multirow{6}{*}{UCF} & \multirow{3}{*}{mean} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \cline{2-4}
+    {} & \multirow{3}{*}{max} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \hline
 
 
-\par
-As we noticed from the above figures, our system has difficulty in translating 3D boxes into 2D sequence of ROIs. So, that makes us rethink the way we designed
+  \end{tabular}
+  \caption{}
+  \label{table:reg_1_2}
+\end{table}
+
+\textbf{TODO add more comment}
+As we noticed from the above results, our system has difficulty in translating 3D boxes into 2D sequence of ROIs. So, that makes us rethink the way we designed
 our TPN.
-\subsection{Changing training procedure}
-Until now, we trained TPN and regressor together, using one total loss, which was the sum of all the sublosses. Now we use a new approach.
-At first, we  train TPN for 40 epochs. Then, we freeze TPN and we train the regressor for 20 epochs.
-
 
 \section{ 3D anchors as 4k-dim vector}
 In this approach, we set 3D anchors as 4k coordinates (k = 16 frames = sample duration). So a typical anchor is written as ($x_1, y_1, x'_1, y'_1, x_2, y_2, ...$)
@@ -320,6 +423,7 @@ duration is 4 frames.
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.\textwidth]{tpn_2}
+  % \includegraphics[scale=0.35]{tpn_2}
   \caption{The structure of TPN according to new approach}
   \label{fig:New_structure}
 \end{figure}
@@ -342,18 +446,107 @@ In following figures we can see recall performance for sample duration = 16 when
 % \end{center}
 From the above results, we can see that using max pooling achieves better results.
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{||c | c | c | c ||}
+    \hline
+    \textbf{Dataset} & \textbf{Pooling} &  \textbf{Recall(0.5)} \\
+    \hline  \hline
+    \multirow{2}{4em}{JHMDB} & mean &  TODO \\
+    \cline{2-3}
+    {} & max & TODO \\
+    \hline
+    \multirow{2}{4em}{UCF} & mean &  TODO \\
+    \cline{2-3}
+    {} & max & TODO \\
+    \hline
+  \end{tabular}
+  \caption{Recall results after adding fixed time duration anchors}
+  \label{table:tpn_2_1}
+\end{table}
+
 \subsection{Adding regressor}
 In full correspondance with the previous approach, we added an regressor for trying to find better results. We 
-TODO
-\subsection{Trying to  improve performance}
-TODO
-\subsection{Changing training procedure}
-TODO
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{||c | c | c || c||}
+    \textbf{Dataset} & \textbf{Pooling} & \textbf{Feature Map} & \textbf{Recall (0.5)} \\
+    \hline
+    \multirow{6}{*}{JHMDB} & \multirow{3}{*}{mean} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \cline{2-4}
+    {} & \multirow{3}{*}{max} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \hline
+    \multirow{6}{*}{UCF} & \multirow{3}{*}{mean} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \cline{2-4}
+    {} & \multirow{3}{*}{max} & 64 & TODO \\
+    \cline{3-4}
+    {} & {} & 128 & TODO \\
+    \cline{3-4}
+    {} & {} & 256 & TODO \\
+    \hline
+
+
+  \end{tabular}
+  \caption{}
+  \label{table:reg_2_1}
+\end{table}
+
+% \subsection{Changing Regressor - from 3D to 2d}
+% After getting first recall results, we experiment using another architecture for the regressor network. Our idea was that we can treat feature maps like not having
+% temporal dependencies between their frames. So, at first, we get from Roi Align operation activation maps with dimensions \textit{(k,64,16,7,7)} where k is the number
+% of ToIs proposed for this video segment. We reshape this feature map to \textit{ (k*16,64,7,7) }, and in same time, we reshape their proposed action tubes from \textit{(k,16,4)}
+% to \textit{(k*16,4)}. So, the new regression Network is consisted with:
+% % \begin{enumerate}
+% % \item a 2D Convolutional Network
+% \paragraph{From 3D to 2d}
+% The first idea we thought, was to change the first Convolutional layer from 3D to 2D. This means that we consider  features  not to have temporal dependencies for
+% each frame. As we can see in the figure \ref{}, we got worse results, so, we rejected this idea.
+
+% \subsection{Trying to  improve performance}
+% TODO
+% \subsection{Changing training procedure}
+% TODO
 \subsection{Changing sample duration}
 After trying all the previous version, we noticed that we get about the same recall performances. So, we thought that we could try
 to reduce the sample duration. On top of that, we trained our network for sample duration = 8 and 4 frames.
 
-.......................
+\begin{table}
+  \centering
+  \begin{tabular}{|c | c| c|}
+    \hline
+    \textbf{Dataset} & \textbf{Sample dur} & \textbf{Recall} \\
+    \hline
+    \multirow{2}{*}{JHMDB} & 8 & TODO \\
+    \cline{2-3}
+    {} & 4 & TODO \\
+    \hline
+    \multirow{2}{*}{UCF} & 8 & TODO \\
+    \cline{2-3}
+    {} & 4 & TODO \\
+    \hline
+    
+  \end{tabular}
+  \caption{}
+  \label{table:reg_2_sample}
+\end{table}
+                                             
+                                             
+    
+
+    
 
 
 \end{document}

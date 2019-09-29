@@ -22,12 +22,11 @@
 \section{Description}
 After getting all proposed tubes, it's time to do classification. As classifiers we use several approaches includingn
 a Recursive Neural Network (RNN) Classifier, a Support Vector Machine (SVM) Classifier and a Multilayer perceptron (MLP).
-\textbf{Pending Change the sxima...}
-\\
+
 \begin{figure}[h]
   % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
   \centering
-  \includegraphics[scale=0.7]{model}
+  \includegraphics[scale=0.42]{model_prenms}
   \caption{Structure of the whole network}
   \label{fig:whole_network}
 \end{figure}
@@ -35,22 +34,22 @@ a Recursive Neural Network (RNN) Classifier, a Support Vector Machine (SVM) Clas
 The whole procedure of classification is consisted from the following steps:
 \begin{enumerate}
 \item Seperate video into small video clips. Feed TPN network those video clips and get as output
-  150 ToIs and their corresponding features for each video clip.
+  k-proposed ToIs and their corresponding features for each video clip.
 \item Connect the proposed ToIs in order to get video tubes which may contain an action.
 \item For each candidate video tube, which is a sequence of ToIs, feed it into the classifier
   for verification.
 \end{enumerate}
 
-The general structure of the whole network is depicted in figure \ref{fig:whole_network}, in which blue arrows show that
-features go straight up to the classifier. \textbf{(Pending... Change that)} \par
+The general structure of the whole network is depicted in figure \ref{fig:whole_network}, in which we can see the previous steps if we
+follow the arrows.  \par
 In first steps of classification stage we refer only to JHMDB dataset because it has smaller number of video than UCF dataset which
 helped us save a lot of time and resources. That's because  we performed most experiments only JHMDB and after we found the optimal
 situation, we implemented to UCF-dataset, too. 
 
-\section{Preparing data for classification - Linear and RNN Classifiers}
+\section{Preparing data for classification -  RNN Classifier}
 
-\textbf{(Pending... Introduction about Linear and RNN classifiers)}
-\textbf{(Pending.. also an image of Linear classifier)}
+% \textbf{(Pending... Introduction about Linear and RNN classifiers)}
+\textbf{(Pending.. also an image of RNN classifier)}
 
 In order to train our classifier, we have to execute the previous steps for each video. However, each video
 has different number of frames and reserves too much memory in the GPU. In order to deal with this situation,
@@ -121,11 +120,81 @@ we have only 1 action per video.
 
    before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
  \hline   \hline
- \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  3.16 & 4.20 & 4.40    \\
+ \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  3.16 & 4.2 & 4.4    \\
   \cline{4-7}
-  {} & {} & {} & 2 &  2.29 & 2.68 & 2.86    \\
+  {} & {} & {} & 2 & 2.29 & 2.68 & 2.86    \\
     \cline{4-7}
-  {} & {} & {} & 3 & 0.96 & 2.11 & 2.9     \\
+  {} & {} & {} & 3 & 1.04 & 1.04 & 1.04    \\
+    \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO    \\
+    \cline{4-7}
+  {} & {} & {} & 5 & TODO & TODO & TODO    \\
+  \hline
+ \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 & TODO & TODO & TODO \\
+    \cline{4-7}
+  {} & {} & {} & 2 & TODO & TODO & TODO    \\
+    \cline{4-7}
+  {} & {} & {} & 3 & TODO & TODO & TODO    \\
+    \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO    \\
+    \cline{4-7}
+  {} & {} & {} & 5 & TODO & TODO & TODO     \\
+
+  \hline   \hline
+
+ \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  11.41 & 11.73 & 11.73 \\
+
+    \cline{4-7}
+  {} & {} & {} & 2 & 10.35 & 10.92 &11.89 \\
+    \cline{4-7}
+  {} & {} & {} & 3 & 8.93 9.64 9.94 \\
+    \cline{4-7}
+  {} & {} & {} & 4 & TODO & TODO & TODO \\
+    \cline{4-7}
+  {} & {} & {} & 5 & 5.92 & 6.92 & 7.79 \\
+    \hline
+ \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{max}  & 1  & 22.07 & 24.4 & 25.77  \\
+    \cline{4-7}
+  {} & {} & {} & 2  & 14.07 & 16.56 & 17.74 \\
+    \cline{4-7}
+  {} & {} & {} & 3  & 14.22 & 18.94 &21.6 \\
+    \cline{4-7}
+  {} & {} & {} & 4  & 21.05 & 24.63 & 25.93 \\
+    \cline{4-7}
+  {} & {} & {} & 5  & 11.6 & 13.92 & 15.81 \\
+  \hline   
+  
+  \caption{Our architecture's performance using 5 different policies and 2 different feature maps while pooling in
+  tubes' dimension. With bold is the best scoring case}
+  \label{table:svm_first_results}
+
+\end{longtable} 
+\end{center}
+
+\subsection{Modifying 3D Roi Align}
+As we mentioned before, we extract from each tube its activation maps using 3D Roi Align procedure and we set equal to zero the pixels outside
+of bounding boxes for each frame. We came with the idea that the enviroment surrounding the actor sometimes help us determine the class
+of the action which is performed. This is base in the idea that 3D Convolutional Networks use the whole scene in order to classify the action
+that is performed. We thought to extend a little each bounding box both in width and height. So, during Roi Align procedure, after resizing
+the bounding box into the desired spatial scale  ( in our case 1/16 because original sample size = 112 and resized sample size = 7 )
+we increase by 1 both width and height. According to that if we have a resized bounding box $( x_1,y_1,x_2,y_2) $ our new bounding box becomes
+$ (max(0,x_1-0.5),max(0,y_1-0.5),min(7,x_2+0.5),min(7,y_2+0.5)) $ ( we use \textit{ min} and \textit{max} functions in order to avoid exceeding feature maps' limits).
+We just experiment in policies 1 and 4 for both (256,8,7,7) and (64,8,7,7) feature maps as show in  Table \ref{table:svm_mod_roialign}
+
+
+\begin{center}
+\begin{longtable}{||c | c | c| c||c c c||}
+
+  \hline
+  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+   before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
+ \hline   \hline
+ \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO  \\
+  \cline{4-7}
+  {} & {} & {} & 2 & TODO & TODO & TODO \\
+    \cline{4-7}
+  {} & {} & {} & 3 & 0.96 & 2.11 & 2.9   \\
     \cline{4-7}
   {} & {} & {} & 4 &  2.4  & 4.53 & 5.16    \\
     \cline{4-7}
@@ -165,9 +234,9 @@ we have only 1 action per video.
   {} & {} & {} & 5  & 10.41 & 10.46 & 11.29   \\
   \hline   
   
-  \caption{Our architecture's performance using 5 different policies and 2 different feature maps while pooling in
-  tubes' dimension. With bold is the best scoring case}
-  \label{table:svm_first_results}
+  \caption{Our architecture's performance using 5 different policies and 2 different feature maps extracted using modified Roi Align.}
+  \label{table:svm_mod_roialign}
+
 \end{longtable} 
 \end{center}
 
@@ -216,29 +285,6 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
   \cline{4-7}
   {} & {} & {} & 5 & TODO & TODO & TODO \\
   \hline
-  % \hline   \hline
-  % \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO \\
-  % \cline{4-7}
-  % {} & {} & {} & 2 & TODO & TODO & TODO \\
-  % \cline{4-7}
-  % {} & {} & {} & 3 & TODO & TODO & TODO \\
-  % \cline{4-7}
-  % {} & {} & {} & 4 & TODO & TODO & TODO \\
-  % \cline{4-7}
-  % {} & {} & {} & 5 & TODO & TODO & TODO \\
-  % \hline   
-
-  % \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,7,7} & \multirow{5}{*}{max}  & 1 & TODO & TODO & TODO \\
-  % \cline{4-7}
-  % {} & {} & {} & 2 & TODO & TODO & TODO \\
-  % \cline{4-7}
-  % {} & {} & {} & 3 & 3.83 & 4.86 & 5.4   \\
-  % \cline{4-7}
-  % {} & {} & {} & 4 & 3.21 & 4.01 & 4.01   \\
-  % \cline{4-7}
-  % {} & {} & {} & 5 & 3.27 & 5.29 & 5.82   \\
-  % \hline   
-
 
   \caption{mAP results for second approach using temporal pooling }
   \label{table:svm_temp_pooling}
@@ -256,31 +302,32 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
   before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
   \hline   \hline
 
-  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{1,256,16,7,7} & \multirow{5}{*}{No}  & 1 & TODO & TODO & TODO \\
+  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{1,256,16,7,7} & \multirow{5}{*}{No}  & 1 & 23.4 & 27.57 &28.65  \\
   \cline{4-7}
 
   {} & {} & {} & 2 & TODO & TODO & TODO \\
   \cline{4-7}
   {} & {} & {} & 3 & TODO & TODO & TODO \\
   \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO \\
+  {} & {} & {} & 4 & 22.7 & 26.95 & 28.05 \\
   \cline{4-7}
   {} & {} & {} & 5 & TODO & TODO & TODO \\
   \hline
 
-  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{2,256,16,7,7} & \multirow{5}{*}{Yes}  & 1 & 25.07 & 26.91 & 29.11 \\
+  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{2,256,16,7,7} & \multirow{5}{*}{Yes}  & 1 & 21.12 & 24.07 & 24.36  \\
   \cline{4-7}
 
   {} & {} & {} & 2 & TODO & TODO & TODO \\
   \cline{4-7}
   {} & {} & {} & 3 & TODO & TODO & TODO \\
   \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO \\
+  {} & {} & {} & 4 & 18.36 & 23.09 & 23.75 \\
   \cline{4-7}
+  
   {} & {} & {} & 5 & TODO & TODO & TODO \\
   \hline
   \caption{mAP results for   }
-  \label{table:svm_temp_pooling}
+  \label{table:svm_temp_pooling_16}
 \end{longtable} 
 \end{center}
 
@@ -312,40 +359,6 @@ greater that 0.7 . Also, we increase the total number of tube to 8. Table \ref{t
 \end{longtable} 
 \end{center}
 
-
-\subsection{Modifying 3D Roi Align}
-As we mentioned before, we extract from each tube its activation maps using 3D Roi Align procedure and we set equal to zero the pixels outside
-of bounding boxes for each frame. We came with the idea that the enviroment surrounding the actor sometimes help us determine the class
-of the action which is performed. This is base in the idea that 3D Convolutional Networks use the whole scene in order to classify the action
-that is performed. We thought to extend a little each bounding box both in width and height. So, during Roi Align procedure, after resizing
-the bounding box into the desired spatial scale  ( in our case 1/16 because original sample size = 112 and resized sample size = 7 )
-we increase by 1 both width and height. According to that if we have a resized bounding box $( x_1,y_1,x_2,y_2) $ our new bounding box becomes
-$ (max(0,x_1-0.5),max(0,y_1-0.5),min(7,x_2+0.5),min(7,y_2+0.5)) $ ( we use \textit{ min} and \textit{max} functions in order to avoid exceeding feature maps' limits).
-We just experiment in policies 1 and 4 for both (256,8,7,7) and (64,8,7,7) feature maps as show in  Table \ref{table:svm_mod_roialign}
-
-\begin{center}
-\begin{longtable}{||c | c| c| c||c c c||}
-
-  \hline
- \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
-
-  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
-  \hline   \hline
-
-  \multirow{2}{*}{k,64,8,7,7} & \multirow{2}{*}{2,64,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO   \\
-  \hline   
-  \multirow{2}{*}{k,256,8,7,7} & \multirow{2}{*}{2,256,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO   \\
-  \hline   
-  \caption{mAP results for features extracted with modified 3D RoiAlign }
-  \label{table:svm_mod_roialign}
-
-\end{longtable} 
-\end{center}
-
 \section{MultiLayer Perceptron (MLP)}
 Last but not least approach is a Multilayer perceptorn (MLP). More specifically, we extract the 3 last residulal layers of 3D ResNet34
 and we add a classification layer.  
@@ -356,7 +369,7 @@ We
 \subsection{Regular training}
 
 \section{Classifying dataset UCF}
-As mentioned before, all the above results are from JHMDB dataset. As shown
+As mentioned before, all the above results are from JHMDB dataset. 
 \section{Final Improvements}
 After classification, we relize that a lot of classified tubes overlap and represent the same action. So, we use again NMS algorithm in order
 to remove unnecessary tubes. The new model can be seen in figure \ref{fig:network_nms}.

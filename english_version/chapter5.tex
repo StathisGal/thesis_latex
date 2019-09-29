@@ -383,7 +383,7 @@ tubes. In Table \ref{table:ucf_recall}
   \cline{3-7}
                                     {} &  {}   & \multirow{2}{*}{20000}   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
   \cline{2-2} \cline{4-7} 
-                                    {} &  0.5   & {}   & TODO  & TODO & TODO & TODO \\
+                                    {} &  0.8   & {}   & TODO  & TODO & TODO & TODO \\
 
   \hline                                    
   \multirow{4}{7em}{0,1,...,14,\textbf{\{15,\}}
@@ -391,13 +391,13 @@ tubes. In Table \ref{table:ucf_recall}
   \cline{3-7}
                                     {} &  {}   & \multirow{2}{*}{20000}   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
   \cline{2-2} \cline{4-7} 
-                                    {} &  0.5   & {}   & TODO  & TODO & TODO & TODO \\
+                                    {} &  0.8   & {}   & TODO  & TODO & TODO & TODO \\
 
 
   \hline                                    
 
   \caption{Temporal Recall results for UCF dataset}
-  \label{table:ucf_temp_recall }
+  \label{table:ucf_nms_recall }
 \end{longtable} 
 \end{center}
 
@@ -493,7 +493,9 @@ ToIs, produced by TPN,  to 30 for each video clip. We exploited the fact that JH
 for action tubes starting in the second video clip which saves us a lot of memory. On top of that, we modified our code
 in order to be memory efficient at the most writing some parts in CUDA programming language, saving a lot of processing power, too. \par
 So, after computing all possible combinations starting of the first video clip and ending in the last video clip, we keep only the
-\textbf{k-best scoring tubes (k = 500) }. In the follown table, we can see the recall results for sample durations = 8 and 16. \par
+\textbf{k-best scoring tubes (k = 500) }. We run case for sample duration equal with 8 and 16 frames and we modify the video step each time.
+For sample duration = 8, we return only 15 ToIs and for sample duratio = 16, we return 30 because, if we return more, we get ``out of memory error''.
+In the follown table, we can see the recall results. \par
 
 \begin{center}
 \begin{longtable}{||c c||c c c||}
@@ -504,25 +506,27 @@ So, after computing all possible combinations starting of the first video clip a
   sample dur & step &  0.3 &  0.4 & 0.5 \\
   \hline   \hline
 
-  8 & 6 & 0.7873 & 0.8657 & 0.9366\\
+  8 & 6 & 0.7873 & 0.8657 & 0.9366  \\
   \hline
-  8 & 7 & TODO & TODO & TODO \\
+  8 & 7 & 0.7836 & 0.8731 & 0.9366  \\
   \hline
   8 &  8 & 0.7910 & 0.8806 & 0.9515 \\
   \hline 
 
-  16 & 8  & TODO & TODO & TODO  \\
+  16 & 8  & 0.7873 & 0.8843 & 0.9291 \\
   \hline
-  16 & 12 & TODO & TODO & TODO \\
+  16 & 12 & 0.7948 & 0.8881 & 0.9403 \\
   \hline
-  16 & 16 & 0.7910 & 0.8806 & 0.9478 \\
+  16 & 16 & 0.7985 & 0.8918 & 0.9515 \\
   \hline \hline
   \caption{Recall results for second approach with  }
   \label{table:conn_app3}
 \end{longtable} 
 \end{center}
 
-From the above table, we notice that sample duration = 8 is slightly better that the 16.
+From the above table, firstly, we corfirmed that overlap = sample duration gives us the best recall results. we notice that sample duration = 16 is
+slightly better that the 8. However, using sample 16 increases the memory usage even though it reduces the number of video segments. So for classification stage
+we will experiment using mostly sample duration = 8.
 
 
 \end{document}

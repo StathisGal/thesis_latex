@@ -1,22 +1,22 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage[export]{adjustbox}
-% \usepackage{longtable} % package for multi pages tables
-% \usepackage{multirow}  % package for tables, multirow
-% % \usepackage{amsmath}
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Classification stage}
 \section{Description}
@@ -82,8 +82,25 @@ Then, after extracting those features, we trained both Linear and RNN classifier
 so we used a pooling function in the dimension of the videos. So, at first we had a feature map of 3,512,16 dimensions and then we
 get as output a feature maps of 512,16 dimensions. We used both max and mean pooling as show in the results below. For the RNN
 classifier, we do not use any pooling function before feeding it. For both classifiers, at first, we didn't considered a fixed
-threshold for confidence score.
+threshold for confidence score. 
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|| c || c  c  c ||}
+    \hline
+    \multirow{2}{*}{\textbf{Classifier}} & {} & \textbf{mAP} & {} \\
+    {} & 0.5 & 0.4 & 0.3 \\
+    \hline
+    Linear & TODO & TODO & TODO \\
+    \hline
+    RNN    & 11.3 & 14.14 & 14.84 \\
+    \hline
+  \end{tabular}
+  \caption{}
+  \label{fig:rnn_linear}
+\end{table}
+
+  
 \textbf{(Pending results RNN... Table)}
 \textbf{(Pending results RNN... commentary)}
 % The results are disappointing.
@@ -201,66 +218,31 @@ $ (max(0,x_1-0.5),max(0,y_1-0.5),min(7,x_2+0.5),min(7,y_2+0.5)) $ ( we use \text
 We just experiment in policies 1 and 4 for both (256,8,7,7) and (64,8,7,7) feature maps as show in  Table \ref{table:svm_mod_roialign}
 
 
-% \begin{center}
-% \begin{longtable}{||c | c | c| c||c c c||}
+\begin{center}
+\begin{longtable}{||c | c | c| c||c c c||}
 
-%   \hline
-%   \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+  \hline
+  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
-%    before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
-%  \hline   \hline
-%  \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO  \\
-%   \cline{4-7}
-%   {} & {} & {} & 2 & TODO & TODO & TODO \\
-%     \cline{4-7}
-%   {} & {} & {} & 3 & 0.96 & 2.11 & 2.9   \\
-%     \cline{4-7}
-%   {} & {} & {} & 4 &  2.4  & 4.53 & 5.16    \\
-%     \cline{4-7}
-%   {} & {} & {} & 5 &  0.6  & 0.76 & 0.93    \\
-%   \hline
-%  \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 &  1.07 & 1.85 & 2.26    \\
-%     \cline{4-7}
-%   {} & {} & {} & 2 &  3.2 & 3.39 & 3.66    \\
-%     \cline{4-7}
-%   {} & {} & {} & 3 &  0.86 & 1.98 & 1.98    \\
-%     \cline{4-7}
-%   {} & {} & {} & 4 &  1.24 & 2.68 & 3.09    \\
-%     \cline{4-7}
-%   {} & {} & {} & 5 &  0.21 & 0.27 & 0.32    \\
+   before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
+ \hline   \hline
+ \multirow{2}{*}{(k,64,8,7,7)} & \multirow{2}{*}{(1,64,8,7,7)} & \multirow{2}{*}{mean}  & 1 & 9.75 & 11.92 & 13.34 \\
+  \cline{4-7}
+  {} & {} & {} & 4 &  5.74 &6.62 & 7.59 \\
+  \hline
+ \multirow{2}{*}{(k,64,8,7,7)} & \multirow{2}{*}{(1,64,8,7,7)} & \multirow{2}{*}{max}  & 1 &  6.46 & 10.26 & 10.83 \\
+    \cline{4-7}
+  {} & {} & {} & 4 & 4.19 & 6.27 & 7.52 \\
+    \cline{4-7}
+  \hline
+  \caption{Our architecture's performance using 2 different policies and 2 different pooling methods using modified Roi Align.}
+  \label{table:svm_mod_roialign}
 
-%   \hline   \hline
-
-%  \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  10.62 & 10.94 & 10.94    \\
-
-%     \cline{4-7}
-%   {} & {} & {} & 2 &  9.09  & 10.02 & 10.83   \\
-%     \cline{4-7}
-%   {} & {} & {} & 3 &  9.05  & 9.65  & 9.69    \\
-%     \cline{4-7}
-%   {} & {} & {} & 4 &  11.19 & 11.51 & 11.51   \\
-%     \cline{4-7}
-%   {} & {} & {} & 5 &  4.84  & 6.13  & 6.13   \\
-%     \hline
-%  \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{max}  & 1  & \bf 20.94 & \bf 24.96 & \bf 26.46   \\
-%     \cline{4-7}
-%   {} & {} & {} & 2  & 14.94 & 17.78 & 19.38   \\
-%     \cline{4-7}
-%   {} & {} & {} & 3  & 14.9 & 17.39 & 19.88   \\
-%     \cline{4-7}
-%   {} & {} & {} & 4  & 19.43 & 23.91 & 25.31   \\
-%     \cline{4-7}
-%   {} & {} & {} & 5  & 10.41 & 10.46 & 11.29   \\
-%   \hline   
-  
-%   \caption{Our architecture's performance using 5 different policies and 2 different feature maps extracted using modified Roi Align.}
-%   \label{table:svm_mod_roialign}
-
-% \end{longtable} 
-% \end{center}
+\end{longtable} 
+\end{center}
 
 
-\textbf{Pending table...}
+\textbf{Pending commetary...}
 \\
 
 \subsection{Temporal pooling}
@@ -343,7 +325,59 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
 From above results, we notice that SVM improve a lot the perfomance of our model. In order to futher improve our results, we will
 add more groundtruth action tubes. We consider as groundtruth action tubes all the tubes whose overlap score  with a groundtruth tube is
 greater that 0.7 . Also, we increase the total number of tube to 8. Table \ref{table:svm_increased}
-\\
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|| c | c | c || c c c||}
+    \hline
+    \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{Total tubes}} & \multirow{2}{*}{\textbf{FG tubes}} & {} & \textbf{mAP} & {} \\
+    {}  & {} & {} & 0.5 & 0.4 & 0.3 \\
+    \hline
+    \multirow{4}{*}{(k,256,8,7,7)} & 3 & 1 & 11.3 & 14.14 & 14.84 \\
+    \cline{2-6}
+    {} & 8 & 2 & 0.77 & 1.51 & 2.72 \\
+    \cline{2-6}
+    {} & 16 & 4 & 20.11	& 25.50 & 27.62 \\
+    \cline{2-6}
+    {} & 32 & 8 & Pending... \\
+    \hline
+
+  \end{tabular}
+  \caption{RNN results }
+  \label{table:rnn_increased}
+\end{table}
+  
+temporal pooling kai me max
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|| c | c | c | c || c c c||}
+    \hline
+    \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{T. tubes}} & \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Policy}} & {} & \textbf{mAP} & {} \\
+    {}  & {} & {} & {} & 0.5 & 0.4 & 0.3 \\
+    \hline
+    \multirow{8}{*}{(2,256,8,7,7)} & \multirow{2}{*}{3} & \multirow{2}{*}{1} & 1 & Pending...\\
+    \cline{4-7}
+    {} & {} & {} & 4 & Pending... \\
+    \cline{2-7}
+    {} & \multirow{2}{*}{8} & \multirow{2}{*}{2} & 1 &  Pending... \\
+    \cline{4-7}
+    {} & {} & {} & 4 & Pending... \\
+    \cline{2-7}
+    {} & \multirow{2}{*}{16} & \multirow{2}{*}{4} & 1 &  Pending... \\
+    \cline{4-7}
+    {} & {} & {} & 4 & Pending... \\
+    \cline{2-7}
+    {} & \multirow{2}{*}{32} & \multirow{2}{*}{8} & 1 &  Pending... \\
+    \cline{4-7}
+    {} & {} & {} & 4 & Pending... \\
+
+    \hline
+
+  \end{tabular}
+  \caption{SVM results }
+  \label{table:svm_increased}
+\end{table}
+  
 \textbf{Pending table...}
 % \begin{center}
 % \begin{longtable}{||c | c| c| c||c c c||}
@@ -403,4 +437,4 @@ information but only temporal information extracted by our
 %   \label{fig:network_nms}
 % \end{figure}
 
-% % \end{document}
+\end{document}

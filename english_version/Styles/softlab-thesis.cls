@@ -217,8 +217,12 @@
 \DeclareOption{openbib}{\@openbibtrue}
 \newif\if@chapterbib \@chapterbibfalse
 \DeclareOption{chapterbib}{\@chapterbibtrue}
+% edw vgazw to greek an thelw agglika
+% \ExecuteOptions{a4paper,11pt,twoside,final,openright,%
+%                 bold,nocenter,noupper,greek,contpage}
 \ExecuteOptions{a4paper,11pt,twoside,final,openright,%
                 bold,nocenter,noupper,contpage}
+
 
 \ProcessOptions*
 
@@ -1573,7 +1577,7 @@
 \school{School of Electrical and Computer Engineering}
 \department{Department of Computer Science}
 \ifcase\c@type
-  \or\thesistype{Diploma THesis}
+  \or\thesistype{Diploma Thesis}
   \or\thesistype{M.Sc. Thesis}
      \institution{National and Kapodistrian University of Athens}
      \school{Department of Mathematics}

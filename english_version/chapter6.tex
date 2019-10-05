@@ -1,22 +1,22 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage[export]{adjustbox}
-\usepackage{longtable} % package for multi pages tables
-\usepackage{multirow}  % package for tables, multirow
-% \usepackage{amsmath}
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage[export]{adjustbox}
+% \usepackage{longtable} % package for multi pages tables
+% \usepackage{multirow}  % package for tables, multirow
+% % \usepackage{amsmath}
 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Classification stage}
 \section{Description}
@@ -50,6 +50,21 @@ situation, we implemented to UCF-dataset, too.
 
 % \textbf{(Pending... Introduction about Linear and RNN classifiers)}
 \textbf{(Pending.. also an image of RNN classifier)}
+Recurrent neural networks, or RNNs for short, are a type of neural network that was designed to learn from sequence data,
+such as sequences of observations over time, or a sequence of words in a sentence.
+RNN takes many input vectors to process them and output other vectors.
+It can be roughly pictured like in the Figure \ref{fig:rnn} below,
+imagining each rectangle has a vectorial depth and other special hidden quirks in the image below.
+For our case, we choose \textbf{many to one} approach, because we want only one prediction, at the end of
+the action tube. \par
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.\textwidth]{rnn.jpeg}
+  \caption{Types of RNN}
+  \label{fig:rnn}
+\end{figure}
+
+
 
 In order to train our classifier, we have to execute the previous steps for each video. However, each video
 has different number of frames and reserves too much memory in the GPU. In order to deal with this situation,
@@ -63,19 +78,19 @@ and background rois and chooses 128 roi in total. Respectively, we chose a littl
 video tube in each video. So, for each video we got 3 video tubes in total, 1 for positive and 2 for background. We considered
 background tubes those whose overlap scores with groundtruth tubes are $ \ge 0.1 $ and $ \le 0.3 $. \par
 
-Then, after extracting those features, we trained both linear and RNN classifiers. The Linear classifier needs a fixed input size,
+Then, after extracting those features, we trained both Linear and RNN classifiers. The Linear classifier needs a fixed input size,
 so we used a pooling function in the dimension of the videos. So, at first we had a feature map of 3,512,16 dimensions and then we
 get as output a feature maps of 512,16 dimensions. We used both max and mean pooling as show in the results below. For the RNN
 classifier, we do not use any pooling function before feeding it. For both classifiers, at first, we didn't considered a fixed
 threshold for confidence score.
 
-\textbf{(Pending results in Linear... Table)}
-
-The results are disappointing.
-As we can see in the table, RNN classifier cannot classify very well because, probably, the duration of the videos are so small
-so we stopped using it in jHMDB dataset. In the Linear classifier, we noticed that every tube is considered as background tube.
-That means that Linear classifier gets overfitted with trained data and cannot handle unknown data. So, we thought that we
-need a classifier which can \"learn\" very easily, with little data. So we chose to try a support vector machine classifier.
+\textbf{(Pending results RNN... Table)}
+\textbf{(Pending results RNN... commentary)}
+% The results are disappointing.
+% As we can see in the table, RNN classifier cannot classify very well because, probably, the duration of the videos are so small
+% so we stopped using it in jHMDB dataset. In the Linear classifier, we noticed that every tube is considered as background tube.
+% That means that Linear classifier gets overfitted with trained data and cannot handle unknown data. So, we thought that we
+% need a classifier which can \"learn\" very easily, with little data. So we chose to try a support vector machine classifier.
 
 \section{Support Vector Machine (SVM)}
 \subsection{First steps}
@@ -118,27 +133,27 @@ we have only 1 action per video.
   \hline
   \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
-   before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
+   before & after &  {} & {} &  0.5 &  0.4 & 0.3 \\
  \hline   \hline
  \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  3.16 & 4.2 & 4.4    \\
   \cline{4-7}
   {} & {} & {} & 2 & 2.29 & 2.68 & 2.86    \\
     \cline{4-7}
-  {} & {} & {} & 3 & 1.04 & 1.04 & 1.04    \\
+  {} & {} & {} & 3 & 1.63 & 3.16 &  4  \\
     \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO    \\
+  {} & {} & {} & 4 & 2.42 & 4.83 & 5.46  \\  
     \cline{4-7}
-  {} & {} & {} & 5 & TODO & TODO & TODO    \\
+  {} & {} & {} & 5 & 0.89 &1.12 & 1.21  \\
   \hline
- \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 & TODO & TODO & TODO \\
+ \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 & 1.11 & 2.35 & 2.71 \\
     \cline{4-7}
-  {} & {} & {} & 2 & TODO & TODO & TODO    \\
+  {} & {} & {} & 2 & 2.31 & 2.62 & 2.64 \\
     \cline{4-7}
-  {} & {} & {} & 3 & TODO & TODO & TODO    \\
+  {} & {} & {} & 3 & 1.11 & 2.35 & 2.71 \\
     \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO    \\
+  {} & {} & {} & 4 & 1.41 & 2.76 & 3.84  \\
     \cline{4-7}
-  {} & {} & {} & 5 & TODO & TODO & TODO     \\
+  {} & {} & {} & 5 & 0.33 & 0.51 &0.58  \\
 
   \hline   \hline
 
@@ -147,9 +162,9 @@ we have only 1 action per video.
     \cline{4-7}
   {} & {} & {} & 2 & 10.35 & 10.92 &11.89 \\
     \cline{4-7}
-  {} & {} & {} & 3 & 8.93 9.64 9.94 \\
+  {} & {} & {} & 3 & 8.93 & 9.64 & 9.94 \\
     \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO \\
+  {} & {} & {} & 4 & 12.1 & 13.04 &13.04 \\
     \cline{4-7}
   {} & {} & {} & 5 & 5.92 & 6.92 & 7.79 \\
     \hline
@@ -171,6 +186,10 @@ we have only 1 action per video.
 \end{longtable} 
 \end{center}
 
+From the above results we notice that features map with dimension (256,8,7,7) outperform in all cases, both for mean and max pooling and
+for all the policies. Also, we can see that max pooling outperforms mean pooling in all cases, too. Last but not least, we notice that policies
+2, 3 and 5 give us the worst results which means that svm needs both data from other classes positives and from background tubes. 
+
 \subsection{Modifying 3D Roi Align}
 As we mentioned before, we extract from each tube its activation maps using 3D Roi Align procedure and we set equal to zero the pixels outside
 of bounding boxes for each frame. We came with the idea that the enviroment surrounding the actor sometimes help us determine the class
@@ -182,67 +201,67 @@ $ (max(0,x_1-0.5),max(0,y_1-0.5),min(7,x_2+0.5),min(7,y_2+0.5)) $ ( we use \text
 We just experiment in policies 1 and 4 for both (256,8,7,7) and (64,8,7,7) feature maps as show in  Table \ref{table:svm_mod_roialign}
 
 
-\begin{center}
-\begin{longtable}{||c | c | c| c||c c c||}
+% \begin{center}
+% \begin{longtable}{||c | c | c| c||c c c||}
 
-  \hline
-  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+%   \hline
+%   \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} &\multirow{2}{*}{\textbf{Type}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
-   before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
- \hline   \hline
- \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO  \\
-  \cline{4-7}
-  {} & {} & {} & 2 & TODO & TODO & TODO \\
-    \cline{4-7}
-  {} & {} & {} & 3 & 0.96 & 2.11 & 2.9   \\
-    \cline{4-7}
-  {} & {} & {} & 4 &  2.4  & 4.53 & 5.16    \\
-    \cline{4-7}
-  {} & {} & {} & 5 &  0.6  & 0.76 & 0.93    \\
-  \hline
- \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 &  1.07 & 1.85 & 2.26    \\
-    \cline{4-7}
-  {} & {} & {} & 2 &  3.2 & 3.39 & 3.66    \\
-    \cline{4-7}
-  {} & {} & {} & 3 &  0.86 & 1.98 & 1.98    \\
-    \cline{4-7}
-  {} & {} & {} & 4 &  1.24 & 2.68 & 3.09    \\
-    \cline{4-7}
-  {} & {} & {} & 5 &  0.21 & 0.27 & 0.32    \\
+%    before & after &  {} & {} &  0.3 &  0.4 & 0.5 \\
+%  \hline   \hline
+%  \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO  \\
+%   \cline{4-7}
+%   {} & {} & {} & 2 & TODO & TODO & TODO \\
+%     \cline{4-7}
+%   {} & {} & {} & 3 & 0.96 & 2.11 & 2.9   \\
+%     \cline{4-7}
+%   {} & {} & {} & 4 &  2.4  & 4.53 & 5.16    \\
+%     \cline{4-7}
+%   {} & {} & {} & 5 &  0.6  & 0.76 & 0.93    \\
+%   \hline
+%  \multirow{5}{*}{(k,64,8,7,7)} & \multirow{5}{*}{(1,64,8,7,7)} & \multirow{5}{*}{max}  & 1 &  1.07 & 1.85 & 2.26    \\
+%     \cline{4-7}
+%   {} & {} & {} & 2 &  3.2 & 3.39 & 3.66    \\
+%     \cline{4-7}
+%   {} & {} & {} & 3 &  0.86 & 1.98 & 1.98    \\
+%     \cline{4-7}
+%   {} & {} & {} & 4 &  1.24 & 2.68 & 3.09    \\
+%     \cline{4-7}
+%   {} & {} & {} & 5 &  0.21 & 0.27 & 0.32    \\
 
-  \hline   \hline
+%   \hline   \hline
 
- \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  10.62 & 10.94 & 10.94    \\
+%  \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{mean}  & 1 &  10.62 & 10.94 & 10.94    \\
 
-    \cline{4-7}
-  {} & {} & {} & 2 &  9.09  & 10.02 & 10.83   \\
-    \cline{4-7}
-  {} & {} & {} & 3 &  9.05  & 9.65  & 9.69    \\
-    \cline{4-7}
-  {} & {} & {} & 4 &  11.19 & 11.51 & 11.51   \\
-    \cline{4-7}
-  {} & {} & {} & 5 &  4.84  & 6.13  & 6.13   \\
-    \hline
- \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{max}  & 1  & \bf 20.94 & \bf 24.96 & \bf 26.46   \\
-    \cline{4-7}
-  {} & {} & {} & 2  & 14.94 & 17.78 & 19.38   \\
-    \cline{4-7}
-  {} & {} & {} & 3  & 14.9 & 17.39 & 19.88   \\
-    \cline{4-7}
-  {} & {} & {} & 4  & 19.43 & 23.91 & 25.31   \\
-    \cline{4-7}
-  {} & {} & {} & 5  & 10.41 & 10.46 & 11.29   \\
-  \hline   
+%     \cline{4-7}
+%   {} & {} & {} & 2 &  9.09  & 10.02 & 10.83   \\
+%     \cline{4-7}
+%   {} & {} & {} & 3 &  9.05  & 9.65  & 9.69    \\
+%     \cline{4-7}
+%   {} & {} & {} & 4 &  11.19 & 11.51 & 11.51   \\
+%     \cline{4-7}
+%   {} & {} & {} & 5 &  4.84  & 6.13  & 6.13   \\
+%     \hline
+%  \multirow{5}{*}{(k,256,8,7,7)} & \multirow{5}{*}{(1,256,8,7,7)} & \multirow{5}{*}{max}  & 1  & \bf 20.94 & \bf 24.96 & \bf 26.46   \\
+%     \cline{4-7}
+%   {} & {} & {} & 2  & 14.94 & 17.78 & 19.38   \\
+%     \cline{4-7}
+%   {} & {} & {} & 3  & 14.9 & 17.39 & 19.88   \\
+%     \cline{4-7}
+%   {} & {} & {} & 4  & 19.43 & 23.91 & 25.31   \\
+%     \cline{4-7}
+%   {} & {} & {} & 5  & 10.41 & 10.46 & 11.29   \\
+%   \hline   
   
-  \caption{Our architecture's performance using 5 different policies and 2 different feature maps extracted using modified Roi Align.}
-  \label{table:svm_mod_roialign}
+%   \caption{Our architecture's performance using 5 different policies and 2 different feature maps extracted using modified Roi Align.}
+%   \label{table:svm_mod_roialign}
 
-\end{longtable} 
-\end{center}
+% \end{longtable} 
+% \end{center}
 
-From the above results we notice that features map with dimension (256,8,7,7) outperform in all cases, both for mean and max pooling and
-for all the policies. Also, we can see that max pooling outperforms mean pooling in all cases, too. Last but not least, we notice that policies
-2, 3 and 5 give us the worst results which means that svm needs both data from other classes positives and from background tubes. 
+
+\textbf{Pending table...}
+\\
 
 \subsection{Temporal pooling}
 After getting first results, we implement a temporal pooling function inspired from \cite{DBLP:journals/corr/HouCS17}. We need a
@@ -259,127 +278,129 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
   \hline
  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
-  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
+  before & after & {} & {} & 0.5 &  0.4 & 0.3\\
   \hline   \hline
 
-  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,8,7,7} & \multirow{5}{*}{mean}  & 1 & TODO & TODO & TODO \\
+  \multirow{4}{*}{k,256,8,7,7} & \multirow{4}{*}{2,256,8,7,7} & \multirow{2}{*}{RoiAlign}  & 1 & 25.07 & 26.91 & 29.11 \\
   \cline{4-7}
-
-  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  {} & {} & {} & 4 &  23.27 & 25.96 & 28.25 \\
+  \cline{3-7}
+  {} & {} & \multirow{2}{*}{mod RoiAlign} & 1 & 7.01 & 9.69 & 10.52 \\
   \cline{4-7}
-  {} & {} & {} & 3 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 5 & TODO & TODO & TODO \\
+  {} & {} & {} & 4 & 5.5 & 7.25 & 8.99 \\
   \hline
 
-  \multirow{5}{*}{k,256,8,7,7} & \multirow{5}{*}{2,256,8,7,7} & \multirow{5}{*}{max}  & 1 & 25.07 & 26.91 & 29.11 \\
-  \cline{4-7}
-
-  {} & {} & {} & 2 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 3 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 5 & TODO & TODO & TODO \\
-  \hline
-
-  \caption{mAP results for second approach using temporal pooling }
+  \caption{mAP results using temporal pooling for both RoiAlign approaches}
   \label{table:svm_temp_pooling}
 \end{longtable} 
 \end{center}
 
 \subsection{Increasing sample duration to 16 frames}
 
+\textbf{Pending description...}
 \begin{center}
 \begin{longtable}{||c | c| c| c||c c c||}
 
   \hline
  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{4.5em}{\textbf{Temporal Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
-  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
+  before & after & {} & {} &  0.5 &  0.4 & 0.3 \\
   \hline   \hline
 
   \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{1,256,16,7,7} & \multirow{5}{*}{No}  & 1 & 23.4 & 27.57 &28.65  \\
   \cline{4-7}
 
-  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  {} & {} & {} & 2 & Pending \\
   \cline{4-7}
-  {} & {} & {} & 3 & TODO & TODO & TODO \\
+  {} & {} & {} & 3 & Pending \\
   \cline{4-7}
   {} & {} & {} & 4 & 22.7 & 26.95 & 28.05 \\
   \cline{4-7}
-  {} & {} & {} & 5 & TODO & TODO & TODO \\
+  {} & {} & {} & 5 & Pending \\
   \hline
 
   \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{2,256,16,7,7} & \multirow{5}{*}{Yes}  & 1 & 21.12 & 24.07 & 24.36  \\
   \cline{4-7}
 
-  {} & {} & {} & 2 & TODO & TODO & TODO \\
+  {} & {} & {} & 2 & Pending \\
   \cline{4-7}
-  {} & {} & {} & 3 & TODO & TODO & TODO \\
+  {} & {} & {} & 3 & Pending \\
   \cline{4-7}
   {} & {} & {} & 4 & 18.36 & 23.09 & 23.75 \\
   \cline{4-7}
   
-  {} & {} & {} & 5 & TODO & TODO & TODO \\
+  {} & {} & {} & 5 & Pending \\
   \hline
   \caption{mAP results for   }
   \label{table:svm_temp_pooling_16}
 \end{longtable} 
 \end{center}
 
+\textbf{Pending commentary...}
+
 \subsection{Adding more groundtruth tubes}
+\textbf{Pending more comments...} \\
 From above results, we notice that SVM improve a lot the perfomance of our model. In order to futher improve our results, we will
 add more groundtruth action tubes. We consider as groundtruth action tubes all the tubes whose overlap score  with a groundtruth tube is
 greater that 0.7 . Also, we increase the total number of tube to 8. Table \ref{table:svm_increased}
+\\
+\textbf{Pending table...}
+% \begin{center}
+% \begin{longtable}{||c | c| c| c||c c c||}
 
-\begin{center}
-\begin{longtable}{||c | c| c| c||c c c||}
+%   \hline
+%  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
 
-  \hline
- \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+%   before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
+%   \hline   \hline
 
-  before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
-  \hline   \hline
+%   \multirow{2}{*}{k,64,8,7,7} & \multirow{2}{*}{2,64,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
+%   \cline{4-7}
+%   {} & {} & {} & 4 & Pending \\
+%   \hline   
+%   \multirow{2}{*}{k,256,8,7,7} & \multirow{2}{*}{2,256,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
+%   \cline{4-7}
+%   {} & {} & {} & 4 & Pending \\
+%   \hline   
+%   \caption{Results after increasing the number of total tubes }
+%   \label{table:svm_increased}
 
-  \multirow{2}{*}{k,64,8,7,7} & \multirow{2}{*}{2,64,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO   \\
-  \hline   
-  \multirow{2}{*}{k,256,8,7,7} & \multirow{2}{*}{2,256,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
-  \cline{4-7}
-  {} & {} & {} & 4 & TODO & TODO & TODO   \\
-  \hline   
-  \caption{Results after increasing the number of total tubes }
-  \label{table:svm_increased}
-
-\end{longtable} 
-\end{center}
+% \end{longtable} 
+% \end{center}
 
 \section{MultiLayer Perceptron (MLP)}
+\textbf{Pending...}
 Last but not least approach is a Multilayer perceptorn (MLP). More specifically, we extract the 3 last residulal layers of 3D ResNet34
-and we add a classification layer.  
-
-\subsection{Extract features}
-We
+and we add a classification layer. 
 
 \subsection{Regular training}
+\textbf{Pending...}
+At first, we train our network using 
+tpn - freeze features, don't know
+
+
+
+\subsection{Extract features}
+\textbf{Pending...}
+
+
 
 \section{Classifying dataset UCF}
-As mentioned before, all the above results are from JHMDB dataset. 
-\section{Final Improvements}
-After classification, we relize that a lot of classified tubes overlap and represent the same action. So, we use again NMS algorithm in order
-to remove unnecessary tubes. The new model can be seen in figure \ref{fig:network_nms}.
+\textbf{Pending...}
+As mentioned before, all the above results are from JHMDB dataset. For UCF dataset, we explore only MLP classifier. We didn't use spatio-temporal
+information but only temporal information extracted by our
 
-\begin{figure}[h]
-  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
-  \centering
-  \includegraphics[scale=0.7]{model_nms}
-  \caption{Structure of the network with NMS}
-  \label{fig:network_nms}
-\end{figure}
 
-\end{document}
+% \section{Final Improvements}
+% After classification, we relize that a lot of classified tubes overlap and represent the same action. So, we use again NMS algorithm in order
+% to remove unnecessary tubes. The new model can be seen in figure \ref{fig:network_nms}.
+
+% \begin{figure}[h]
+%   % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
+%   \centering
+%   \includegraphics[scale=0.7]{model_nms}
+%   \caption{Structure of the network with NMS}
+%   \label{fig:network_nms}
+% \end{figure}
+
+% % \end{document}

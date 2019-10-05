@@ -1,24 +1,24 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage{multirow}  % package for tables, multirow
-\usepackage{longtable} % package for multi pages tables
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{multirow}  % package for tables, multirow
+% \usepackage{longtable} % package for multi pages tables
 
 
-\usepackage[export]{adjustbox}
-% \usepackage{amsmath}
+% \usepackage[export]{adjustbox}
+% % \usepackage{amsmath}
 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Connecting Tubes}
 \section{Description}
@@ -26,7 +26,7 @@ After getting TOIs for each video segment, it is time to connect them. That's be
 This means that, in overlaping video clips, there will be consequentive TOIs that represent the entire action. So, it is essential to create
 an algorithm for finding and connecting these TOIs.
 
-\subsection{First approach: combine overlap and actioness}
+\section{First approach: combine overlap and actioness}
 Our algorithm is inspired by \cite{DBLP:journals/corr/HouCS17}, which calculates all possible sequences of ToIs. In order find the best candidates,
 it uses a score which tells us how likely a sequence of TOIs is  to contain an action. This score is a combination of 2 metrics:
 \begin{description}
@@ -85,7 +85,7 @@ Also, we initialize threshold equal to 0.5 .
   denoted as $(min(x_1,x'_1), min(y_1,y'_1), max(x_2,x'_2), max(y_2,y'_2))$ for bounding boxes $(x_1,y_1,x_2,y_2)$ and $(x'_1,y'_1,x'_2,y'_2)$.
 \end{enumerate}
 % We implement this algorithm using CUDA language for counting the scores. In \cite{DBLP:journals/corr/HouCS17}, they use temporal \textit{stride = sample duration} during testing. We want 
-\section{Some results}
+\subsection{JHMDB Dataset}
 
 In order to validate our algorithm, we firstly experiment in JHMDB dataset's videos in order to define the best overlapping policy and
 the video overlapping step. Again, we use recall as evaluation metrinc. A groundtruth action tube is considered to be found, as well as positive,
@@ -105,7 +105,7 @@ the frames with which we calculate the overlap score).
 
   \hline
   \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
-                                    &  0.3 &  0.4 & 0.5 \\         
+                                    &  0.5  &  0.4 &  0.3 \\         
   \hline  \hline
   0,1,...,\textbf{\{8,...,15\}}               & {} & {} & {} \\
   \textbf{\{8,9,...,15\}},16,...,23           & 0.3172 & 0.4142 & 0.6418 \\
@@ -159,7 +159,7 @@ Table \ref{table:step12_16}.
 
   \hline
   \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
-                                    &  0.3 &  0.4 & 0.5 \\         
+                                    &  0.5  &  0.4 &  0.3 \\         
   \hline  \hline
   0,1,...,11,\textbf{\{12,...,15\}}           & {} & {} & {} \\
   \textbf{\{12,13,...,15\}},16,...,26,27         & 0.3769 & 0.4627 & 0.6828 \\
@@ -181,13 +181,13 @@ Table \ref{table:step12_16}.
 \end{center}
 
 As we can see, recall performance is increase so that means that our assumption was correct. So again, we increase video step into 14, 15 and 16 frames
-and recall score is shown at Table \ref{table: step_14_16}
+and recall score is shown at Table \ref{table:step14_16}
 \begin{center}
 \begin{longtable}{||c||c c c||}
 
   \hline
   \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
-                                    &  0.3 &  0.4 & 0.5 \\         
+                                    &  0.5  &  0.4 &  0.3 \\         
   \hline  \hline
   0,1,...,13\textbf{\{14,15\}}                & {} & {} & {} \\
   \textbf{\{14,15\}},16,...,28,29                & 0.3731 & 0.5336 & 0.6493 \\
@@ -224,7 +224,7 @@ shows recall performance for sample duration = 8 and video step = 4 and Table \r
 
   \hline
   \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
-                                    &  0.3 &  0.4 & 0.5 \\         
+                                    &  0.5  &  0.4 &  0.3 \\         
   \hline  \hline
   0,1,2,3,13\textbf{\{4,5,6,7\}}                & {} & {} & {} \\
   \textbf{\{4,5,6,7\}},8,9,10,11                & 0.2015   & 0.3582 & 0.5858 \\
@@ -249,28 +249,30 @@ shows recall performance for sample duration = 8 and video step = 4 and Table \r
 
   \hline
   \multirow{2}{5em}{combination} & {} &overlap thresh & {} \\
-                                    &  0.3 &  0.4 & 0.5 \\         
+                                    &   0.5  &  0.4 &  0.3 \\         
   \hline  \hline
   0,1,2,3,4,5\textbf{\{6,7\}}           & {} & {} & {} \\
-  \textbf{\{6,7\}},8,9,10,11,12,13      & TODO   & TODO & TODO \\
+  \textbf{\{6,7\}},8,9,10,11,12,13      & 0.3134  & 0.7015 & 0.8619 \\
   \hline     \hline                          
 
   0,1,2,3,4,5,\textbf{\{6,\}}7          & {} & {} & {} \\
-  \textbf{\{6,\}}7,8,9,10,11,12,13      & TODO   & TODO & TODO \\
+  \textbf{\{6,\}}7,8,9,10,11,12,13      & 0.3209  & 0.6679 & 0.847 \\
   \hline                          
   0,1,2,3,4,5,6,\textbf{\{7\}}          & {} & {} & {} \\
-  6,\textbf{\{7\}}8,9,10,11,12,13       & TODO   & TODO & TODO \\
+  6,\textbf{\{7\}}8,9,10,11,12,13       & 0.3172  & 0.6567 & 0.8507 \\
   \hline                          
   0,1,2,3,4,5,6\textbf{\{7\}}           & {} & {} & {} \\
-  \textbf{\{7,\}}8,9,10,11,12,13,14     & TODO   & TODO & TODO \\
+  \textbf{\{7,\}}8,9,10,11,12,13,14     & 0.5597  & 0.7687 & 0.903 \\
   \hline                           
   0,1,2,3,4,5,6\textbf{\{7\}}           & {} & {} & {} \\
-  \textbf{\{8\}}9,10,11,12,13,14,15     & TODO   & TODO & TODO \\
+  \textbf{\{8\}}9,10,11,12,13,14,15     & 0.653	  & 0.8396 &0.9179  \\
   \hline                           
   \caption{Recall results for steps = 6, 7 and 8}
   \label{table:step8_678 }
 \end{longtable} 
 \end{center}
+
+\textbf{Pending... commentary}
 
 \subsection{UCF dataset}
 In previous steps, we tried to find the best overlap policy for our algorithm in JHMDB dataset. After that, it's time to apply our algorithm in UCF dataset using the best scoring
@@ -321,7 +323,7 @@ tubes. In Table \ref{table:ucf_recall}
   \hline                                    
 
   \caption{Recall results for UCF dataset}
-  \label{table:ucf_recall }
+  \label{table:ucf_recall}
 \end{longtable} 
 \end{center}
 
@@ -367,7 +369,12 @@ tubes. In Table \ref{table:ucf_recall}
 \end{longtable} 
 \end{center}
 
+\textbf{Pending... commentary}
+
 \subsubsection{Adding NMS algorithm}
+
+\textbf{Pending description... }
+
 
 \begin{center}
 \begin{longtable}{||c | c | c ||c c c| c|}
@@ -379,19 +386,19 @@ tubes. In Table \ref{table:ucf_recall}
   
   
   \multirow{3}{7em}{0,1,...,6,\textbf{\{7,\}}
-  \textbf{\{8,\}}9,...,15 }  & \multirow{2}{*}{0.7} & 10000   & 0.4464  & 0.581 & 0.6844  & 0.7787 \\
+  \textbf{\{8,\}}9,...,15 }  & \multirow{2}{*}{0.7} & 10000   & Pending \\
   \cline{3-7}
-                                    {} &  {}   & \multirow{2}{*}{20000}   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
+                                    {} &  {}   & \multirow{2}{*}{20000}   & Pending \\
   \cline{2-2} \cline{4-7} 
-                                    {} &  0.8   & {}   & TODO  & TODO & TODO & TODO \\
+                                    {} &  0.8   & {}   & Pending \\
 
   \hline                                    
   \multirow{4}{7em}{0,1,...,14,\textbf{\{15,\}}
-  \textbf{\{16,\}}17,18,...,23 }  & \multirow{2}{*}{0.7} & 10000   & TODO  & TODO & TODO & TODO\\
+  \textbf{\{16,\}}17,18,...,23 }  & \multirow{2}{*}{0.7} & 10000   & Pending \\
   \cline{3-7}
-                                    {} &  {}   & \multirow{2}{*}{20000}   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
+                                    {} &  {}   & \multirow{2}{*}{20000}   & Pending \\
   \cline{2-2} \cline{4-7} 
-                                    {} &  0.8   & {}   & TODO  & TODO & TODO & TODO \\
+                                    {} &  0.8   & {}   & Pending \\
 
 
   \hline                                    
@@ -401,8 +408,9 @@ tubes. In Table \ref{table:ucf_recall}
 \end{longtable} 
 \end{center}
 
-
-\subsection{Second approach: use progression and progress rate}
+\textbf{Pending... }
+\\
+\section{Second approach: use progression and progress rate}
 As we saw before, our first connecting algorithm doesn't have very good recall results. So, we created another algorithm which is base in \cite{DBLP:journals/corr/abs-1903-00304}. This
 algorithm introduces two 2 metrics according to \cite{DBLP:journals/corr/abs-1903-00304}:
 
@@ -460,19 +468,19 @@ predefined threshold.
   \multicolumn{2}{||c||}{\textbf{combination}} &\multicolumn{3}{|c||}{\textbf{overlap thresh}}\\
 
   \hline
-  sample dur & step &  0.3 &  0.4 & 0.5 \\
+  sample dur & step &   0.5  &  0.4 &  0.3 \\
   \hline   \hline
-  8 & 6 & TODO & TODO & TODO \\
+  8 & 6 & Pending \\
   \hline
-  8 & 7 & TODO & TODO & TODO \\
+  8 & 7 & Pending \\
   \hline
   8 & 8 & 0.3060 & 0.5672 & 0.6866 \\
   \hline
-  16 & 8  & TODO & TODO & TODO  \\
+  16 & 8  & Pending \\
   \hline
-  16 & 12 & TODO & TODO & TODO \\
+  16 & 12 & Pending \\
   \hline
-  16 & 16 & TODO & TODO & TODO \\
+  16 & 16 & Pending \\
   
   \hline     \hline                          
 
@@ -503,7 +511,7 @@ In the follown table, we can see the recall results. \par
   \hline
   \multicolumn{2}{||c||}{\textbf{combination}} &\multicolumn{3}{|c||}{\textbf{overlap thresh}}\\
   \hline
-  sample dur & step &  0.3 &  0.4 & 0.5 \\
+  sample dur & step &  0.5  &  0.4 &  0.3 \\
   \hline   \hline
 
   8 & 6 & 0.7873 & 0.8657 & 0.9366  \\
@@ -529,4 +537,4 @@ slightly better that the 8. However, using sample 16 increases the memory usage 
 we will experiment using mostly sample duration = 8.
 
 
-\end{document}
+% \end{document}

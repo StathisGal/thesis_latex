@@ -1,26 +1,29 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% % \usepackage{amsmath}
-% \usepackage[
-%     backend=bibtex,
-%     style=authoryear,
-%     sorting=ynt,
-%     % style=numeric,
-%     % style=alphabetic ,
-%   ]{biblatex}
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{amsmath}
+\usepackage[
+    backend=bibtex,
+    citestyle=authoryear,
+    % citestyle=authoryear-comp,
+    % citestyle=authoryear-ibid,
+    bibstyle=numeric,
+    sorting=ynt,
+    % style=numeric,
+    % style=alphabetic ,
+  ]{biblatex}
  
-%  \addbibresource{References}
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+ \addbibresource{References}
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Related work}
 
@@ -36,65 +39,78 @@
 
 % \paragraph{Frame based methods}
 \section{Action Recognition}
-First approaches for action classification consisted of 2 steps a) compute complex handcrafted features from raw video frames
-such as SIFT, HOG, optical flow and b) train a classifier based on those features. These approaches made the choise of
+First approaches for action classification consisted of two steps a) compute complex handcrafted features from raw video frames
+such as SIFT, HOG, ORB features and b) train a classifier based on those features. These approaches made the choise of
 features a signifact factor for network's performance. That's because different action classes may appear dramatically
-different in terms of their appearences and motion patterns. Another problem was that most of those approaches take
-assumptions about the circumstances under which the video was taken because there was problems such as cluttered
-background, camera viewpoit variations etc. A review techniques used until 2011 made by \cite{Aggarwal:2011:HAA:1922649.1922653}.
+different in terms of their appearance and motion patterns. Another problem was that most of those approaches make
+assumptions about the circumstances under which the video was taken due to problems such as cluttered
+background, camera viewpoint variations etc. A review of the techniques, used until 2011, is presented in \cite{Aggarwal:2011:HAA:1922649.1922653}. \par
 
-Recent results in deep architectures and especially in image classification made us attempt to train CNN networks for
-the task of action classification. First significant attempt made by \cite{6909619}.  % \cite{DBLP:journals/corr/WangXW0LTG16}.
- \cite{simonyan2014two} and \cite{DBLP:journals/corr/FeichtenhoferPZ16} both added optical flow in order to achieve better results.
-On top of that, the increase  in computing performance contributed to the design more complicated architectures including
-3D Convolutions as presented in \cite{6165309} as done by \cite{DBLP:journals/corr/TranBFTP14}.
+Recent results in deep architectures and especially in image classification motivated researchers to train CNN networks for
+the task of action recognition. The first significant attempt was made by \cite{6909619}. They design their architecture based on the best-scoring CNN
+in the ImageNet competition. they explore several methods for fusion of spatio-temporal features using 2D operations mostly and 3D convolution only in slow fusion.
+\cite{simonyan2014two}  used a 2 CNNs, one for spatial information and one for optical flow and combined them using late fusion.
+They show that extacting spatial context from videos and motion context from optical flow can improve significantly action recognition accuracy.
+\cite{DBLP:journals/corr/FeichtenhoferPZ16} extend this approach by using early fusion at the end of convolutional layers,  instead of late fusion which
+takes places at the last layer of the network. On top that, they used a second network for temporal context which they fuse with the other network using late
+fusion. Futhermore, \cite{DBLP:journals/corr/WangXW0LTG16} based their method on \cite{simonyan2014two}, too. They deal with the problem of capturing long-range
+temporal context and training their network given limited training samples. Their approach, which they named Temporal Segment Network (TSN), seperates the input
+video in K segments and a short snippet from each segment is chosen for analysis. Then they fuse  the extracted spatio-temporal context, making, eventually, their
+prediction. \par
+Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and
+\cite{DBLP:journals/corr/MaCKA17}. \textbf{Pending... description} \par
+% A comparison between RNN networks and dilated convolutions is presented in \cite{DBLP:journals/corr/abs-1803-01271}, even though they don't refer at.\textbf{Pending... description}
+Additionally, \cite{Tran2014LearningSF} explored 3D Convolutional Networks (\cite{pmid:22392705}) and introduced C3D network which  has
+3D convolutional layers with kernels $ 3 \times 3 \times 3$.
+This network is able to  model appearence and motion context simultaneously using 3D convolutions and it can be used as a feature extractor, too.
+Combining Two-stream architecture and 3D Convolutions, \cite{DBLP:journals/corr/CarreiraZ17} proposed
+I3D network. On top of that, the authors emphasize in the advantages of transfer learning for the task of action recognition by repeating 2D pre-trained weights
+in the 3rd dimension. \cite{DBLP:journals/corr/abs-1708-07632} proposed a 3D ResNet Network for action recognition based on Residual Networks (ResNet)
+(\cite{DBLP:journals/corr/HeZRS15}) and explore the effectiveness of ResNet with 3D Convolutional kernels.
+\cite{DBLP:journals/corr/abs-1711-08200} \textbf{Pending ...} \cite{DBLP:journals/corr/abs-1711-11248}
+experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
+to show that a 2D spatial convolution followed by a 1D temporal convolution achieves state of the art classification performance, naming
+this type of convolution layer as R(2+1)D. A more detailed presentation for Action Recognition techniques used until 2018 is included in
+\cite{DBLP:journals/corr/abs-1806-11230}.
 
-R(2+1) \cite{DBLP:journals/corr/abs-1711-11248}
-\textbf(Pending...More before 3D ResNet)
-Recent day 3D ResNet has been introduced by \cite{Hara_2018_CVPR} 
 \section{Action Localization}
-As mentioned before, Action Localization can be seen as an extention of object detection problem, where the outputs are action tubes
-that consist of a sequence of bounding boxes. So, there are several approaches including an object-detector network for single frame
-action proposal and a classifier. The introduction of R-CNN (\cite{DBLP:journals/corr/GirshickDDM13}) achieve significant improvemet
-in the performance of Object Detection Networks. This architectures, firstly, proposes regions in the image which are likely to
-contain an object and then it classify it using a SVM classifier. Inspired by this architecture, \cite{DBLP:journals/corr/GkioxariM14}
-desing a 2-stream RCNN network in order to generate action proposals for each frame, one stream for frame level and one for optical flow.
-Then they  connect them using viterbi connection algorithm. \cite{DBLP:journals/corr/WeinzaepfelHS15} extend this approach, performing
-frame-level proposals and using a tracker for connecting those proposals using both spatial and optical flow features. Also it performs
-temporal localization using a sliding window over the tracked tubes. \cite{peng:hal-01349107} used Faster R-CNN (\cite{Ren:2015:FRT:2969239.2969250})
-instead of RCNN for frame-level proposals, and they use Viterbi algorithm for linking proposals, too. For temporal localization, they
-use a maximum subarray method.
 
+As mentioned before, Action Localization can be seen as an extention of the object detection problem. Instead of outputing 2D bounding
+boxes in a single image, the goal of action localization systems is to output action tubes which are sequences of bounding boxes that
+contain an performed action. So, there are several approaches including an object-detector network for single frame
+action proposal and a classifier. \par
+The introduction of R-CNN (\cite{DBLP:journals/corr/GirshickDDM13}) achieve significant improvement
+in the performance of Object Detection Networks. This architecture, firstly, proposes regions in the image which are likely to
+contain an object and then it classifies them using a SVM classifier. Inspired by this architecture, \cite{DBLP:journals/corr/GkioxariM14}
+design a 2-stream RCNN network in order to generate action proposals for each frame, one stream for frame level and one for optical flow.
+Then they  connect them using the viterbi connection algorithm. \cite{DBLP:journals/corr/WeinzaepfelHS15} extend this approach, by performing
+frame-level proposals and using a tracker for connecting those proposals using both spatial and optical flow features. Also their method performs
+temporal localization using a sliding window over the tracked tubes. \par
+\cite{peng:hal-01349107} and \cite{DBLP:journals/corr/SahaSSTC16} use Faster R-CNN (\cite{Ren:2015:FRT:2969239.2969250}) instead of RCNN
+for frame-level proposals, using RPN for both RGB and optical flow images.
+After getting spatial and motion proposals,\cite{peng:hal-01349107} fuse them exploring and from each proposed ROI, generate 4 ROIs in order to focus in specific
+body parts of the actor. After that, they connect the proposal using Viterbi algorithm for each class and perform temporal localization by using a sliding window, with multiple
+temporal scales and stride using a maximum subarray method. From the other hand, \cite{DBLP:journals/corr/SahaSSTC16} perform, too, frame-level classification. After that,
+their method performs fusion based on a combination between the actioness scores of the appearence and motion based proposals and their overlap score. Finally, temporal localization
+takes place using dynamic programming. \par
+On top of that, \cite{singh2016online} and \cite{kalogeiton17iccv:hal-01519812} design their networks based on the Single Shot Multibox Detector \cite{DBLP:journals/corr/LiuAESR15}).
+\cite{singh2016online} created an online real-time spatio-temporal network. In order their network to execute real-time,  \cite{singh2016online} propose a novel and efficient algorithm
+by adding boxes in tubes in every frame if they overlap more than a threshold, or alternatively, terminate the action tube if for k-frames no box was added.  \cite{kalogeiton17iccv:hal-01519812}
+designed a two-stream network, which they called ACT-detector, and introduced anchor cuboids. For K frames, for both networks, \cite{kalogeiton17iccv:hal-01519812} extract spatial
+features in frame-level, then they stack these features. Finally, using cuboid anchors, the network extracts tubelets, that is a sequence of boxes, with their corresponding classification
+scores and regression targets. For linking the tubelets, \cite{kalogeiton17iccv:hal-01519812} follow about the same steps as \cite{singh2016online} did. For temporal localization, they use
+a temporal smoothing approach. \par
 
-
-
-
-
-
-\cite{6909495} introduces the tubelets.
-
-% \\
-% \cite{peng:hal-01349107} NA DW TI KANEI.
-
-\cite{singh2016online} uses SSD 
-
-Some approaches include tracking \cite{DBLP:journals/corr/WeinzaepfelHS15}.
-Other approaches treat a video as a sequence of frames such as in \cite{DBLP:journals/corr/KalogeitonWFS17} and in \cite{DBLP:journals/corr/HouCS17}.
-
-\paragraph{3d-2d pose}
-
-
-
-% % \paragraph{Tube-level proposals}
-% The previous approaches do not consider the motion information enconded in multiple contiguous frames because they treat video
-% frames as still images. In \cite{pmid:22392705} was introuduce 3D Convolution which captures spatial and temporal information.
-
-% On top of that, and based also in \cite{simonyan2014two},  \cite{DBLP:journals/corr/KalogeitonWFS17} presented action tubes
-
-% % We can devide
-% % the previous methods in 3 subcategories (1) temporal modeling for action representation (2) object detection and (3) spatial-temporal
-% % localization.
-
+Most recently, YOLO Network (\cite{DBLP:journals/corr/RedmonDGF15}) became the inspiration for \cite{DBLP:journals/corr/abs-1903-00304} and
+\cite{DBLP:journals/corr/abs-1802-08362}. In \cite{DBLP:journals/corr/abs-1903-00304}, concepts of progression and progress
+rate were introduced. Except from proposing bounding boxes in frame level, they use YOLO together with a RNN classifier for extracting temporal information for the proposals.
+Based on this information, they create action tubes, seperated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232}, \cite{} and
+\cite{}. In \cite{DBLP:journals/corr/abs-1802-09232} uses \textbf{pending description...}. \par
+Most of aforementioned networks use per-frame spatial proposals and extract their temporal infomation by calculating optical flow. On the other hand, \cite{DBLP:journals/corr/HouCS17} design
+an architecture which icludes proposal in video segment level, which they called Tube CNN (T-CNN). Video segment level means that the whole video is seperated into equal length video clips, and
+using a C3D for extracting features, it returns spatio-temporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} link the tube proposals by an algorithm based on tubes'
+actioness score and overlap. Finally, classification operation is performed for the linked video proposals.
+% Edw na diavasw ...\cite{Li_2018_ECCV}
 
 \section{Our implementation}
 We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architecture is consisted by the following basic elements:
@@ -104,9 +120,9 @@ We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architect
 \item Tube Proposal Network for proposing action tubes (based on the idea presented in \cite{DBLP:journals/corr/HouCS17}).
 \item A classifier for classifying video tubes.
 \end{itemize}
-  
 
+\textbf{Pending ... more commentary and a figure}
 
-% \printbibliography
+\printbibliography
 
-% \end{document}
+\end{document}

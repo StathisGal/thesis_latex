@@ -40,7 +40,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -139,7 +139,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>anyt</bcf:value>
+      <bcf:value>nty</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -1992,33 +1992,56 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">References</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">DBLP:journals/corr/GkioxariM14</bcf:citekey>
-    <bcf:citekey order="2">DBLP:journals/corr/GirshickDDM13</bcf:citekey>
-    <bcf:citekey order="3">peng:hal-01349107</bcf:citekey>
-    <bcf:citekey order="4">DBLP:journals/corr/SinghSC16</bcf:citekey>
-    <bcf:citekey order="5">DBLP:journals/corr/WeinzaepfelHS15</bcf:citekey>
-    <bcf:citekey order="6">DBLP:journals/corr/KalogeitonWFS17</bcf:citekey>
-    <bcf:citekey order="7">DBLP:journals/corr/HouCS17</bcf:citekey>
-    <bcf:citekey order="8">DBLP:journals/corr/HouCS17</bcf:citekey>
-    <bcf:citekey order="9">hara3dcnns</bcf:citekey>
-    <bcf:citekey order="10">DBLP:journals/corr/HeZRS15</bcf:citekey>
-    <bcf:citekey order="11">DBLP:journals/corr/HouCS17</bcf:citekey>
+    <bcf:citekey order="1">Aggarwal:2011:HAA:1922649.1922653</bcf:citekey>
+    <bcf:citekey order="2">6909619</bcf:citekey>
+    <bcf:citekey order="3">simonyan2014two</bcf:citekey>
+    <bcf:citekey order="4">DBLP:journals/corr/FeichtenhoferPZ16</bcf:citekey>
+    <bcf:citekey order="5">DBLP:journals/corr/WangXW0LTG16</bcf:citekey>
+    <bcf:citekey order="6">simonyan2014two</bcf:citekey>
+    <bcf:citekey order="7">DBLP:journals/corr/DonahueHGRVSD14</bcf:citekey>
+    <bcf:citekey order="8">DBLP:journals/corr/NgHVVMT15</bcf:citekey>
+    <bcf:citekey order="9">DBLP:journals/corr/MaCKA17</bcf:citekey>
+    <bcf:citekey order="10">Tran2014LearningSF</bcf:citekey>
+    <bcf:citekey order="11">pmid:22392705</bcf:citekey>
+    <bcf:citekey order="12">DBLP:journals/corr/CarreiraZ17</bcf:citekey>
+    <bcf:citekey order="13">DBLP:journals/corr/abs-1708-07632</bcf:citekey>
+    <bcf:citekey order="14">DBLP:journals/corr/HeZRS15</bcf:citekey>
+    <bcf:citekey order="15">DBLP:journals/corr/abs-1711-08200</bcf:citekey>
+    <bcf:citekey order="16">DBLP:journals/corr/abs-1711-11248</bcf:citekey>
+    <bcf:citekey order="17">DBLP:journals/corr/GirshickDDM13</bcf:citekey>
+    <bcf:citekey order="18">DBLP:journals/corr/GkioxariM14</bcf:citekey>
+    <bcf:citekey order="19">DBLP:journals/corr/WeinzaepfelHS15</bcf:citekey>
+    <bcf:citekey order="20">peng:hal-01349107</bcf:citekey>
+    <bcf:citekey order="21">Ren:2015:FRT:2969239.2969250</bcf:citekey>
+    <bcf:citekey order="22">DBLP:journals/corr/SahaSSTC16</bcf:citekey>
+    <bcf:citekey order="23">Chao_2018_CVPR</bcf:citekey>
+    <bcf:citekey order="24">singh2016online</bcf:citekey>
+    <bcf:citekey order="25">kalogeiton17iccv:hal-01519812</bcf:citekey>
+    <bcf:citekey order="26">DBLP:journals/corr/LiuAESR15</bcf:citekey>
+    <bcf:citekey order="27">singh2016online</bcf:citekey>
+    <bcf:citekey order="28">kalogeiton17iccv:hal-01519812</bcf:citekey>
+    <bcf:citekey order="29">DBLP:journals/corr/RedmonDGF15</bcf:citekey>
+    <bcf:citekey order="30">DBLP:journals/corr/abs-1903-00304</bcf:citekey>
+    <bcf:citekey order="31">DBLP:journals/corr/abs-1802-09232</bcf:citekey>
+    <bcf:citekey order="34">DBLP:journals/corr/abs-1802-09232</bcf:citekey>
+    <bcf:citekey order="35">DBLP:journals/corr/HouCS17</bcf:citekey>
+    <bcf:citekey order="36">Li_2018_ECCV</bcf:citekey>
+    <bcf:citekey order="37">DBLP:journals/corr/HouCS17</bcf:citekey>
+    <bcf:citekey order="38">hara3dcnns</bcf:citekey>
+    <bcf:citekey order="39">DBLP:journals/corr/HeZRS15</bcf:citekey>
+    <bcf:citekey order="40">DBLP:journals/corr/HouCS17</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="anyt">
+  <bcf:sortingtemplate name="nty">
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2">
-      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3" final="1">
+    <bcf:sort order="2" final="1">
       <bcf:sortitem order="1">sortkey</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="4">
+    <bcf:sort order="3">
       <bcf:sortitem order="1">sortname</bcf:sortitem>
       <bcf:sortitem order="2">author</bcf:sortitem>
       <bcf:sortitem order="3">editor</bcf:sortitem>
@@ -2026,27 +2049,18 @@
       <bcf:sortitem order="5">sorttitle</bcf:sortitem>
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
     <bcf:sort order="5">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="7">
       <bcf:sortitem order="1">volume</bcf:sortitem>
       <bcf:sortitem order="2">0</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="anyt/global//global/global"
-                type="entry"
-                sortingtemplatename="anyt"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

@@ -1,24 +1,24 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage{multirow}  % package for tables, multirow
-% \usepackage{longtable} % package for multi pages tables
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage{multirow}  % package for tables, multirow
+\usepackage{longtable} % package for multi pages tables
 
 
-% \usepackage[export]{adjustbox}
-% % \usepackage{amsmath}
+\usepackage[export]{adjustbox}
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Connecting Tubes}
 \section{Description}
@@ -272,54 +272,57 @@ shows recall performance for sample duration = 8 and video step = 4 and Table \r
 \end{longtable} 
 \end{center}
 
-\textbf{Pending... commentary}
+According to Tables \ref{table:step4_8} and \ref{table:step8_678 }, it is clearly shown that, we achieve best results, for $step = sample duration$ and overlaping scores is calculated between the last box of the current tubes and the first box of next tubes.
 
 \subsection{UCF dataset}
 In previous steps, we tried to find the best overlap policy for our algorithm in JHMDB dataset. After that, it's time to apply our algorithm in UCF dataset using the best scoring
 overlap policy. We did some modifications in the code, in order to save memory and move most parts of the code to GPU. This happened by using tensors instead of lists for scores and
 most operations are, from now on, matrix operations. On top that, last step of the algorith, which is the modification from indices to actual action tubes was written in CUDA code so
 it takes place in GPU, too. So, we are now able to increase the number of tubes returned by TPN, the max number of active tubes before updating threshold and the max number of final
-tubes. In Table \ref{table:ucf_recall}
+tubes. \par
+The first experiments we performed were related with the number of the final tubes, our network proposes alongside with TPN's proposed
+tubes' number. We experiment for cases, in which TPN proposes 30, 100 and 150, our final network proposes 500, 2000 and 4000 for
+sample durations equal with 8 and 16 frames. For sample duration equal with 8 we return 100 proposed action tubes because, when we
+tried to return 150 proposed ToIs, we got OutOfMemory error.
+Table \ref{table:ucf_recall} show the spatio-temporal recall and MABO performance of those approaches. Futhermore, Table \ref{table:ucf_temp_recall } show their tempolar recall and MABO performance. We are interested in temporal performance, because UCF is consisted of
+untrimmed videos, unlike JHMDB which has only trimmed videos. So, we want to know how well our network is able to propose action tubes that
+overlap temporally with the groundtruth action tubes over a ``big'' threshold. For temporal localization, we don't use 0.5, 0.4 and 0.3
+overlapping threshold, but instead, we use 0.9, 0.8 and 0.7, because it is very important our network to be able to propose tubes that
+contain an action. In order to calculate the temporal overlap, we use IoU for 1D as described before.
 
 \begin{center}
 \begin{longtable}{||c | c | c ||c c c | c|}
 
   \hline
-  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  \multicolumn{3}{}{overlap thresh} & \multirow{2}{*}{MABO} \\
   {} & {} & {} &  0.5 &  0.4 & 0.3 & {}\\         
   \hline
   
-  
-
   \multirow{6}{7em}{0,1,...,6,\textbf{\{7,\}}
   \textbf{\{8,\}}9,...,14,15 }  & \multirow{3}{*}{30} & 500   & 0.2829  & 0.4395 & 0.5817  & 0.3501 \\
   \cline{3-7}
   {} &  {}   & 2000   & 0.3567  & 0.4996 & 0.6289 & 0.3815\\
   \cline{3-7}
-  {} &  {}   & 400   & 0.3749  & 0.5316 & 0.6487 & 0.3934 \\
+  {} &  {}   & 4000   & 0.3749  & 0.5316 & 0.6487 & 0.3934 \\
   \cline{2-7}
   {} &  \multirow{3}{*}{100}   & 500   & 0.2966  & 0.451 & 0.5947 & 0.356 \\
   \cline{3-7}
   {} &  {}   & 2000   & 0.3757  & 0.5163 & 0.6471 & 0.3902 \\
   \cline{3-7}
   {} &  {}   & 4000  & 0.3977  & 0.5506 & 0.6624 & 0.4029 \\
-
-
   \hline                                    
   \multirow{6}{7em}{0,1,...,14,\textbf{\{15,\}}
   \textbf{\{16,\}}17,18,...,23 }  & \multirow{3}{*}{30} & 500   & 0.362  & 0.5042 & 0.6243 & 0.3866 \\
   \cline{3-7}
-                                    {} &  {}   & 2000   & 0.416  & 0.5468 & 0.6631 & 0.4108  \\
+  {} &  {}   & 2000   & 0.416  & 0.5468 & 0.6631 & 0.4108  \\
   \cline{3-7}
-                                    {} &  {}   & 4000   & 0.4281  & 0.5589  & 0.6779 & 0.4182 \\
+  {} &  {}   & 4000   & 0.4281  & 0.5589  & 0.6779 & 0.4182 \\
   \cline{2-7}
-                                    {} &  \multirow{3}{*}{150}   & 500 & 0.3589  & 0.4981 & 0.6198 & 0.3845 \\
+  {} &  \multirow{3}{*}{150}   & 500 & 0.3589  & 0.4981 & 0.6198 & 0.3845 \\
   \cline{3-7}
-                                    {} &  {}   & 2000   & 0.4129  & 0.5392  & 0.6563 & 0.4085 \\
+  {} &  {}   & 2000   & 0.4129  & 0.5392  & 0.6563 & 0.4085 \\
   \cline{3-7}
-                                    {} &  {}   & 4000   & 0.4266  & 0.5521 & 0.6722 & 0.4162\\
-
-
+  {} &  {}   & 4000   & 0.4266  & 0.5521 & 0.6722 & 0.4162\\
   \hline                                    
 
   \caption{Recall results for UCF dataset}
@@ -327,8 +330,13 @@ tubes. In Table \ref{table:ucf_recall}
 \end{longtable} 
 \end{center}
 
-\begin{center}
-\begin{longtable}{||c | c | c ||c c c| c|}
+% \begin{center}
+% \begin{longtable}{||c | c | c ||c c c| c|}
+
+\begin{table}
+  \centering
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{||c | c | c ||c c c| c|}
 
   \hline
   \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
@@ -339,18 +347,18 @@ tubes. In Table \ref{table:ucf_recall}
   \multirow{6}{7em}{0,1,...,6,\textbf{\{7,\}}
   \textbf{\{8,\}}9,...,15 }  & \multirow{3}{*}{30} & 500   & 0.4464  & 0.581 & 0.6844  & 0.7787 \\
   \cline{3-7}
-                                    {} &  {}   & 2000   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
+  {} &  {}   & 2000   & 0.635  & 0.7665 & 0.8403 & 0.8693 \\
   \cline{3-7}
-                                    {} &  {}   & 4000   & 0.7034  & 0.8228 & 0.8875 & 0.8973 \\
+  {} &  {}   & 4000   & 0.7034  & 0.8228 & 0.8875 & 0.8973 \\
   \cline{2-7}
-                                    {} &  \multirow{3}{*}{100}   & 500   & 0.454 & 0.5924 & 0.692 & 0.783 \\
+  {} &  \multirow{3}{*}{100}   & 500   & 0.454 & 0.5924 & 0.692 & 0.783 \\
   \cline{3-7}
-                                    {} &  {}   & 2000   & 0.651 & 0.7696 & 0.8441 &0.8734 \\
+  {} &  {}   & 2000   & 0.651 & 0.7696 & 0.8441 &0.8734 \\
   \cline{3-7}
-                                    {} &  {}   & 4000   & 0.7209 &0.8312 & 0.8913 & 0.9026 \\
+  {} &  {}   & 4000   & 0.7209 &0.8312 & 0.8913 & 0.9026 \\
 
   \hline                                    
-  \multirow{4}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \multirow{6}{7em}{0,1,...,14,\textbf{\{15,\}}
   \textbf{\{16,\}}17,18,...,23 }  & \multirow{3}{*}{30} & 500   & 0.6844 &0.8327 & 0.9027 & 0.8992 \\
   \cline{3-7}
                                     {} &  {}   & 2000   & 0.7475 & 0.8684 & 0.9217 & 0.9175 \\
@@ -363,53 +371,96 @@ tubes. In Table \ref{table:ucf_recall}
   \cline{3-7}
                                     {} &  {}   & 4000   &  0.8403  & 0.9179 & 0.9437 & 0.9389\\
   \hline                                    
-
+  \end{tabular}
   \caption{Temporal Recall results for UCF dataset}
   \label{table:ucf_temp_recall }
-\end{longtable} 
-\end{center}
+\end{table}
+% \end{longtable} 
+% \end{center}
 
-\textbf{Pending... commentary}
+According to Table \ref{table:ucf_recall}, we achieve better recall and MABO performance when we set sample duration equal with 16.
+In all cases,  recall performace of simulations with sample duration equal with 16 outweight the corresponding with 8, with the difference
+varying from 2\% to 8\%. In addition, we get best recall and MABO performance when our system proposes 4000 tubes. As we can see,
+the ratio of good proposals increases about 5\%-7\% when we change number of proposed tubes from 500 to 2000. This ratio increases more
+when we double returned action tubes, from 2000 to 4000. However, this increase is only about 1\%-2\%, which make us rethink if this increase
+is worth to be performed. That's because, this modification increases memory usage, because of 4000 proposed action tubes, instead of
+2000. Finally, Table \ref{table:ucf_recall} shows that, for sample duration = 8, changing the number of ToIs produced by TPN, slightly
+helps our network to achieve better results. This contribution is measured about 1\%-2\%.
+On the contrary, when we set sample duration equal with 16, it slightly reduces network's performance. Taking all the aforementioned
+results into account, we think that the most suitable choices for connection approaches are, for sample duration equal with 8, the one in
+which TPN returns 100 ToIs and our network proposes 4000 action tubes, and for sample duration equal with 16, the one in which,
+TPN returns 30 ToIs and the network 4000 action tubes. \par
+Addionally, Table \ref{table:ucf_temp_recall } shows some interesting facts, too. At first, it confirms that increasing the number of proposed
+action tubes, from 500 to 4000, increases recall and MABO performance. Also, we get better result when network has 16 frames as sample
+duration, too. However, unlike Table \ref{table:ucf_recall}, Table \ref{table:ucf_temp_recall } shows that when we increase TPN's number
+of proposed ToIs, it increases performances for both sample durations. For sample duration equal with 8, this increases results in Improving
+recall performances by 2\% and MABO performance by 1\% like spatio-temporal recall and MABO. For sample duration equal with 16, recall
+performance is increasing by about 8\% and MABO by 1\%-2\%.  \par
+Taking both tables into cosideration, we think that the best approach is TPN returning 30 proposed ToIs, network returning 4000 proposed
+action tubes and sample duration equals with 16. We didn't choose TPN returning 150 proposed ToIs because, based on MABO performances,
+they different only by 1\%, difference which is insignificant.
+
 
 \subsubsection{Adding NMS algorithm}
 
-\textbf{Pending description... }
-
+Previous section describe the performances of network's proposals for variations in the returnig number of TPN's ToIs, number of returned
+proposed aciton tubes and sample duration. For each situation, we choose the k-best scoring action tubes, without taking into account
+any relation between these aciton tubes, like their Spatio-temporal overlap. So, like TPN's approach, we thought that we should apply
+nms algorithm before choosing k-best scoring tubes, in order to further improve  spatio-temporal and temporal, recall and MABO  performance.
+We experiment using again two sample durations, 16 and 8 frames per video segment, number or TPN's returning tubes equal with 30 and
+number of final picked action tubes equal with 4000. NMS algorithm uses a threshold in order to choose if 2 action tubes overlap enough. We
+experiment setting this threshold equal with 0.7 and 0.8 and results are shown at Table \ref{table:ucf_nms_recall} for Spatio-temporal
+perfomance and at Table \ref{table:ucf_nms_temp_recall} for temporal performace.
 
 \begin{center}
+  \setlength{\tabcolsep}{2pt}
 \begin{longtable}{||c | c | c ||c c c| c|}
 
   \hline
   \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
   {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
   \hline
-  
-  
-  \multirow{3}{7em}{0,1,...,6,\textbf{\{7,\}}
-  \textbf{\{8,\}}9,...,15 }  & \multirow{2}{*}{0.7} & 10000   & Pending \\
-  \cline{3-7}
-                                    {} &  {}   & \multirow{2}{*}{20000}   & Pending \\
+  \multirow{2}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{2}{*}{20000}  & 0.346 & 0.5202 & 0.657 & 0.3824685269 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.8   & {}   & Pending \\
+  \hline                                    
+  \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,...,23 }  & 0.7 & \multirow{2}{*}{20000}   & Pending \\
   \cline{2-2} \cline{4-7} 
                                     {} &  0.8   & {}   & Pending \\
-
-  \hline                                    
-  \multirow{4}{7em}{0,1,...,14,\textbf{\{15,\}}
-  \textbf{\{16,\}}17,18,...,23 }  & \multirow{2}{*}{0.7} & 10000   & Pending \\
-  \cline{3-7}
-                                    {} &  {}   & \multirow{2}{*}{20000}   & Pending \\
-  \cline{2-2} \cline{4-7} 
-                                    {} &  0.8   & {}   & Pending \\
-
-
   \hline                                    
 
-  \caption{Temporal Recall results for UCF dataset}
-  \label{table:ucf_nms_recall }
+  \caption{Spatio-temporal Recall results for UCF dataset}
+  \label{table:ucf_nms_recall}
 \end{longtable} 
 \end{center}
 
-\textbf{Pending... }
-\\
+\begin{center}
+  \setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{||c | c | c ||c c c| c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
+  \hline
+  \multirow{2}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{2}{*}{20000}  & 0.6281 & 0.8251 & 0.9027 & 0.8885141223  \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.8   & {}   & Pending \\
+  \hline                                    
+  \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,...,23 }  & 0.7 & \multirow{2}{*}{20000}   & Pending \\
+  \cline{2-2} \cline{4-7} 
+                                    {} &  0.8   & {}   & Pending \\
+  \hline                                    
+
+  \caption{Temporal Recall results for UCF dataset}
+  \label{table:ucf_nms_temp_recall}
+\end{longtable} 
+\end{center}
+
+
 \section{Second approach: use progression and progress rate}
 As we saw before, our first connecting algorithm doesn't have very good recall results. So, we created another algorithm which is base in \cite{DBLP:journals/corr/abs-1903-00304}. This
 algorithm introduces two 2 metrics according to \cite{DBLP:journals/corr/abs-1903-00304}:
@@ -470,7 +521,7 @@ predefined threshold.
   \hline
   sample dur & step &   0.5  &  0.4 &  0.3 \\
   \hline   \hline
-  8 & 6 & Pending \\
+  8 & 6 & 0.3284 & 0.5 & 0.6082  \\
   \hline
   8 & 7 & 0.209	& 0.459 & 0.6119 \\
   \hline
@@ -537,4 +588,4 @@ slightly better that the 8. However, using sample 16 increases the memory usage 
 we will experiment using mostly sample duration = 8.
 
 
-% \end{document}
+\end{document}

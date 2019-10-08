@@ -690,7 +690,7 @@ colour and the interpolated has red color.
 
 In order to calculate AP, we sample the curve at all unique recalls values, whenever the maximum precision drops. On top of that, we define mean Average Precision (mAP)
 the mean of the AP for each class. So, AP and mAP are defined as
-\[  AP = \sum (r_{n+1} - r_n) p_{interp} (r_{n+1}) \]
+\[  AP = \sum (r{n+1} - r_n) p_{interp} (r_{n+1}) \]
 \[ p_{interp}(r_{n+1}) = \max_{\tilde{r} \ge r_{n+1} p(\tilde{r})}p(\tilde{r}) \]
 \[ mAP = \frac{1}{N} \sum_{i=1}^N AP_i \]
 

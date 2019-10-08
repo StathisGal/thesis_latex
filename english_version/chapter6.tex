@@ -1,22 +1,22 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage[export]{adjustbox}
-% \usepackage{longtable} % package for multi pages tables
-% \usepackage{multirow}  % package for tables, multirow
-% % \usepackage{amsmath}
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Classification stage}
 \section{Description}
@@ -86,14 +86,16 @@ threshold for confidence score.
 
 \begin{table}[h]
   \centering
-  \begin{tabular}{|| c || c  c  c ||}
+  \begin{tabular}{|| c | c || c  c  c ||}
     \hline
-    \multirow{2}{*}{\textbf{Classifier}} & {} & \textbf{mAP} & {} \\
-    {} & 0.5 & 0.4 & 0.3 \\
+    \multirow{2}{*}{\textbf{Classifier}} & \multirow{2}{*}{\textbf{Pooling}} &  {} & \textbf{mAP} & {} \\
+    {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    Linear & TODO & TODO & TODO \\
+    \multirow{2}{*}{Linear} & mean & 14.18 & 19.81 & 20.02 \\
+    \cline{2-5}
+    {} & max & 13.67 & 16.46 & 17.02 \\
     \hline
-    RNN    & 11.3 & 14.14 & 14.84 \\
+    RNN  & -  & 11.3 & 14.14 & 14.84 \\
     \hline
   \end{tabular}
   \caption{}
@@ -289,31 +291,16 @@ maps because it wouldn't performed better that (256,8,7,7) ferature maps as noti
   before & after & {} & {} &  0.5 &  0.4 & 0.3 \\
   \hline   \hline
 
-  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{1,256,16,7,7} & \multirow{5}{*}{No}  & 1 & 23.4 & 27.57 &28.65  \\
-  \cline{4-7}
-
-  {} & {} & {} & 2 & Pending \\
-  \cline{4-7}
-  {} & {} & {} & 3 & Pending \\
+  \multirow{2}{*}{k,256,16,7,7} & \multirow{2}{*}{1,256,16,7,7} & \multirow{2}{*}{No}  & 1 & 23.4 & 27.57 &28.65  \\
   \cline{4-7}
   {} & {} & {} & 4 & 22.7 & 26.95 & 28.05 \\
-  \cline{4-7}
-  {} & {} & {} & 5 & Pending \\
   \hline
 
-  \multirow{5}{*}{k,256,16,7,7} & \multirow{5}{*}{2,256,16,7,7} & \multirow{5}{*}{Yes}  & 1 & 21.12 & 24.07 & 24.36  \\
-  \cline{4-7}
-
-  {} & {} & {} & 2 & Pending \\
-  \cline{4-7}
-  {} & {} & {} & 3 & Pending \\
+  \multirow{2}{*}{k,256,16,7,7} & \multirow{2}{*}{2,256,16,7,7} & \multirow{2}{*}{Yes}  & 1 & 21.12 & 24.07 & 24.36  \\
   \cline{4-7}
   {} & {} & {} & 4 & 18.36 & 23.09 & 23.75 \\
-  \cline{4-7}
-  
-  {} & {} & {} & 5 & Pending \\
   \hline
-  \caption{mAP results for   }
+  \caption{mAP results for  policies 1,4  for sample duration = 16 }
   \label{table:svm_temp_pooling_16}
 \end{longtable} 
 \end{center}
@@ -326,31 +313,97 @@ From above results, we notice that SVM improve a lot the perfomance of our model
 add more groundtruth action tubes. We consider as groundtruth action tubes all the tubes whose overlap score  with a groundtruth tube is
 greater that 0.7 . Also, we increase the total number of tube to 8. Table \ref{table:svm_increased}
 
-\begin{table}[h]
-  \centering
-  \begin{tabular}{|| c | c | c || c c c||}
+% \begin{table}[h]
+%   \centering
+%   \begin{tabular}{|| c | c | c || c c c||}
+
+\begin{center}
+  \begin{longtable}{|| c | c | c || c c c||}
     \hline
-    \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{Total tubes}} & \multirow{2}{*}{\textbf{FG tubes}} & {} & \textbf{mAP} & {} \\
+    \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{FG tubes}}  & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {}  & {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{(k,256,8,7,7)} & 3 & 1 & 11.3 & 14.14 & 14.84 \\
+    \multirow{7}{*}{(k,256,8,7,7)} & 1 & 3 & 11.3 & 14.14 & 14.84 \\
     \cline{2-6}
-    {} & 8 & 2 & 0.77 & 1.51 & 2.72 \\
+    {} & \multirow{3}{*}{2} & 4  & Pending... \\
+    \cline{3-6}
+    {} & {} & 6 & Pending... \\
+    \cline{3-6}
+    {} & {} & 8 & 0.77 & 1.51 & 2.72 \\
     \cline{2-6}
-    {} & 16 & 4 & 20.11	& 25.50 & 27.62 \\
+    {} & \multirow{3}{*}{4} & 8 & Pending... \\
+    \cline{3-6}
+    {} & {} & 12  & 16.55 & 24.35 & 25.22 \\
+    \cline{3-6}
+    {} & {} & 16  & 20.11 & 25.50 & 27.62 \\
     \cline{2-6}
-    {} & 32 & 8 & Pending... \\
+    {} & \multirow{3}{*}{8} & 16 & Pending... \\
+    \cline{3-6}
+    {} &  {} & 24 & 15.88 & 23.44 & 24.48  \\
+    \cline{3-6}
+    {} &  {} & 32 &  12.66 & 23.50 & 25.61 \\
     \hline
 
-  \end{tabular}
   \caption{RNN results }
   \label{table:rnn_increased}
-\end{table}
+\end{longtable}
+\end{center}
+
+  % \end{tabular}
+  % \caption{RNN results }
+  % \label{table:rnn_increased}
+% \end{table}
+
   
+% \begin{table}[h]
+%   \centering
+%   \begin{tabular}{|| c | c | c || c c c||}
+
+\begin{center}
+  \begin{longtable}{|| c | c | c || c c c||}
+    \hline
+    \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
+    {}  & {} & {} & 0.5 & 0.4 & 0.3 \\
+    \hline
+    \multirow{7}{*}{(k,256,8,7,7)}  & 1 & 3& 14.18 &19.81 & 20.02 \\
+    \cline{2-6}
+    {} & \multirow{3}{*}{2} & 4 & Pending... \\
+    \cline{3-6}
+    {} & {} & 6 & 10.74 & 13.36 & 15.18 \\
+    \cline{3-6}
+    {} & {} & 8 & 8.00 & 9.83 & 11.17 \\
+    \cline{2-6}
+    {} & \multirow{3}{*}{4} & 8 & 17.04	& 20.12 &22.07 \\
+    \cline{3-6}
+    {} & {} & 12 & 17.57 & 19.9 & 21.88 \\
+    \cline{3-6}
+    {} & {} & 16 & 14.24 & 17.24 & 17.95 \\
+
+    \cline{2-6}
+    {} & \multirow{3}{*}{8} & 16 & 16.76 & 20.34 & 22.72 \\
+    \cline{3-6}
+    {} & {} & 24 & 17.61 & 19.12 & 24.48 \\
+    \cline{3-6}
+    {} & {} & 32 & 14.45 & 18.07 & 19.14  \\
+    \hline
+
+    \caption{Linear results }
+    \label{table:linear_increased}
+  \end{longtable}
+\end{center}
+%   \end{tabular}
+%   \caption{Linear results }
+%   \label{table:linear_increased}
+% \end{table}
+  
+
 temporal pooling kai me max
-\begin{table}[h]
-  \centering
-  \begin{tabular}{|| c | c | c | c || c c c||}
+% \begin{table}[h]
+%   \centering
+%   \begin{tabular}{|| c | c | c | c || c c c||}
+\begin{center}
+  \begin{longtable}{|| c | c | c | c || c c c||}
+
     \hline
     \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{T. tubes}} & \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Policy}} & {} & \textbf{mAP} & {} \\
     {}  & {} & {} & {} & 0.5 & 0.4 & 0.3 \\
@@ -359,7 +412,7 @@ temporal pooling kai me max
     \cline{4-7}
     {} & {} & {} & 4 & Pending... \\
     \cline{2-7}
-    {} & \multirow{2}{*}{8} & \multirow{2}{*}{2} & 1 &  Pending... \\
+    {} & \multirow{2}{*}{8} & \multirow{2}{*}{3} & 1 &  24.38 & 25.97 & 26.4 \\
     \cline{4-7}
     {} & {} & {} & 4 & Pending... \\
     \cline{2-7}
@@ -373,35 +426,15 @@ temporal pooling kai me max
 
     \hline
 
-  \end{tabular}
-  \caption{SVM results }
-  \label{table:svm_increased}
-\end{table}
-  
-\textbf{Pending table...}
-% \begin{center}
-% \begin{longtable}{||c | c| c| c||c c c||}
-
-%   \hline
-%  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Pooling}} &\multirow{2}{*}{ \textbf{Type}} &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
-
-%   before & after & {} & {} & 0.3 &  0.4 & 0.5 \\
-%   \hline   \hline
-
-%   \multirow{2}{*}{k,64,8,7,7} & \multirow{2}{*}{2,64,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
-%   \cline{4-7}
-%   {} & {} & {} & 4 & Pending \\
-%   \hline   
-%   \multirow{2}{*}{k,256,8,7,7} & \multirow{2}{*}{2,256,7,7} & \multirow{2}{*}{max}  & 1 & TODO & TODO & TODO \\
-%   \cline{4-7}
-%   {} & {} & {} & 4 & Pending \\
-%   \hline   
-%   \caption{Results after increasing the number of total tubes }
+    \caption{SVM results }
+    \label{table:svm_increased}
+  \end{longtable}
+\end{center}
+%   \end{tabular}
+%   \caption{SVM results }
 %   \label{table:svm_increased}
-
-% \end{longtable} 
-% \end{center}
-
+% \end{table}
+  
 \section{MultiLayer Perceptron (MLP)}
 \textbf{Pending...}
 Last but not least approach is a Multilayer perceptorn (MLP). More specifically, we extract the 3 last residulal layers of 3D ResNet34
@@ -417,7 +450,7 @@ tpn - freeze features, don't know
 \subsection{Extract features}
 \textbf{Pending...}
 
-
+\subsection{Performing temporal pooling}
 
 \section{Classifying dataset UCF}
 \textbf{Pending...}
@@ -437,4 +470,4 @@ information but only temporal information extracted by our
 %   \label{fig:network_nms}
 % \end{figure}
 
-% \end{document}
+\end{document}

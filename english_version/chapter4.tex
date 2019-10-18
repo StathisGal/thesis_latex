@@ -1,37 +1,69 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage[export]{adjustbox}
-\usepackage{multirow}  % package for tables, multir
-\usepackage{amssymb}
-% \usepackage{tabu}   % for tables 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage[export]{adjustbox}
+% \usepackage{multirow}  % package for tables, multir
+% \usepackage{amssymb}
+% % \usepackage{tabu}   % for tables 
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Tube Proposal Network}
 
-One of the basic elements of ActionNet is \textbf{Tube Proposal Network}(TPN). The main purpose of this network is to propose
+\section{ Our implementation's architecture}
+In this chapter, we get involved with Tube Proposal Network(TPN), one of the basic elements of ActionNet. Before describing it, we present
+the whole structure of our model. We propose a network similar to \cite{DBLP:journals/corr/HouCS17}.
+Our architecture is consisted by the following basic elements:
+\begin{itemize}
+\item One 3D Convolutional Network, which is used for feature extraction. In our implementaion we use a 3D Resnet network which is taken from
+  \cite{hara3dcnns} and it is based on ResNet CNNs for Image Classification \cite{DBLP:journals/corr/HeZRS15}.
+\item Tube Proposal Network for proposing action tubes (based on the idea presented in \cite{DBLP:journals/corr/HouCS17}).
+\item A classifier for classifying video tubes.
+\end{itemize}
+
+The basic procedure ActionNet follows is:
+\begin{enumerate}
+\item Given a video, we seperate it into video segments. These video segments in some cases overlap temporally and in some others don't.
+\item For each video segment, after performing spatiotemporal resizing, we feed its frames into ResNet34 in order to perform feature
+  extraction. These activation maps are, next, fed into TPN for proposing sequences of bounding boxes. We name them Tubes of Interest (ToIs), 
+  like \cite{DBLP:journals/corr/HouCS17}, and are likely to contain a person performing an action. N
+\item After getting proposed ToIs for each video segment, using a linking algorithm, ActionNet finds final cancidate action tubes. These
+  action tubes are given as input to a classifier in order to get their action class.
+\end{enumerate}
+
+A diagram of ActionNet is shown at Figure \ref{fig:whole_network_}.
+
+\begin{figure}[h]
+  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
+  \centering
+  \includegraphics[scale=0.42]{model_prenms}
+  \caption{Structure of the whole network}
+  \label{fig:whole_network_}
+\end{figure}
+
+\section{Introduction to TPN}
+ The main purpose of Tube Proposal Network (TPN)  is to propose
 \textbf{Tube of Interest}(TOIs). These tubes are likely to contain an known action and are consisted of some 2D boxes
 (1 for each frame). TPN is inspired from RPN introduced by FasterRCNN (\cite{Ren:2015:FRT:2969239.2969250}), but instead of images, TPN
 is used in videos as show in \cite{DBLP:journals/corr/HouCS17}. In full correspondence with RPN, the structure
 of TPN is similar to RPN. The only difference, is that TPN uses 3D Convolutional Layers and 3D anchors instead of 2D. \par
 We designed 2 main structures for TPN. Each approach has a different definition of the used 3D anchors.
 The rest structure of the TPN is mainly the same with some little differences in the regression layer. \par
-Before describing TPN, we present the preprocess procedure which is the same for both approaches.
 
 \section{Preparation for TPN}
 
 \subsection{Preparing data}
-
+Before getting a video as input to extract its features and ToIs, this video has to be preprocessed.
+Preprocess procedure  is the same for both approaches of TPN.
 Our architecture gets as input a sequnece of frames which has a fixed size in widht, height and duration. However, each video has different resolution. That's creates the
 need to resize each frame before. As mentioned in previous chapter, the first element of our network is a 3D RenNet taken from \cite{hara3dcnns}. This network is designed to
 get images with dimensions (112,112). As a result, we resize each frame from datasets' videos into (112,112) frames. In order to keep aspect ratio, we pad each frame either
@@ -605,8 +637,6 @@ implementation code.
     \multirow{2}{*}{JHMDB} &  64 & 0.7985 & 0.903 & 0.9552 \\
     \cline{2-5}
     {} & 128 & 0.7836 & 0.8881 & 0.944\\
-    % \cline{2-5}
-    % {} & 256 & Pending... \\
     \hline
     \multirow{2}{*}{UCF}  & 64 & 0.5794 & 0.7206 & 0.8134 \\
     \cline{2-5}
@@ -618,7 +648,7 @@ implementation code.
   \label{table:reg_2_1}
 \end{table}
 
-According to Table \ref{table:ref_2_1}, we got the best results when we use $(64,16,7,7)$ feature map. This is the expected result, because these feature maps
+According to Table \ref{table:reg_2_1}, we got the best results when we use $(64,16,7,7)$ feature map. This is the expected result, because these feature maps
 are closer to the actual pixels of the actor, than $(128,16,7,7)$ feature maps, in which because of $3 \times 3 \times 3$ kernels, which combine spation-temporal
 information from neighbour pixels. However, as we can see, we got worst recall performance than when we didn't use any regressor if we compare results from Tables
 \ref{table:tpn_2_1} and \ref{table:reg_2_1}.
@@ -719,8 +749,14 @@ avg pooling. Of course, for sample duration = 16, we used the calculated one in 
   \label{table:new_sample}
 \end{table}
 
-As Table \ref{table:new_sample} shows, we get best performance for sample duration = 8. This 
-\subsubsection{with Regressor}                                             
+According to Table \ref{table:new_sample}, we notice that we get best performance for sample duration = 8 for both datasets. For dataset JHMDB sample duration equal with 8
+is gets far better results from the others aprroaches, followed by approach with sample duration = 4. For UCF dataset, although sample duration equal with 8 gives us best performances
+sample duration equal with 4 gives us about the same. The difference between those 2 duration is less that 1\%. 
+
+\subsubsection{With Regressor}                                             
+
+Following the idea of reducing sample duration for getting better recall performance, we trained TPN with a regressor. We trained for both approaches, which means both 3D and 2D Convolutional
+Layer approaches were trained. Recall performances are presented at Table \ref{table:new_sample_reg}.
 
 \begin{table}[h]
   \centering
@@ -750,6 +786,12 @@ As Table \ref{table:new_sample} shows, we get best performance for sample durati
   \label{table:new_sample_reg}
 \end{table}
 
+According to \ref{table:new_sample_reg}, it is clear that using a 2D Convolutional Layer as presented above results in better recall performance that using a 3D. Futhermore, we notice that
+the addition of a regressor causes both improvements and deteriorations in recall performances. For dataset UCF, approach with sample duration = 8 improves by about 1-2\% recall performance
+but for sample duration = 4 it reduce it by 1-3\%. On the other hand, for dataset JHMDB, now, sample duration = 4 gets better results by adding a regressor and sample duration = 8 gets
+worse. So, after considering both results from Tables \ref{table:new_sample} and \ref{table:new_sample_reg}, we think that the best approach is using sample duration equal with 8, with the
+adddition of a regressor, which uses a 2D Convolutional Layer. We know that this appoarch gets worse performance at JHMDB but it gives us the best results in UCF. But, since JHMDB's results are
+high enough, we are most interested in improving UCF's results. That's the reason, we will use the aformentioned approach in the rest chapters.
 
-\end{document}
+% \end{document}
 

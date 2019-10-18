@@ -84,8 +84,9 @@ robust human action recognition systems and detection algorithms.
 The first datasets like KTH\cite{} include 1 actor performing using a static camera over homogeneous backgrounds.
 Even though, those datasets help us design the first action recognition algorithms, they were not able to deal with the above
 challenges.
-This lead us to design datasets containing more ambigious videos such as Joint-annotated Human Motion Database(JHMDB)\cite{}
-and UCF-101\cite{}.
+This lead us to design datasets containing more ambigious videos such as Joint-annotated Human Motion Database(JHMDB) (\cite{Kuehne11})
+and UCF-101 (\cite{soomro2012ucf101}).
+
 \subsection{JHMDB Dataset}
 The JHMDB dataset (\cite{Jhuang:ICCV:2013}) is a fully annotated dataset for human actions and human poses. It is consisted of 21 action categories and 928
 clips extracted from Human Motion Database (HMDB51) \cite{Kuehne11}. This dataset contains trimmed videos with duration between
@@ -95,7 +96,7 @@ There are available 3 different splits for training data, proposed by the author
 videos for training set and 268 for validation . 
 
 \subsection{UCF-101 Dataset}
-The UCF-101 dataset(\cite{soomro2012ucf101} contains 13320 videos from 101 action categories.
+The UCF-101 dataset (\cite{soomro2012ucf101}) contains 13320 videos from 101 action categories.
 From those, for 24 classes and 3194 video spatio-temporal annotations are included. This means for each frames in which an action is taking place,
 there is a 2D bounding box surrounding the actor.  We seperate them in 2284 videos for training set and 910 for validation test according to the
 first proposed training split. For training data, there are videos up to 641 frame while in validation data max number of frames is 900.
@@ -115,11 +116,10 @@ bounding boxes in order to propose a final action tube and 4) we try to find the
 
 \section{Thesis structure}
 The rest of Thesis is organized as follows. Chapter 2 provides an general introduction to Machine Learning techniques currently used.
-After that, we present the basic elements of object recognition systems and alongside with that, loss functions and evaluation metrics that
-we used. Chapter 3 presents an brief overview of literature on human action recognition and localization. Chapter 4 introduces the first basic
-element of our network, Tube Proposal Network (TPN) and shows all the approachs designed for this. Chapter 5 proposes an algorithm
-for linking the proposed TOIs from every video segment and proposal performance is presented. In Chapter 6, we present all the classification
-approaches we used for designing our architecture and some classification results.  Chapter 7 is used for conclusions, summary of our contribution
-alongside with possible future work.
+After that, we present the basic elements of object recognition systems and alongside with loss functions and evaluation metrics that
+we used. Also, Chapter 2 presents an brief overview of literature on human action recognition and localization. Chapter 3 introduces the first basic element of our network, Tube Proposal Network (TPN), a network which proposes Tubes of Interest (ToIs), which are sequences of bounding boxes, with are likely to contain a performed action. Furthermore, it contains all the proposed architectures for achieving this.
+Chapter 4 proposes algorithms for linking the proposed TOIs from every video segment and proposal performance is presented.
+In Chapter 5, we present all the classification approaches we used for designing our architecture and some classification results.
+Chapter 6 is used for conclusions, summary of our contribution alongside with possible future work.
 
 % \end{document}

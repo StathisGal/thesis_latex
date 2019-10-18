@@ -16,7 +16,7 @@
 \usepackage{longtable} % package for multi pages tables
 \usepackage{multirow}  % package for tables, multirow
 \usepackage{amssymb}
-
+\usepackage{esvect}
 % \usepackage{amsmath}
 \usepackage[
     backend=bibtex,
@@ -117,7 +117,7 @@
   The purpose of this diploma thesis is the design of a network for recognizing and localising human actions in videos.
   Our network aims to spatio-temporally localize a recognized action within a video
   producing a sequence of 2D boxes, one per frame, which includes the actor
-  performing the recognized action.\par
+  performing the recognized action. \par
 
   Detecting and Recognizing actions in videos is one of the biggest
   challenges in the field of Computer Vision. Most recent approaches
@@ -132,16 +132,15 @@
   object detection networks and 3D Convolution.\par
 
   % \textbf{TODO change that}
-  We design a network whose structure is based on standard action localization networks. Its first
+  We design a network whose structure is based on standard action localization networks and we name it ActionNet. Its first
   element is a 3D ResNet34 which is used for spatio-temporal feature extraction. Also,
   we design a network for proposing action tubes based on spatio-temporal features, called Tube Proposal Network.
   This network is an  expansion of Region Proposal Network and it gets as input the extracted features and
   outputs k-proposed action tubes.
-  % introduced by Faster RCNN(\cite{Ren:2015:FRT:2969239.2969250})
-  We explore 2 approaches for
-  defining 3D anchors, which TPN uses. On top of that, we design a linking algorithm for
+  We explore 2 approaches for  defining 3D anchors, which TPN uses. On top of that,
+  we design a linking algorithm for
   connecting proposed action tubes. Finally, we explore several classification techniques
-  including a SVM classifier and a MLP.
+  including a SVM classifier and a MLP for datasets JHMDB and UCF101.
 
 \begin{keywordsen}
 Action Localization, Action Recognition, Action Tubes
@@ -175,8 +174,8 @@ Pending...
 \mainmatter
 
 \include{chapter1}
-\include{chapter2}
-\include{chapter3}
+\include{chapter2_3}
+% \include{chapter3}
 \include{chapter4}
 \include{chapter5}
 \include{chapter6}

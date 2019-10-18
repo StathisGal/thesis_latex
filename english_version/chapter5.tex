@@ -414,21 +414,26 @@ perfomance and at Table \ref{table:ucf_nms_temp_recall} for temporal performace.
 
 \begin{center}
   \setlength{\tabcolsep}{2pt}
-\begin{longtable}{||c | c | c ||c c c| c|}
+\begin{longtable}{||c | c | c | c c c| c|}
 
   \hline
   \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
   {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
   \hline
-  \multirow{2}{7em}{0,1,...,6,\textbf{\{7,\}}
-  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{2}{*}{20000}  & 0.346 & 0.5202 & 0.657 & 0.3824685269 \\
+  \multirow{3}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{3}{*}{20000}  & 0.346 & 0.5202 & 0.657 & 0.3824685269 \\
   \cline{2-2} \cline{4-7} 
-  {} &  0.8   & {}   & Pending \\
+  {} &  0.8   & {}   & 0.3643 & 0.5392 & 0.6578 & 0.3904727407 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.397  & 0.5574 & 0.6677 & 0.4031543642 \\
   \hline                                    
-  \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
-  \textbf{\{16,\}}17,...,23 }  & 0.7 & \multirow{2}{*}{20000}   & Pending \\
+  \multirow{3}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,...,23 }  & 0.7 & \multirow{3}{*}{20000}   & 0.3939 & 0.5559  & 0.6882 & 0.404689056 \\
   \cline{2-2} \cline{4-7} 
-                                    {} &  0.8   & {}   & Pending \\
+                                    {} &  0.8   & {}   & 0.4259 & 0.5764 & 0.6981 & 0.419487652 \\
+  \cline{2-2} \cline{4-7} 
+                                    {} &  0.9   & {}   & 0.4494 & 0.5856 & 0.7019 & 0.4302611039 \\
+
   \hline                                    
 
   \caption{Spatio-temporal Recall results for UCF dataset}
@@ -438,21 +443,25 @@ perfomance and at Table \ref{table:ucf_nms_temp_recall} for temporal performace.
 
 \begin{center}
   \setlength{\tabcolsep}{2.2pt}
-\begin{longtable}{||c | c | c ||c c c| c|}
+\begin{longtable}{||c | c | c | c c c| c|}
 
   \hline
   \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
   {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
   \hline
-  \multirow{2}{7em}{0,1,...,6,\textbf{\{7,\}}
-  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{2}{*}{20000}  & 0.6281 & 0.8251 & 0.9027 & 0.8885141223  \\
+  \multirow{3}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{3}{*}{20000}  & 0.6281 & 0.8251 & 0.9027 & 0.8885141223  \\
   \cline{2-2} \cline{4-7} 
-  {} &  0.8   & {}   & Pending \\
+  {} &  0.8   & {}   & 0.7369 & 0.8616 & 0.9148 & 0.9106069806 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   &  0.7787 & 0.8753 & 0.9209 & 0.9212593589 \\
   \hline                                    
-  \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
-  \textbf{\{16,\}}17,...,23 }  & 0.7 & \multirow{2}{*}{20000}   & Pending \\
+  \multirow{3}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,...,23 }  & 0.7 & \multirow{3}{*}{20000}   & 0.7452 & 0.8920 & 0.9361 & 0.920331595 \\
   \cline{2-2} \cline{4-7} 
-                                    {} &  0.8   & {}   & Pending \\
+  {} &  0.8   & {}   & 0.8160 & 0.9278 & 0.9506 & 0.93612757 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.854 & 0.9346 & 0.9529 & 0.9434986107 \\
   \hline                                    
 
   \caption{Temporal Recall results for UCF dataset}
@@ -460,6 +469,149 @@ perfomance and at Table \ref{table:ucf_nms_temp_recall} for temporal performace.
 \end{longtable} 
 \end{center}
 
+Comparing Table \ref{table:ucf_nms_recall} with Table \ref{table:ucf_recall},  we notice that NMS algorithm impoves recall and MABO
+performance when NMS threshold is equal with 0.9. When we set it equal with 0.7 or 0.8, we get worse results. This happens, probably, because
+nms algorithm removes some good proposals. Comparing these results with results presented at Tables \ref{table:ucf_recall} and \ref{table:ucf_temp_recall } it becomes clear that using NMS algorithm is very usefull. That's because, even though we get the same number of proposed action tubes,
+these tubes are not very close spatiotemporally, so this makes proposed action tubes more likely to contain actuall foreground action tubes.
+
+\subsubsection{Stop updating threshold}
+
+In previous approaches, scoring threshold was updated each time our algorithm gathered a significant number of ``active'' tubes in order not
+to add action tubes with score below this score. However, after serious cosideration we came with the conclusion that some times, the updated
+threshold leads to not detecting action tubes that start after some frames. That's because, until then, linking threshold may be too big that
+won't let new action tubes to be created. So, we came with the modification of not updating linking threshold but just filtering proposed
+tubes, by keeping k-best scoring each time their number is bigger that the a specific number. The rest algorithm remains the same. Tables
+\ref{table:ucf_nms_noup_recall} and \ref{table:ucf_nms_noup_temp_recall} show spatio-temporal and temporal, recall and MABO performace respectively.
+We experiment for cases in which either we don't use NMS algorithm at all, either we set overlap threshold equal with 0.7 and 0.9 as shown
+below.
+
+\begin{center}
+  \setlength{\tabcolsep}{2pt}
+\begin{longtable}{||c | c | c | c c c| c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
+  \hline
+  \multirow{3}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }   &   \multicolumn{2}{|c|}{-}     &  0.3779 & 0.5316 & 0.6471 & 0.393082961 \\
+  \cline{2-7}
+  {} & 0.7 &\multirow{2}{*}{20000}  & 0.3483  & 0.5194 & 0.6471 & 0.3783524086 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.416 & 0.5605 & 0.6722 & 0.4074053106 \\
+  \hline                                    
+  \multirow{3}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,...,23 }  &   \multicolumn{2}{|c|}{-} & 0.438 & 0.5635 & 0.6829 & 0.4231788 \\
+  \cline{2-7}
+  {} & 0.7 & \multirow{2}{*}{20000}   & 0.4525 & 0.5848 & 0.7034 & 0.429747438 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.3802 & 0.5133 & 0.6068 & 0.3862278851848662 \\
+
+  \hline                                    
+
+  \caption{Spatio-temporal Recall results for UCF dataset}
+  \label{table:ucf_nms_noup_recall}
+\end{longtable} 
+\end{center}
+
+\begin{center}
+  \setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{||c | c | c | c c c| c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
+  \hline
+
+  \multirow{3}{7em}{0,1,...,6,\textbf{\{7,\}}
+    \textbf{\{8,\}}9,...,15 }  &   -   & -    & 0.7087 & 0.8281 & 0.8913 & 0.899210587 \\
+  \cline{2-7} 
+  {} & 0.7 &\multirow{2}{*}{20000}  & 0.6586 & 0.854 & 0.9278 & 0.903373468 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   &  0.8137 & 0.8973 & 0.9361 & 0.9333068498 \\
+  \hline                                    
+  \multirow{3}{7em}{0,1,...,14,\textbf{\{15,\}}
+  \textbf{\{16,\}}17,...,23 }  &   \multicolumn{2}{|c|}{-} & 0.8327 & 0.9156 &0.9399 & 0.940143272 \\
+  \cline{2-7}
+  {} & 0.7 & \multirow{2}{*}{20000}& 0.8646 & 0.9369 & 0.9567 & 0.946701832 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.6183 & 0.7696 & 0.8388 & 0.8628507037919737 \\
+  \hline                                    
+
+  \caption{Temporal Recall results for UCF dataset}
+  \label{table:ucf_nms_noup_temp_recall}
+\end{longtable} 
+\end{center}
+
+Comparing recall and MABO performaces shown at Table \ref{table:ucf_nms_noup_recall} with those included at Tables \ref{table:ucf_nms_recall}
+and \ref{table:ucf_recall}, we deduce that for sample duration equal with 8 stopping updating linking threshold results in worse performace
+when ...
+\textbf{Pending... commentary}
+
+\subsubsection{Soft-nms instead of nms}
+
+After widely experiment using NMS algorithm, we thought that we should try to use Soft-NMS algorithm, introduced by \cite{DBLP:journals/corr/BodlaSCD17} and described in chapter 2. We implement our own soft-nms algorithm modifying it in order to calculate spatiotemporal overlapping
+scores, and not just spatial, like the one implemented by \cite{DBLP:journals/corr/BodlaSCD17}. As mentioned before, instead of removing action tubes, Soft-NMS algorithm just reduces their score for those which overlap over a predefined threshold, We experiment for sample duration
+equal with 8 and thresholds equal with 0.7 and 0.9, because, our implementation ran out of memory for sample duration equal with 16.
+Recall and MABO perfomance are presented at Tables \ref{table:ucf_softnms_recall} and \ref{table:ucf_softnms_temp_recall}
+
+\begin{center}
+  \setlength{\tabcolsep}{2pt}
+\begin{longtable}{||c | c | c | c c c| c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
+  \hline
+  \multirow{2}{7em}{0,1,...,6,\textbf{\{7,\}}
+  \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{2}{*}{20000}  & 0.3916 & 0.5384 & 0.6464 & 0.3964639 \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.4023 & 0.5430 & 0.6502 & 0.398845313 \\
+  \hline                                    
+  % \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
+  % \textbf{\{16,\}}17,...,23 }   & 0.7 & \multirow{2}{*}{20000}   & Pending... \\
+  % \cline{2-2} \cline{4-7} 
+  % {} &  0.9   & {}   & Pending... \\
+
+  % \hline                                    
+
+  \caption{Spatio-temporal Recall results for UCF dataset using Soft-NMS}
+  \label{table:ucf_softnms_recall}
+\end{longtable} 
+\end{center}
+
+\begin{center}
+  \setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{||c | c | c | c c c| c|}
+
+  \hline
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{NMS thresh} & \multirow{2}{3.5em}{PreNMS tubes} &  {} &overlap thresh & {} & \multirow{2}{*}{MABO} \\
+  {} & {} & {} &  0.9 &  0.8 & 0.7 & {}\\         
+  \hline
+
+  \multirow{2}{7em}{0,1,...,6,\textbf{\{7,\}}
+    \textbf{\{8,\}}9,...,15 }  & 0.7 &\multirow{2}{*}{20000}  & 0.7521 & 0.8586 & 0.9110 & 0.915746097  \\
+  \cline{2-2} \cline{4-7} 
+  {} &  0.9   & {}   & 0.7741 & 0.8768 & 0.9255 & 0.922677864 \\
+  \hline                                    
+  % \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
+  % \textbf{\{16,\}}17,...,23 }  &  0.7 & \multirow{2}{*}{20000}& Pending... \\
+  % \cline{2-2} \cline{4-7} 
+  % {} &  0.9   & {}   & Pending... \\
+  % \hline                                    
+
+  \caption{Temporal Recall results for UCF dataset using SoftNMS}
+  \label{table:ucf_softnms_temp_recall}
+\end{longtable} 
+\end{center}
+
+Taking results at Tables \ref{table:ucf_softnms_recall} and \ref{table:ucf_softnms_temp_recall} into consideration, alongside with those
+at Tables \ref{table:ucf_nms_noup_recall} and \ref{table:ucf_nms_noup_temp_recall} for sample duration equal with 8, we notice that
+using softNMS results in slightly better results. This happens when we set overlapping threshold equal with 0.9, otherwise, for
+overlapping threshold 0.7, we get worst performace. Despite the fact that softnms results in better recall and MABO performance,
+our implementation is very slow, which means that for a 201-frame video, softNMS part lasts about 32 seconds on the contrary with
+standard NMS algorithm without updating linking threshold, in which this part last only 2 seconds. So, we choose to use standard NMS
+algorithm without updating liking threshold as an algorithm for  removing overlapping action tubes.
 
 \section{Second approach: use progression and progress rate}
 As we saw before, our first connecting algorithm doesn't have very good recall results. So, we created another algorithm which is base in \cite{DBLP:journals/corr/abs-1903-00304}. This
@@ -527,11 +679,11 @@ predefined threshold.
   \hline
   8 & 8 & 0.3060 & 0.5672 & 0.6866 \\
   \hline
-  16 & 8  & Pending \\
+  16 & 8  & 0.194 & 0.4366 & 0.7164 \\
   \hline
-  16 & 12 & Pending \\
+  16 & 12 & 0.3358 & 0.5336 & 0.7537 \\
   \hline
-  16 & 16 & Pending \\
+  16 & 16 & 0.2649 & 0.4664 & 0.709 \\
   
   \hline     \hline                          
 
@@ -540,10 +692,10 @@ predefined threshold.
 \end{longtable} 
 \end{center}
 
+According to \ref{table:conn_app2}, we get best performance when we set sample duration equal with  16 and overlap step equal with 12.
+Comparing this performance with first approach, for both sample durations equal with 8 and 16, we notice that second approach falls short
+comparing to the first one. 
 
-
-(Pending Table...)
-As we can see from the table above, the results in recall are not very good either.
 \section{Third approach : use naive algorithm - only for JHMDB}
 
 As mention in first approach,  \cite{DBLP:journals/corr/HouCS17} calculates all possible sequences of ToIs in order to the find the best
@@ -586,6 +738,7 @@ In the follown table, we can see the recall results. \par
 From the above table, firstly, we corfirmed that overlap = sample duration gives us the best recall results. we notice that sample duration = 16 is
 slightly better that the 8. However, using sample 16 increases the memory usage even though it reduces the number of video segments. So for classification stage
 we will experiment using mostly sample duration = 8.
+
 
 
 \end{document}

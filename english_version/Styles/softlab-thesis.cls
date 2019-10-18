@@ -222,6 +222,9 @@
 %                 bold,nocenter,noupper,greek,contpage}
 \ExecuteOptions{a4paper,11pt,twoside,final,openright,%
                 bold,nocenter,noupper,contpage}
+% \ExecuteOptions{a4paper,12pt,twoside,final,openright,%
+%                 bold,nocenter,noupper,contpage}
+
 
 
 \ProcessOptions*

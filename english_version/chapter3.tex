@@ -57,9 +57,19 @@ fusion. Futhermore, \cite{DBLP:journals/corr/WangXW0LTG16} based their method on
 temporal context and training their network given limited training samples. Their approach, which they named Temporal Segment Network (TSN), seperates the input
 video in K segments and a short snippet from each segment is chosen for analysis. Then they fuse  the extracted spatio-temporal context, making, eventually, their
 prediction. \par
-Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and
-\cite{DBLP:journals/corr/MaCKA17}. \textbf{Pending... description} \par
+Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and \cite{DBLP:journals/corr/MaCKA17}.  \cite{DBLP:journals/corr/DonahueHGRVSD14} address the challenge of variable lenghts of
+input and output sequences, explointing convolutional layers and long-range temporal recursions. They propose a Long-term Recurrent
+Convolutional Network (LRCN) which is capable of dealing with the tasks of action Recognition, image caption and video description. In order to classify a given sequence of frames, LRCN firstly gets as input a frame, and in particular its RGB channels and optical flow and predicts a class label. After that, it extracts video class by averaging label probabilities, choosing the most probable class.
+\cite{DBLP:journals/corr/NgHVVMT15} firstly explore several approaches for temporal feature pooling. These techniques include handling video
+frames individually by 2 CNN architectures: either AlexNet or GoogleNet, and consisted of early fusion, late fusion of a combination between
+them. Futhermore, they propose a recurrnet neural Network architecture in order to consider video clips as a sequences of CNN activations.
+Proposed LSTM takes an input the output of the final CNN layer at each consequentive video frame and after five stacked LSTM layers using a
+Softmax classifier, it proposes a class label. For video classification, they return a label after last time step, max-pool the predictions
+over time, sum predictions over time and return the max or linearly weight the predictions over time by a factor g, sum them and return the max.
+They showed that all approaches are 1\% different with a bias for using weighting predictions for supporting the idea that LSTM becomes progressively more informed. Last but not least,  \cite{DBLP:journals/corr/MaCKA17} use a two-stream ConvNet for feature extraction and either a LSTM or convolutional layers over temporally-constructed feature matrices, for fusing spatial and temporal information. They use a ResNet-101 for
+extracting feature maps for both spatial and temporal streams. They divide video frames in several segments like \cite{DBLP:journals/corr/WangXW0LTG16} did, and use a temporal pooling layer to extract distinguished features. Taken these features, LSTM extracts embedded features from all segments.
 % A comparison between RNN networks and dilated convolutions is presented in \cite{DBLP:journals/corr/abs-1803-01271}, even though they don't refer at.\textbf{Pending... description}
+\par
 Additionally, \cite{Tran2014LearningSF} explored 3D Convolutional Networks (\cite{pmid:22392705}) and introduced C3D network which  has
 3D convolutional layers with kernels $ 3 \times 3 \times 3$.
 This network is able to  model appearence and motion context simultaneously using 3D convolutions and it can be used as a feature extractor, too.
@@ -67,8 +77,10 @@ Combining Two-stream architecture and 3D Convolutions, \cite{DBLP:journals/corr/
 I3D network. On top of that, the authors emphasize in the advantages of transfer learning for the task of action recognition by repeating 2D pre-trained weights
 in the 3rd dimension. \cite{DBLP:journals/corr/abs-1708-07632} proposed a 3D ResNet Network for action recognition based on Residual Networks (ResNet)
 (\cite{DBLP:journals/corr/HeZRS15}) and explore the effectiveness of ResNet with 3D Convolutional kernels.
-\cite{DBLP:journals/corr/abs-1711-08200} \textbf{Pending ...} \cite{DBLP:journals/corr/abs-1711-11248}
-experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
+On the other hand,\cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets(\cite{DBLP:journals/corr/HuangLW16a}) and extend
+DenseNet architecture by using 3D filters and pooling kernels instead of 2D, naming this approach as DenseNet3D. Futhermore, they introduce
+Temporal Transition Layer (TTL), which concatenates temporal feature-maps extracted at different temporal depth ranges and replaces DenseNet's
+transition layer. Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
 to show that a 2D spatial convolution followed by a 1D temporal convolution achieves state of the art classification performance, naming
 this type of convolution layer as R(2+1)D. A more detailed presentation for Action Recognition techniques used until 2018 is included in
 \cite{DBLP:journals/corr/abs-1806-11230}.
@@ -104,8 +116,11 @@ a temporal smoothing approach. \par
 Most recently, YOLO Network (\cite{DBLP:journals/corr/RedmonDGF15}) became the inspiration for \cite{DBLP:journals/corr/abs-1903-00304} and
 \cite{DBLP:journals/corr/abs-1802-08362}. In \cite{DBLP:journals/corr/abs-1903-00304}, concepts of progression and progress
 rate were introduced. Except from proposing bounding boxes in frame level, they use YOLO together with a RNN classifier for extracting temporal information for the proposals.
-Based on this information, they create action tubes, seperated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232}, \cite{} and
-\cite{}. In \cite{DBLP:journals/corr/abs-1802-09232} uses \textbf{pending description...}. \par
+Based on this information, they create action tubes, seperated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232} do.% , \cite{} and
+% . In \cite{DBLP:journals/corr/abs-1802-09232} uses \textbf{pending description...}. \par
+They proposed a method for calcualatin 2D and 3D poses and then they performed action classification. They use the diffferentiable Soft-argamax function for estimating 2D and 3D joints, because
+argmax function is not differentiable. Then, for T adjacent poses, they create an image representation with time and $N_j$ joins as $x-y$ dimensions and having 2 channes for 2D poses and 3
+channels for 3D poses. They use Convolutional Layers in order to produce action heats and then using max plus min pooling and a Softmax activation they perform action classification.
 Most of aforementioned networks use per-frame spatial proposals and extract their temporal infomation by calculating optical flow. On the other hand, \cite{DBLP:journals/corr/HouCS17} design
 an architecture which icludes proposal in video segment level, which they called Tube CNN (T-CNN). Video segment level means that the whole video is seperated into equal length video clips, and
 using a C3D for extracting features, it returns spatio-temporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} link the tube proposals by an algorithm based on tubes'

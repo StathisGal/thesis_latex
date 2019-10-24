@@ -1,6 +1,6 @@
 .PHONY: FORCE default clean distclean
 
-FILE=main_file
+FILE=cvsp
 
 export SHELL=/bin/bash -xv
 export TEXINPUTS:=.:./Styles//:${TEXINPUTS}
@@ -9,7 +9,8 @@ export BSTINPUTS:=.:./Styles//:${BSTINPUTS}
 default: $(FILE).pdf
 
 %.pdf: %.tex FORCE
-	latexmk -pdf -f -e '$$pdflatex=q/xelatex %O %S/' $<
+	lualatex  '$$pdflatex=q/xelatex %O %S/' $<
+	# latexmk -pdf -f -e '$$pdflatex=q/xelatex %O %S/' $<
 
 clean:
 	$(RM) *.{dvi,aux,log,toc,lof,lol,lot,dlog,bbl,blg,idx,out,tpt,svn}

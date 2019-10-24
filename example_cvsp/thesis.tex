@@ -1,0 +1,67 @@
+\documentclass[12pt, twoside, a4paper]{cvsp-thesis}
+\usepackage[greek]{babel}
+\usepackage[iso-8859-7]{inputenc}
+\usepackage[pdftex]{color}
+\usepackage[pdftex]{graphicx}
+%\usepackage[pdftex,unicode]{hyperref}
+\usepackage{geometry}
+\usepackage{amsmath, amsfonts}
+\usepackage{epstopdf}
+\usepackage{subfig}
+\def\subfigure{\subfloat}
+\usepackage{algorithm}
+\floatname{algorithm}{\textgreek{Αλγόριθμος}}
+\usepackage{algorithmic}
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+\newcommand{\tl}{\textlatin}
+\hyphenpenalty=424242
+\sloppy
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\pagestyle{fancy}
+\includeonly{abstract,kef1,kef2,kef3,kef4,kef5,kef6,kef7,biblio}
+
+\title{Εκτίμηση της κατεύθυνσης του βλέμματος με χρήση Ενεργών Μοντέλων Εμφάνισης}
+\author{Πέτρος N. Κούτρας}
+\supervisor{Πέτρος Μαραγκός}
+\epitropiF{Κωνσταντίνος Τζαφέστας}
+\epitropiS{Γεράσιμος Ποταμιάνος}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\include{abstract}
+
+\mainmatter
+
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents
+
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\include{kef1}
+
+\include{kef2}
+
+\include{kef3}
+
+\include{kef4}
+
+\include{kef5}
+
+\include{kef6}
+
+\include{kef7}
+
+\addcontentsline{toc}{chapter}{\bibname}
+\include{biblio}
+
+\end{document}

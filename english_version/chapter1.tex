@@ -19,7 +19,7 @@
 \chapter{Introduction}
 Nowadays, the enormous increase of computing power help us deal with a lot of difficult situations appeared in our daily life.
 A lot of areas of science have managed to tackle with problems, which were consided non trivial 20 years ago. One of
-these area is Computer Vision and an import problem is human action recognition and localization.
+these area is Computer Vision and an important problem is human action recognition and localization.
 \section{Problem statement}
 The area of human action recognition and locatization has 2 main goals:
 \begin{enumerate}
@@ -28,7 +28,7 @@ The area of human action recognition and locatization has 2 main goals:
 \end{enumerate}
 
 \subsection{Human Action Recognition}
-Considering human action recognition, a video may be consisted of only by 1 person doing something, however, this is a ideal
+Considering human action recognition, a video may be consisted of only by 1 person doing something. However, this is a ideal
 situation. In most cases, videos contain multiple people, who perform multiple actions or may not act at all in some segments.
 So, our goal is not only to classify an action, but to dertemine the temporal boundaries of each action.
 \subsection{Human Action Localization}
@@ -42,17 +42,18 @@ The field of Human Action Recognition and Localization has a lot of applications
 human-computer interaction.
 
 The huge availability of data (especially of videos) create the  necessity to find ways to take advantage of them.
-About 2.5 billion images are uploaded in Facebook every month, more than 34K hours of video in YouTube and
-about 5K images every minutes. On top of that, there are about 30 million surveillance cameras in US, which means
+About 2.5 billion images are uploaded at Facebook database every month, more than 34K hours of video in YouTube and
+about 5K images every minute. On top of that, there are about 30 million surveillance cameras in US, which means
 about 700K video hours per day. All those data need to be seperated in categories according to their content in
-order to search them more easily. This process takes places by hand, by the user who attaches
-keywords or tags, however, most users avoid to do so. This situation creates the need to create algorithms for
-automated indexing based on the content of the video.
+order to search them more easily. This process takes place by hand, by a user who attaches
+keywords or tags to each video. However, most users avoid doing that, so many videos end up without any tagging information.
+This situation creates the need to create algorithms for automated indexing based on the content of the video.
 
 Another application is video summury. This area take place usually in movies or sports events. In movies,
 video analysis algorithms can create a small video containing all the important moments of the movie. This
-can be achieve by choosing video segments which an important action take place such as killing the villain
-of the movie. In sports events, video summury applications include creating highlight video automatically.
+can be achieved by choosing video segments which an important action takes place such as killing the villain
+of the movie. In sports events, video summury applications include creating highlight videos automatically, like
+a video containing all achieved goals in football match.
 
 On top of that, human action recognition can replace human operators in surveillance systems. Until now,
 security systems include a system of multiple cameras handled by a human operator, who judges if a person
@@ -64,8 +65,15 @@ help elderly people deal with their daily needs. Also, gaming applications using
 gaming experience without the need of a physical game controller.
 
 \section{Challenges and Datasets}
-The wide variety of applications creates a lot of challenges which involve with action recognition systems.
-The most important include large variations in appearence of the actors, camera view-point changes, occlusions
+There are various types of human activities. Depending on their complexity, weconceptually categorize human activities into four different
+levels: gestures, actions, interactions, and group activities. Gestures are elementary movements of a person’s body part, and are the atomic
+components describing the meaningful motion of a person. ``Stretching an arm'' and ``raising a leg'' are good examples of gestures.
+Actions are single person activities that may be composed of multiple gestures organized temporally, such as ``walking'', ``waving'', and
+``punching''. Interactions are human activities that involve two or more persons and/or objects. For example, ``two persons fighting'' is
+an interaction between two humans and ``a person stealing a suitcase from another'' is a human-object interaction involving two humans and one
+object. Finally, group activities are the activities performed by conceptual groups composed of multiple persons and/or objects. ``A group of persons marching'', ``a group having a meeting'', and ``two groups fighting'' are typical examples of them.
+The wide variety of human activities and applications creates a lot of challenges which involve action recognition systems.
+The most important challenges include large variations in appearence of the actors, camera view-point changes, occlusions,
 non-rigid camera motions etc. On top of that, a big problem is that there are too many action classes which means
 that manual collection of training sample is prohibitive. Also, some times, action vocabulary is not well defined.
 As figure \ref{fig:open_example} shows, ``Open'' action can include a lot of kinds of actions, so we must carefully
@@ -81,11 +89,11 @@ choose which granularity of the action we will consider.
 
 In order to deal with those challenges, several standard action datasets have been created in order to delevop
 robust human action recognition systems and detection algorithms.
-The first datasets like KTH\cite{} include 1 actor performing using a static camera over homogeneous backgrounds.
-Even though, those datasets help us design the first action recognition algorithms, they were not able to deal with the above
+The first datasets included 1 actor performing using a static camera over homogeneous backgrounds.
+Even though, those datasets helped us design the first action recognition algorithms, they were not able to deal with the above
 challenges.
-This lead us to design datasets containing more ambigious videos such as Joint-annotated Human Motion Database(JHMDB) (\cite{Kuehne11})
-and UCF-101 (\cite{soomro2012ucf101}).
+This lead us to design datasets containing more ambigious videos, such as Joint-annotated Human Motion Database(JHMDB) (\cite{Kuehne11})
+and UCF-101 (\cite{soomro2012ucf101}). These datasets contain only human actions, the second category presented above.
 
 \subsection{JHMDB Dataset}
 The JHMDB dataset (\cite{Jhuang:ICCV:2013}) is a fully annotated dataset for human actions and human poses. It is consisted of 21 action categories and 928
@@ -97,11 +105,12 @@ videos for training set and 268 for validation .
 
 \subsection{UCF-101 Dataset}
 The UCF-101 dataset (\cite{soomro2012ucf101}) contains 13320 videos from 101 action categories.
-From those, for 24 classes and 3194 video spatio-temporal annotations are included. This means for each frames in which an action is taking place,
-there is a 2D bounding box surrounding the actor.  We seperate them in 2284 videos for training set and 910 for validation test according to the
-first proposed training split. For training data, there are videos up to 641 frame while in validation data max number of frames is 900.
-Each video,both training and validation, is, of course, untrimmed,  including more than 1 simultaneous actions. We took annotations from
-\cite{singh2016online} because the proposed, by the authors, annotations contains some mistakes.
+From those, for 24 classes and 3194 video spatio-temporal annotations are included. This means that there is a 2D bounding box surrounding the actor for each frame in which an action is taking place.
+We seperate them in 2284 videos for training set and 910 for validation test according to the
+first proposed training split. For training data, there are videos up to 641 frames, while in validation data max number of frames is 900.
+Each video, both training and validation, is untrimmed, including sometimes more than 1 actions taking place simultaneously.
+We took annotations from
+\cite{singh2016online} because the by the authors proposed annotations contain some mistakes.
 
 \section{Motivation ans Contibutions}
 The current achievements in Object Recognition Networks and in 3D Convolution Networks for Action Recognition have triggered us to try
@@ -110,9 +119,9 @@ to combine them in order to achieve state-of-the-art results for action localiza
 by \cite{jjfaster2rcnn}.
 
 Our contributions are the following 1) We create a new framework for action localization extending the code taken from faster RCNN,
-2) We try to create a network for proposing sequences of bounding boxes in video clips which may containg an anction taking advantage
-of the spatio-temporal features which 3D Convolutions provide us, 3) We create a connection algorithm for linking these sequences of
-bounding boxes in order to propose a final action tube and 4) we try to find the most suitable feature maps for classifying them.
+2) we try to create a network for proposing sequences of bounding boxes in video clips which may contain an anction taking advantage
+of the spatio-temporal features which 3D Convolutions provide us, 3) we create a linking algorithm for connecting proposed sequences of
+bounding boxes in order to extract candidate action tubes and 4) we try to find the most suitable feature maps for classifying them.
 
 \section{Thesis structure}
 The rest of Thesis is organized as follows. Chapter 2 provides an general introduction to Machine Learning techniques currently used.

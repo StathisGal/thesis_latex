@@ -484,7 +484,7 @@ input to Roi Algin operation.  At Table \ref{table:reg_1_2}, we can see the reca
   \centering
   \begin{tabular}{||c | c | c || c  c  c ||}
     \hline
-    \textbf{Dataset} & \textbf{Pooling} & \textbf{F. Map} & \textbf{Recall} &  \textbf{ Recall SR}  &  \textbf{Recall SRF)} \\
+    \textbf{Dataset} & \textbf{Pooling} & \textbf{F. Map} & \textbf{Recall} &  \textbf{ Recall SR}  &  \textbf{Recall SRF} \\
     \hline
     \multirow{6}{*}{JHMDB} & \multirow{3}{*}{mean} & 64 &  0.6828  & 0.5112  & 0.7610 \\
     \cline{3-6}
@@ -512,7 +512,7 @@ input to Roi Algin operation.  At Table \ref{table:reg_1_2}, we can see the reca
     \hline
 
   \end{tabular}
-  \caption{}
+  \caption{Recall performance using 3 different feature maps as Regressor's input and 2 pooling methods}
   \label{table:reg_1_2}
 \end{table}
 
@@ -583,7 +583,7 @@ tube, alongside with background anchors whose overlap is bigger that 0.1 and sma
     {} & max & 0.6418 & 0.7255 & 0.7898 \\
     \hline
   \end{tabular}
-  \caption{Recall results}
+  \caption{Recall results using 2nd approach for anchors}
   \label{table:tpn_2_1}
 \end{table}
 
@@ -644,7 +644,7 @@ implementation code.
     \hline
 
   \end{tabular}
-  \caption{}
+  \caption{Recall performance when using a 3D Convolutional Layer in Regressor's architecture}
   \label{table:reg_2_1}
 \end{table}
 
@@ -706,7 +706,7 @@ Again, we experiment using 64, 128 and 256 feature maps (in this case, there is 
     \hline
 
   \end{tabular}
-  \caption{}
+  \caption{Recall performance when using a 2D Convolutional Layer instead of 3D in Regressor's model}
   \label{table:reg_2_2}
 \end{table}
 
@@ -745,7 +745,7 @@ avg pooling. Of course, for sample duration = 16, we used the calculated one in 
     \hline
     
   \end{tabular}
-  \caption{}
+  \caption{Recall results when reducing sample duration to 4 and 8 frames per video segment}
   \label{table:new_sample}
 \end{table}
 
@@ -782,7 +782,7 @@ Layer approaches were trained. Recall performances are presented at Table \ref{t
     \hline
     
   \end{tabular}
-  \caption{}
+  \caption{Recall results when a regressor and sample duration equal with 4 or 8 frames per video segment}
   \label{table:new_sample_reg}
 \end{table}
 

@@ -36,12 +36,11 @@
 
 \subsection{Introduction}
 Machine Learning (ML) is a field which is raised out of Artificial Intelligence (AI). Applying AI, we wanted to build better and intelligent
-machines. But except for few mere tasks such as finding the shortest path between point A and B, we were unable to program more complex
-and constantly evolving challenges. There was a realisation that the only way to be able to achieve this task was to let machine learn
-from itself. This sounds similar to a child learning from its self. So machine learning was developed as a new capability for computers.
-And now machine learning is present in so many segments of technology, that we don’t even realise it while using it. \par
-Finding patterns in data on planet earth is possible only for human brains. The data being very massive, the time taken to compute is
-increased, and this is where Machine Learning comes into action, to help people with large data in minimum time. \\
+machines. But except for mere tasks such as finding the shortest path between point A and B, we were unable to program more complex
+and constantly evolving challenges. There was a realization that the only way to be able to achieve this task was to let machines learn
+from themselves. This sounds similar to a child learning from its self. So machine learning was developed as a new capability for computers.
+And now machine learning is present in so many segments of technology, that we don’t even realize it while using it. \par
+Finding patterns in data on planet earth is possible only for human brains. Data being very massive and time taken to compute them made  Machine Learning take  action, in order to help people exploit them in minimum time. \\
 There are three kinds of Machine Learning Algorithms :
  
 \begin{enumerate}
@@ -61,7 +60,7 @@ $Y = f(x)$.
 \end{figure}
 
 As shown in Figure \ref{fig:supervised_learning_example}, we have initially taken some data and marked them as ‘Spam’ or ‘Not Spam’. This
-labeled data is used by the training supervised model, in order to train the model. Once it is trained, we can test our model by testing it with some test new mails and checking of the model is able to predict the right output. 
+labeled data is used by the training supervised model, in order to train the model. Once it is trained, we can test our model by testing it with some new mails and checking if the model is able to predict the right output. 
 
 Supervised learning problems can be further divided into two parts, namely \textbf{classification}, and \textbf{regression}.
 \begin{description}
@@ -95,7 +94,7 @@ learning problems can be further divided into \textbf{association} and \textbf{c
 
 \begin{description}
 \item[ Association] : An association rule learning problem is where you want to discover rules that describe large portions of your data, such as “people that buy X also tend to buy Y”.
-\item[ Clustering] : A clustering problem is where you want to discover the inherent groupings in the data, such as grouping customers by purchasing behaviour.
+\item[ Clustering] : A clustering problem is where you want to discover the inherent groupings in the data, such as grouping customers by purchasing behavior.
 \end{description}
 
 \subsubsection{Reinforcement Learning}
@@ -155,10 +154,10 @@ several activation functions:
   \[ tanh(x) = 2 \sigma(2x) -1 \]
   Now it’s output is zero centered because its range in between -1 to 1. Hence optimization is easier in this method and  in practice it is always preferred over Sigmoid function . But still it suffers from Vanishing gradient problem.
 
-\item[ ReLU ]: ReLU stands for \textit{Rectified Linear Unit}. It takes a real-valued input and thresholds it at zero (replaces negative values with zero). So its formula is:
+\item[ Re-LU ]: Re-LU stands for \textit{Rectified Linear Unit}. It takes a real-valued input and thresholds it at zero (replaces negative values with zero). So its formula is:
   \[ f(x) = max(0,x) \]
   It has become very popular in the past couple of years. It was recently proved that it had 6 times improvement in convergence from Tanh
-  function. Seeing the mathamatical form of this function we can see that it is very simple and efficinent . A lot of times in Machine
+  function. Seeing the mathematical form of this function we can see that it is very simple and efficient . A lot of times in Machine
   learning and computer science we notice that most simple and consistent techniques and methods are only preferred and are best.
   Hence it avoids and rectifies vanishing gradient problem . Almost all deep learning Models use ReLu nowadays.
 \end{description}
@@ -171,7 +170,7 @@ Figure \ref{fig:Activation}  show each of the above activation functions.
   \label{fig:Activation}
 \end{figure}
 
-\subsubsection{Feedforward Neural Network}
+\subsubsection{Feed-forward Neural Network}
 Till now we have covered neuron and activation functions which together for the basic building blocks of any neural network. The feedforward
 neural network was the first and simplest type of artificial neural network devised. It contains multiple neurons (nodes) arranged in layers.
 A layer is nothing but a collection of neurons which take in an input and provide an output. Inputs to each of these neurons are processed
@@ -205,19 +204,19 @@ A Convolutional Neural Network (ConvNet/CNN) is one of the variants of neural ne
 derives its name from the type of hidden layers it consists of. The hidden layers of a CNN typically consist of convolutional layers, pooling
 layers, fully connected layers, and normalization layers. Here it simply means that instead of using the normal activation functions defined
 above, convolution and pooling functions are used as activation functions.
-It can take in an input image, assing importance (learning weights and biases) to various aspects/objects in the image and be able to
+It can take in an input image, assigning importance (learning weights and biases) to various aspects/objects in the image and be able to
 differentiate one from the other. The pre-processing required in a ConvNet is much lower as compared to the other classification algorithms.
 While in primitive method filters are hand-engineered, with enough training, ConvNets have the ability to learn these filters/characteristics.
 
 The architecture of a ConvNet is analogous to that of the connectivity pattern of Neurons in the Human Brain and was inspired by the
-structure of the Visual Cortex. However, most ConvNets costist mainly in 2 parts:
+structure of the Visual Cortex. However, most ConvNets consist mainly in 2 parts:
 \begin{description}[font=$\bullet$\scshape\bfseries]
 \item [ Feature extractor] : \\
   This part of the network takes as input the image and extract features that are meaningful for its classification. It amplifies aspects
-  of the input that are important for discrimination and suppresses irrelevant variations. Usually, the feature extractor cosists of
-  several layers. For instance, an image which could be seen as an array of pixel values. The first layer often learns reprensations
+  of the input that are important for discrimination and suppresses irrelevant variations. Usually, the feature extractor consists of
+  several layers. For instance, an image which could be seen as an array of pixel values. The first layer often learns representation
   that represent the presence or absence of edges at particular orientations and locations in the image. The second layer typically
-  detects motifs by spotting particular arrangements of edges, regardeless of small variations in the edge positions. Finally, the third
+  detects motifs by spotting particular arrangements of edges, regardless of small variations in the edge positions. Finally, the third
   may assemble motifs into larger combinations that correspond to paths of familiar objects, and subsequent layers would detect objects
   as combinations of these parts.
   
@@ -233,8 +232,8 @@ structure of the Visual Cortex. However, most ConvNets costist mainly in 2 parts
 \end{figure}
 \paragraph{Convolutional Layers}
 In order to extract such features, ConvNets use 2D convolution operations. These operations take place in convolutional layers. Convolutional
-layers consist of a set of learnable filters. Every filter is small spatially (along widht and height), but extends through the full depth of
-input. During forword pass, we slide (more precisely, convolve) each filter across the width and height of the input volume and compute dot
+layers consist of a set of learnable filters. Every filter is small spatially (along width and height), but extends through the full depth of
+input. During forward pass, we slide (more precisely, convolve) each filter across the width and height of the input volume and compute dot
 products between the entries of the filter and the input at any position (as Figure \ref{fig:conv_example} shows). The objective of the
 Convolution Operation is to extract the high-level features such as edges, from the input image. ConvNets need not be limited to only one
 Convolutional Layer. Conventionally, the first ConvLayer is responsible for capturing the Low-Level features such as edges, color, gradient
@@ -254,13 +253,13 @@ understanding of images in the dataset, similar to how we would.
   \label{fig:conv_example}
 \end{figure}
 \paragraph{Pooling Layers}
-Pooling Layers are also refered as downsampling layers and are used to reduce the spatial dimensions, but not depth, on a convolution neural network.
+Pooling Layers are also referred as downsampling layers and are used to reduce the spatial dimensions, but not depth, on a convolution neural network.
 The intuitive reasoning behind this layer is that once we know that a specific feature is in the original input volume (there will be a high activation value),
 its exact location is not as important as its relative location to the other features. The main advantages of pooling layer are:
 
 \begin{itemize}
 \item We gain computation performance since the amount of parameters is reduce.
-\item Less parameters also means We deal with overfitting situations.
+\item Less parameters also means we deal with overfitting situations.
 \end{itemize}
 
 The pooling operation is specified, rather than learned. Two common functions used in the pooling operation are:
@@ -281,8 +280,11 @@ Traditionally, ConvNets are targeting RGB images (3 channels). The goal of 3D CN
 When ConvNets extract the graphical characteristics of a single image and put them in a vector (a low-level representation), 3D ConvNets
 extract the graphical characteristics of a set of images. 3D CNNs takes in to account a temporal dimension (the order of the images in the
 video). From a set of images, 3D CNNs find a low-level representation of a set of images, and this representation is useful to find the
-right label of the video (a given action is performed). \\
-In order to extract such features, 3D ConvNets  use 3D convolution operations.
+right label of the video (a given action is performed). In order to extract such features, 3D ConvNets  use 3D convolution operations, whose kernel
+shape for a 3D Convolution is specified along 3 dimensions. When thinking about the convolution operation in terms of a kernel sliding
+across a multidimensional input array, for a 3D Convolution, the kernel slides in 3 directions
+Their output shape is a 3 dimensional volume space such as cube or cuboid.
+
 \begin{figure}[h]
   % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
   \centering
@@ -290,23 +292,26 @@ In order to extract such features, 3D ConvNets  use 3D convolution operations.
   \caption{3D Convolution operation}
 \end{figure}
 
-There are several existing approaches to tackle the video classification. This is a nonexaustive list of existing approaches:
-\begin{description} [font=$\bullet$\scshape\bfseries]
-\item[ ConvNets + LSTM cell] : Extract features from each frame with a ConvNet, passing the sequence to an RNN
-\item[ Temporal Relation Networks] : Extract features from each frame with a ConvNet and pass the sequence to an MLP
-\item[ Two-Stream Convolutional Networks] : Use 2 CNN, 1 spatial stream ConvNet which process one single frame at a time, and 1 Temporal stream ConvNet which process multi-frame optical flow
-\end{description}
+Also, such 3D relationship is important for some applications, such as in 3D segmentations / reconstructions of biomedical imagining,
+e.g. CT and MRI where objects such as blood vessels meander around in the 3D space.
+% There are several existing approaches to tackle the video classification. This is a nonexaustive list of existing approaches:
+% \begin{description} [font=$\bullet$\scshape\bfseries]
+% \item[ ConvNets + LSTM cell] : Extract features from each frame with a ConvNet, passing the sequence to an RNN
+% \item[ Temporal Relation Networks] : Extract features from each frame with a ConvNet and pass the sequence to an MLP
+% \item[ Two-Stream Convolutional Networks] : Use 2 CNN, 1 spatial stream ConvNet which process one single frame at a time, and 1 Temporal stream ConvNet which process multi-frame optical flow
+% \end{description}
 
 \section{Object Detection}
-Within the field of Deep Learning, the sub-discipline called “Object Detection” involves processes such as identifying the objects through a picture, video or a webcam feed.
-Object Detection is used almost everywhere these days. The use cases are endless such as Tracking objects, Video surveillance, Pedestrian detection etc. 
+Within the field of Deep Learning, the sub-discipline called ``Object Detection'' involves processes such as identifying the objects through a picture, video or a webcamera feed. The challenge of detecting all objects existing in image in counterpart of action localization in videos and
+a lot of object detection techniques are used in action localization architectures, so it is worth presenting it.
+Object Detection methods are used almost everywhere these days. The use cases are endless such as Tracking objects, Video surveillance, Pedestrian detection etc. 
 An object detection model is trained to detect the presence and location of multiple classes of objects. For example, a model might be trained with images that
 contain various pieces of fruit, along with a label that specifies the class of fruit they represent (e.g. an apple, a banana, or a strawberry),
 and data specifying where each object appears in the image.
 
 The main process followed by most of CNN for Object Detection is:
 \begin{enumerate}
-\item Fistly, we do feature extraction using as backbone network, the first Convolutional Layers of a known pre-trained CNN such
+\item Firstly, we do feature extraction using as backbone network, the first Convolutional Layers of a known pre-trained CNN such
   as AlexNet, VGG, ResNet etc.
 \item Then, we propose regions of interest (ROI) in the image. These regions contain possibly an object, which we are looking for.
 \item Finally, we classify each proposed ROI.
@@ -325,18 +330,18 @@ because, they were not be proposed to be classified.
   \label{fig:rpn_structure}
 \end{figure}
 
-The first Object-Detection CNNs use several algorithms for proposing ROIs. For example, R-CNN\cite{DBLP:journals/corr/GirshickDDM13},
-and Fast R-CNN\cite{Girshick:2015:FR:2919332.2920125} used Selective Search Algorithm for extracting ROIs.
-One of noverlties introduced by the Faster R-CNN\cite{Ren:2015:FRT:2969239.2969250} is \textbf{Region Proposal Network} (RPN). Its
-Function is to propose ROIs and its structure can be shown in \ref{fig:rpn_structure}. As we can see, RPN is consisted of:
+The first Object-Detection CNNs use several algorithms for proposing ROIs. For example, R-CNN(\cite{DBLP:journals/corr/GirshickDDM13}),
+and Fast R-CNN(\cite{Girshick:2015:FR:2919332.2920125}) used Selective Search Algorithm for extracting ROIs.
+One of novelties introduced by the Faster R-CNN(\cite{Ren:2015:FRT:2969239.2969250}) is \textbf{Region Proposal Network} (RPN). Its
+function is to propose ROIs and its structure can be shown in \ref{fig:rpn_structure}. As we can see, RPN is consisted of:
 \begin{itemize}
 \item 1 2D Convolutional Layer
 \item 1 score layer 
 \item 1 regression layer
 \end{itemize}
 
-Another basic element of RPN is the \textbf{anchors}. Anchors are predefined boxes used for extracting ROIs. In figure \ref{fig:anchors} is
-depicted an exaple of some anchors
+Before describing RPN's function, we introduce another basic element of RPN which is its \textbf{anchors}. Anchors are predefined boxes used for extracting ROIs. In figure \ref{fig:anchors} is
+depicted an example of some anchors
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.3]{anchors}
@@ -345,76 +350,78 @@ depicted an exaple of some anchors
 \end{figure}
 
 For each feature map's pixel corresponds \textbf{k (k=9)} anchors (3 different scales and 3 different ratios 1:1, 1:2, 2:1). \par
-As a result, RPN gets as input feature maps extracted from the backbone CNN. Then performs 2D convolution over this input and passes
-the output to its scoring layer and regression layer. Those scores represent the confidence of existing an object in this specific position.
-On top of that, regression layer outputs 4k displacements, 4 for each anchor. Finally, we keep as output only the \textit{ n-best scoring} anchors.
+So, RPN's procedure is:
+\begin{enumerate}
+\item RPN gets as input feature maps extracted from the backbone CNN.
+\item Then it performs 2D convolution over this input and passes the output to its scoring layer and regression layer.
+\item Scoring layer produces confidence score of existing an object in each anchor's area. On the other hand, regression layer outputs 4k displacements, 4 for each anchor. Finally, we keep as output only the \textit{ n-best scoring} anchors.
+\end{enumerate}
 
 \subsection{Roi Align}
 
 The biggest problem facing Object Detection Networks is the need for fixed input size. Classification networks require a fixed input size, which
-is easy for image classification because it is handle by resizing the input image. However, in object recognition, each proposal has a different size
+is easy for image classification because it is handled by resizing the input image. However, in object recognition architectures, each proposal has a different size
 and shape. This creates the need for converting all proposals to a fixed shape. At Fast-RCNN(\cite{Girshick:2015:FR:2919332.2920125}) and
-Faster-RCNN(\cite{Ren:2015:FRT:2969239.2969250}), this operation happens by applying Roi Pooling. However, this wrapping is digitalized because
+Faster-RCNN(\cite{Ren:2015:FRT:2969239.2969250}) methods, this operation happens by applying Roi Pooling. However, this wrapping is digitalized because
 the cell boundaries of the target feature map are forced to realign with the boundary of the input feature maps as shown in Figure \ref{fig:roi_pooling_align_1}
-at the top left diagram. As a result, each target cells may not be in the same size (Figure \ref{fig:roi_pooling_align_2}).
+(the top left diagram). As a result, each target cells may not be in the same size (Figure \ref{fig:roi_pooling_align_2}).
+
 
 \begin {figure}[h]
-  \centering
+
   \begin{subfigure}{0.35\textwidth}
+    \centering
     \includegraphics[scale=0.3]{roi_align_1}
     \caption{}
     \label{fig:roi_pooling_align_1}
   \end{subfigure}
   \hfill
-    \begin{subfigure}{0.35\textwidth}
+  \begin{subfigure}{0.35\textwidth}
+    \centering
     \includegraphics[scale=0.3]{roi_al_3}
     \caption{}
     \label{fig:roi_pooling_align_3}
   \end{subfigure}
   \hfill
-    \begin{subfigure}{0.35\textwidth}
+  \begin{subfigure}{0.35\textwidth}
+    \centering
     \includegraphics[scale=0.3]{roi_al_2}
     \caption{}
     \label{fig:roi_pooling_align_2}
   \end{subfigure}
   \hfill
-    \begin{subfigure}{0.35\textwidth}
+  \begin{subfigure}{0.35\textwidth}
+    \centering
     \includegraphics[scale=0.3]{roi_al_4}
     \caption{}
     \label{fig:roi_pooling_align_4}
   \end{subfigure}
-  \caption{}
+  \caption{Roi Pooling and Roi Align examples}
   \label{fig:roi_pooling_align}
 \end{figure}
 
 On the other hand, Mask-RCNN (\cite{DBLP:journals/corr/HeGDG17}) introduced Roi Align operation. Roi Align avoids digitalizing
 the boundary of the cells as shown in Figure \ref{fig:roi_pooling_align_3}, and achieves to make every target cell to have the same size
-according to Figure \ref{fig:roi_pooling_align_4}. In order to calculate feature maps values, Roi Align uses bilinear interpolation as
-shown in Figure \ref{fig:roi_align_2}. This means that we calculate the value of the desired bins according to their neighbours'.
+according to Figure \ref{fig:roi_pooling_align_4}. In order to calculate feature maps values, Roi Align uses bi-linear interpolation as
+shown in Figure \ref{fig:roi_align_2}. This means that we calculate the value of the desired bins according to their neighbors'.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.35]{roi_align_2}
-  \caption{}
+  \caption{Example of bi-linear interpolation for calculation Roi Align's final feature map}
   \label{fig:roi_align_2}
 \end{figure}
 
-% In \ref{fig:roi_align_2}, the $ 5 \times 5$ feature map from the last convolution layer is shown with the dotted lines and our proposed
-% Roi is shown with black lines. This rectangular proposal is overlaid with the feature map at a certain position. According to \ref{fig:roi_align_2},
-% our desired output has dimensions $2 \times 2$. So, the rectangular proposal is devided into a $2 x 2$ grid. From each grid cell we sample
-% four regions as shown with the blue dots, 
-
 \subsection{Non-maximum suppression (NMS) algorithm}
 
-That's because the neighbour windows have similar scores to some extent. This 
-Another proble that object detection networks face is that neighbourd bounding boxes have similar scores to some extent. Most object
+Another problem that object detection networks face is that neighbor bounding boxes have similar scores to some extent. Most object
 detection systems employ a sliding window or a Region Proposal Network for proposing areas in the image that is likely to contain an
-object. These techniques,which return several areas in the images, achieve high recall performance. However, in these approaches,
-more that 1 proposal may be related with only one groundtruth object coordinates. This situation creates
-the need for choosing the best proposals, because, alternatively, hundreds of unnecesssary proposals will be classified. For that
+object. These techniques, which return several areas in the images, achieve high recall performance. However, in these approaches,
+more that 1 proposal may be related with only one ground-truth object coordinates. This situation creates
+the need for choosing the best proposals, because, alternatively, hundreds of unnecessary proposals will be classified. For that
 reason, Non-Maximum Suppression (NMS) algorithm was proposed for filtering these proposals base on some criteria. NMS gets as input
 a list of proposal bounding boxes B, their corresponding confidence score S and an overlap threshold N and return as output
-a list of the final filtered proposals D. NMS algorith's steps are:
+a list of the final filtered proposals D. NMS algorithm's steps are:
 \begin{enumerate}
   
 \item Initialize an empty list D. Select the proposal with the highest confidence score, remove it from B and add it to D.
@@ -424,8 +431,8 @@ a list of the final filtered proposals D. NMS algorith's steps are:
 \item Repeat steps 2 and 3 until no more proposals are left in list B.
 \end{enumerate}
 
-The aforementioned algorithm shows that the whole process depends mostly on a sigle threshold value.  So that makes the selection
-of threshold a crucial factor for the perfomance of the model. In some situations, bad choice of the threshold may make the network
+The aforementioned algorithm shows that the whole process depends mostly on a single threshold value.  So that makes the selection
+of threshold a crucial factor for the performance of the model. In some situations, bad choice of the threshold may make the network
 to remove bounding boxes with good confidence score, if there are side by side. Figure \ref{fig:nms_eg} shows a situation like this,
 where red and blue boxes will be removed because of the presence of the black box.
 \begin{figure}[h]
@@ -436,9 +443,9 @@ where red and blue boxes will be removed because of the presence of the black bo
 \end{figure}
 
 \subsubsection{Soft NMS}
-A simple and efficinet way to deal the aforementioned situation is to use Soft-NMS algorithm, which is presented in \cite{DBLP:journals/corr/BodlaSCD17}.
+A simple and efficient way to deal the aforementioned situation is to use Soft-NMS algorithm, which is presented in \cite{DBLP:journals/corr/BodlaSCD17}.
 Soft-NMS algorithm is based on the idea of
-reducing condifence score of the proposals propotional to their overlap score, instead of completely removing them.
+reducing confidence score of the proposals proportional to their overlap score, instead of completely removing them.
 The score calculation follows the formula 
 \[ s_i = \begin{dcases}
     s_i, & overlapscore(M, b_i) < N_t \\
@@ -447,7 +454,8 @@ The score calculation follows the formula
     \]
 
     where $s_i$ is the score of proposal $i$, $b_i$ is the box coordinates of proposal $i$, $M$ is the coordinates of
-    the box with the maximum confidence and $N_t$ is the overlap threshold. So steps of soft-NMS algorithm are:
+    the box with the maximum confidence and $N_t$ is the overlap threshold. Let's, again, consider as input a list of
+    proposal bounding-boxes B, their corresponding confidence score S and as output a list of proposals D. Soft-NMS algorithm includes the following steps:
 
 \begin{enumerate}
   
@@ -466,7 +474,7 @@ For training our network, we use \textbf{Cross Entropy Loss} for classification 
 in each frame and their diagram is show at Figure \ref{fig:cross_l1}.
 \subsubsection{Cross Entropy Loss}
 Cross-entropy loss, or log loss, measures the performance of a classification model whose output is a probability value between 0 and 1. \par
-Entropy is the measure of uncertainty assosiated with a given distribution \textit{q(y)} and its formula is: 
+Entropy is the measure of uncertainty associated with a given distribution \textit{q(y)} and its formula is: 
 \[ H = -\sum_{i=1}^n p_i \cdot \log p_i \]
 Intuitively, entropy tells us how ``surprised'' we are when some event E happened. When we are sure about an event E to happened ($ p_E = 1$)
 we have 0 entropy (we are not surprised) and vise versa. \par
@@ -481,7 +489,7 @@ Smooth L1-loss can be interpreted as a combination of L1-loss and L2-loss. It be
 value of the argument is high, and it behaves like L2-loss when the absolute value of the argument is close to zero.
 It is usually used for doing box regression on some object detection systems like Fast-RCNN(\cite{Girshick:2015:FR:2919332.2920125}),
 Faster-RCNN(\cite{Ren:2015:FRT:2969239.2969250}) and it is less sensitive to outliers according according to \cite{Girshick:2015:FR:2919332.2920125}.
-As showm in \cite{Girshick:2015:FR:2919332.2920125}, its formula is:
+As shown in \cite{Girshick:2015:FR:2919332.2920125}, its formula is:
 
 \[ smooth_{L1}(x) = \begin{dcases}
     0.5x^2 & \text{ if } x < 1 \\
@@ -500,7 +508,7 @@ L_{\delta}(x) = \begin{dcases}
 if we set $\delta $ parameter equal 1. \par
 
 Smooth L1-loss combines the advantages of L1-loss (steady gradients for large values of \textit{x}) and L2-loss (less oscillations during
-updates when \textit{x} is small). Figure \ref{fig:cross_l1} \subref{fig:smooth_l1} shows a comparison between L1-norm, L2-norm  and smooth-L1 .
+updates when \textit{x} is small). Figure \ref{fig:smooth_l1} shows a comparison between L1-norm, L2-norm  and smooth-L1 .
 
 \begin{figure}[h]
   \centering
@@ -530,13 +538,13 @@ updates when \textit{x} is small). Figure \ref{fig:cross_l1} \subref{fig:smooth_
 Evaluating our machine learning algorithm is an essential part of any project. The way we choose our metrics influences how the performance
 of machine learning algorithms is measured and compared.
 They influence how to weight the importance of different characteristics in the results and finally,
-the ultimate choice of which algorithm to choose. Most of the times we use classification accuracy
+the ultimate choice of classification algorithm. Most of the times we use classification accuracy
 to measure the performance of our model, however it is not enough to truly judge our model. \par
-At first, we introduce some basic evaluation metrics in order,then, to present those we use for our assesment.
+At first, we introduce some basic evaluation metrics in order,then, to present those we use for our assessment.
 
 \subsubsection{Intersection over Union}
 The first and most important metric that we use is Intersection over Union (IoU). IoU  measures the overlap between 2 boundaries.
-It is usually used in Object Recognition Networks in order to define how good overlap a predicted bounding box  with the actuall
+It is usually used in Object Recognition Networks in order to define how good overlap a predicted bounding box  with the actual
 bounding box as shown in Figure \ref{fig:iou_fig}. We predefine an IoU threshold (say 0.5) in classifying whether the prediction is a true positive or a false positive.
 \begin{figure}[h]
   \centering
@@ -556,7 +564,7 @@ On top of that, we can implement IoU for 1 dimension and for 3 dimensions.
 estimate their overlap score. Their IoU can be described as:
 \[ \text { Length of overlap } = \lVert(min(t_2,t_4) - max(t_1,t_3))\rVert  \]
 \[ \text { Length of union } = \lVert(max(t_2,t_4) - min(t_1,t_3))\rVert  \]
-\paragraph{3D IoU} 3-dimentional Intersection over Union which can, also, be named as spatiotemporal IoU, can be defined by 2 ways:
+\paragraph{3D IoU} 3-dimensional Intersection over Union which can, also, be named as spatiotemporal IoU, can be defined by 2 ways:
 % categories: whether the $3^{rd}$ dimension is continuous or discrete.
 \begin{description}
 \item[3D boxes are cuboids] In this case, 3D boxes can be written  as $(x,y,z,x',y',z')$.
@@ -572,7 +580,7 @@ So, the IoU overlap between 2 boxes, $(x_1,y_1,z_1,x_2,y_2,z_2)$
 \end{equation*}
 
 \item[x-y are continuous and z discrete] In this case 3D boxes is defined as a sequence of 2D boxes $(x,y,x',y')$. For this definition, z-dimension is
-  discrete, and IoU can be defined with 2 ways, which both result in the same overlapping score. Let's cosider 2 sequences of boxes, with temporal limits
+  discrete, and IoU can be defined with 2 ways, which both result in the same overlapping score. Let's consider 2 sequences of boxes, with temporal limits
   $(t_1,t_2)$ and $(t_3,t_4)$. We calculate their IoU following one of the following methods:
   \begin{enumerate}
 \item IoU is the product between temporal-IoU and the average spatial-IoU between 2D boxes in the overlapping temporal area and it is described as:
@@ -599,13 +607,13 @@ From above implementations, we are involve mostly with temporal and spatiotempor
 \subsubsection{Precision  \& Recall }
 
 In order to describe \textbf{precision} and \textbf{recall} metrics, we will use an example. Let's consider a group of people in which, some of them are sick and
-the others are not. We use a network which is able to predict if a person is sick or not if we give it some data as input.
+the others are not. We use a network which, given some data as input, is able to predict if a person is sick or not.
 \begin{description}
-\item[ Precision ]  measures how accurate are our model's predictions. i.e. the percentage of  predictions that are correct.
+\item[ Precision ]  measures how accurate are our model's predictions, i.e. the percentage of  predictions that are correct.
   In our case, how accurate is our model when it predicts that a person is sick.
-\item[ Recall ] measures how good we found all the sick people. In our case, how many of the acctual sick people we managed to find.
+\item[ Recall ] measures how well we found all the sick people. In our case, how many of the actual sick people we managed to find.
 \end{description}
-Their definisions are:
+Their definitions are:
 \[ Precision = \frac{TP}{TP + FP} \]  
 \[  Recall = \frac{TP}{TP + FN} \] 
 where \begin{itemize}
@@ -617,7 +625,7 @@ where \begin{itemize}
 
 From these 2 metrics we use recall metric in order to evaluate our networks performance, and more specifically, its performance on finding good action tube proposals.
 We consider a groundtruth action as true positive when there is at least 1 proposed action tube that its IoU overlap score is bigger that
-a predifed threshold. If there is no such action tube, then we consider this groundtruth action tube as false negative.
+a predefined threshold. If there is no such action tube, then we consider this groundtruth action tube as false negative.
 
 
 \subsubsection{mAP }
@@ -627,18 +635,18 @@ a trade-off between precision and recall performance. This trade-off can be adju
 In order to have high precision performance, we need to decrease the number of FP. But this will lead to decrease recall performance and
 vice-versa. \par
 As a result, these metrics fail to determine if a model is performing well in object detection tasks as well as action detection tasks. For
-that reason, we use mean Average Precision (mAP) metric.
+that reason, we use mean Average Precision (mAP) metric, which for videos is named video-AP as introduced by \cite{DBLP:journals/corr/GkioxariM14}.
 \paragraph{AP (Average precision)} Before defining mAP metric, we will define Average Precision metric (AP). AP is a popular metric in measuring the accuracy of
 object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
-As mention before, during classification stage, our prediction result in True positive(TP), False positive(FP), True Negative(TN) and False Negative(FN). For object recognition and action
+As mentioned before, during classification stage, our prediction results in True positive(TP), False positive(FP), True Negative(TN) or False Negative(FN). For object recognition and action
 localization networks, we don't care about TN. We consider a prediction as True positive when our prediction (an bounding box for object detection network or a sequence of bounding boxes in
 action localization networks) overlaps with the groundtruth bounding box/action tube over a predefined threshold, and our predicted class is the same as groundtruth's. In addition, we
-consider a False Negative when either no detection overlaps with the groundtruth bounding box/action tube or our prediction was incorrect. We consider a prediction as False positive, when more that
+consider a False Negative when either no detection overlaps with the groundtruth bounding box/action tube or our prediction's class label was incorrect. We consider a prediction as False positive, when more that
 one predictions overlap with the groundtruth. In this situation, we consider the prediction with the biggest confidence score as TP and the rest as FP.\par
 
 For a class, we need to calculate, first, its precision and recall scores in order to calculate its AP score. We sort our predictions according to their confidence score and for each new prediction we
-calculate precision and recall values. An example, for a class containing 4 TP and 8 predictions  is shown in Table \ref{table:map_1}. Precision and recall
-are calculated according to the number of elements that are above in the order. So, for rank \#3, Precision is calculated as the proposion of TP = 2/3 = 0.67
+calculate precision and recall values. An example, for a class containing 4 TP and 8 predictions  is shown at Table \ref{table:map_1}. Precision and recall
+are calculated according to the number of elements that are above in the order. So, for rank \#3, Precision is calculated as the proportion of TP = 2/3 = 0.67
 and Recall as the proportion of TP out of all the possible TP = 2/4 = 0.5.
 
 \begin{table}[h]
@@ -678,26 +686,26 @@ and Recall as the proportion of TP out of all the possible TP = 2/4 = 0.5.
 We plot Precision against Recall and their curve is shown in Figure \ref{fig:pr_curve}.  The general definition for Average Precision(AP) is finding
 the area under the precision-recall curve and its formula is:
 \[ AP = \int_{0}^{1} p(r)dr \]
-Precision and Recall values $ \in [0,1] $, so AP $\in [0,1]$, too. This integral can be replace with a finite, as we have a finite number of predictions.
+Precision and Recall values $ \in [0,1] $, so AP $\in [0,1]$, too. This integral can be replaced with a finite, as we have a finite number of predictions.
 So its formula is:
 \[ AP = \sum_{k=1}^{n} P(k)\Delta r(k) \]
 where $P(k)$ is the precision until prediction $k$ and $\Delta r$ is the change in recall from $k-1$ to $k$.
 
 \paragraph{Interpolated Precision}
 
-At we can see in \ref{fig:pr_curve}, P-R curve has a zigzag pattern as it goes down with false predictions, and goes up with correct.
-So, before calculation AP, we need to smooth out this zigzag pattern using Intenpolated precision, as introduced in \cite{Everingham:2010:PVO:1747084.1747104}.
+As we can see at Figure \ref{fig:pr_curve}, P-R curve has a zigzag pattern as it goes down with false predictions, and goes up with correct.
+So, before calculation AP, we need to smooth out this zigzag pattern using Interpolated precision, as introduced in \cite{Everingham:2010:PVO:1747084.1747104}.
 Interpolated precision is calculated at each recall level $r$ by taking the maximum precision measured for that $r$ and it is defined as:
 \[ p_{interp}(r) = \max_{\tilde{r}:\tilde{r}\ge r} p(\tilde{r}) \]
 
 where $p(\tilde{r})$ is the measured precision at recall $\tilde{r}$. Graphically, at each recall level, we replace each precision value
-with the maximum precision value to the right of that recall level.  At Figure \ref{fig:pr_curve2} are shown both P-R curvers. The previous P-R curve has blue
-colour and the interpolated has red color.
+with the maximum precision value to the right of that recall level.  At Figure \ref{fig:pr_curve2} are shown both P-R curves. The previous P-R curve has blue
+color and the interpolated has red color.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.4]{pr_curve2}
-  \caption{Both P-R curves. }
+  \caption{Both P-R curves. Interpolated P-R curve has red col-our.}
   \label{fig:pr_curve2}
 \end{figure}
 
@@ -707,77 +715,82 @@ the mean of the AP for each class. So, AP and mAP are defined as
 \[ p_{interp}(r_{n+1}) = \max_{\tilde{r} \ge r_{n+1} p(\tilde{r})}p(\tilde{r}) \]
 \[ mAP = \frac{1}{N} \sum_{i=1}^N AP_i \]
 
-
-% In our case, we use the metrics presented in \cite{DBLP:journals/corr/GkioxariM14} in
-% order to quantify our results:
-% \begin{description}
-% % \item[ frame-AP ] measures the area under the precision-recallcurve of the detections for each frame (similar to the PASCAL  VOC  detection  challenge  \cite{Everingham10}).   A  detection is correct
-% %   if the intersection-over-union with theground truth at that frame is greater than and the ac-tion label is correctly predicted.
-% \item [ video-AP ] measures the area under the precision-recallcurve of the action tubes predictions. A tube is correctif the mean per frame intersection-over-union with theground truth across the
-%   frames of the video is greaterthan and the action label is correctly predicted.
-% % \item [ AUC ] measures the area under the ROC curve, a metricpreviously used on this task.  An action tube is correctunder the same conditions as invideo-AP. Following
-% %   \cite{Tian:2013:SDP:2514950.2515975} , the ROC curve is plotted until a false positive rateof 0.6, while keeping the top-3 detections per class andper video. Consequently,
-% %   the best possible AUC scoreis 60\%.
-% \end{description}
-
 \subsubsection{Mean Average Best Overlap - MABO}
 
-In order to evaluate more the quality of our proposals, both during TPN and connecting tube stages, recall metric isn't enough.
-That's because recall metric tells us only in how many known objects there was at least 1 proposal that satified the detection
-criterion. However, it doen't tells us how close the proposals are to the groundtruth tubes. In order to quantify this performance,
+In order to evaluate the quality of our proposals, both during TPN and connecting tube stages, recall metric isn't enough.
+That's because recall metric tells us only for how many actual objects/action tubes, there was at least 1 proposal that satisfied the detection
+criterion. However, it doesn't tells us how close these proposals are to the actual objects/action tubes. In order to quantify this performance,
 Mean Average Best Overlap (MABO) was introduced by \cite{DBLP:journals/corr/WinschelLE16}. The importance of MABO can be clarified 
 we consider figure \ref{fig:mabo_fig}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.25]{mabo}
-  \caption{Recall versus MABO exaple}
+  \caption{Recall versus MABO example}
   \label{fig:mabo_fig}
 \end{figure}
 
-As we can see, recall performance is almost perfect, but, MABO perfonmance, which tells us where most proposal overlap scores are gather,
-is just fine. In order to define MABO, we need first to define Average Best Overlap. Let $ c \in C$ denote a class $c$ from the set of all
+As we can see, recall performance is almost perfect, but, MABO performance, which tells us where most proposal overlap scores are gathered,
+is just fine and not perfect. \par
+In order to define MABO, we need first to define Average Best Overlap. Let $ c \in C$ denote a class $c$ from the set of all
 classes $C$ and $G^c$ the set of ground truth annotations of this class in all images; let $L$ be the set of all generated object proposals
 for all images. Average Best Overlap is defined as the average value of the maximum overlap score, (in our situation, we use intersection
 over union) of $L$ with each groundtruth annotation $g \in G^c$. The Mean Average Best Overlap (MABO) is defined as the average value of all
 class ABO values :
 \[ MABO = \frac{1}{|C|} \sum_{c \in C} [ \frac {1}{|G^C|} \sum_{g \in G^c} \max_{l \in L} IoU(g,l)]  \]
-In order our situation, we consider only one class, for defining proposals, so, MABO identifies with ABO.
+In our situation, which we care only for the quality of our proposals,  we consider only 1 class, foreground class. As a result, MABO's performance identifies with ABO's.
 
 \section{Related work}
 In this section, we present some of the most relevant methods to our work and others studied for designing this approach. These methods
  are divided into two sections: \textit{action recognition} and \textit{action localization}. The first part refers to classic action classification methods introduced until recently and the second part, respectively, to recent action localization methods. 
 \subsection{Action Recognition}
 First approaches for action classification consisted of two steps a) compute complex handcrafted features from raw video frames
-such as SIFT, HOG, ORB features and b) train a classifier based on those features. These approaches made the choise of
-features a signifact factor for network's performance. That's because different action classes may appear dramatically
+such as SIFT, HOG, ORB features and b) train a classifier based on those features. These features can be separated into 3 categories:
+1) space-time volume approaches, 2) trajectories and 3) space-time features. For space-time volume methods the approach is as follows. Based on the training videos, the system contracts a 3D space-time model, by concatenating 2D images (x-y dimension) along time (t or z dimension),
+in order to represent each action. When system is given an unlabeled video, it constructs a 3D space-time volume corresponding to this video.
+This new 3D volume, then, is compared with each activity model to measure the similarity in shape and appearance between these two volumes.
+The system extracts the class label of the unknown video by corresponding to the action with the highest similarity. Furthermore, there are
+several variations of space-time representations. Instead of volume representation, the system may represent the action as trajectories
+in space-time dimensions  or even more, the action can be represented as a set of features extracted from the volume or the trajectories.
+Pure space-time volume representations include methods of comparing foreground regions of a person (i.e. silhouettes) like \cite{BobickAaron}
+did, comparing volumes in terms of their patches like \cite{1467296}.  \cite{4270510} method uses oversegmented volumes, automatically
+calculating a set of 3-D XYT volume segments that corresponds to a moving human. \cite{4587727} proposed filters for
+capturing volume's characteristics, in order to match them more reliably and efficiently. From the other hand, trajectory-based approaches
+include representing an action as a set of 13 joint trajectories (\cite{1541250}) or using a set of \textit{XYZT}-dimensions joint trajectories
+obtained from moving cameras (\cite{1541251}). Finally, several methods use local features extracted from 3-dimensional space-time volumes,
+like extracting local features at every frame and concatenate them temporally (\cite{784616, 990935, 1544882}, extracting sparse
+spatiotemporal local interest points from 3D volumes (\cite{1238378, 1570899, Niebles, 1467373, Ryoo2006})
+These approaches made the choice of
+features a significant factor for network's performance. That's because different action classes may appear dramatically
 different in terms of their appearance and motion patterns. Another problem was that most of those approaches make
 assumptions about the circumstances under which the video was taken due to problems such as cluttered
 background, camera viewpoint variations etc. A review of the techniques, used until 2011, is presented in \cite{Aggarwal:2011:HAA:1922649.1922653}. \par
 
 Recent results in deep architectures and especially in image classification motivated researchers to train CNN networks for
 the task of action recognition. The first significant attempt was made by \cite{6909619}. They design their architecture based on the best-scoring CNN
-in the ImageNet competition. they explore several methods for fusion of spatio-temporal features using 2D operations mostly and 3D convolution only in slow fusion.
+in the ImageNet competition. they explore several methods for fusion of spatiotemporal features using 2D operations mostly and 3D convolution only in slow fusion.
 \cite{simonyan2014two}  used a 2 CNNs, one for spatial information and one for optical flow and combined them using late fusion.
-They show that extacting spatial context from videos and motion context from optical flow can improve significantly action recognition accuracy.
+They show that extracting spatial context from videos and motion context from optical flow can improve significantly action recognition accuracy.
 \cite{DBLP:journals/corr/FeichtenhoferPZ16} extend this approach by using early fusion at the end of convolutional layers,  instead of late fusion which
 takes places at the last layer of the network. On top that, they used a second network for temporal context which they fuse with the other network using late
-fusion. Futhermore, \cite{DBLP:journals/corr/WangXW0LTG16} based their method on \cite{simonyan2014two}, too. They deal with the problem of capturing long-range
-temporal context and training their network given limited training samples. Their approach, which they named Temporal Segment Network (TSN), seperates the input
-video in K segments and a short snippet from each segment is chosen for analysis. Then they fuse  the extracted spatio-temporal context, making, eventually, their
-prediction. \par
-Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and \cite{DBLP:journals/corr/MaCKA17}.  \cite{DBLP:journals/corr/DonahueHGRVSD14} address the challenge of variable lenghts of
-input and output sequences, explointing convolutional layers and long-range temporal recursions. They propose a Long-term Recurrent
+fusion. Furthermore, \cite{DBLP:journals/corr/WangXW0LTG16} based their method on \cite{simonyan2014two}, too. They deal with the problem of capturing long-range
+temporal context and training their network given limited training samples. Their approach, which they named Temporal Segment Network (TSN), separates the input
+video in K segments and a short snippet from each segment is chosen for analysis. Then they fuse  the extracted spatiotemporal context, making, eventually, their
+prediction.
+Most recently, \cite{DBLP:journals/corr/ZhangWWQW16} and \cite{DBLP:journals/corr/ZhuLNH17a} used two-stream approach, too. \cite{DBLP:journals/corr/ZhangWWQW16} replace optical flow with motion vector which can be obtained directly from compressed videos without extra calculation and feeding it to . \cite{DBLP:journals/corr/ZhuLNH17a} trained a CNN for calculating optical flow, calling it
+MotionNet and use a temporal stream cnn for project motion information to action labels. Finally, they use late fusion through the weighted averaging of the prediction scores of the temporal and spatial streams. On the other hand, a novel approach was introduced by \cite{DBLP:journals/corr/abs-1711-01467} incorporating attention maps to give significant improvement in action recognition performance \par 
+
+Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and \cite{DBLP:journals/corr/MaCKA17}.  \cite{DBLP:journals/corr/DonahueHGRVSD14} address the challenge of variable lengths of
+input and output sequences, exploiting convolutional layers and long-range temporal recursions. They propose a Long-term Recurrent
 Convolutional Network (LRCN) which is capable of dealing with the tasks of action Recognition, image caption and video description. In order to classify a given sequence of frames, LRCN firstly gets as input a frame, and in particular its RGB channels and optical flow and predicts a class label. After that, it extracts video class by averaging label probabilities, choosing the most probable class.
 \cite{DBLP:journals/corr/NgHVVMT15} firstly explore several approaches for temporal feature pooling. These techniques include handling video
 frames individually by 2 CNN architectures: either AlexNet or GoogleNet, and consisted of early fusion, late fusion of a combination between
-them. Futhermore, they propose a recurrnet neural Network architecture in order to consider video clips as a sequences of CNN activations.
-Proposed LSTM takes an input the output of the final CNN layer at each consequentive video frame and after five stacked LSTM layers using a
+them. Furthermore, they propose a recurrent neural Network architecture in order to consider video clips as a sequences of CNN activations.
+Proposed LSTM takes an input the output of the final CNN layer at each consecutive video frame and after five stacked LSTM layers using a
 Softmax classifier, it proposes a class label. For video classification, they return a label after last time step, max-pool the predictions
 over time, sum predictions over time and return the max or linearly weight the predictions over time by a factor g, sum them and return the max.
 They showed that all approaches are 1\% different with a bias for using weighting predictions for supporting the idea that LSTM becomes progressively more informed. Last but not least,  \cite{DBLP:journals/corr/MaCKA17} use a two-stream ConvNet for feature extraction and either a LSTM or convolutional layers over temporally-constructed feature matrices, for fusing spatial and temporal information. They use a ResNet-101 for
 extracting feature maps for both spatial and temporal streams. They divide video frames in several segments like \cite{DBLP:journals/corr/WangXW0LTG16} did, and use a temporal pooling layer to extract distinguished features. Taken these features, LSTM extracts embedded features from all segments.
-% A comparison between RNN networks and dilated convolutions is presented in \cite{DBLP:journals/corr/abs-1803-01271}, even though they don't refer at.\textbf{Pending... description}
 \par
 Additionally, \cite{Tran2014LearningSF} explored 3D Convolutional Networks (\cite{pmid:22392705}) and introduced C3D network which  has
 3D convolutional layers with kernels $ 3 \times 3 \times 3$.
@@ -786,12 +799,15 @@ Combining Two-stream architecture and 3D Convolutions, \cite{DBLP:journals/corr/
 I3D network. On top of that, the authors emphasize in the advantages of transfer learning for the task of action recognition by repeating 2D pre-trained weights
 in the 3rd dimension. \cite{DBLP:journals/corr/abs-1708-07632} proposed a 3D ResNet Network for action recognition based on Residual Networks (ResNet)
 (\cite{DBLP:journals/corr/HeZRS15}) and explore the effectiveness of ResNet with 3D Convolutional kernels.
-On the other hand,\cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets(\cite{DBLP:journals/corr/HuangLW16a}) and extend
+On the other hand, \cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets(\cite{DBLP:journals/corr/HuangLW16a}) and extend
 DenseNet architecture by using 3D filters and pooling kernels instead of 2D, naming this approach as DenseNet3D. Futhermore, they introduce
 Temporal Transition Layer (TTL), which concatenates temporal feature-maps extracted at different temporal depth ranges and replaces DenseNet's
-transition layer. Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
+transition layer. On top of that \cite{DBLP:DibaFSKAYG18} introduced  a new temporal layer that models variable  temporal Convolution kernel depths.
+Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
 to show that a 2D spatial convolution followed by a 1D temporal convolution achieves state of the art classification performance, naming
-this type of convolution layer as R(2+1)D. A more detailed presentation for Action Recognition techniques used until 2018 is included in
+this type of convolution layer as R(2+1)D. 
+Recently \cite{Guo_2018_ECCV} proposed a framework which can learn to recognize a previous unseen 3D action class with only a few examples
+by exploiting the inherent structure of 3D data through a graphical representation. A more detailed presentation for Action Recognition techniques used until 2018 is included in
 \cite{DBLP:journals/corr/abs-1806-11230}.
 
 \subsection{Action Localization}
@@ -800,22 +816,51 @@ As mentioned before, Action Localization can be seen as an extention of the obje
 boxes in a single image, the goal of action localization systems is to output action tubes which are sequences of bounding boxes that
 contain an performed action. So, there are several approaches including an object-detector network for single frame
 action proposal and a classifier. \par
+First object detection approaches included extending a object proposal algorithm into 3-dimensions. \cite{6619185} extended deformable part models (\cite{5255236})  by treating actions as spatiotemporal patterns and generate a deformable part for each action. \cite{6909495} introduced the concept of tubelets, aka sequences of bounding boxes and based their method on selective search algorithm
+(\cite{Uijlings13}), extending super-pixels to super-voxels for producing spatiotemporal shapes. On the other hand, \cite{Oneata}
+extend a randomized superpixel merging procedure which was used for object proposals as presented by \cite{Manen:2013:POP:2586117.2587333}.
+\cite{7298735} first propose bounding boxes for each frame using a human and motion detector and then by picking the best-scoring bounding boxes,
+they proposed a greedy linking algorithm by formulating liking task as a maximum set coverage problem. \cite{BMVC2015_177} generate spatiotemporal proposals directly from dense trajectories, which also used for classification. \cite{7410734} create a spatiotemporal trajectory
+graph and select action proposals based only on intentional movement extracted from the graph. \cite{7410732} seperate the video segments
+into supervoxels and use their context as a spatial relation between supervoxels relative to foreground action. They create a graph for each
+video, where supervoxels form thenodes and directed edges capture the spatial relations between them.During testing, they  perform a context
+walk where each step is guided by the context relations learned during training, resulting in a probability distribution of an action over all the supervoxels. \cite{DBLP:journals/corr/MettesGS16}, instead of annotating boxes in all frames, annotate points on a sparse subset of video
+frames, and use proposals obtained by an overlap measure between action proposals and points. \cite{DBLP:journals/corr/BehlSSSCT17} deal with
+online action detection and localization by getting per-frame action proposal and  proposing a linking algorithm which is able to construct and update action tubes at each frame.
+
+\par
+
 The introduction of R-CNN (\cite{DBLP:journals/corr/GirshickDDM13}) achieve significant improvement
 in the performance of Object Detection Networks. This architecture, firstly, proposes regions in the image which are likely to
 contain an object and then it classifies them using a SVM classifier. Inspired by this architecture, \cite{DBLP:journals/corr/GkioxariM14}
 design a 2-stream RCNN network in order to generate action proposals for each frame, one stream for frame level and one for optical flow.
 Then they  connect them using the viterbi connection algorithm. \cite{DBLP:journals/corr/WeinzaepfelHS15} extend this approach, by performing
 frame-level proposals and using a tracker for connecting those proposals using both spatial and optical flow features. Also their method performs
-temporal localization using a sliding window over the tracked tubes. \par
-\cite{peng:hal-01349107} and \cite{DBLP:journals/corr/SahaSSTC16} use Faster R-CNN (\cite{Ren:2015:FRT:2969239.2969250}) instead of RCNN
+temporal localization using a sliding window over the tracked tubes. Most recently, \cite{8237344} tried to deal with the problem of unsupervised
+action detection and localization. Their approach included extracting supervoxel segmentation and then assigning a weight to each supervoxel.
+Using extracted supervoxels, they create a graph and then using a discriminate clustering approach a classifier is trained.\par
+
+The introduction of Faster RCNN (\cite{Ren:2015:FRT:2969239.2969250}) contribute a lot to the improvement of the performance of Actiol Localization Networks
+\cite{peng:hal-01349107}, \cite{DBLP:journals/corr/SahaSSTC16} and  use Faster R-CNN  instead of RCNN
 for frame-level proposals, using RPN for both RGB and optical flow images.
 After getting spatial and motion proposals,\cite{peng:hal-01349107} fuse them exploring and from each proposed ROI, generate 4 ROIs in order to focus in specific
 body parts of the actor. After that, they connect the proposal using Viterbi algorithm for each class and perform temporal localization by using a sliding window, with multiple
 temporal scales and stride using a maximum subarray method. From the other hand, \cite{DBLP:journals/corr/SahaSSTC16} perform, too, frame-level classification. After that,
 their method performs fusion based on a combination between the actioness scores of the appearence and motion based proposals and their overlap score. Finally, temporal localization
-takes place using dynamic programming. \par
+takes place using dynamic programming. On the other hand, \cite{DBLP:journals/corr/WeinzaepfelMS16} use
+Faster RCNN for extracting human tubes from videos focusing  on weakly-supervised action localization problem.
+Then using dense trajectories and a  multi-fold Multiple  Instance  Learning approach (\cite{7420739}) train a classifier.
+\cite{DBLP:journals/corr/MettesS17} introduced a method for zero-shot action localization. Their approach includes scoring proposed action tubes according to the interactions between
+actors and local objects. They used Faster-RCNN, in the first step, for detecting both actors and objects and then using spatial relations between them they link the proposed boxes over
+time based on zero-shot likelihood from the presence of actors, relevant objects around the actors and the expected spatial relations between objects and actors.
+Furthermore, \cite{DBLP:journals/corr/HeIDM17} proposed the Tube Proposal Network (TPN) for generating generic class-independent tubelet proposals, which uses Faster-RCNN for getting
+2D region proposals and a linking algorithm for linking tubelets with these region proposals. Most recently, \cite{DBLP:journals/corr/abs-1807-10066} proposed a method for action Localization
+on the AVA dataset (\cite{DBLP:journals/corr/GuSVPRTLRSSM17}) combining I3D (\cite{DBLP:journals/corr/CarreiraZ17}) and Faster-RCNN architectures. They use I3D blocks for getting video representation
+and Fast-RCNN's RPN for generation ``person'' proposals for the center frame.
+\par
+
 On top of that, \cite{singh2016online} and \cite{kalogeiton17iccv:hal-01519812} design their networks based on the Single Shot Multibox Detector \cite{DBLP:journals/corr/LiuAESR15}).
-\cite{singh2016online} created an online real-time spatio-temporal network. In order their network to execute real-time,  \cite{singh2016online} propose a novel and efficient algorithm
+\cite{singh2016online} created an online real-time spatiotemporal network. In order their network to execute real-time,  \cite{singh2016online} propose a novel and efficient algorithm
 by adding boxes in tubes in every frame if they overlap more than a threshold, or alternatively, terminate the action tube if for k-frames no box was added.  \cite{kalogeiton17iccv:hal-01519812}
 designed a two-stream network, which they called ACT-detector, and introduced anchor cuboids. For K frames, for both networks, \cite{kalogeiton17iccv:hal-01519812} extract spatial
 features in frame-level, then they stack these features. Finally, using cuboid anchors, the network extracts tubelets, that is a sequence of boxes, with their corresponding classification
@@ -825,14 +870,19 @@ a temporal smoothing approach. \par
 Most recently, YOLO Network (\cite{DBLP:journals/corr/RedmonDGF15}) became the inspiration for \cite{DBLP:journals/corr/abs-1903-00304} and
 \cite{DBLP:journals/corr/abs-1802-08362}. In \cite{DBLP:journals/corr/abs-1903-00304}, concepts of progression and progress
 rate were introduced. Except from proposing bounding boxes in frame level, they use YOLO together with a RNN classifier for extracting temporal information for the proposals.
-Based on this information, they create action tubes, seperated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232} do.% , \cite{} and
-% . In \cite{DBLP:journals/corr/abs-1802-09232} uses \textbf{pending description...}. \par
+Based on this information, they create action tubes, seperated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232} do. 
 They proposed a method for calcualatin 2D and 3D poses and then they performed action classification. They use the diffferentiable Soft-argamax function for estimating 2D and 3D joints, because
 argmax function is not differentiable. Then, for T adjacent poses, they create an image representation with time and $N_j$ joins as $x-y$ dimensions and having 2 channes for 2D poses and 3
 channels for 3D poses. They use Convolutional Layers in order to produce action heats and then using max plus min pooling and a Softmax activation they perform action classification.
-Most of aforementioned networks use per-frame spatial proposals and extract their temporal infomation by calculating optical flow. On the other hand, \cite{DBLP:journals/corr/HouCS17} design
-an architecture which icludes proposal in video segment level, which they called Tube CNN (T-CNN). Video segment level means that the whole video is seperated into equal length video clips, and
-using a C3D for extracting features, it returns spatio-temporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} link the tube proposals by an algorithm based on tubes'
+\cite{DBLP:journals/corr/ZolfaghariOSB17} proposed a three-stream architecture which includes 2D pose, optical flow and RGB information. These streams are integrated sequentially via a Markov
+chain model. In addition, \cite{8237881} proposed an architecture using a temporal convolutional regression network, for capturin the long-term dependency and contexts among adjacent
+frames, and a spatial regression network,
+getting per-frame proposals. They use tracking methods and dynamic programming for generating action proposals.\par
+
+Most of aforementioned networks use per-frame spatial proposals and extract their temporal infomation by calculating optical flow. On the other hand,  \cite{DBLP:journals/corr/SahaSC17} and  \cite{DBLP:journals/corr/HouCS17} design an architecture which icludes proposal in video segment level, handling more that 1 frame simultaneously. \cite{DBLP:journals/corr/SahaSC17} proposed a 3D-RPN which
+is able to generate and classify 3D region proposals consisted of two successive frames. Also, they proposed a linking algorithm, modifying the one proposed by \cite{DBLP:journals/corr/SahaSSTC16}.
+On top of that, \cite{DBLP:journals/corr/HouCS17} design an architecture for generating action proposals for more than 2 frame, which they called Tube CNN (T-CNN). In their approach, video segment level means that the whole video is seperated into equal length video clips, and
+using a C3D for extracting features, it returns spatiotemporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} link the tube proposals by an algorithm based on tubes'
 actioness score and overlap. Finally, classification operation is performed for the linked video proposals.
 
 % \printbibliography

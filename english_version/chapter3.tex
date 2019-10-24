@@ -1,29 +1,29 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% % \usepackage{amsmath}
-% \usepackage[
-%     backend=bibtex,
-%     citestyle=authoryear,
-%     % citestyle=authoryear-comp,
-%     % citestyle=authoryear-ibid,
-%     bibstyle=numeric,
-%     sorting=ynt,
-%     % style=numeric,
-%     % style=alphabetic ,
-%   ]{biblatex}
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage{amsmath}
+\usepackage[
+    backend=bibtex,
+    citestyle=authoryear,
+    % citestyle=authoryear-comp,
+    % citestyle=authoryear-ibid,
+    bibstyle=numeric,
+    sorting=ynt,
+    % style=numeric,
+    % style=alphabetic ,
+  ]{biblatex}
  
-%  \addbibresource{References}
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+ \addbibresource{References}
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Related work}
 
@@ -40,7 +40,22 @@
 % \paragraph{Frame based methods}
 \section{Action Recognition}
 First approaches for action classification consisted of two steps a) compute complex handcrafted features from raw video frames
-such as SIFT, HOG, ORB features and b) train a classifier based on those features. These approaches made the choise of
+such as SIFT, HOG, ORB features and b) train a classifier based on those features. These features can be seperated into 3 categories:
+1) space-time volume approaches, 2) trajectories and 3) space-time feaures. For space-time volume methods the approach is as follows. Based on the training videos, the system contructs a 3D space-time model, by concatenating 2D images (x-y dimension) along time (t or z dimension),
+in order to represent each action. When system is given an unlabeled video, it constructs a 3D space-time volume corresponding to this video.
+This new 3D volume, then, is compared with each activity model to measure the similarity in shape and appearence between these two volumes.
+The system extracts the class label of the unknown video by corresponding to the action with the highest similarity. Futhermore, there are
+several variations of space-time representations. Instead of volume representation, the system may represent the action as trajectories
+in space-time dimensions  or even more, the action can be represented as a set of features extracted from the volume or the trajectories.
+Pure space-time volume representations include methods of comparing foreground regions of a person (i.e. silhouelttes) like \cite{BobickAaron}
+did, comparing volumes in terms of their patches like \cite{1467296}.  \cite{4270510} method uses oversegmented volumes, automatically
+calculating a set of 3-D XYT volume segments that corresponds to a moving human. \cite{4587727} proposed filters for
+capturing volume's characteristics, in order to match them more reliably and efficiently. From the other hand, trajectory-based approaches
+include representing an action as a set of 13 joint trajectories (\cite{1541250}) or using a set of \textit{XYZT}-dimensions joint trajectories
+obtained from moving cameras (\cite{1541251}). Finally, several methods use local features extracted from 3-dimensional space-time volumes,
+like extracting local features at every frame and concatenate them temporally (\cite{784616, 990935, 1544882}, extracting sparse
+spatio-temporal local interest points from 3D volumes (\cite{1238378, 1570899, Niebles, 1467373, Ryoo2006})
+These approaches made the choise of
 features a signifact factor for network's performance. That's because different action classes may appear dramatically
 different in terms of their appearance and motion patterns. Another problem was that most of those approaches make
 assumptions about the circumstances under which the video was taken due to problems such as cluttered
@@ -56,7 +71,10 @@ takes places at the last layer of the network. On top that, they used a second n
 fusion. Futhermore, \cite{DBLP:journals/corr/WangXW0LTG16} based their method on \cite{simonyan2014two}, too. They deal with the problem of capturing long-range
 temporal context and training their network given limited training samples. Their approach, which they named Temporal Segment Network (TSN), seperates the input
 video in K segments and a short snippet from each segment is chosen for analysis. Then they fuse  the extracted spatio-temporal context, making, eventually, their
-prediction. \par
+prediction.
+Most recently,\cite{DBLP:journals/corr/ZhuLNH17a} used two-stream approach, too. They trained a CNN for calculating optical flow, calling it
+MotionNet and use a temporal stream cnn for project motion information to action labels. Finally, they use late fusion through the weighted averaging of the prediction scores ofthe temporal and spatial streams. On the other hand, a novel approach was introduced by \cite{DBLP:journals/corr/abs-1711-01467} incoporating attension maps to give signifact improvement in action recognition performance \par 
+
 Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and \cite{DBLP:journals/corr/MaCKA17}.  \cite{DBLP:journals/corr/DonahueHGRVSD14} address the challenge of variable lenghts of
 input and output sequences, explointing convolutional layers and long-range temporal recursions. They propose a Long-term Recurrent
 Convolutional Network (LRCN) which is capable of dealing with the tasks of action Recognition, image caption and video description. In order to classify a given sequence of frames, LRCN firstly gets as input a frame, and in particular its RGB channels and optical flow and predicts a class label. After that, it extracts video class by averaging label probabilities, choosing the most probable class.
@@ -77,14 +95,16 @@ Combining Two-stream architecture and 3D Convolutions, \cite{DBLP:journals/corr/
 I3D network. On top of that, the authors emphasize in the advantages of transfer learning for the task of action recognition by repeating 2D pre-trained weights
 in the 3rd dimension. \cite{DBLP:journals/corr/abs-1708-07632} proposed a 3D ResNet Network for action recognition based on Residual Networks (ResNet)
 (\cite{DBLP:journals/corr/HeZRS15}) and explore the effectiveness of ResNet with 3D Convolutional kernels.
-On the other hand,\cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets(\cite{DBLP:journals/corr/HuangLW16a}) and extend
+On the other hand, \cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets(\cite{DBLP:journals/corr/HuangLW16a}) and extend
 DenseNet architecture by using 3D filters and pooling kernels instead of 2D, naming this approach as DenseNet3D. Futhermore, they introduce
 Temporal Transition Layer (TTL), which concatenates temporal feature-maps extracted at different temporal depth ranges and replaces DenseNet's
-transition layer. Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
+transition layer. On top of that \cite{DBLP:DibaFSKAYG18} introduced  a new temporal layer that models variable  temporal Convolution kernel depths.
+Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experiment with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
 to show that a 2D spatial convolution followed by a 1D temporal convolution achieves state of the art classification performance, naming
-this type of convolution layer as R(2+1)D. A more detailed presentation for Action Recognition techniques used until 2018 is included in
+this type of convolution layer as R(2+1)D. 
+Recently \cite{Guo_2018_ECCV} proposed a framework which can learn to recognize a previous unseen 3D action class with only a few examples
+by exploiting the inherent structure of 3D data through a graphical representation. A more detailed presentation for Action Recognition techniques used until 2018 is included in
 \cite{DBLP:journals/corr/abs-1806-11230}.
-
 \section{Action Localization}
 
 As mentioned before, Action Localization can be seen as an extention of the object detection problem. Instead of outputing 2D bounding
@@ -126,18 +146,6 @@ an architecture which icludes proposal in video segment level, which they called
 using a C3D for extracting features, it returns spatio-temporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} link the tube proposals by an algorithm based on tubes'
 actioness score and overlap. Finally, classification operation is performed for the linked video proposals.
 % Edw na diavasw ...\cite{Li_2018_ECCV}
+\printbibliography
 
-\section{Our implementation}
-We propose a network similar to \cite{DBLP:journals/corr/HouCS17}. Our architecture is consisted by the following basic elements:
-\begin{itemize}
-\item One 3D Convolutional Network, which is used for feature extraction. In our implementaion we use a 3D Resnet network which is taken from
-  \cite{hara3dcnns} and it is based on ResNet CNNs for Image Classification \cite{DBLP:journals/corr/HeZRS15}.
-\item Tube Proposal Network for proposing action tubes (based on the idea presented in \cite{DBLP:journals/corr/HouCS17}).
-\item A classifier for classifying video tubes.
-\end{itemize}
-
-\textbf{Pending ... more commentary and a figure}
-
-% \printbibliography
-
-% \end{document}
+\end{document}

@@ -1,20 +1,20 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage[export]{adjustbox}
-% % \usepackage{amsmath}
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+% \usepackage{amsmath}
 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Introduction}
 Nowadays, the enormous increase of computing power help us deal with a lot of difficult situations appeared in our daily life.
@@ -118,10 +118,36 @@ to combine them in order to achieve state-of-the-art results for action localiza
 \cite{DBLP:journals/corr/HouCS17}, \cite{DBLP:journals/corr/abs-1712-09184},\cite{Ren:2015:FRT:2969239.2969250} and for implementation
 by \cite{jjfaster2rcnn}.
 
-Our contributions are the following 1) We create a new framework for action localization extending the code taken from faster RCNN,
-2) we try to create a network for proposing sequences of bounding boxes in video clips which may contain an anction taking advantage
-of the spatio-temporal features which 3D Convolutions provide us, 3) we create a linking algorithm for connecting proposed sequences of
-bounding boxes in order to extract candidate action tubes and 4) we try to find the most suitable feature maps for classifying them.
+Our contributions are the following
+\begin{enumerate}
+\item We create a new framework for action localization extending the code taken from faster RCNN implementation. Based on the structure
+  proposed by \cite{DBLP:journals/corr/HouCS17}, we modified it, using a 3D Resnet34 instead of C3D, which previous approach used.
+
+\item Furthermore, we proposed our own TPN Network, a Network for proposing candidate action tubes give a small video segment.
+  Following the approach \cite{DBLP:journals/corr/HouCS17} proposed, we firstly implement an architecture which uses
+  cubboids as anchors, which then using a regressor it becomes a sequence of bounding boxes, likely to contain an action.
+  We experiment with two candidate regressor's architecture and proposed and implement a 3D RoiAlign which uses trilinear
+  interpolation for extracting each proposed action tube's activation maps. 
+  Inspired by \cite{DBLP:journals/corr/abs-1712-09184}, we proposed and implement a TPN which uses predefined sequences of bounding
+  boxes as 3D anchors. We proposed anchors that last equal with and less than video segment's duration in order our architecture to be able to
+  perform temporal localization.  we explore two different regressors' architectures for better spatial precision using activation
+  maps extracted from 2D RoiAlign, treating each frame seperatly.
+\item Inspired by liniking algorithm proposed by \cite{DBLP:journals/corr/HouCS17}, we introduce our own linking algorithm, which
+  uses a combination of actioness and overlap scores in order to decide if 2 proposed action tubes would connect or not and some updatable lists.
+  Our approach includes gathering all candidate action tubes whose score is bigger than a threshold, and use them as active action tubes for
+  new possible connections. When the number of gathered active action tube is bigger than a threshold, we keep the k-best scoring action tubes
+  and remove the rest.  We implement this algorithm using, also, CUDA code in order to calculate connection score faster. We proposed 3 versions of this algorith:
+  \begin{enumerate}
+  \item An approach which uses an updatable scoring threshold, in order not to calculate unnecessary connection scores
+  \item An approach which doesn't use an updatable scoring threshold, but it just updateds ``active'' action tube more frequently.
+  \item An approach which, also, uses NMS or softmax-NMS algorithms for getting wider action tube proposals.
+  \end{enumerate}
+  Also, we implement, from scratch, another connection algorithm proposed by \cite{DBLP:journals/corr/abs-1903-00304} and extending it in order to work for ToIs instead of frames, which they proposed.
+  We modified our TPN structure in order to calculate progression and progress rate scores in order to calculate connection scores and generate candidate action tubes.
+\item We experiment using several classifier in order to find the most suitable. We considered 2 feature maps extracted using 3D RoiAlign and proposed action tubes, without any other
+  modification. Also, we explore the different ratios and number of groundtruth foreground tubes that should be used during training
+  stage. Finally, we tried to perform only temporal localization using temporal information generated from proposed action tubes.
+\end{enumerate}
 
 \section{Thesis structure}
 The rest of Thesis is organized as follows. Chapter 2 provides an general introduction to Machine Learning techniques currently used.
@@ -131,4 +157,4 @@ Chapter 4 proposes algorithms for linking the proposed TOIs from every video seg
 In Chapter 5, we present all the classification approaches we used for designing our architecture and some classification results.
 Chapter 6 is used for conclusions, summary of our contribution alongside with possible future work.
 
-% \end{document}
+\end{document}

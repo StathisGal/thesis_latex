@@ -1,21 +1,21 @@
-% \documentclass{report}
+\documentclass{report}
 
-% \usepackage{subcaption} % package for subfigures
-% \usepackage{hyperref}  % package for linking figures etc
-% \usepackage{enumitem}  % package for description with bullets
-% \usepackage{graphicx}  % package for importing images
-% \usepackage{mathtools} % package for math equation
-% \usepackage{mathrsfs}  % package for math font
-% \usepackage{indentfirst} % package for getting ident after section or paragraph
-% \usepackage[export]{adjustbox}
-% \usepackage{multirow}  % package for tables, multir
-% \usepackage{amssymb}
-% % \usepackage{tabu}   % for tables 
-% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+\usepackage{multirow}  % package for tables, multir
+\usepackage{amssymb}
+% \usepackage{tabu}   % for tables 
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-% \graphicspath{ {./theory/figures/} }       % path for images
+\graphicspath{ {./theory/figures/} }       % path for images
 
-% \begin{document}
+\begin{document}
 
 \chapter{Tube Proposal Network}
 
@@ -793,5 +793,32 @@ worse. So, after considering both results from Tables \ref{table:new_sample} and
 adddition of a regressor, which uses a 2D Convolutional Layer. We know that this appoarch gets worse performance at JHMDB but it gives us the best results in UCF. But, since JHMDB's results are
 high enough, we are most interested in improving UCF's results. That's the reason, we will use the aformentioned approach in the rest chapters.
 
-% \end{document}
+\section{General comments}
+
+\begin{figure}[h]
+  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
+  \centering
+  \includegraphics[scale=0.25]{proposals0_half}
+  \caption{Structure of the whole network}
+  \label{fig:proposals0}
+\end{figure}
+
+\begin{figure}[h]
+  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
+  \centering
+  \includegraphics[scale=0.25]{proposals1_half}
+  \caption{Structure of the whole network}
+  \label{fig:proposals1}
+\end{figure}
+
+\begin{figure}[h]
+  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
+  \centering
+  \includegraphics[scale=0.25]{proposals2_half}
+  \caption{Structure of the whole network}
+  \label{fig:proposals2}
+\end{figure}
+
+\textbf{Pending... comment poiotika results}
+\end{document}
 

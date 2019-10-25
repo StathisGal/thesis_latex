@@ -21,6 +21,7 @@
 \begin{document}
 
 \chapter{Connecting Tubes}
+\textbf{Pending.. importance of connection}
 \section{Description}
 After getting TOIs for each video segment, it is time to connect them. That's because most actions in videos lasts more that 16 frames.
 This means that, in overlaping video clips, there will be consequentive TOIs that represent the entire action. So, it is essential to create
@@ -42,7 +43,7 @@ For every possible combination of TOIs we calculate their score as show in figur
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.225]{connection_algo}
-  \caption{An example of calculating connection score for 3 random TOIs}
+  \caption{An example of calculating connection score for 3 random TOIs taken from \cite{DBLP:journals/corr/HouCS17}}
   \label{fig:connection_algo}
 \end{figure}
 
@@ -568,12 +569,6 @@ Recall and MABO perfomance are presented at Tables \ref{table:ucf_softnms_recall
   \cline{2-2} \cline{4-7} 
   {} &  0.9   & {}   & 0.4023 & 0.5430 & 0.6502 & 0.398845313 \\
   \hline                                    
-  % \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
-  % \textbf{\{16,\}}17,...,23 }   & 0.7 & \multirow{2}{*}{20000}   & Pending... \\
-  % \cline{2-2} \cline{4-7} 
-  % {} &  0.9   & {}   & Pending... \\
-
-  % \hline                                    
 
   \caption{Spatio-temporal Recall results for UCF dataset using Soft-NMS}
   \label{table:ucf_softnms_recall}
@@ -594,11 +589,6 @@ Recall and MABO perfomance are presented at Tables \ref{table:ucf_softnms_recall
   \cline{2-2} \cline{4-7} 
   {} &  0.9   & {}   & 0.7741 & 0.8768 & 0.9255 & 0.922677864 \\
   \hline                                    
-  % \multirow{2}{7em}{0,1,...,14,\textbf{\{15,\}}
-  % \textbf{\{16,\}}17,...,23 }  &  0.7 & \multirow{2}{*}{20000}& Pending... \\
-  % \cline{2-2} \cline{4-7} 
-  % {} &  0.9   & {}   & Pending... \\
-  % \hline                                    
 
   \caption{Temporal Recall results for UCF dataset using SoftNMS}
   \label{table:ucf_softnms_temp_recall}
@@ -739,6 +729,14 @@ From the above table, firstly, we corfirmed that overlap = sample duration gives
 slightly better that the 8. However, using sample 16 increases the memory usage even though it reduces the number of video segments. So for classification stage
 we will experiment using mostly sample duration = 8.
 
+\section {General comments}
 
+\begin{figure}[h]
+  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
+  \centering
+  \includegraphics[scale=0.25]{tube_ex_half}
+  \caption{Example of connected tubes}
+  \label{fig:tube_ex}
+\end{figure}
 
 \end{document}

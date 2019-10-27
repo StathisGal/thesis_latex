@@ -24,7 +24,7 @@ In this thesis we explore the problem of action recognition and localization. We
 combined with some elements from \cite{DBLP:journals/corr/abs-1712-09184}, \cite{Ren:2015:FRT:2969239.2969250}, \cite{Girshick:2015:FR:2919332.2920125},
 \cite{DBLP:journals/corr/abs-1903-00304} and \cite{hara3dcnns}. \par
 
-We write a pytorch implementation expanding code only from \cite{jjfaster2rcnn}. Futhermore, we wrote our own code using some CUDA functions designed by us (like
+We write a pytorch implementation expanding code only from \cite{jjfaster2rcnn}. Furthermore, we wrote our own code using some CUDA functions designed by us (like
 calculating connection scores, modifying tubes etc). \par
 
 We tried to design a design a Tube Proposal Network for proposing action tubes in given video segments, inspired by Faster R-CNN's RPN.
@@ -34,10 +34,10 @@ the approach proposed by \cite{DBLP:journals/corr/abs-1712-09184}, in which it u
 On top of that, we designed a naive connection algorithm for connecting  our proposed action tubes based on the one proposed by \cite{DBLP:journals/corr/abs-1712-09184}.
 In our approach, we use the same scoring policy, which is a combination between actioness and overlaping scores. The main difference is that we avoid to calculate
 all the possible combinations using an updating threshold. We, also, tried another connection algorithm inspired by \cite{DBLP:journals/corr/abs-1903-00304}. However,
-our implementation wasn't very good so, we didn't explore all of its pontentials. \par
+our implementation wasn't very good so, we didn't explore all of its potentials. \par
 
 Finally, we explored several classifiers for the classification stage of our network, which are a RNN, a SVM and a MLP.  We used an implementation taken from Fast RCNN
-for the SVM classifier, which included hard negatives mining trainig procedure. Futhermore, we explore some training techniques for best classification performance and
+for the SVM classifier, which included hard negatives mining training procedure. Furthermore, we explore some training techniques for best classification performance and
 2 training approaches, the classic one and using pre-extracted features. 
 
 \section{Future work}
@@ -60,7 +60,7 @@ we could experiment using Feature Pyramid Networks, which could be extracted in 
 \paragraph{Changing Connection algorithm}
 In this thesis, another challenge we came was connecting proposed ToIs for proposing action tubes. We implemented a very naive algorithm, which wasn't
 able to give us very good proposals despite the changes we tried to do. We implemented another connection algorithm which was base in a estimation on temporal
-progress of an action and their overlap. Although it also didn't give us very good proposals, we believe that we should explore this algorithm's pontelials. That's
+progress of an action and their overlap. Although it also didn't give us very good proposals, we believe that we should explore this algorithm's ponytails. That's
 because it takes advantage of the progress of the action, which the previous algorithm didn't.
 
 \paragraph{Explore other  classification techniques}

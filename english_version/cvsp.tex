@@ -3,6 +3,10 @@
 \documentclass[10pt, twoside, a4paper]{cvsp-thesis}
 % \usepackage[greek]{babel}
 
+\newcommand{\tl}{\textlatin}
+\newcommand{\en}{\selectlanguage{english}}
+\newcommand{\gr}{\selectlanguage{greek}}
+
 %% alla packages
 % \usepackage[pdftex]{color}
 \usepackage{graphicx}
@@ -19,7 +23,6 @@
 % %\setcounter{tocdepth}{3}
 \hyphenpenalty=424242
 \sloppy
-\newcommand{\tl}{\textlatin}
 \usepackage{fancyhdr}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
@@ -64,7 +67,7 @@
 \graphicspath{ {./theory/figures/} }       % path for images
 
 \begin{document}
-
+\gr
 \frontmatter
 
 \maketitle
@@ -105,7 +108,7 @@
 -
 \end{keywords}
 \end{abstract}
-
+\en
 \begin{abstracteng}
 
   The purpose of this diploma thesis is the design of a network for recognizing and localising human actions in videos.
@@ -142,7 +145,7 @@ Action Localization, Action Recognition, Action Tubes
 
 \end{abstracteng}
 
-
+\gr
 \mainmatter
 
 \addcontentsline{toc}{chapter}{\contentsname}
@@ -152,7 +155,7 @@ Action Localization, Action Recognition, Action Tubes
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-
+\en
 \include{chapter1}
 \include{chapter2_3}
 \include{chapter4}

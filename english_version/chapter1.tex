@@ -1,20 +1,20 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage[export]{adjustbox}
-% \usepackage{amsmath}
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage[export]{adjustbox}
+% % \usepackage{amsmath}
 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Introduction}
 Nowadays, the enormous increase of computing power help us deal with a lot of difficult situations appeared in our daily life.
@@ -106,19 +106,18 @@ videos for training set and 268 for validation .
 \subsection{UCF-101 Dataset}
 The UCF-101 dataset (\cite{soomro2012ucf101}) contains 13320 videos from 101 action categories.
 From those, for 24 classes and 3194 video spatio-temporal annotations are included. This means that there is a 2D bounding box surrounding the actor for each frame in which an action is taking place.
-We seperate them in 2284 videos for training set and 910 for validation test according to the
+We seperate dataset's videos into 2284 videos for training set and 910 for validation test according to the
 first proposed training split. For training data, there are videos up to 641 frames, while in validation data max number of frames is 900.
 Each video, both training and validation, is untrimmed, including sometimes more than 1 actions taking place simultaneously.
-We took annotations from
-\cite{singh2016online} because the by the authors proposed annotations contain some mistakes.
+We took annotations from \cite{singh2016online} because thoses  proposed by the authors contain some mistakes.
 
-\section{Motivation ans Contibutions}
+\section{Motivation and Contibutions}
 The current achievements in Object Recognition Networks and in 3D Convolution Networks for Action Recognition have triggered us to try
 to combine them in order to achieve state-of-the-art results for action localization. We introduce a new network structure inspired by
 \cite{DBLP:journals/corr/HouCS17}, \cite{DBLP:journals/corr/abs-1712-09184},\cite{Ren:2015:FRT:2969239.2969250} and for implementation
 by \cite{jjfaster2rcnn}.
 
-Our contributions are the following
+Our contributions are the following:
 \begin{enumerate}
 \item We create a new framework for action localization extending the code taken from faster RCNN implementation. Based on the structure
   proposed by \cite{DBLP:journals/corr/HouCS17}, we modified it, using a 3D Resnet34 instead of C3D, which previous approach used.
@@ -157,4 +156,4 @@ Chapter 4 proposes algorithms for linking the proposed TOIs from every video seg
 In Chapter 5, we present all the classification approaches we used for designing our architecture and some classification results.
 Chapter 6 is used for conclusions, summary of our contribution alongside with possible future work.
 
-\end{document}
+% \end{document}

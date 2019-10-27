@@ -1,0 +1,1367 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\IeC {\textEpsilon }\IeC {\textupsilon }\IeC {\textchi }\IeC {\textalpha }\IeC {\textrho }\IeC {\textiota }\IeC {\textsigma }\IeC {\texttau }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textepsilon }\IeC {\textvarsigma }}{7}{chapter*.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\textPi \textepsilon \textrho \acctonos \textiota \textlambda \texteta \textpsi \texteta }{9}{chapter*.2}% 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{11}{chapter*.4}% 
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {1em}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Contents}{13}{section*.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{15}{chapter*.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{18}{chapter*.7}% 
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}\textlatin {Tube Proposal Network}}{21}{chapter.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1} \IeC {\textEta } \IeC {\textalpha }\IeC {\textrho }\IeC {\textchi }\IeC {\textiota }\IeC {\texttau }\IeC {\textepsilon }\IeC {\textkappa }\IeC {\texttau }\IeC {\textomicron }\IeC {\textnu }\IeC {\textiota }\IeC {\textkappa }\IeC {\ensuregreek {\acctonos \texteta }} \IeC {\texttau }\IeC {\textomicron }\IeC {\textupsilon } \IeC {\textmu }\IeC {\textomicron }\IeC {\textnu }\IeC {\texttau }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textlambda }\IeC {\textomicron }\IeC {\textupsilon } \IeC {\textmu }\IeC {\textalpha }\IeC {\textvarsigma }}{21}{section.1.1}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}\IeC {\textEpsilon }\IeC {\textiota }\IeC {\textsigma }\IeC {\textalpha }\IeC {\textgamma }\IeC {\textomega }\IeC {\textgamma }\IeC {\ensuregreek {\acctonos \texteta }} \IeC {\textsigma }\IeC {\texttau }\IeC {\textomicron } \textlatin {TPN}}{22}{section.1.2}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}\IeC {\textPi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textepsilon }\IeC {\texttau }\IeC {\textomicron }\IeC {\textiota }\IeC {\textmu }\IeC {\textalpha }\IeC {\textsigma }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textalpha } \IeC {\textpi }\IeC {\textrho }\IeC {\textiota }\IeC {\textnu } \IeC {\texttau }\IeC {\textomicron } \textlatin {TPN}}{23}{section.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}\IeC {\textEta } \IeC {\textpi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textepsilon }\IeC {\texttau }\IeC {\textomicron }\IeC {\textiota }\IeC {\textmu }\IeC {\textalpha }\IeC {\textsigma }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textalpha } \IeC {\texttau }\IeC {\textomega }\IeC {\textnu } \IeC {\textdelta }\IeC {\textepsilon }\IeC {\textdelta }\IeC {\textomicron }\IeC {\textmu }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textnu }\IeC {\textomega }\IeC {\textnu }}{23}{subsection.1.3.1}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}\selectlanguage {english}3D ResNet \selectlanguage {greek}}{24}{subsection.1.3.2}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}\IeC {\textTau }\IeC {\textalpha } \IeC {\texttau }\IeC {\textrho }\IeC {\textiota }\IeC {\textalpha }\IeC {\textsigma }\IeC {\textdelta }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\textsigma }\IeC {\texttau }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha } \textlatin {anchors} \IeC {\textomega }\IeC {\textvarsigma } \textlatin {6-dim} \IeC {\textdelta }\IeC {\textiota }\IeC {\textalpha }\IeC {\textnu }\IeC {\ensuregreek {\acctonos \textupsilon }}\IeC {\textsigma }\IeC {\textmu }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha }}{24}{section.1.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.1}\IeC {\textPi }\IeC {\textrho }\IeC {\ensuregreek {\acctonos \textomega }}\IeC {\texttau }\IeC {\texteta } \IeC {\textpi }\IeC {\textepsilon }\IeC {\textrho }\IeC {\textiota }\IeC {\textgamma }\IeC {\textrho }\IeC {\textalpha }\IeC {\textphi }\IeC {\ensuregreek {\acctonos \texteta }}}{24}{subsection.1.4.1}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.2}\textlatin {Training}}{25}{subsection.1.4.2}% 
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.3}\textlatin {Validation}}{26}{subsection.1.4.3}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.4}\textlatin {Modified Intersection over Union(mIoU) } }{26}{subsection.1.4.4}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.5}\IeC {\textBeta }\IeC {\textepsilon }\IeC {\textlambda }\IeC {\texttau }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textomega }}\IeC {\textnu }\IeC {\textomicron }\IeC {\textnu }\IeC {\texttau }\IeC {\textalpha }\IeC {\textvarsigma } \IeC {\texttau }\IeC {\textomicron } \textlatin { TPN score}}{27}{subsection.1.4.5}% 
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.6}\IeC {\textPi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textsigma }\IeC {\texttheta }\IeC {\ensuregreek {\acctonos \texteta }}\IeC {\textkappa }\IeC {\texteta } \textlatin {Regressor}}{29}{subsection.1.4.6}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D Roi Align}{30}{section*.17}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\selectlanguage {english}Regression procedure}{30}{section*.18}% 
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\textlatin { Training}}{30}{section*.19}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\textlatin {Validation}}{31}{section*.20}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\IeC {\textAlpha }\IeC {\textrho }\IeC {\textchi }\IeC {\textiota }\IeC {\texttau }\IeC {\textepsilon }\IeC {\textkappa }\IeC {\texttau }\IeC {\textomicron }\IeC {\textnu }\IeC {\textiota }\IeC {\textkappa }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textvarsigma } \IeC {\textgamma }\IeC {\textiota }\IeC {\textalpha } \IeC {\texttau }\IeC {\textomicron }\IeC {\textnu } \selectlanguage {english}Regressor \selectlanguage {greek}}{31}{section*.21}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}\IeC {\textTau }\IeC {\textalpha } \IeC {\texttau }\IeC {\textrho }\IeC {\textiota }\IeC {\textalpha }\IeC {\textsigma }\IeC {\textdelta }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\textsigma }\IeC {\texttau }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha } anchors \IeC {\textomega }\IeC {\textvarsigma } \textlatin {4k} \IeC {\textdelta }\IeC {\textiota }\IeC {\textalpha }\IeC {\textnu }\IeC {\ensuregreek {\acctonos \textupsilon }}\IeC {\textsigma }\IeC {\textmu }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha }}{32}{section.1.5}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.1}\textlatin {Training}}{34}{subsection.1.5.1}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.2}\IeC {\textPi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textsigma }\IeC {\texttheta }\IeC {\ensuregreek {\acctonos \texteta }}\IeC {\textkappa }\IeC {\texteta } \textlatin {Regressor}}{35}{subsection.1.5.2}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\textlatin {3D Roi align}}{35}{section*.29}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.3}\IeC {\textMu }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textomega }\IeC {\textsigma }\IeC {\texteta } \IeC {\texttau }\IeC {\texteta }\IeC {\textvarsigma } \IeC {\textdelta }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\textrho }\IeC {\textkappa }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textalpha }\IeC {\textvarsigma } \IeC {\texttau }\IeC {\textomicron }\IeC {\textupsilon } \IeC {\textdelta }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textgamma }\IeC {\textmu }\IeC {\textalpha }\IeC {\texttau }\IeC {\textomicron }\IeC {\textvarsigma }}{36}{subsection.1.5.3}% 
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Introduction}{39}{chapter.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Problem statement}{39}{section.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Human Action Recognition}{39}{subsection.2.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Human Action Localization}{39}{subsection.2.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Applications}{39}{section.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Challenges and Datasets}{40}{section.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}JHMDB Dataset}{41}{subsection.2.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}UCF-101 Dataset}{41}{subsection.2.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Motivation ans Contibutions}{41}{section.2.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Thesis structure}{42}{section.2.5}% 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Background}{45}{chapter.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Machine Learning}{45}{section.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Introduction}{45}{subsection.3.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Supervised Learning}{45}{section*.35}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Unsupervised Learning}{46}{section*.37}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Reinforcement Learning}{47}{section*.39}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Neural Networks}{47}{subsection.3.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}A single Neuron}{47}{subsection.3.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Activation Functions}{48}{section*.42}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Feed-forward Neural Network}{49}{section*.44}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.4}2D Convolutional Neural Network}{50}{subsection.3.1.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Convolutional Layers}{51}{section*.47}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pooling Layers}{51}{section*.49}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.5}3D Convolutional Neural Network}{52}{subsection.3.1.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Object Detection}{53}{section.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1} Region Proposal Network}{53}{subsection.3.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Roi Align}{55}{subsection.3.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Non-maximum suppression (NMS) algorithm}{56}{subsection.3.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Soft NMS}{56}{section*.57}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Losses and Metrics}{57}{section.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Losses}{57}{subsection.3.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cross Entropy Loss}{58}{section*.58}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Smooth L1-loss}{58}{section*.59}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Metrics}{58}{subsection.3.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Intersection over Union}{59}{section*.61}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{1D IoU}{60}{section*.63}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D IoU}{60}{section*.64}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Precision \& Recall }{61}{section*.65}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{mAP }{61}{section*.66}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{AP (Average precision)}{61}{section*.67}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Interpolated Precision}{63}{section*.70}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mean Average Best Overlap - MABO}{64}{section*.72}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Related work}{64}{section.3.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Action Recognition}{65}{subsection.3.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Action Localization}{67}{subsection.3.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Tube Proposal Network}{71}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1} Our implementation's architecture}{71}{section.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Introduction to TPN}{71}{section.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Preparation before TPN}{72}{section.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Preparing data}{72}{subsection.4.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}3D ResNet}{73}{subsection.4.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4} 3D anchors as 6-dim vector}{74}{section.4.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}First Description}{74}{subsection.4.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Training}{74}{subsection.4.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}Validation}{76}{subsection.4.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.4}Modified Intersection over Union(mIoU)}{76}{subsection.4.4.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.5}Improving TPN score}{77}{subsection.4.4.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.6}Adding regressor}{78}{subsection.4.4.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D Roi Align}{79}{section*.82}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Regression procedure}{79}{section*.83}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{ Training}{79}{section*.84}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{First regression Network}{80}{section*.85}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.7}Changing Regressor - from 3D to 2d}{81}{subsection.4.4.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5} 3D anchors as 4k-dim vector}{81}{section.4.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}Training}{83}{subsection.4.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}Adding regressor}{84}{subsection.4.5.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D Roi align}{84}{section*.93}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.3}From 3D to 2D}{85}{subsection.4.5.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.4}Changing sample duration}{86}{subsection.4.5.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Without Regressor}{86}{section*.96}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{With Regressor}{87}{section*.98}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}General comments}{87}{section.4.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Connecting Tubes}{91}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Introduction}{91}{section.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}First approach: combine overlap and actioness}{91}{section.5.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}JHMDB Dataset}{93}{subsection.5.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{sample duration = 16}{93}{section*.103}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{sample duration = 8}{95}{section*.104}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}UCF dataset}{96}{subsection.5.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Adding NMS algorithm}{98}{section*.105}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Stop updating threshold}{99}{section*.106}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Soft-nms instead of nms}{100}{section*.107}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Second approach: use progression and progress rate}{101}{section.5.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Third approach : use naive algorithm - only for JHMDB}{102}{section.5.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}General comments}{103}{section.5.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Classification stage}{105}{chapter.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Description}{105}{section.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Preparing data and first classification results}{105}{section.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Linear Classifier}{105}{section*.110}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{RNN}{106}{section*.111}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Training}{106}{section*.113}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Validation}{107}{section*.114}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Support Vector Machine (SVM)}{108}{section.6.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Modifying 3D Roi Align}{109}{subsection.6.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Temporal pooling}{110}{subsection.6.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Increasing sample duration to 16 frames}{110}{section.6.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Adding more groundtruth tubes}{111}{section.6.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.1}Increasing again sample duration (only for RNN and Linear)}{113}{subsection.6.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.6}MultiLayer Perceptron (MLP)}{114}{section.6.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.6.1}Regular training}{114}{subsection.6.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.6.2}Extract features}{115}{subsection.6.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.7}Adding nms algorithm}{116}{section.6.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.8}Classifying dataset UCF}{118}{section.6.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.8.1}Using RNN, Linear and MLP classifiers}{118}{subsection.6.8.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.8.2}Only temporal classification}{119}{subsection.6.8.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Training}{120}{section*.118}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Validation}{120}{section*.119}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Conclusion - Future work}{123}{chapter.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Conclusion}{123}{section.7.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Future work}{123}{section.7.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Improving TPN proposals}{123}{section*.120}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Changing Connection algorithm}{124}{section*.121}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Explore other classification techniques}{124}{section*.122}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{125}{section*.122}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{}{130}{section*.124}% 

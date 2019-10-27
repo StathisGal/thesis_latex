@@ -20,10 +20,26 @@
 % \begin{document}
 
 \chapter{Classification stage}
-\textbf{Pending introduction...}
-\section{Description}
-After getting all proposed tubes, it's time to do classification. As classifiers we use several approaches including a Linear Classifier, 
+\section{Introduction}
+In previous 2 chapters, we introduced the procedure we used to create
+candidate action tubes, which probably contain some action or may not.
+Most of the times, the proposed action tubes belong to the background, and for that reason, as mentioned
+and in the previous chapter, it is important to choose a good linking algorithm that generates good sequences of bounding
+boxes. However, it is quite important to choose the appropriate classiiser who will be able
+very accurately predict whether a candidate action tube belongs to a known category of actions or
+it belongs to the background. This is because we may produce good proposals for candidate actions, but if our classier
+is unable to distinguish them, our system will again fail to recognize the actions. \par
+
+The right choice of a classifier is a big dilemma we are facing and we need to answer. However, this classifier will get as input
+some activation maps in order to be classified. Therefore, apart from the good selection of classifier, equally, 
+good choice of features is important, too. Finally, the training process of the classifier plays a major role in order to 
+be able to generalize and to avoid overfitting situations. \par
+
+For our implementation, we implement approaches including a Linear Classifier, 
 a Recursive Neural Network (RNN) Classifier, a Support Vector Machine (SVM) Classifier and a Multilayer perceptron (MLP).
+Additionall, we experiment using feature maps obtained from 3D RoiAlign using, also, avg or max pooling. Last but not least, we try to
+find the right ratio between foreground and background action tubes including their total number needed during training stage
+in order our classifier to perform efficiently.
 
 \begin{figure}[h]
   % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
@@ -35,18 +51,18 @@ a Recursive Neural Network (RNN) Classifier, a Support Vector Machine (SVM) Clas
 
 The whole procedure of classification is consisted from the following steps:
 \begin{enumerate}
-\item Separate video into small video clips. Feed TPN network those video clips and get as output
+\item Separate video into small video clips and feed TPN network those video clips and get as output
   k-proposed ToIs and their corresponding features for each video clip.
 \item Connect the proposed ToIs in order to get video tubes which may contain an action.
-\item For each candidate video tube, which is a sequence of ToIs, feed it into the classifier
-  for verification.
+\item For each candidate video tube, which is a sequence of ToIs, feed its feature maps  into the classifier
+  in order to perform classification.
 \end{enumerate}
 
 The general structure of the whole network is depicted in figure \ref{fig:whole_network}, in which we can see the aforementioned steps if we
 follow the arrows.  \par
 In first steps of classification stage we refer only to JHMDB dataset because it has smaller number of video than UCF dataset which
 helped us save a lot of time and resources. That's because  we performed most experiments only JHMDB and after we found the optimal
-situation, we implemented to UCF-dataset, too. 
+approach, we implemented it for  UCF dataset, too. 
 
 \section{Preparing data  and first classification results}
 
@@ -73,27 +89,31 @@ the action tube. \par
 \end{figure}
 
 \paragraph{Training}
-In order to train our classifier, we have to execute the previous steps for each video. However, each video
-has different number of frames and reserves too much memory in the GPU. In order to deal with this situation,
+In order to train our classifier, we have to execute the steps, presented in the first section, for each video. However, each video
+has different number of frames and reserves too much memory in the GPU. In order to deal with this situation and considering there are
+4 GPUs available,
 we give as input one video per GPU. So we can handle 4 videos simultaneously. This means that a regular
 training session takes too much time for just 1 epoch. \par
-The solution we came with, is to precompute the features for both positive video tubes and negative video tubes and 
+The solution we came with, is to precompute the features for both foreground  and background video tubes, and 
 then to feed those features to our classifier for training  it in order to discriminate classes. This solution includes the following steps:
 \begin{enumerate}
-\item  At first, we extract only groundtruth video tubes' features and the double number of background video tubes. We chose this
-ratio between positive and negative tubes inspired by \cite{jjfaster2rcnn}, in which it has 0.25 ratio between foreground
+\item  At first, we extract only groundtruth action tubes’ features. Also we extract feature maps from  background action tubes, which
+  are double the number of groundtruth action tubes. We chose this
+ratio between the number of  positive and negative tubes inspired by \cite{jjfaster2rcnn}, in which it has 25\% ratio between foreground
 and background rois and chooses 128 roi in total. Respectively, we chose a little bigger ratio because we have only 1 groundtruth
-video tube in each video. So, for each video we got 3 video tubes in total, 1 for positive and 2 for background. We considered
-background tubes those whose overlap scores with groundtruth tubes are $ \ge 0.1 $ and $ \le 0.3 $. Of course, we use a pre-trained TPN
-in order to get those action tubes.
+video tube in each video. So, for each video we got 3 action  tubes in total, 1 for positive and 2 for background. We considered
+background tubes those whose overlap scores with groundtruth tubes are $ \ge 0.1 $ and $ \le 0.3 $. Of course, 
+in order to get those action tubes,we use a pre-trained TPN to generate ToIs for each video segment and then our proposed connection
+algorithm for linking proposed ToIs. Finally, we get each action tube's corresponding feature map using 3D RoiAlign
+
 \item After extracting those features, we trained both Linear and RNN classifiers. The Linear classifier needs a fixed input size, so
-  we used a pooling function in the dimension of the videos. So, at first we had a feature map of \textit{3,512,16} dimensions and then
-  we get as output a feature maps of \textit{512,16} dimensions. We used both max and avg pooling as shown at Table \ref{table:rnn_linear}.
+  we used a pooling function in the dimension of the number of videos. So, at first we had a feature map of \textit{3,512,16} dimensions and then
+  we get as output a feature maps of \textit{512,16} dimensions. We experimented using  both max and avg pooling as shown at Table \ref{table:rnn_linear}.
   For the RNN classifier, we do not use any pooling function before feeding it.
 \end{enumerate}
 In order to train our classifiers, we use Cross-Entropy Loss as training loss function.
 \paragraph{Validation} Validation stage includes using both pre-trained TPN and classifier. So, for each video,
-we get classification scores for proposed action tubes. Most approaches usually consider a confidence score for
+we get classification scores for proposed action tubes. Most approaches usually consider a confidence score threshold for
 considering an action tube as foreground. However, we don't use any confidence score. On the contrary, because we
 know that JHMDB has trimmed videos with only 1 performed action, we just consider the best-scoring tube as our prediction.
 
@@ -139,7 +159,10 @@ the separating hyper-plane. So in each iteration, we update this set of negative
 SVM is trained independently. \par
 SVM code is take from Microsoft's Azure \href{https://github.com/Azure/ObjectDetectionUsingCntk} {github page} in which there is an implementation
 of Fast RCNN using a SVM classifier. We didn't modify its parameters which means that it has a linear kernel, uses  L2-norm as penalty and L1-norm
-as loss during training. Also, we consider as hard-negatives the tubes that got score $ >  -1.0 $ during classification.\par
+as loss during training. Training procedure starts with randomly picking 100 videos in order to calculate feature's scale.
+After that, each svm is provided by positive samples' feature maps and network looks for hard negatives for each class' svm. We consider as hard-negatives the tubes
+that got confidence score $ >  -1.0 $ during classification, and we add them to svm's sampls. When we gathen  hard-negatives whose number is bigger than 500 or 1000 (depending
+on the approach) we retrain the class' SVM and remove samples with new score $ < -1.0$.  \par 
 This whole process makes the choice of the negatives a crucial factor. In order to find the best policy,  we came with 5 different cases to consider
 as negatives:
 \begin{enumerate}
@@ -264,12 +287,13 @@ modified Roi Align may outclass regular Roi Align.
 
 \subsection{Temporal pooling}
 After getting first results, we implement a temporal pooling function inspired from \cite{DBLP:journals/corr/HouCS17}. We need a
-fixed input size for the SVM. However, our tubes' temporal stride varies from 2 to 5. So we use as fixed temporal pooling equal
+fixed input size for the SVM. However, our tubes' temporal stride varies from 2 to 5, because a video lasting 15 frames
+is cosisted of 2 ToIs and a video of 40 frames is consisted of 5. So we use as fixed temporal pooling equal
 with 2. As pooling function we use 3D max pooling, one for each filter of the feature map.  So for example, for an action tube
-with 4 consecutive ToIs, we  have 4,256,8,7,7 as feature size. We separate the feature map into 2 groups using \textit{linspace}
-function and we reshape the feature map into 256,k,8,7,7 where k is the size of each group, After using 3D max pooling, we get
-a feature map 256,8,7,7 so finally we concat them and get 2,256,8,7,7. In this case we didn't experiment with (64,8,7,7) feature
-maps because it wouldn't performed better that (256,8,7,7) feature maps as noticed from the previous section. \par
+with 4 consecutive ToIs, we  have $(4,256,8,7,7)$ as feature size. We separate the feature map into 2 groups using \textit{linspace}
+function and we reshape the feature map into $(256,k,8,7,7)$ where k is the size of each group. After using 3D max pooling, we get
+a feature map with dimensions $(256,8,7,7)$, so we concat them and finally get feature maps with size of $(2,256,8,7,7)$.
+In this case we didn't experiment with feature maps with size $(64,8,7,7)$ because they wouldn't performed better than  feature maps with size $(256,8,7,7)$ as noticed from the previous section. \par
 We experiment using a SVM classifier for training policies 1 and 4 and using both regular and modifier Roi Align. The
 performance results are presented at Table \ref{table:svm_temp_pooling}.
 
@@ -282,7 +306,7 @@ performance results are presented at Table \ref{table:svm_temp_pooling}.
   before & after & {} & {} & 0.5 &  0.4 & 0.3\\
   \hline   \hline
 
-  \multirow{4}{*}{k,256,8,7,7} & \multirow{4}{*}{2,256,8,7,7} & \multirow{2}{*}{RoiAlign}  & 1 & 25.07 & 26.91 & 29.11 \\
+  \multirow{4}{*}{k,256,8,7,7} & \multirow{4}{*}{2,256,8,7,7} & \multirow{2}{*}{RoiAlign}  & 1 & 24.97 & 26.91 & 29.11 \\
   \cline{4-7}
   {} & {} & {} & 4 &  23.27 & 25.96 & 28.25 \\
   \cline{3-7}
@@ -440,8 +464,13 @@ First of all, after considering results presented at both Tables \ref{table:rnn_
 set the number of foreground tubes equal with 2, for both case, we get worse results that the initial. This probably is due to the fact that we increase
 also the number of background tubes for cases when ratio is 1:2, 1:3 and 1:4 resulting in considering more proposed tubes as background tubes. On the other
 hand when we set ratio equal with 2:3, instead of considering most proposed action tubes as background, classifiers classify them as a specific action class,
-which means there is an overfitting situation. \par
-After considering aforementioned results, for the remaining SVM classifier, we will \textbf{Pending... for case 2}
+which means there is an overfitting situation. So, although we think that we shouldn't investigate any more for cases with 2 foreground action tubes,
+we will train our SVM classifier using 2 foreground tubes and all the aforementioned ratio because we want to be sure about our assumption. On the other hand
+we notice that using 4 or 8 foreground tubes both  get us better results than the initial results. The best results come when  ratio between foreground and
+total tubes is 1:3 for both cases. Then we get good results for ratios 2:3 and 1:2, and we get the worst while using ratio 1:4. This is caused probably
+from the big number of background tubes in total Comparing with the foreground. \par 
+As mentioned before, we train SVM classifier using aforementioned cases only for policy 1 because it gives us the best results for all previous cases.
+Classification performance using mAP metric is shown at Table \ref{table:svm_increased}. 
 
 \begin{center}
   \setlength{\tabcolsep}{2pt}
@@ -452,17 +481,17 @@ After considering aforementioned results, for the remaining SVM classifier, we w
     \multirow{2}{*}{\textbf{F. map}} & \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {}  & {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{8}{*}{(2,256,8,7,7)} & 1 & 3 & 25.07 & 26.91 & 29.11\\
+    \multirow{8}{*}{(2,256,8,7,7)} & 1 & 3 & 24.97 & 26.91 & 29.11\\
     \cline{2-6}
-    {} & \multirow{4}{*}{2} & 3 & Pending... \\
+    {} & \multirow{4}{*}{2} & 3 & 13.87 & 18.74 & 21.29 \\
     \cline{3-6}
-    {} & {} & 4 & Pending... \\
+    {} & {} & 4 & 14.21 & 19.67 & 21.75 \\
     \cline{3-6}
-    {} & {} & 6 &  Pending... \\
+    {} & {} & 6 & 12.88 & 18.62 & 21.59 \\
     \cline{3-6}
-    {} & {} & 8 & Pending... \\
+    {} & {} & 8 & 12.66 & 18.7 & 21.97 \\
     \cline{2-6}
-    {} & \multirow{4}{*}{4} & 6 & Pending... \\
+    {} & \multirow{4}{*}{4} & 6 & 25.04 & 26.91 & 27.82  \\
     \cline{3-6}
     {} & {} &  8 & 24.34 & 25.67 & 26.34 \\
     \cline{3-6}
@@ -470,7 +499,7 @@ After considering aforementioned results, for the remaining SVM classifier, we w
     \cline{3-6}
     {} & {} & 16 & 21.94 & 23.55 & 24.23 \\
     \cline{2-6}
-    {} & \multirow{4}{*}{8} & 12 & Pending...\\
+    {} & \multirow{4}{*}{8} & 12 & 24.83 & 27.13 & 27.46 \\
     \cline{3-6}
     {} & {} & 16 & 23.97 & 26.38 & 26.94 \\
     \cline{3-6}
@@ -484,13 +513,23 @@ After considering aforementioned results, for the remaining SVM classifier, we w
     \label{table:svm_increased}
   \end{longtable}
 \end{center}
-\textbf{Pending... commentary}
+
+Results shows us some interesting facts. Firstly, it confirms our assumption about not training cases with only 2 foreground tubes, so from now on,
+we will investige training situations using 4 or 8 foreground action tube during training. Also, a strange facts occurs, which is that we get almost the
+same results with the results obtained for using policy 1, only one foreground tube, 3 in total and temporal pooling. This is probably because
+during training we don't get such good sample set of video like we did during aforementioned situation. But we think that it is better to
+keep testing using 4 or 8 foreground action tubes. Last but not least, it is clear that we get the best result when we habe ration 2:3 between
+number of foreground and total action tubes. Also, it is more preferable to have 4 foreground action tubes instead of 8. This means that given too
+many action tubes confuse SVM classifier, so it fails to perform well.
+
 
 \subsection{Increasing again sample duration (only for RNN and Linear)}
 
 Table \ref{table:svm_temp_pooling_16} showed that SVM classifier gets about the same performance for both sample durations 8 and 16 frames.
 Triggered by this fact, we trained RNN and Linear classifiers for sample duration equal with 16 frames. Table \ref{table:rnn_16} shows RNN's mAP
-performance and Table \ref{table:linear_16} Linear's mAP performance.
+performance and Table \ref{table:linear_16} Linear's mAP performance. We started experimenting with RNN classifier because it performed better than
+Linear classifier previously. As mentioned before, we experiment using 4 or 8 foreground tubes and ratios 2:3, 1:2, 1:3 and 1:4 between the number of
+foreground and total action tubes provived.
 
 \begin{center}
   \begin{longtable}{|| c | c || c c c ||}
@@ -498,7 +537,7 @@ performance and Table \ref{table:linear_16} Linear's mAP performance.
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{4} & 6 & Pending...\\
+    \multirow{4}{*}{4} & 6 & 7.94 & 13.51 & 14.95 \\
     \cline{2-5}
     {} & 8 & 10.88 & 14.02 & 14.74  \\
     \cline{2-5}
@@ -506,7 +545,7 @@ performance and Table \ref{table:linear_16} Linear's mAP performance.
     \cline{2-5}
     {} & 16 & 11.69 & 15.77 & 16.87  \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
+    \multirow{4}{*}{8} & 12 & 10.47 & 15.06 & 19.93 \\
     \cline{2-5}
     {} & 16 &  12.29 & 19.51 & 23.11  \\
     \cline{2-5}
@@ -520,13 +559,18 @@ performance and Table \ref{table:linear_16} Linear's mAP performance.
 \end{longtable}
 \end{center}
 
+Comparing results from Table \ref{table:rnn_16} and previous table \ref{table:rnn_increased} one by one, it is clear that RNN outperformes when sample
+duration equals with 8 frames. This results was expected, because, the increase of sample duration reduce the number of video segments needed for each video.
+So, this means that RNN has to classify sequences with 3 video segments at the most, which is more difficult that classifying bigger sequence like previously. \par
+Next, we experiment using Linear classifier for the same cases like RNN's. 
+
 \begin{center}
   \begin{longtable}{|| c | c || c c c ||}
     \hline
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{4} & 6 & Pending...\\
+    \multirow{4}{*}{4} & 6 & 13.79 & 19.75 & 23.63 \\
     \cline{2-5}
     {} & 8 & 15.11 & 19.78 & 21.14 \\
     \cline{2-5}
@@ -534,7 +578,7 @@ performance and Table \ref{table:linear_16} Linear's mAP performance.
     \cline{2-5}
     {} & 16 & 13.62 & 16.11 & 18.15 \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
+    \multirow{4}{*}{8} & 12 & 10.63 & 19.37 & 21.65 \\
     \cline{2-5}
     {} & 16 & 12.98 & 17.52 & 19.10 \\
     \cline{2-5}
@@ -548,7 +592,10 @@ performance and Table \ref{table:linear_16} Linear's mAP performance.
 \end{longtable}
 \end{center}
 
-\textbf{ Pending... commentary}
+
+In this case, results from table \ref{table:linear_16} are worse than  those presented at Table \ref{table:linear_increased}, with the difference being about 2\%.
+So, after considering both cases, it becomes clear that it is preferable to experiment using sample duration equal with 8 and not to increase it to 16 frames.
+
 
 \section{MultiLayer Perceptron (MLP)}
 
@@ -621,7 +668,7 @@ need at the most 8 foreground tubes, even thought the ration between the number 
 Probably, too many foreground action tubes make our architecture overfitted so unable to generalize.
 
 \subsection{Extract features}
-\textbf{Pending...}
+
 As previously performed, we trained MLP classifier using pre-computed feature maps. These feature maps include both foreground and background
 action tubes. Base on the conclusion made in previous sections, we will train our classifier only for number of foreground tubes equal with 4
 and 8. Furthermore, we will train it for 3 different ratios between the number of foreground and background action tubes, which are 1:1, 1:2
@@ -633,7 +680,7 @@ and 1:3. Table \ref{table:mlp_extract_jhdmb} shows these cases and their respect
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{3}{*}{4} & 6 & Pending...\\
+    \multirow{3}{*}{4} & 6 & 4,37 & 8,54 & 10,12 \\
     \cline{2-5}
     {} & 8 & 5.89 & 9.54 & 13.61 \\
     \cline{2-5}
@@ -641,7 +688,7 @@ and 1:3. Table \ref{table:mlp_extract_jhdmb} shows these cases and their respect
     \cline{2-5}
     {} & 16 & 6.80 & 13.17 & 14.67 \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
+    \multirow{4}{*}{8} & 12 & 8,62 & 12,32 & 14,74 \\
     \cline{2-5}
     {} & 16 & 8.49 & 13.94 & 15.09 \\
     \cline{2-5}
@@ -655,7 +702,11 @@ and 1:3. Table \ref{table:mlp_extract_jhdmb} shows these cases and their respect
 \end{longtable}
 \end{center}
 
-\textbf{Pending.. commentary}
+Comparing results from Tables  \ref{table:mlp_extract_jhdmb}  and \ref{table:mlp_reg}, it is clear we need 8 foreground tubes in order to perform well. However, it isn't very
+clear which of these two proposed training approches is better, but if we have to decide one method, we would choose using pre-extracted features training.  This approach manages
+to achieve the best results, and especially when we have 8 foreground action tubes and 32 in total. Also, comparing methods using 4 or 8 positive action tubes, it is clear that we
+would prefer using 8 genelly. However, it's not clear which ratio is better because, we get best results when we have 8 foreground action tubes  and  ratio 1:4 while we get best results
+when ratio is 1:3 having 4 positive action tubes.
 
 \section{Adding nms algorithm}
 
@@ -665,7 +716,9 @@ doesn't score the best overlapping action tube but a neighbour, which should hav
 before classification stage in order to remove unnecessary overlapping action tubes.
 The structure of this approach is presented at Figure \ref{fig:network_nms}. So, we run again validation stage for our classifiers
 and results are presented at Tables \ref{table:svm_nms}, \ref{table:rnn_nms}, \ref{table:linear_nms} and \ref{table:mlp_nms} for SVM, RNN, Linear
-and MLP classifiers respectively.
+and MLP classifiers respectively. \par
+
+We start experimenting using SVM classifier, whose mAP performance is presented at Table \ref{table:svm_nms} when we use NMS algorithm.
 
 \begin{figure}[h]
   % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
@@ -681,7 +734,7 @@ and MLP classifiers respectively.
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{4} & 6 & Pending...\\
+    \multirow{4}{*}{4} & 6 & 21.42 & 24.3 & 25.11 \\
     \cline{2-5}
     {} & 8 & 21.3 & 24.06 & 24.85 \\
     \cline{2-5}
@@ -689,7 +742,7 @@ and MLP classifiers respectively.
     \cline{2-5}
     {} & 16 & 21.11 & 23.98 & 24.84 \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
+    \multirow{4}{*}{8} & 12 & 20.47 & 22.55 & 23.41 \\
     \cline{2-5}
     {} & 16 & 21.21 & 23.89 & 24.97 \\
     \cline{2-5}
@@ -703,13 +756,19 @@ and MLP classifiers respectively.
 \end{longtable}
 \end{center}
 
+According to Table \ref{table:svm_nms} and taking Table's \ref{table:svm_increased} results into consideration, it is clear that mAP performance decreases while using NMS algorithm.
+We run only for case with foreground tubes equal with 4 or 8 and we didn't experiment using initial ratio, because we think that we are going to get the same attitude.
+This is probably because NMS algorithm removes some overlapping action tubes, so SVM classifier doesn't get the right action tubes for classifying them. \par
+
+Netxt, we experiment using RNN classifier for sample duration equal with 8 frames per video segment. Results are included at Table \ref{table:rnn_nms}
+
 \begin{center}
   \begin{longtable}{|| c | c || c c c ||}
     \hline
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{4} & 6 & Pending... \\
+    \multirow{4}{*}{4} & 6 & 13.27 & 26.12 & 30.69  \\
     \cline{2-5}
     {} & 8 & 16.06 & 25.81 & 27.63 \\
     \cline{2-5}
@@ -717,7 +776,7 @@ and MLP classifiers respectively.
     \cline{2-5}
     {} & 16 & 17.24 & 26.44 & 28.36 \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
+    \multirow{4}{*}{8} & 12 & 2 & 5.11 & 7.75 \\
     \cline{2-5}
     {} & 16 & 11.11 & 20.98 & 23.97 \\
     \cline{2-5}
@@ -731,13 +790,17 @@ and MLP classifiers respectively.
 \end{longtable}
 \end{center}
 
+Alongside with SVM's mAP performances, RNN doesn't achieve any improvement in its mAP performance when adding NMS algorithm. On the contrary, it reduce about 5\% in some cases, so it is more
+preferable to use ActionNet's architecture without NMS algorithm included while using RNN as classifier. \par
+Following RNN, we investigate the same situations with Linear classify instead of RNN. Its performance is presented at Table \ref{table:linear_nms}.
+
 \begin{center}
   \begin{longtable}{|| c | c || c c c ||}
     \hline
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{4} & 6 & Pending...\\
+    \multirow{4}{*}{4} & 6 & 12.59 & 14.91 & 17.79  \\
     \cline{2-5}
     {} & 8 & 15.89 & 21.92 & 23.28 \\
     \cline{2-5}
@@ -745,7 +808,7 @@ and MLP classifiers respectively.
     \cline{2-5}
     {} & 16 & 15.07 & 17.38 & 18.27 \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
+    \multirow{4}{*}{8} & 12 & 18.88 & 24.37 & 26.72 \\
     \cline{2-5}
     {} & 16 & 15.42 & 22.31 & 24.70 \\
     \cline{2-5}
@@ -759,13 +822,20 @@ and MLP classifiers respectively.
 \end{longtable}
 \end{center}
 
+On the contrary with SVM and RNN's performances, Linear's mAP performance is getting better when adding NMS algorithm, comparing results presented at
+Tables \ref{table:linear_nms} and  \ref{table:linear_increased}. This is probably because Linear classifier gets now less proposed action tubes comparing with
+previous approach. So, now it is less likely to misclassify an action tube, probably considering it as foreground when actually is a background action tube.
+Even though its performance increased, it doesn't achieve our best results, fact which may corroborate our previous claim.
+Last but not least, we need to experiment using MLP classifier in order to determine if NMS algorithm is needed during classification. The results are presented at
+Table \ref{table:mlp_nms}.
+
 \begin{center}
   \begin{longtable}{|| c | c || c c c ||}
     \hline
     \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{4}{*}{4} & 6 &  Pending...\\
+    \multirow{4}{*}{4} & 6 & 3.66 & 7.23 & 9.43 \\
     \cline{2-5}
     {} & 8 & 3.43 & 8.17 & 12.77 \\
     \cline{2-5}
@@ -773,7 +843,7 @@ and MLP classifiers respectively.
     \cline{2-5}
     {} & 16 & 4.82 & 11.38 & 15.85 \\
     \hline
-    \multirow{4}{*}{8} & 12 & Pending... \\
+    \multirow{4}{*}{8} & 12 & 5.92 & 12.42 & 15.81  \\
     \cline{2-5}
     {} & 16 & 6 & 12.55 & 14.66 \\
     \cline{2-5}
@@ -787,84 +857,28 @@ and MLP classifiers respectively.
 \end{longtable}
 \end{center}
 
-\textbf{Pending... Commentary}
+Finally, comparing results from Tables \ref{table:mlp_nms} and \ref{mlp_extract_jhmdb}, again adding NMS algorithm approach descreases mAP performance. Consequently, after considering all
+situations it is clear that NMS algorithm doesn't contribute at the improvement of Network's mAP performance, but, on the contrary, it reduces it. So, as a final comment, it is more preferable
+not to uses it, except when we use Linear classifier for classification. \par
+
+\subsection{General comments}
+To sum up, in this section we tried to find the most suitable classifier for achieve good classification results based on mAP metric. It is clear that when using a SVM classifier, which uses
+temporal pooling in order to have a fix-size input, we get the best results. The most suitable method for training is using about 4 foreground action tubes and only 2 background which using
+both background action tubes and action tubes from other classes as hard-negatives. \par
 
 \section{Classifying dataset UCF}
-\subsection{Using RNN, Linear and MLP classifiers}
+\subsection{Introduction}
+During previous section we explore different classification methods using several classifiers. On top of that, it became clear how important is generating good proposal considering the situation
+where we added NMS algorithm. NMS algorithm reduce the number of proposed action tubes, so most of classifiers failed to improve their performance. Considering recall and MABO performances presented
+in chapter 5, it is clear that our network would fail recognizing most of spatiotemporal action tubes and to correctly classify them. However, inn most cases, MABO performance
+got score about 92-94\%. So, we came withthe idea of rather than performing spatiotemporal localization and
+classification, for dataset UCF, we perform only temporall localization. This means that  we tried to detect video segments in which an action is performed, and also we try
+to determine the class of the performed action.
 
-At first, we use the same approach we did for classifying JHMDB dataset. However, we don't use a SVM classifier because its training requires too much resources, which we don't have available. That's
-because, during training, it loads every feature map and keeps it for future training of the SVM classifier, according to hard mining negative training procedure. So, we again extract foreground
-and background action tubes and save them in order to use them during classifiers' training phase. The only difference with JHMDB's approach is that before saving them, we perform max pooling in
-sample duration's dimension because saving those feature maps requires too much memory, and by doing this, we reduce significantly.
-\begin{center}
-  \begin{longtable}{|| c | c || c c c ||}
-    \hline
-    \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
-    {} & {} & 0.5 & 0.4 & 0.3 \\
-    \hline
-    \multirow{4}{*}{8} & 12 & Pending...\\
-    \cline{2-5}
-    {} & 16 & Pending... \\
-    \cline{2-5}
-    {} & 24 & Pending... \\
-    \cline{2-5}
-    {} & 32 & Pending... \\
-    \hline
-
-  \caption{RNN results}
-  \label{table:ucf_rnn}
-\end{longtable}
-\end{center}
-  
-\begin{center}
-  \begin{longtable}{|| c | c || c c c ||}
-    \hline
-    \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
-    {} & {} & 0.5 & 0.4 & 0.3 \\
-    \hline
-    \multirow{3}{*}{8} & 12 & Pending...\\
-    \cline{2-5}
-    {} & 16 & Pending... \\
-    \cline{2-5}
-    {} & 24 & Pending... \\
-    \cline{2-5}
-    {} & 32 & Pending... \\
-    \hline
-
-  \caption{Linear results}
-  \label{table:ucf_linear}
-\end{longtable}
-\end{center}
-
-\begin{center}
-  \begin{longtable}{|| c | c || c c c ||}
-    \hline
-    \multirow{2}{*}{\textbf{FG tubes}} & \multirow{2}{*}{\textbf{Total tubes}} & {} & \textbf{mAP} & {} \\
-    {} & {} & 0.5 & 0.4 & 0.3 \\
-    \hline
-    \multirow{3}{*}{8} & 12 & Pending...\\
-    \cline{2-5}
-    {} & 16 & Pending... \\
-    \cline{2-5}
-    {} & 24 & Pending... \\
-    \cline{2-5}
-    {} & 32 & Pending... \\
-    \hline
-
-  \caption{MLP results}
-  \label{table:mlp_linear}
-\end{longtable}
-\end{center}
-  
-
-\textbf{Pending... commentary}
-% As mentioned before, all the above results are from JHMDB dataset. For UCF dataset, we explore only MLP classifier. We didn't use spatiotemporal
-% information but only temporal information extracted by our
 
 \subsection{Only temporal classification}
 
-As presented in chapter 5, our connection algorithm is able to get good temporal recall and MABO performance. In most cases, MABO performance
-got score about 92-94\%. So, we came with idea of just performing temporal localization, instead of spatiotemporal localization. \par
+As presented in chapter 5, our connection algorithm is able to get good temporal recall and MABO performance. 
 In order to temporally localize action in videos, we use only the temporal information containing in the proposed action tubes, which means the first and the last frame of the action tube.
 After that, we will classify the proposed action tubes without performing spatiotemporal localization, but only temporal. Although we don't use the extracted bounding boxes for classification, we take advantage of the spatial information in order to perform better temporal localization. Intuitively,that's because, in order to extract the action tubes, we consider the spatial overlap between the connected ToIs . This aforementioned approach includes the following steps:
 \begin{enumerate}
@@ -970,10 +984,55 @@ According to Table \ref{table:temp_cls_1}, mAP performance for temporal localiza
 Comparing these results with results shown at Table \ref{table:temp_cls_recall_1}, we deduce that our method is not at all efficient. Even though mAP results increase slightly,
 recall and MABO performance decrease rapidly. Of course, this result is anticipated because, by decreasing NMS threshold, the number of rejected action tubes is increased. \par
 We tried another approach, which applies NMS algorithm after classification stage, and not before it like we did previously.
-In previous approach, we sorted candidate action tubes using connection score obtained from linking algorithm and then we removed
-the overlapping action tubes. In this approach, we firstly remove action tubes with same temporal limits, in order to get unique
+Also, we noticed in previous results that in most cases, we get these low performances because of the number of false positives, which
+don't get removed during NMS procedure. To be more specific, Table \ref{table:tp_fp} shows all the detected true and false positives when we set NMS threshold equal with 0.2,
+mAP overlap threshold equal with 0.3 and confidence threshold equal with 0.6 for both aforementioned approaches.
+\begin{center}
+  \setlength{\tabcolsep}{2pt}
+  \begin{longtable} {|| c | c c | c c | c | cc | cc||}
+
+    \hline
+    \multirow{2}{*}{\textbf{Class}} & \multicolumn{2}{|c|}{\textbf{Appr 1}}  & \multicolumn{2}{ c||}{\textbf{Appr 2}} &
+    \multirow{2}{*}{\textbf{Class}} & \multicolumn{2}{|c|}{\textbf{Appr 1}}  & \multicolumn{2}{ c||}{\textbf{Appr 2}} \\
+    {} & TP & FP & TP & FP &
+    {} & TP & FP & TP & FP \\
+    \hline    
+    Basketball & 5 & 279 & 6 & 403 &
+    BasketballDunk & 7 & 7 & 12 & 13 \\
+    Biking & 0 & 3 & 0 & 5 &
+    CliffDiving & 11 & 55 & 1 & 1 \\
+    CricketBowling &  0 & 0 & 10 & 75 &
+    Diving & 20 & 189 & 23 & 272 \\
+    Fencing & 11 & 222 & 25 & 336 &
+    FloorGymnastics & 2 & 86 & 6 & 131 \\
+    GolfSwing & 4 & 51 & 6 & 78&
+    HorseRiding & 0 & 33 & 4 & 58 \\
+    IceDancing & 8 & 29 & 6 & 38 &
+    LongJump & 1 & 24 & 6 & 43 \\
+    PoleVault & 0 & 202 & 9 & 296 &
+    RopeClimbing & 1 &24 & 4 & 43 \\
+    SalsaSpin & 3 & 158 & 5 & 237 &
+    SkateBoarding & 0 & 10 & 0 & 13 \\
+    Skiing & 0 & 0 & 0 & 0 &
+    Skijet & 1 & 27 & 6 & 43 \\
+    SoccerJuggling & 3 & 94 & 1 & 153 &
+    Surfing  & 11 & 102 & 23 & 159 \\
+    TennisSwing & 0 & 125 & 0 & 166 &
+    TrampolineJumping & 4 & 18 & 4 & 32 \\
+    VolleyballSpiking & 20 &704 & 20 & 1044 &
+    WalkingWithDog & 0 & 5 & 0 & 9 \\
+    \hline    
+    \caption{Comparing TP and FP for both approaches}
+    \label{table:tp_fp}
+
+  \end{longtable}
+\end{center}
+
+Considering those two facts we came with the following solution.
+In previous approach, we sorted candidate action tubes using connection scores obtained from linking algorithm and then we removed
+the overlapping action tubes. In our new approach, we firstly remove action tubes with same temporal limits, in order to get unique
 temporal action tubes. Then, we classify all the proposed action tubes exactly like we did in step 3 previously. After that, we
-perform temporal NMS using the confidence score extracted by the last layer of the ResNet34 and finally we keep those which
+perform temporal NMS using the confidence scores extracted by the last layer of the 3D ResNet34 and finally we keep those which
 their confidence score is over a predefined threshold. 
 
 \begin{center}
@@ -1030,53 +1089,7 @@ their confidence score is over a predefined threshold.
 
 Comparing Tables \ref{table:temp_cls_2} and \ref{table:temp_cls_recall_1}, we get about the same results for overlap thresholds 0.9, 0.7, 0.5, 0.4 and
 0.3 . But for overlap threshold 0.2 we notice that mAP performance is improved about 1\%. So, we thought that we should use even smaller overlap thresholds,
-which are 0.15, 0.1, 0.5 and 0.0 . Also, we noticed in previous results that in most cases, we get these low performances because of the number of false positives, which
-don't get removed during NMS procedure. To be more specific, Table \ref{table:tp_fp} shows all the detected true and false positives when we set NMS threshold equal with 0.2,
-mAP overlap threshold equal with 0.3 and confidence threshold equal with 0.6 for both aforementioned approaches.
-
-\begin{center}
-  \setlength{\tabcolsep}{2pt}
-  \begin{longtable} {|| c | c c | c c | c | cc | cc||}
-
-    \hline
-    \multirow{2}{*}{\textbf{Class}} & \multicolumn{2}{|c|}{\textbf{Appr 1}}  & \multicolumn{2}{ c||}{\textbf{Appr 2}} &
-    \multirow{2}{*}{\textbf{Class}} & \multicolumn{2}{|c|}{\textbf{Appr 1}}  & \multicolumn{2}{ c||}{\textbf{Appr 2}} \\
-    {} & TP & FP & TP & FP &
-    {} & TP & FP & TP & FP \\
-    \hline    
-    Basketball & 5 & 279 & 6 & 403 &
-    BasketballDunk & 7 & 7 & 12 & 13 \\
-    Biking & 0 & 3 & 0 & 5 &
-    CliffDiving & 11 & 55 & 1 & 1 \\
-    CricketBowling &  0 & 0 & 10 & 75 &
-    Diving & 20 & 189 & 23 & 272 \\
-    Fencing & 11 & 222 & 25 & 336 &
-    FloorGymnastics & 2 & 86 & 6 & 131 \\
-    GolfSwing & 4 & 51 & 6 & 78&
-    HorseRiding & 0 & 33 & 4 & 58 \\
-    IceDancing & 8 & 29 & 6 & 38 &
-    LongJump & 1 & 24 & 6 & 43 \\
-    PoleVault & 0 & 202 & 9 & 296 &
-    RopeClimbing & 1 &24 & 4 & 43 \\
-    SalsaSpin & 3 & 158 & 5 & 237 &
-    SkateBoarding & 0 & 10 & 0 & 13 \\
-    Skiing & 0 & 0 & 0 & 0 &
-    Skijet & 1 & 27 & 6 & 43 \\
-    SoccerJuggling & 3 & 94 & 1 & 153 &
-    Surfing  & 11 & 102 & 23 & 159 \\
-    TennisSwing & 0 & 125 & 0 & 166 &
-    TrampolineJumping & 4 & 18 & 4 & 32 \\
-    VolleyballSpiking & 20 &704 & 20 & 1044 &
-    WalkingWithDog & 0 & 5 & 0 & 9 \\
-    \hline    
-    \caption{Comparing TP and FP for both approaches}
-    \label{table:tp_fp}
-
-  \end{longtable}
-\end{center}
-
-
-\textbf{Pending...} describe choosing first 10
+which are 0.15, 0.1, and 0.05 which are presented at Table \ref{table:temp_cls_2_1}.
 
 \begin{center}
   \begin{longtable}{|| c | c | c c c||}
@@ -1084,41 +1097,33 @@ mAP overlap threshold equal with 0.3 and confidence threshold equal with 0.6 for
     \multirow{2}{*}{\textbf{NMS thresh}} & \multirow{2}{*}{\textbf{Conf thresh}} & {} & \textbf{mAP} & {} \\
     {} & {} & 0.5 & 0.4 & 0.3 \\
     \hline
-    \multirow{3}{*}{0.2} & 0.6 & Pending... \\
+    \multirow{3}{*}{0.15} & 0.6 & 2.01 & 2.66 & 3.62 \\
     \cline{2-5}
-    {} & 0.75 & Pending... \\
+    {} & 0.75 & 1.62 & 2.21 & 2.97 \\
     \cline{2-5}
-    {} & 0.85 & Pending... \\
+    {} & 0.85 & 1.51 & 1.91 & 2.56 \\
     \hline
-    \multirow{3}{*}{0.15} & 0.6 & Pending... \\
+    \multirow{3}{*}{0.10} & 0.6 & 1.87 & 2.74 & 3.77 \\
     \cline{2-5}
-    {} & 0.75 & Pending... \\
+    {} & 0.75 & 1.62 & 2.28 & 3.08  \\
     \cline{2-5}
-    {} & 0.85 & Pending... \\
+    {} & 0.85 & 1.5 & 2 & 2.7  \\
     \hline
-    \multirow{3}{*}{0.10} & 0.6 & Pending... \\
+    \multirow{3}{*}{0.05} & 0.6 & 1.85 & 2.71 & 3.73  \\
     \cline{2-5}
-    {} & 0.75 & Pending... \\
+    {} & 0.75 & 1.61 & 2.28 & 3.1  \\
     \cline{2-5}
-    {} & 0.85 & Pending... \\
-    \hline
-    \multirow{3}{*}{0.05} & 0.6 & Pending... \\
-    \cline{2-5}
-    {} & 0.75 & Pending... \\
-    \cline{2-5}
-    {} & 0.85 & Pending... \\
-    \hline
-    \multirow{3}{*}{0.0} & 0.6 & Pending... \\
-    \cline{2-5}
-    {} & 0.75 & Pending... \\
-    \cline{2-5}
-    {} & 0.85 & Pending... \\
+    {} & 0.85 & 1.5 & 2 & 2.7 \\
     \hline
 
+    \caption{UCF's temporal localization mAP performance for even smaller NMS threshold}
+    \label{table:temp_cls_2_1}
 
   \end{longtable}
 \end{center}
 
-\textbf{Pending...}
+Using very small NMS threshold results in a tiny improvement in mAP performance. However, these scores are far away from state-of-the-art results. So, we think that
+we should rethink the way we trained our classifier and the way it classifies given action tubes, in order to be able to classify efficiently. This research is
+left for future work, and won't be investiged in this thesis.
 
 % \end{document}

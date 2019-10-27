@@ -1,0 +1,54 @@
+\documentclass{report}
+
+% \usepackage[greek,english]{babel}
+% % 
+\usepackage{polyglossia}
+
+
+\setmainfont[Mapping=tex-text]{Liberation Sans } % choose a font that supports greek characters
+% \setmainfont[Mapping=tex-text]{GFS Bodoni } % choose a font that supports greek characters Auti tha valw
+
+\setdefaultlanguage{english}
+\setotherlanguage[variant=modern]{greek}
+
+% \newcommand{\tl}{\textlatin}
+% \newcommand{\en}{\selectlanguage{english}}
+% \newcommand{\gr}{\selectlanguage{greek}}
+
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage{subcaption} % package for subfigures
+\usepackage[export]{adjustbox}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
+\usepackage{amssymb}
+\usepackage{esvect}
+\usepackage[
+backend=bibtex,
+citestyle=authoryear,
+% citestyle=authoryear-comp,
+% citestyle=authoryear-ibid,
+bibstyle=numeric,
+sorting=ynt,
+% style=numeric,
+% style=alphabetic ,
+]{biblatex}
+\addbibresource{References}
+
+\graphicspath{ {./theory/figures/} }       % path for images
+
+\begin{document}
+ 
+\chapter{Classification stage}
+
+
+\section{JHDMB dataset}
+\subsection{Linear-RNN-MLP-SVM}
+
+\section{UCF dataset}
+\subsection{temporal localization}
+\end{document}

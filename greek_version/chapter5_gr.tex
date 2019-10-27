@@ -1,0 +1,191 @@
+\documentclass{report}
+
+\usepackage[ english, greek]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[LGR, T1]{fontenc}
+
+% % 
+
+\newcommand{\tl}{\textlatin}
+\newcommand{\en}{\selectlanguage{english}}
+\newcommand{\gr}{\selectlanguage{greek}}
+
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage{subcaption} % package for subfigures
+\usepackage[export]{adjustbox}
+\usepackage{longtable} % package for multi pages tables
+\usepackage{multirow}  % package for tables, multirow
+\usepackage{amssymb}
+\usepackage{esvect}
+\usepackage[
+backend=bibtex,
+citestyle=authoryear,
+% citestyle=authoryear-comp,
+% citestyle=authoryear-ibid,
+bibstyle=numeric,
+sorting=ynt,
+% style=numeric,
+% style=alphabetic ,
+]{biblatex}
+\addbibresource{References}
+
+\graphicspath{ {./theory/figures/} }       % path for images
+
+\begin{document}
+\gr 
+ 
+\chapter{\en Classification stage\gr }
+Στα προηγούμενα 2 κεφάλαια παρουσιάσαμε την διαδικασία που χρησιμοποιούμε για να δημιουργήσουμε
+υποψήφια \en action tubes\gr,  τα οποία πιθανώς να περιέχουν κάποια πραγματοποιούμενη δράση ή μπορεί όχι.
+Τις περισσότερες φορές τα προτεινόμενα \en action tubes \gr ανήκουν στο φόντο, και γι' αυτό, όπως αναφέρθηκε
+και στον προηγούμενο κεφάλαιο, είναι σημαντικό να επιλέξουμε έναν καλό αλγόριθμο που προτείνει καλές ακολουθίες
+από πλαίσια. Ωστόσο, είναι αρκετά σημαντικό να επιλέξουμε και τον κατάλληλο ταξινομητή ο οποίος θα είναι σε θέση
+με μεγάλη ακρίβεια να προβλέψει αν ένα υποψήφιο \en action tube \gr ανήκει σε μια γνωστή κατηγορία από δράσεις ή
+ανήκει στο φόντο. Κι αυτό γιατί μπορεί να παράγουμε καλές προτάσεις για υποψήφιες δράσεις, αλλά αν ο ταξινομητής μας
+δεν λειτουργεί στο έπακρο, το σύστημα μας πάλι θα αποτυγχάνει να αναγνωρίσει τις δράσεις. \par
+Η σωστή επιλογή ενός ταξινομητή είναι μια μεγάλη απόφαση που καλούμαστε να πάρουμε. Ωστόσο,  αυτός ο ταξινομητής θα δεχθεί
+ορισμένους χάρτες ενεργοποίησης τους οποίους θα κληθεί να ταξινομήσει. Συνεπώς, εκτός από την καλή επιλογή ταξινομητή, εξίσου
+σημαντική είναι η καλή επιλογή χαρακτηριστικών. Τέλος, μεγάλο ρόλο παίζει και η διαδικασία εκπαίδευσης του ταξινομητή προκειμένου
+να είναι σε θέση να γενικεύει και καταστάσεις \en overfitting \gr να αποφεύγονται. \par
+Σε αυτό το κεφάλαιο παρουσιάζουμε διάφορες μεθόδους που χρησιμοποιήσαμε οι οποίες περιλαμβάνουν ένα Γραμμικό ταξινομητή, ένα \en
+Recursive Neural Network (RNN)\gr, ένα \en Support Vector Machine (SVM)\gr και ένα \en Multilayer Perceptron(MLP)\gr. Επίσης,
+πειραματιζόμαστε χρησιμοποιώντας χάρτες χαρακτηριστικών που εξηχθησαν μέσω του \en 3D RoiAlign \gr χρησιμοποιώντας παράλληλα
+\en avg  \gr ή  \en max  pooling\gr. Τελευταίο αλλά εξίσου σημαντικό είναι το γεγονός ότι προσπαθήσαμε να βρούμε το καλύτερο
+ποσοστό μεταξύ \en actio tubes \gr προσκηνίου και φόντο αλλά και τον συνολικό αριθμό τους που είναι απαραίτητα  κατά την διάρκεια της εκπαίδευσης προκειμένου ο ταξινομητής να λειτουργεί αποδοτικά. \par
+Η όλη διαδικασία ταξινόμησης αποτελείται από τα ακόλουθα βήματα:
+\begin{enumerate}
+\item Διαχωρίζουμε το βίντεο σε μικρά βίντεο κλιπ και τροφοδοτούμε το δίκτυο \en  TPN \gr με αυτά τα βίντεο κλιπ
+  και παίρνουμε ως αποτέλεσμα \tl{k}-προτεινόμενα \en ToIs \gr και τα αντίστοιχα χαρακτηριστικά τους για
+  κάθε κλιπ βίντεο.
+\item Συνδέουμε τα προτεινόμενα \en ToIs \gr για να πάρουμε \en action tubes \gr που μπορεί να περιέχουν
+  μια ενέργεια.
+\item Για κάθε υποψήφιο \en action tube\gr, η οποία είναι μια ακολουθία του ToIs,
+  τροφοδοτούμε τους χάρτης ενεργοποίησης του στον ταξινομητή για ταξινόμηση.
+\end{enumerate}
+Στα πρώτα βήματα του σταδίου ταξινόμησης αναφερόμαστε μόνο στο σύνολο δεδομένων \en JHMDB\gr, επειδή έχει μικρότερο αριθμό βίντεο από το σύνολο δεδομένων \en UCF \gr το οποίο μας βοήθησε 
+να εξοικονομήσουμε πολύ χρόνο και πόρους. Αυτό συμβαίνει επειδή κάναμε τα περισσότερα πειράματα μόνο \en JHMDB \gr και αφού βρήκαμε τη
+βέλτιστη υλοποίηση, την υλοποιήσαμε για το \en UCF, \gr επίσης.
+\section{\tl{JHDMB dataset}}
+\subsection{Ταξινομητές \en Linear, SVM  \gr και  \en RNN \gr}
+
+
+\paragraph{\en Training\gr}
+\gr Για να εκπαιδεύσουμε τον ταξινομητή μας, πρέπει να εκτελέσουμε τα προηγούμενα βήματα,
+για κάθε βίντεο. Ωστόσο, κάθε βίντεο έχει διαφορετικό αριθμό καρέ και καταλαμβάνει 
+μεγάλη ποσότητα μνήμης στη GPU. Για να αντιμετωπίσουμε αυτή την κατάσταση και έχοντας 4 διαθέσιμες \en GPU\gr, δίνουμε
+ως είσοδο ένα βίντεο ανά \en GPU\gr. Έτσι μπορούμε να χειριστούμε 4 βίντεο ταυτόχρονα. Αυτό
+σημαίνει ότι ένα κλασσικό \en training \gr παίρνει πάρα πολύ χρόνο για μόλις 1 εποχή.
+Η λύση με την οποία ήρθαμε, είναι να προυπολογίσουμε τους χάρτες χαρακτηριστικών τόσο για \en action tubes \gr
+προσκηνίου όσο και φόντου και στη συνέχεια να τροφοδοτήσουμε
+αυτούς τους χάρτες στον ταξινομητή μας για να τον εκπαιδεύσουμε.%  Για συνάρτηση κόστους εκπαιδευσης χρησιμοποιούμε το \en % Cross-Entropy. \gr
+Αυτή η λύση περιλαμβάνει τα ακόλουθα βήματα:
+\begin{enumerate}
+\item Αρχικά, εξαγουμε τους χάρτες χαρακτηριστικών από τα πραγματικά \en action tubes \gr. Ακόμα εξάγουμε τα χαρακτηριστικά από \en
+  action tubes \gr φόντου τα οποία είναι διπλάσια στον αριθμό από αυτά του φόντου. Επιλέξαμε αυτή την αναλογία μεταξύ του αριθμού των
+  θετικών και αρνητικών \en action tubes \gr εμπνευσμένοι από τους \en\cite{jjfaster2rcnn}\gr, των οποίων η μέθοδος χρησιμοποιεί ποσοστό
+  25\% μεταξύ των περιοχών ενδιαφέροντος προσκηνίου και των συνολικών περιοχών, και συνολικά επιλέγει 128 τέτοιες περιοχές. Αντίστοιχα,
+  επιλέγουμε ένα λίγο μεγαλύτερο ποσοστό επειδή έχουμε μόνο ένα πραγματικό \en action tube \gr σε κάθε βίντεο. Έτσι, για κάθε βίντεο
+  λαμβάνουμε 3 \en action tubes \gr συνολικά, 1 προσκηνίου και 2 φόντου. Θεωρούμε ως \en background action tubes \gr εκείνα που το σκορ
+  επικάλυψης τους με οποιοδήποτε \en action tube \gr είναι μεγαλύτερο απο 0.1 αλλά μικρότερο από 0.3 . Φυσικά,προκειμενου να εξάγουμε αυτά
+  τα \en action tubes\gr, χρησιμοποιούμε ένα  προεκπαιδευμένο \en TPN, \gr για να μας προτείνει \en ToIs \gr για κάθε τμήμα βίντεο και
+  τον προτεινόμενο αλγόριθμο σύνδεσης για να συνδέσουμε αυτά τα \en ToIs\gr. Τελικώς, για κάθε \en action tube \gr λαμβάνουμε
+  τους αντίστοιχους χάρτες ενεργοποίησης χρησιμοποιώντας \en 3D RoiAlign. \gr
+\item Αφού εξαγουμε αυτά τα χαρακτηριστικά, εκπαιδεύουμε τους ταξινομητές μας. Ο Γραμμικός ταξινομητής χρειάζεται ένα σταθερό μέγεθος
+  εισόδου, συνεπώς χρησιμοποιούμε μια συνάρτηση \en pooling \gr στην διάσταση του αριθμού των βίντεο. Έτσι, αρχικά έχουμε ένα
+  χάρτη χαρακτηριστικών μεγέθους \textit{3,512,16} και μετά λαμβάνουμε ως έξοδο έναν χάρτη χαρακτηριστικών μεγέθους \textit{512,16}.
+  Πειραματιζόμαστε χρησιμοποιώντας αμφότερα \en max \gr και \en avg pooling \gr όπως φαίνεται στον Πίνακα χρησιμοποιώντας  \ref{table:rnn_linear}. Για τον ταξινομητή \en RNN \gr δεν χρειαζόμαστε καμία \en pooling \gr διαδικασία ενώ για τον ταξινομητή \en SVM \gr
+  πειραματιζόμαστε ξανά χρησιμοποιώντας   και τις δύο αυτές συναρτήσεις τα αποτελέσματα του οποίου φαίνονται στον Πίνακα \ref{table:svm_first_results}.
+\end{enumerate}
+\paragraph{\en Validation\gr} Το στάδιο επικύρωσης περιλαμβάνει τη χρήση τόσο προεκπαιδευμένου \en TPN \gr όσο και του ταξινομητή.
+Έτσι, για κάθε βίντεο λαμβάνουμε σκορ ταξινόμησης για τα προτεινόμενα \en action tubes\gr.
+Οι περισσότερες προσεγγίσεις συνήθως θεωρούν ένα κατώφλι σκορ εμπιστοσύνης πάνω από το οποίο θεωρούν ένα \en action tube \gr
+ ως προσκήνιο. Ωστόσο, εμείς δεν χρησιμοποιούμε κανένα σκορ εμπιστοσύνης. Αντιθέτως, επειδή
+ γνωρίζουμε ότι \en  JHMDB \gr έχει κομμένα βίντεο με μόνο 1 εκτελούμενη δράση ανά βίντεο, εμείς απλά θεωρούμε το καλύτερο ως προς το
+ σκορ \en action tube \gr ως πρόβλεψη.
+
+ \begin{table}[h]
+   \en
+  \centering
+  \begin{tabular}{|| c | c || c  c  c ||}
+    \hline
+    \multirow{2}{*}{\textbf{Classifier}} & \multirow{2}{*}{\textbf{Pooling}} &  {} & \textbf{mAP} & {} \\
+    {} & {} & 0.5 & 0.4 & 0.3 \\
+    \hline
+    \multirow{2}{*}{Linear} & mean & 14.18 & 19.81 & 20.02 \\
+    \cline{2-5}
+    {} & max & 13.67 & 16.46 & 17.02 \\
+    \hline
+    RNN  & -  & 11.3 & 14.14 & 14.84 \\
+    \hline
+  \end{tabular}
+  \caption{First classification results using Linear and RNN classifiers}
+  \label{table:rnn_linear}
+\end{table}
+
+\begin{center}
+  \en
+\begin{longtable}{||c | c | c||c c c||}
+
+  \hline
+  \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{ \textbf{Pooling}} & \multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+   before & after &  {} &  0.5 &  0.4 & 0.3 \\
+ \hline   \hline
+ \multirow{1}{*}{(k,64,8,7,7)} & \multirow{1}{*}{(1,64,8,7,7)} & \multirow{1}{*}{mean}  &  3.16 & 4.2 & 4.4    \\
+ \hline
+ \multirow{1}{*}{(k,64,8,7,7)} & \multirow{1}{*}{(1,64,8,7,7)} & \multirow{1}{*}{max}   & 1.11 & 2.35 & 2.71 \\
+ \hline   \hline
+ \multirow{1}{*}{(k,256,8,7,7)} & \multirow{1}{*}{(1,256,8,7,7)} & \multirow{1}{*}{mean}   &  11.41 & 11.73 & 11.73 \\
+ \hline
+ \multirow{1}{*}{(k,256,8,7,7)} & \multirow{1}{*}{(1,256,8,7,7)} & \multirow{1}{*}{max}    & \textbf{22.07} & \textbf{24.4} &  \textbf{25.77} \\
+  \hline   
+  
+  \caption{Our architecture's performance using 5 different policies and 2 different feature maps while pooling in
+  tubes' dimension. With bold is the best scoring case}
+  \label{table:svm_first_results}
+\end{longtable} 
+\end{center}
+
+
+\subsection{\en Temporal pooling \gr}
+
+Μετά τη λήψη των πρώτων αποτελεσμάτων, εφαρμόζουμε μια συνάρτηση χρονικής ομαδοποίησης (\en temporal pooling \gr) εμπνευσμένη από το \cite{DBLP:journals/corr/HouCS17}. Χρειαζόμαστε ένα
+σταθερό μέγεθος εισόδου για το SVM. Ωστόσο, το χρονικό \en stride \gr των \en action tube \gr μας ποικίλλει από 2 έως 5, αφού ένα βίντεο με 15
+καρέ αποτελείεται από 2 συνεχόμενες \en ToIs \gr ενώ ένα βίντεο με 40 καρέ αποτελείται απο 5.
+Έτσι χρησιμοποιούμε ως σταθερή χρονική διάσταση ίσον με 2. Ως λειτουργία \en pooling \gr χρησιμοποιούμε \en 3D max poolign\gr,  για κάθε φίλτρο του χάρτη χαρακτηριστικών ξεχωριστά.  Για παράδειγμα, για ένα \en action tube \gr με 4 συνεχόμενες \en ToIs\gr, έχουμε $(4,256, 8, 7, 7)$ ως μέγεθος του χάρτη χαρακτηριστικών. Διαχωρίσουμε το \en feature map \gr  σε 2 ομάδες χρησιμοποιώντας την συνάρτηση \en\textit{linspace} \gr 
+και  αναδιαμορφώνουμε το χάρτη χαρακτηριστικών σε $(256, k, 8, 7, 7)$ όπου \tl{k} είναι το μέγεθος της κάθε ομάδας. Αφού κάνουμε
+χρήση \en 3D max pooling\gr, θα πάρουμε ένα χαρακτηριστικό χάρτη διαστάσεων $(256, 8, 7, 7)$, ακολούθως τους ενώνουμε και τελικά
+λαμβάνουμε χαρακτηριστικών μεγέθους $(2, 256, 8, 7, 7)$. Σε αυτή την περίπτωση δεν πειραματιζόμαστε με χάρτες χαρακτηριστικών μεγέθους
+(64, 8, 7, 7)  επειδή με βάση τα παραπάνω αποτελέσματα, δεν θα έχουμε καλύτερη επίδοση απ' τα χαρακτηριστικών μεγέθους $(256, 8, 7, 7)$.
+Tα αποτελέσματα  παρουσιάζονται στον πίνακα \ref{table:svm_temp_pooling}, όπου περιλαμβάνεται η καλύτερη προηγούμενη μέθοδος η οποία
+χρησιμοποιεί \en max pooling \gr αντί για \en temporal pooling\gr.
+
+\begin{center}
+\en
+\begin{longtable}{||c | c|  c||c c c||}
+
+  \hline
+ \multicolumn{2}{||c|}{\textbf{Dimensions}} & \multirow{2}{*}{\textbf{Temp Pooling}}  &\multicolumn{3}{|c||}{\textbf{mAP precision}}\\
+
+  before & after & {}   & 0.5 &  0.4 & 0.3\\
+  \hline   \hline
+  \multirow{1}{*}{k,256,8,7,7} & \multirow{1}{*}{1,256,8,7,7} & -  & 22.07 & 24.4 &  25.77 \\
+  \hline
+  \multirow{1}{*}{k,256,8,7,7} & \multirow{1}{*}{2,256,8,7,7} & Yes & 25.07 & 26.91 & 29.11 \\
+  \hline
+
+  \caption{mAP results using temporal pooling for both RoiAlign approaches}
+  \label{table:svm_temp_pooling}
+\end{longtable} 
+\end{center}
+
+% \subsection{Ταξινομητές \en 
+
+% \section{UCF dataset}
+% \subsection{temporal localization}
+\end{document}

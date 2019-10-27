@@ -1,21 +1,21 @@
-\documentclass{report}
+% \documentclass{report}
 
-\usepackage{subcaption} % package for subfigures
-\usepackage{hyperref}  % package for linking figures etc
-\usepackage{enumitem}  % package for description with bullets
-\usepackage{graphicx}  % package for importing images
-\usepackage{mathtools} % package for math equation
-\usepackage{mathrsfs}  % package for math font
-\usepackage{indentfirst} % package for getting ident after section or paragraph
-\usepackage[export]{adjustbox}
-\usepackage{multirow}  % package for tables, multir
-\usepackage{amssymb}
-% \usepackage{tabu}   % for tables 
-\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+% \usepackage{subcaption} % package for subfigures
+% \usepackage{hyperref}  % package for linking figures etc
+% \usepackage{enumitem}  % package for description with bullets
+% \usepackage{graphicx}  % package for importing images
+% \usepackage{mathtools} % package for math equation
+% \usepackage{mathrsfs}  % package for math font
+% \usepackage{indentfirst} % package for getting ident after section or paragraph
+% \usepackage[export]{adjustbox}
+% \usepackage{multirow}  % package for tables, multir
+% \usepackage{amssymb}
+% % \usepackage{tabu}   % for tables 
+% \setlength{\parindent}{2em} % how much indent to use when we start a paragraph
 
-\graphicspath{ {./theory/figures/} }       % path for images
+% \graphicspath{ {./theory/figures/} }       % path for images
 
-\begin{document}
+% \begin{document}
 
 \chapter{Tube Proposal Network}
 
@@ -25,9 +25,9 @@ the whole structure of our model. We propose a network similar to \cite{DBLP:jou
 Our architecture is consisted by the following basic elements:
 \begin{itemize}
 \item One 3D Convolutional Network, which is used for feature extraction. In our implementaion we use a 3D Resnet network which is taken from
-  \cite{hara3dcnns} and it is based on ResNet CNNs for Image Classification \cite{DBLP:journals/corr/HeZRS15}.
-\item Tube Proposal Network for proposing action tubes (based on the idea presented in \cite{DBLP:journals/corr/HouCS17}).
-\item A classifier for classifying video tubes.
+  \cite{hara3dcnns} and it is based on ResNet CNNs for Image Classification (\cite{DBLP:journals/corr/HeZRS15}).
+\item Tube Proposal Network for proposing ToIs (based on the idea presented in \cite{DBLP:journals/corr/HouCS17}).
+\item A classifier for classifying proposed action video tubes.
 \end{itemize}
 
 The basic procedure ActionNet follows is:
@@ -35,7 +35,7 @@ The basic procedure ActionNet follows is:
 \item Given a video, we seperate it into video segments. These video segments in some cases overlap temporally and in some others don't.
 \item For each video segment, after performing spatiotemporal resizing, we feed its frames into ResNet34 in order to perform feature
   extraction. These activation maps are, next, fed into TPN for proposing sequences of bounding boxes. We name them Tubes of Interest (ToIs), 
-  like \cite{DBLP:journals/corr/HouCS17}, and are likely to contain a person performing an action. N
+  like \cite{DBLP:journals/corr/HouCS17}, and are likely to contain a person performing an action.
 \item After getting proposed ToIs for each video segment, using a linking algorithm, ActionNet finds final cancidate action tubes. These
   action tubes are given as input to a classifier in order to get their action class.
 \end{enumerate}
@@ -54,18 +54,19 @@ A diagram of ActionNet is shown at Figure \ref{fig:whole_network_}.
  The main purpose of Tube Proposal Network (TPN)  is to propose
 \textbf{Tube of Interest}(TOIs). These tubes are likely to contain an known action and are consisted of some 2D boxes
 (1 for each frame). TPN is inspired from RPN introduced by FasterRCNN (\cite{Ren:2015:FRT:2969239.2969250}), but instead of images, TPN
-is used in videos as show in \cite{DBLP:journals/corr/HouCS17}. In full correspondence with RPN, the structure
+is used in videos as performed by \cite{DBLP:journals/corr/HouCS17}. In full correspondence with RPN, the structure
 of TPN is similar to RPN. The only difference, is that TPN uses 3D Convolutional Layers and 3D anchors instead of 2D. \par
 We designed 2 main structures for TPN. Each approach has a different definition of the used 3D anchors.
 The rest structure of the TPN is mainly the same with some little differences in the regression layer. \par
 
-\section{Preparation for TPN}
+\section{Preparation before TPN}
 
 \subsection{Preparing data}
 Before getting a video as input to extract its features and ToIs, this video has to be preprocessed.
 Preprocess procedure  is the same for both approaches of TPN.
-Our architecture gets as input a sequnece of frames which has a fixed size in widht, height and duration. However, each video has different resolution. That's creates the
-need to resize each frame before. As mentioned in previous chapter, the first element of our network is a 3D RenNet taken from \cite{hara3dcnns}. This network is designed to
+Our architecture gets as input a sequnece of frames which has a fixed  widht, height and duration. However, each video has different resolution. That's creates the
+need to resize each frame before feeding it to the architecture.
+As mentioned in previous chapter, the first element of our network is a 3D RenNet taken from \cite{hara3dcnns}. This network is designed to
 get images with dimensions (112,112). As a result, we resize each frame from datasets' videos into (112,112) frames. In order to keep aspect ratio, we pad each frame either
 left and right, either above and bellow depending which dimension is bigger. In figure  \ref{fig:Preprocess_example} we can see the original frame and the resize and padded one.
 In full correspondance, we resize the groundtruth bounding boxes for each frame (figure \ref{fig:original_image_rois} and \ref{fig:trans_image_rois} show that).
@@ -102,10 +103,10 @@ In full correspondance, we resize the groundtruth bounding boxes for each frame 
 
 
 \subsection{3D ResNet}
-Before using Tube Proposal Network, we spatio-temporal features from the video. In order to do so, we extract the 3 first Layers of a
-pretrained 3D ResNet. It is pretrained in Kinetics dataset \cite{DBLP:journals/corr/KayCSZHVVGBNSZ17} for sample duration = 16 and
-sample size = (112,122). \par
-This network normally is used for classifying the whole video, so some of its layers use temporal stride = 2.
+Before using Tube Proposal Network, we extract spatio-temporal features from the video. In order to do so, we extract the 3 first Layers of a
+pretrained 3D ResNet34. This Network is pretrained in Kinetics dataset \cite{DBLP:journals/corr/KayCSZHVVGBNSZ17} for sample duration
+equal with 16  frames and sample size equal with (112, 122). \par
+This network normally is used for classifying the whole video, so some of its layers use temporal stride equal with 2.
 We set their temporal stride equal to 1 because we don't want to miss any temporal information during the process.
 So, the output of the third layer is a feature maps with dimesions (256,16,7,7). We feed this feature map to TPN, which is described
 in following sections.
@@ -114,7 +115,7 @@ in following sections.
 \subsection{First Description}
 We started desinging our TPN inspired by \cite{DBLP:journals/corr/HouCS17}. We consider each anchor as a 3D bounding box written as
 $(x_1, y_1, t_1, x_2, y_2, t_2)$ where $x_1, y_1, t_1$
-are the upper front left coordinates of the 3D and $x_2, y_2, t_2$ are the lower back left as shown in figure \ref{fig:anchor_6d}.
+are the upper front left coordinates of the cuboid and $x_2, y_2, t_2$ are the lower back left as shown in figure \ref{fig:anchor_6d}.
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{anchor_6d}
@@ -124,7 +125,7 @@ are the upper front left coordinates of the 3D and $x_2, y_2, t_2$ are the lower
 
 The main advantage of this approach is that except from x-y dims, dimension of time is mutable. As a result, the proposed TOIs have
 no fixed time duration. This will help us deal with untrimmed videos, because proposed TOIs would exclude background frames.
-For this approach, we use \textbf{n = 4k = 60} anchors for each pixel in the feature map of TPN. We have k anchors for each sample
+For this approach, we use \textbf{n = 4k = 60} anchors for each pixel in the feature map of TPN. We have k anchors for each anchor 
 duration( 5 scales of 1, 2, 4, 8, 16, 3 aspect ratios of 1:1, 1:2, 2:1 and 4 durations of 16,12,8,4 frames).
 In \cite{DBLP:journals/corr/HouCS17},  network's anchors are defined according to the dataset most common anchors. This, however,
 creates the need to redesign the network for each dataset. In our approach, we use the same anchors for both datasets, because we want our network not
@@ -137,17 +138,13 @@ So the structure of TPN is:
 \item 1 regression layer outputs \textit{6n coordinates} ($x_1,y_1,t_1,x_2,y_2,t_2$) for \textit{n tubes}.
 \end{itemize}
 
-which is shown in figure \ref{fig:tpn_1_1}
+The structure of TPN is shown in figure \ref{fig:tpn_1_1}. The output of TPN is the k-best scoring cuboid,which are most likely to contain an action.
 \begin{figure}[h]
 
   \includegraphics[width=1.\textwidth]{tpn_1_1}
   \caption{Structure of TPN}
   \label{fig:tpn_1_1}
 \end{figure}
-
-The output of TPN is the k-best scoring cuboid, in which it is likely to contain an action.
-% \subsection{Preparing Data for training}
-
 
 \subsection{Training}
 As mentioned before, TPN extracts TOIs as 6-dim vectors. For that reason, we modify out groundtruth ROIs to groundtruth Tubes.
@@ -181,11 +178,11 @@ for each frame.
 
 For training procedure, for each video, we randomly select a part of it which has duration 16 frames. We consider an anchor as foreground if its overlap score with a groundtruth
 action tube is bigger than 0.5. Otherwise, it is considered as background anchor. We use scoring layer in order to correctly classify those anchors and we use
-Cronss Entropy Loss as loss function. We have a lot of anchors for proposing an anction but few numbers of actions, so we choose 256 anchors in total for each batch. We set the maximum
+Cross Entropy Loss as loss function. We have a lot of anchors for proposing an action but a small number of per-video actions, so we choose 256 anchors in total for each batch. We set the maximum
 number of foreground anchors to be  25\% of the 256 anchors and the rest are the background.\par
-Classifying correctly an anchor isn't enough for proposing an action tube. It is necessary to overlap as much as possible with the groundtruth action tubes. That's the reason we use a
+Classifying correctly an anchor isn't enough for proposing an action tube. It is,also necessary, the anchors to overlap as much as possible with the groundtruth action tubes. That's the reason we use a
 regression layer. This layer ``moves'' the cuboid closer to the area that it is believed that is closer to the action.
-For regression loss we use smooth-L1 loss as proposed in \cite{DBLP:journals/corr/GirshickDDM13}. In order to calculate
+For regression loss we use smooth-L1 loss as proposed from \cite{DBLP:journals/corr/GirshickDDM13}. In order to calculate
 the regression targets, we use pytorch FasterRCNN implementation (\cite{jjfaster2rcnn}) for bounding box regression and 
 we modified the code in order to extend it for 3 dimensions. % \textbf{TODO more details}
 So we have:
@@ -210,7 +207,7 @@ where:
 \begin{itemize}
 \item $L_{cls} $ is the Cross Entropy loss we use for classifying the anchors, with $p_i$ is the predicted label, $p_i^*$ is the groundtruth class and
   $p_i, p_i^* \in \{0,1\}$
-\item $L_{reg} $ is the smooth-L1 loss function, which multiply it with $p_i^*$ in order to set active only when we have a positive anchor $(p_i^* = 1)$
+\item $L_{reg} $ is the smooth-L1 loss function, which is multiplied  with $p_i^*$ in order to be set active only when there is a positive anchor $(p_i^* = 1)$
   and to be deactivated for background anchors $(p_i^* = 0)$.
 \end{itemize}
 
@@ -223,7 +220,7 @@ In order to get good proposals, after getting classification scores and targets 
 corresponding layers, we use Non-Maximum Suppresion (NMS) algorithm.  We set NMS threshold equal with 0.7,
 and we keep the first 150 cuboids with the biggest score.
 
-\subsection{Modified Intersection over Union(mIoU) TODO check again} 
+\subsection{Modified Intersection over Union(mIoU)} 
 During training, we get numerous anchors. We have to classify them as foreground anchors or
 background anchors. Foreground anchors are those which contain some action, and, respectively, background
 don't. As presented before, IoU for cuboids calculates the ratio between volume of overlap and volume of
@@ -239,7 +236,7 @@ So the formula for 2 tubes ($x_1, y_1, t_1, x_2, y_2, t_2$) and ($x'_1, y'_1, t'
 \[ IoU = IoU_{xy} \cdot  IoU_t \]
 The above criterion help us balance the impact of time domain in IoU. For example, let us consider 2 anchors:
 a = (22, 41, 1, 34, 70, 5) and b = (20, 45, 2, 32, 72, 5). These 2 anchors in x-y domain have IoU score equal to 0.61.
-But they are not exactly overlaped in time dim. Using the first approach we get 0.5057 IoU score and using the
+But they are not exactly overlaped in time dimension. Using the first approach we get 0.5057 IoU score and using the
 second approach we get 0.4889. So, the second criterion would reject this anchor, because there is a difference in time
 duration.  \par
 
@@ -278,8 +275,8 @@ After first test, we came with the idea that in a video lasting 16 frames, in ti
 \end{enumerate}
 
 On top of that, we noticed that most of actions, in our datasets, last more that 16 frame. So, we came with the idea to add  1 scoring layer and 1 reggression layer
-which will proposed ToIs with fixed duration equal with sample duration and they will take into account the spatial information produced by activation maps.
-The new structure of TPN is shown in figure \ref{fig:tpn_1_2}. After getting proposals from both scores, we concat them with ration 1:1 between ToI extracted
+which will proposed ToIs with fixed duration equal with sample duration (16 frames) and they will take into account the spatial information produced by activation maps.
+The new structure of TPN is shown in figure \ref{fig:tpn_1_2}. After getting proposals from both scores, we concat them with ratio 1:1 between ToI extracted
 from those 2 subnetworks.
 
 \begin{figure}[h]
@@ -288,7 +285,7 @@ from those 2 subnetworks.
   \caption{TPN structure after adding 2 new layers, where k = 5n.}
   \label{fig:tpn_1_2}
 \end{figure}
-Our goal is to ``compress'' feauture maps in temporal dimension in order to propose action tubes  according only to the spatial information.
+Our goal is to ``compress'' feauture maps in temporal dimension in order to propose ToIs based only on the spatial information.
 So, we came with 2 techniques for doing such thing:
 \begin{enumerate}
 \item Use 3D Convolutional Layers with kernel size = (sample duration, 1,1), stride =1 and no padding for scoring and regression.
@@ -298,8 +295,8 @@ So, we came with 2 techniques for doing such thing:
 
 % \textbf{TODO na perigrapsw oti thelw na exw ola ta xronika features}
 \par
-Training and Validation procedures remain the same. The only big difference is that now we have from 2 difference system proposed TOIs. So, we first concate
-them and, then, we follow the same procedure. For training loss, we have 2 different cross-entropy losses and 2 different smooth-L1 losses, each for every
+Training and Validation procedures remain the same. The only big difference is that now we have losses obtained from 2 difference system proposed TOIs. So, during validation, we,at firstl, concate
+proposed ToIs and, then, we follow the same procedure, which is calculating recall performance. For training loss, we have 2 different cross-entropy losses and 2 different smooth-L1 losses, each for every
 layer correspondly. So training loss is, now, defined as :
 
   % \begin{aligned}
@@ -327,8 +324,8 @@ where:
   $p_i, p_i^* \in \{0,1\}$
 \item $L_{reg} $ is the smooth-L1 loss function, which multiply it with $p_i^*$ in order to set active only when we have a positive anchor $(p_i^* = 1)$
   and to be deactivated for background anchors $(p_i^* = 0)$.
-\item $p_i $ are the anchors from scoring layers with mutable time duration and $p_i^*$ are their corresponding groundtruth label.
-\item $p_{fixed,i} $ are the anchors from scoring layers fixed time duration = 16 and $p_{fixed,i}^*$ are their corresponding groundtruth label.
+\item $p_i $ are the anchors from scoring and regression layers with mutable time duration and $p_i^*$ are their corresponding groundtruth label.
+\item $p_{fixed,i} $ are the anchors from scoring and regression layers with fixed time duration = 16 and $p_{fixed,i}^*$ are their corresponding groundtruth label.
 \end{itemize}
 
 We train our TPN Network using both techniques and their recall performance is show in Table \ref{table:add_16}.
@@ -361,18 +358,19 @@ getting the average values from time dimension gives us the best results.
 
 
 \subsection{Adding regressor}
-The output of TPN is the $\alpha$-highest scoring anchors moved according to their regression prediction. After that, we have to translate the anchor into tubes.
-In order to do so, we add a regressor system which gets as input TOIs' feature maps and returns a sequence of 2D boxes, each for every frame.
-The only problem is that the regressor needs a fixed input size of featuremaps. This problem is already solven by R-CNNs which use roi pooling and roi align
-in order to get fixed size feature maps from ROIs with changing sizes. In our situation, we extend roi align operation, presented by Mask R-CNN, and we
+The output of TPN is the $\alpha$-highest scoring anchors moved according to their regression prediction. After that, we have to turn the proposed anchors into ToIs.
+In order to do so, we add a regressor system which gets as input cuboids' feature maps and returns a sequence of 2D boxes, one per every frame.
+The only problem is that the regressor needs as input a fixed size feature maps. This problem is already solven by R-CNNs which use roi pooling and roi align
+in order to get fixed size feature maps from ROIs with changing sizes. In our situation, we extend roi align operation, presented by Mask R-CNN(\cite{DBLP:journals/corr/HeGDG17}),
+and we
 call it \textbf{3D Roi Align}.
 
 \paragraph{3D Roi Align}
-3D Roi align is a modification of roi align presented by Mask R-CNN (\cite{DBLP:journals/corr/HeGDG17}). The main difference between those two is that Mask R-CNN's roi align uses
+3D Roi align is a modification of roi align presented by Mask R-CNN . The main difference between those two is that Mask R-CNN's roi align uses
 bilinear interpolation for extracting ROI's features and ours 3D roi align uses trilinear interpolation for the same reason. Again, the 3rd dimension is
 time.
 So, we have as input a feature map extracted from ResNet34 with dimensions (64,16,28,28) and a tensor containing the proposed TOIs.
-For each TOI whose actiovation map whose size is (64,16,7,7), we get as output a feature map with size (64, 16, 7, 7). \par
+For each TOI whose actiovation map has size equal with (64,16,7,7), we get as output a feature map with size (64, 16, 7, 7). \par
 
 \subsubsection{Regression procedure}
 At first, for each proposed ToI, we get its corresponding activation maps using 3D Roi Align. These features are given as input to a regressor. This regressor returns 16 $\cdot$ 4 predicted
@@ -425,7 +423,7 @@ The architecture of reggression network is show in Figure \ref{fig:regressor_3d}
 
 We use Recall metric In order to assess the performance of regressor. We calculate 3 recall performaces:
 \begin{description}
-\item [Cuboid Recall,] which is the recall perfomance for proposed cuboids. We interested in this metric, because, we
+\item [Cuboid Recall,] which is the recall perfomance for proposed cuboids. We interested in this metric because, we
   want to know how good are our proposals before modifying them into sequences of boxes.
 
 \item [Single frame Recall,] which is the recall perfomance for the proposed ToI against the groundtruth tubes.
@@ -548,7 +546,7 @@ duration is 4 frames.
 \end{figure}
 
 This new approach led us to change the structure of TPN. The new one can is presented in figure \ref{fig:New_structure}. As we can see, we \
-added scoring and regression layers for each duration. So, TPN follows the next step in order to propose action tubes:
+added scoring and regression layers for each duration. So, TPN follows the upcoming steps in order to propose ToIs:
 \begin{enumerate}
 \item At first, we get the feature map, extracted by ResNet, as input to a 3D Convolutional Layer with kernel size = 1, stride = 1 and no padding.
 \item From Convolutional Layer, we get as output an activation map with dimensions (256,16,7,7). For reducing time dimension, we use 4 pooling layer,
@@ -565,8 +563,9 @@ added scoring and regression layers for each duration. So, TPN follows the next 
 \end{enumerate}
 
 \subsection{Training}
-Training procedure stays almost the same like previous approach's. So, again, we randomly choose  a video segment and we consider anchors with overlap bigger than 0.8 with any groundtruth
-tube, alongside with background anchors whose overlap is bigger that 0.1 and smaller than 0.3.
+Training procedure stays almost the same like previous approach's. So, again, we randomly choose  a video segment and its corresponding groundtruth action tubes. But in this training procedure,
+we consider anchors as foreground when they overlap more than 0.7 with any groundtruth tube, alongside with background anchors whose overlap is bigger that 0.1 and smaller than 0.3. We are not
+concern about the rest of the anchors
 
 \begin{table}[h]
   \centering
@@ -587,9 +586,9 @@ tube, alongside with background anchors whose overlap is bigger that 0.1 and sma
   \label{table:tpn_2_1}
 \end{table}
 
-As Table \ref{table:tpn_2_1}, it is obvious that we get better recall performances compared to previous' approach.
-Additionally, we can see that 3Dmax pooling performs better than  3D avg pooling. The difference
-between max pooling and avg pooling is about 10\%, which is big enough to make us choose max pooling operation before getting anchors' scores
+As Table \ref{table:tpn_2_1} shows, it is obvious that we get better recall performances compared to previous' approach.
+Additionally, we can see that 3D max pooling performs better than 3D avg pooling. The difference
+between max pooling and avg pooling is about 10\%, which is big enough to make us choose max pooling operation as pooling method before getting anchors' scores
 and regression targets.
 
 \subsection{Adding regressor}
@@ -599,8 +598,8 @@ with the groundtruth boxes as well as possible.
 So, in full correspondance with the previous approach, we added an regressor for trying to get better recall results.
 
 \paragraph{3D Roi align}
-In this approach, we know already the 2D coordinates. So, we can use the method proposed in \cite{DBLP:journals/corr/abs-1712-09184}. They
-extend RoiAlign operator by splitting the tube into $T$ 2D boxes. Then, they use classic RoiAlign to extract a region from each
+In this approach, we know already the 2D coordinates. So, we can use the method proposed from \cite{DBLP:journals/corr/abs-1712-09184}. They
+extend RoiAlign operator by splitting the tube into $T$ 2D boxes. Then, they use classic RoiAlign to extract a region from each one 
 of the temporal slices in the feature map. After that, they concatenate the region in time domain so they get a $T \times R \times R$
 feature map, where $R$ is the output resolution of RoiAlign, which is 7 in our situation. \par
 
@@ -795,30 +794,62 @@ high enough, we are most interested in improving UCF's results. That's the reaso
 
 \section{General comments}
 
-\begin{figure}[h]
-  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
-  \centering
-  \includegraphics[scale=0.25]{proposals0_half}
-  \caption{Structure of the whole network}
-  \label{fig:proposals0}
-\end{figure}
+In the previous section, we presented 2 different aprroaches for proposing sequences of bounding boxes which are likely to include an
+actor performing an action. After considering both approaches, we deduce that the second approach results in better proposals
+according to their recall performance. At Figure \ref{fig:proposals}, 3 different generated ToIs are presented.
 
 \begin{figure}[h]
-  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
-  \centering
-  \includegraphics[scale=0.25]{proposals1_half}
-  \caption{Structure of the whole network}
-  \label{fig:proposals1}
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{proposals0_half}
+    \caption{A good action tube proposal}
+    \label{fig:proposals0}
+  \end{subfigure}
+
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{proposals1_half}
+    \caption{A bad action tube proposal}
+    \label{fig:proposals1}
+  \end{subfigure}
+
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{proposals2_half}
+    \caption{Another good action tube proposal}
+    \label{fig:proposals2}
+  \end{subfigure}
+  \caption{3 Different candidate action tubes}
+  \label{fig:proposals}
 \end{figure}
+
+Our goal is bounding boxes to overlap with the actor precisely. According to Figure \ref{fig:proposals}, all of three actions overlap with the actor to some degree.
+Of course, it is clear that ToI, presented at Figure \ref{fig:proposals1}, doesn't overlap very well like those shown at Figures \ref{fig:proposals0} and \ref{fig:proposals2}
+Intuitively, comparing proposals from \ref{fig:proposals0} and \ref{fig:proposals2}, we think that \ref{fig:proposals0} overlaps better than \ref{fig:proposals2}.
 
 \begin{figure}[h]
-  % \includegraphics[scale=0.7]{convolutional_neural_network_structure} \]
-  \centering
-  \includegraphics[scale=0.25]{proposals2_half}
-  \caption{Structure of the whole network}
-  \label{fig:proposals2}
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{proposal_gt}
+    \caption{}
+    \label{fig:proposals_gt0}
+  \end{subfigure}
+
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{proposal_gt1}
+    \caption{}
+    \label{fig:proposals_gt1}
+  \end{subfigure}
+
+  \caption{3 Different candidate action tubes}
+  \label{fig:proposes_gt}
 \end{figure}
 
-\textbf{Pending... comment poiotika results}
-\end{document}
+However, as shown at Figures \ref{fig:proposals_gt0} and \ref{fig:proposals_gt1}, the second ToI better overlaps with the groundtruth. It is clear that even though
+the first proposal overlaps very well with the upper body of ther actor, it fails to capture the left leg, which may be a crucial factor for determining the class of the
+action. The ToI shown at Figure \ref{fig:proposals_gt1} manages to capture most of the actor's body excluding only the head, which usually doesn't move a lot
+during an action. Althogh, judging intuitively, we would choose the first ToI, in reality, the second one is more preferable.
+
+% \end{document}
 

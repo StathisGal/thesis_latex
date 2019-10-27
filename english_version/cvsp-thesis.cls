@@ -32,19 +32,21 @@
 % \LoadClass[twoside,12pt]{book}
 % \LoadClass[a4paper,twoside,12pt]{book}
 \LoadClass[a4paper,twoside,10pt]{book}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{polyglossia}
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{polyglossia}
 
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text]{Liberation Sans } % choose a font that supports greek characters
+% \defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[Mapping=tex-text]{Liberation Sans } % choose a font that supports greek characters
 
-\setdefaultlanguage{english}
-\setotherlanguage[variant=modern]{greek}
+% \setdefaultlanguage{english}
+% \setotherlanguage[variant=modern]{greek}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \usepackage[ greek]{babel}
 % \usepackage[iso-8859-7]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage[utf8]{inputenc}
 
 
 % \usepackage[greek,english]{babel}
@@ -324,8 +326,8 @@
 }
 
 \middletitleback{
-                             Copyright  \copyright \  \ \@author, 2019.\\
-      Με επιφύλαξη παντός δικαιώματος. All rights reserved.\\[12pt]
+                           \tl{  Copyright  \copyright} \  \ \@author, 2019.\\
+      Με επιφύλαξη παντός δικαιώματος. \tl{All rights reserved.}\\[12pt]
       Απαγορεύεται η αντιγραφή, αποθήκευση και διανομή της παρούσας εργασίας, εξ
       ολοκλήρου ή τμήματος αυτής, για εμπορικό σκοπό. Επιτρέπεται η ανατύπωση,
       αποθήκευση και διανομή για σκοπό μη κερδοσκοπικό, εκπαιδευτικής ή ερευνητικής

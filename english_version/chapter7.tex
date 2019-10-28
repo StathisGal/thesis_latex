@@ -20,25 +20,25 @@
 \chapter{Conclusion - Future work}
 
 \section{Conclusion}
-In this thesis we explore the problem of action recognition and localization. We design a network base on \cite{DBLP:journals/corr/HouCS17}
+In this thesis we explore the problem of action recognition and localization. We design a network based on approach proposed by \cite{DBLP:journals/corr/HouCS17}
 combined with some elements from \cite{DBLP:journals/corr/abs-1712-09184}, \cite{Ren:2015:FRT:2969239.2969250}, \cite{Girshick:2015:FR:2919332.2920125},
 \cite{DBLP:journals/corr/abs-1903-00304} and \cite{hara3dcnns}. \par
 
-We write a pytorch implementation expanding code only from \cite{jjfaster2rcnn}. Furthermore, we wrote our own code using some CUDA functions designed by us (like
+We wrote a pytorch implementation expanding code only from \cite{jjfaster2rcnn}. Furthermore, we wrote our own code using some CUDA functions designed by us (like
 calculating connection scores, modifying tubes etc). \par
 
-We tried to design a design a Tube Proposal Network for proposing action tubes in given video segments, inspired by Faster R-CNN's RPN.
-We designed it using general anchors and not dataset specific anchors in order to try to generalize our approach for several datasets, on the contrary with
-the approach proposed by \cite{DBLP:journals/corr/abs-1712-09184}, in which it uses the most frequently appearing anchors as the general anchors. \par
+We tried to  a design the  Tube Proposal Network for proposing ToIs in given video segments, inspired by Faster R-CNN's RPN.
+We designed it using general anchors and not dataset specific anchors. This means that we try to generalize our approach for several datasets, on the contrary with
+the approach proposed by \cite{DBLP:journals/corr/abs-1712-09184}, in which it uses the most frequently appearing anchors for each dataset.
 
-On top of that, we designed a naive connection algorithm for connecting  our proposed action tubes based on the one proposed by \cite{DBLP:journals/corr/abs-1712-09184}.
+On top of that, we designed a naive connection algorithm for connecting  proposed ToIs based on the algorithm proposed by \cite{DBLP:journals/corr/abs-1712-09184}.
 In our approach, we use the same scoring policy, which is a combination between actioness and overlaping scores. The main difference is that we avoid to calculate
-all the possible combinations using an updating threshold. We, also, tried another connection algorithm inspired by \cite{DBLP:journals/corr/abs-1903-00304}. However,
+all the possible combinations using an updatable threshold. We, also, tried another connection algorithm inspired by \cite{DBLP:journals/corr/abs-1903-00304}. However,
 our implementation wasn't very good so, we didn't explore all of its potentials. \par
 
 Finally, we explored several classifiers for the classification stage of our network, which are a RNN, a SVM and a MLP.  We used an implementation taken from Fast RCNN
-for the SVM classifier, which included hard negatives mining training procedure. Furthermore, we explore some training techniques for best classification performance and
-2 training approaches, the classic one and using pre-extracted features. 
+for the SVM classifier, which included hard negatives mining training procedure. We explored some training techniques for best classification performance and
+2 training approaches for MLP classifier, the classic one and using pre-extracted features. 
 
 \section{Future work}
 There is a lot of room for improvement for our network, in order to achieve state-of-the-art results. The most important are described in next paragraphs.
@@ -55,18 +55,17 @@ So training loss could be defined as:
 \end{equation}
 
 Furthermore, it would be a good idea to use SSD's (\cite{DBLP:journals/corr/LiuAESR15}) proposal network instead of RPN, in order to compare result. Finally,
-we could experiment using Feature Pyramid Networks, which could be extracted in 3 dimensions as another feature extractor or some other type of 3D ResNet.
+we could experiment using Feature Pyramid Networks(\cite{8099589}), which could be extented in 3 dimensions as another feature extractor or some other type of 3D ResNet.
 
 \paragraph{Changing Connection algorithm}
 In this thesis, another challenge we came was connecting proposed ToIs for proposing action tubes. We implemented a very naive algorithm, which wasn't
-able to give us very good proposals despite the changes we tried to do. We implemented another connection algorithm which was base in a estimation on temporal
-progress of an action and their overlap. Although it also didn't give us very good proposals, we believe that we should explore this algorithm's ponytails. That's
+able to give us very good proposals despite the changes we tried to do. We implemented another connection algorithm which was based on estimationing temporal
+progress of an action tube  and its overlap with others. Although it also didn't give us very good proposals, we believe that we should explore this algorithm's potentials. That's
 because it takes advantage of the progress of the action, which the previous algorithm didn't.
 
 \paragraph{Explore other  classification techniques}
-For classification stage, we experiment mainly on a SVM classifier for JHMDB dataset and we didn't get involved a lot with UCF dataset. We found the best feature maps from
-JHDMB and we used the same for UCF. We think that we should explore UCF's feature maps even though we believe that there will be the same. It is essential to confirm our
-assumption. In addition, we could try other classification techniques like random forest or experiment more with RNN classifier for the UCF dataset.
+For classification stage, we experimented mainly on a SVM classifier for JHMDB dataset and we didn't get involved with UCF dataset. Our first
+goal is to be able to get good classification results for UCF dataset, too.  We think that we should explore UCF's feature maps and techniques applied at feature maps before  classification. In addition, we could try other classification techniques like random forest or experiment more with RNN classifier for the UCF dataset.
 Finally, another classification procedure would be a good idea, like extracting first all the possible action tubes and then using other network's features for classification
 stage.
 

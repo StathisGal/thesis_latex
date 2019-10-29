@@ -1,6 +1,10 @@
 \documentclass{beamer}
 \usetheme{Boadilla}
 
+\usepackage[greek,english]{babel}
+\usepackage[utf8]{inputenc}
+
+
 \title{Thesis}
 \subtitle{Action Recognition and Localization}
 \author{Stathis Galanakis}
@@ -11,4 +15,16 @@
 \begin{frame}
 \titlepage
 \end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesections]
+\end{frame}
+
+\include{introduction}
+\include{background}
+\include{tpn}
+\include{conn_algo}
+\include{classification}
+
 \end{document}

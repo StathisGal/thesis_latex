@@ -60,21 +60,27 @@
 
   \entry{BobickAaron}{article}{}
     \name{author}{2}{}{%
-      {{hash=BA}{%
-         family={Bobick},
+      {{hash=BAF}{%
+         family={{Bobick}},
          familyi={B\bibinitperiod},
-         given={Aaron},
-         giveni={A\bibinitperiod},
+         given={A.\bibnamedelima F.},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
-      {{hash=DJ}{%
-         family={Davis},
+      {{hash=DJW}{%
+         family={{Davis}},
          familyi={D\bibinitperiod},
-         given={J.W.},
-         giveni={J\bibinitperiod},
+         given={J.\bibnamedelima W.},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
       }}%
     }
-    \strng{namehash}{BADJ1}
-    \strng{fullhash}{BADJ1}
+    \keyw{computer vision;image sequences;image motion analysis;image
+  reconstruction;human movement recognition;temporal templates;view-based
+  approach;human movement representation;motion properties;aerobics
+  exercises;recognition method;temporal segmentation;Image sequences;Image
+  recognition;Computer Society;Computer vision;Cameras;Labeling;Image
+  reconstruction;Humans;Pattern recognition;Pixel}
+    \strng{namehash}{BAFDJW1}
+    \strng{fullhash}{BAFDJW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2001}
@@ -84,13 +90,14 @@
     \verb{doi}
     \verb 10.1109/34.910878
     \endverb
-    \field{pages}{257 \bibrangedash  267}
+    \field{number}{3}
+    \field{pages}{257\bibrangedash 267}
     \field{title}{The recognition of human movement using temporal templates}
     \field{volume}{23}
-    \field{journaltitle}{Pattern Analysis and Machine Intelligence, IEEE
-  Transactions on}
-    \field{month}{04}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
     \field{year}{2001}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{990935}{inproceedings}{}
@@ -492,35 +499,45 @@
 
   \entry{Ryoo2006}{inproceedings}{}
     \name{author}{2}{}{%
-      {{hash=RM}{%
-         family={Ryoo},
+      {{hash=RMS}{%
+         family={{Ryoo}},
          familyi={R\bibinitperiod},
-         given={M.S.},
-         giveni={M\bibinitperiod},
+         given={M.\bibnamedelima S.},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
       }}%
-      {{hash=AJ}{%
-         family={Aggarwal},
+      {{hash=AJK}{%
+         family={{Aggarwal}},
          familyi={A\bibinitperiod},
-         given={J.K.},
-         giveni={J\bibinitperiod},
+         given={J.\bibnamedelima K.},
+         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
       }}%
     }
-    \strng{namehash}{RMAJ1}
-    \strng{fullhash}{RMAJ1}
+    \keyw{computer vision;context-free grammars;gesture recognition;image
+  representation;semantic understanding;recursive human activities;context-free
+  grammar based representation;high-level
+  interactions;fighting;greeting;semantic descriptions;computer
+  vision;Humans;Computer vision;Logic;Punching;Application
+  software;Surveillance;Airports;Patient monitoring;Computerized
+  monitoring;Senior citizens}
+    \strng{namehash}{RMSAJK1}
+    \strng{fullhash}{RMSAJK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2006}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
+    \field{booktitle}{18th International Conference on Pattern Recognition
+  (ICPR'06)}
     \verb{doi}
     \verb 10.1109/ICPR.2006.1043
     \endverb
-    \field{pages}{379 \bibrangedash  378}
+    \field{pages}{379\bibrangedash 378}
     \field{title}{Semantic Understanding of Continued and Recursive Human
   Activities}
-    \field{month}{01}
+    \field{volume}{1}
     \field{year}{2006}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{4270510}{inproceedings}{}
@@ -652,10 +669,6 @@
          giveni={A\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Kluwer Academic Publishers}%
-    }
-    \keyw{Benchmark, Database, Object detection, Object recognition}
     \strng{namehash}{EM+1}
     \strng{fullhash}{EMGLWCKWJZA1}
     \field{labelnamesource}{author}
@@ -664,22 +677,12 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{doi}
-    \verb 10.1007/s11263-009-0275-4
-    \endverb
-    \field{issn}{0920-5691}
-    \field{number}{2}
-    \field{pages}{303\bibrangedash 338}
     \field{title}{The Pascal Visual Object Classes (VOC) Challenge}
     \verb{url}
     \verb http://dx.doi.org/10.1007/s11263-009-0275-4
     \endverb
     \field{volume}{88}
-    \list{location}{1}{%
-      {Hingham, MA, USA}%
-    }
     \field{journaltitle}{Int. J. Comput. Vision}
-    \field{month}{06}
     \field{year}{2010}
   \endentry
 
@@ -795,36 +798,43 @@
   \entry{Kuehne11}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=KH}{%
-         family={Kuehne},
+         family={{Kuehne}},
          familyi={K\bibinitperiod},
          given={H.},
          giveni={H\bibinitperiod},
       }}%
       {{hash=JH}{%
-         family={Jhuang},
+         family={{Jhuang}},
          familyi={J\bibinitperiod},
          given={H.},
          giveni={H\bibinitperiod},
       }}%
       {{hash=GE}{%
-         family={Garrote},
+         family={{Garrote}},
          familyi={G\bibinitperiod},
          given={E.},
          giveni={E\bibinitperiod},
       }}%
       {{hash=PT}{%
-         family={Poggio},
+         family={{Poggio}},
          familyi={P\bibinitperiod},
          given={T.},
          giveni={T\bibinitperiod},
       }}%
       {{hash=ST}{%
-         family={Serre},
+         family={{Serre}},
          familyi={S\bibinitperiod},
          given={T.},
          giveni={T\bibinitperiod},
       }}%
     }
+    \keyw{image motion analysis;object recognition;social networking
+  (online);video databases;HMDB;large video database;human motion
+  recognition;computer vision research;static image datasets;image
+  categories;human action datasets;action recognition databases;digitized
+  movies;YouTube;camera motion;viewpoint;video
+  quality;occlusion;Cameras;YouTube;Databases;Training;Visualization;Humans;Motion
+  pictures}
     \strng{namehash}{KH+1}
     \strng{fullhash}{KHJHGEPTST1}
     \field{labelnamesource}{author}
@@ -833,10 +843,14 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{booktitle}{Proceedings of the International Conference on Computer
-  Vision (ICCV)}
-    \field{title}{{HMDB}: a large video database for human motion recognition}
+    \field{booktitle}{2011 International Conference on Computer Vision}
+    \verb{doi}
+    \verb 10.1109/ICCV.2011.6126543
+    \endverb
+    \field{pages}{2556\bibrangedash 2563}
+    \field{title}{HMDB: A large video database for human motion recognition}
     \field{year}{2011}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{soomro2012ucf101}{article}{}
@@ -874,88 +888,48 @@
     \field{year}{2012}
   \endentry
 
-  \entry{DBLP:journals/corr/GirshickDDM13}{article}{}
-    \name{author}{4}{}{%
-      {{hash=GRB}{%
-         family={Girshick},
-         familyi={G\bibinitperiod},
-         given={Ross\bibnamedelima B.},
-         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=DJ}{%
-         family={Donahue},
-         familyi={D\bibinitperiod},
-         given={Jeff},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=DT}{%
-         family={Darrell},
-         familyi={D\bibinitperiod},
-         given={Trevor},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=MJ}{%
-         family={Malik},
-         familyi={M\bibinitperiod},
-         given={Jitendra},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GRB+1}
-    \strng{fullhash}{GRBDJDTMJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2013}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1311.2524
-    \endverb
-    \field{title}{Rich feature hierarchies for accurate object detection and
-  semantic segmentation}
-    \verb{url}
-    \verb http://arxiv.org/abs/1311.2524
-    \endverb
-    \field{volume}{abs/1311.2524}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2013}
-  \endentry
-
   \entry{Jhuang:ICCV:2013}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=JH}{%
-         family={Jhuang},
+         family={{Jhuang}},
          familyi={J\bibinitperiod},
          given={H.},
          giveni={H\bibinitperiod},
       }}%
       {{hash=GJ}{%
-         family={Gall},
+         family={{Gall}},
          familyi={G\bibinitperiod},
          given={J.},
          giveni={J\bibinitperiod},
       }}%
       {{hash=ZS}{%
-         family={Zuffi},
+         family={{Zuffi}},
          familyi={Z\bibinitperiod},
          given={S.},
          giveni={S\bibinitperiod},
       }}%
       {{hash=SC}{%
-         family={Schmid},
+         family={{Schmid}},
          familyi={S\bibinitperiod},
          given={C.},
          giveni={C\bibinitperiod},
       }}%
       {{hash=BMJ}{%
-         family={Black},
+         family={{Black}},
          familyi={B\bibinitperiod},
          given={M.\bibnamedelima J.},
          giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
+    \keyw{computer vision;gesture recognition;image segmentation;image
+  sequences;pose estimation;action recognition;real-world datasets;video
+  sequences;systematic performance evaluation;thoroughly-annotated data;human
+  actions;joints-for-the HMDB dataset;optical flow;optical segmentation;flow
+  algorithms;human bounding boxes;pose estimation algorithms;feature
+  extraction;J-HMDB;human detection algorithms;computer vision
+  algorithms;Videos;Joints;Trajectory;Estimation;Accuracy;Motion
+  pictures;Vectors;action recognition;dataset;JHMDB;annotation;optical flow
+  estimation;pose estimation}
     \strng{namehash}{JH+1}
     \strng{fullhash}{JHGJZSSCBMJ1}
     \field{labelnamesource}{author}
@@ -964,49 +938,73 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{booktitle}{International Conf. on Computer Vision (ICCV)}
+    \field{booktitle}{2013 IEEE International Conference on Computer Vision}
+    \verb{doi}
+    \verb 10.1109/ICCV.2013.396
+    \endverb
     \field{pages}{3192\bibrangedash 3199}
-    \field{title}{Towards understanding action recognition}
-    \field{month}{12}
+    \field{title}{Towards Understanding Action Recognition}
     \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{pmid:22392705}{article}{}
-    \name{author}{3}{}{%
+    \name{author}{4}{}{%
       {{hash=JS}{%
-         family={Ji},
+         family={{Ji}},
          familyi={J\bibinitperiod},
-         given={Shuiwang},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
+      {{hash=XW}{%
+         family={{Xu}},
+         familyi={X\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
       {{hash=YM}{%
-         family={Yang},
+         family={{Yang}},
          familyi={Y\bibinitperiod},
-         given={Ming},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
       {{hash=YK}{%
-         family={Yu},
+         family={{Yu}},
          familyi={Y\bibinitperiod},
-         given={Kai},
+         given={K.},
          giveni={K\bibinitperiod},
       }}%
     }
-    \strng{namehash}{JSYMYK1}
-    \strng{fullhash}{JSYMYK1}
+    \keyw{feature extraction;gesture recognition;image classification;image
+  motion analysis;image representation;neural nets;spatiotemporal
+  phenomena;video surveillance;3D convolutional neural networks;automated human
+  action recognition;complex handcrafted features;deep model;3D CNN
+  model;temporal dimensions;spatial dimensions;motion information
+  encoding;feature representation;high-level features;airport surveillance
+  videos;baseline methods;Three dimensional displays;Solid modeling;Feature
+  extraction;Computer architecture;Videos;Kernel;Computational modeling;Deep
+  learning;convolutional neural networks;3D convolution;model
+  combination;action recognition;Algorithms;Decision Support Techniques;Image
+  Interpretation, Computer-Assisted;Imaging, Three-Dimensional;Movement;Neural
+  Networks (Computer);Pattern Recognition, Automated;Subtraction Technique}
+    \strng{namehash}{JS+1}
+    \strng{fullhash}{JSXWYMYK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2013}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
+    \verb{doi}
+    \verb 10.1109/TPAMI.2012.59
+    \endverb
     \field{number}{1}
-    \field{pages}{221\bibrangedash 31}
-    \field{title}{3D convolutional neural networks for human action
-  recognition.}
+    \field{pages}{221\bibrangedash 231}
+    \field{title}{3D Convolutional Neural Networks for Human Action
+  Recognition}
     \field{volume}{35}
-    \field{journaltitle}{IEEE transactions on pattern analysis and machine
-  intelligence}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
     \field{year}{2013}
     \warn{\item Invalid format of field 'month'}
   \endentry
@@ -1014,28 +1012,32 @@
   \entry{Manen:2013:POP:2586117.2587333}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=MS}{%
-         family={Manen},
+         family={{Manen}},
          familyi={M\bibinitperiod},
-         given={Santiago},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
       {{hash=GM}{%
-         family={Guillaumin},
+         family={{Guillaumin}},
          familyi={G\bibinitperiod},
-         given={Matthieu},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
       {{hash=GLV}{%
-         family={Gool},
+         family={{Gool}},
          familyi={G\bibinitperiod},
-         given={Luc\bibnamedelima Van},
+         given={L.\bibnamedelima V.},
          giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {IEEE Computer Society}%
-    }
-    \keyw{Object Detection, Object Proposal}
+    \keyw{learning (artificial intelligence);object detection;trees
+  (mathematics);SUN2012 benchmark datasets;PASCAL VOC 2012;PASCAL VOC
+  2007;randomization;object localizations;random partial spanning trees;image
+  superpixels;connectivity graph;object discovery;object detectors;supervised
+  learning;class-specific object detection;generic object detection;randomized
+  Prim algorithm;prime object proposals;Proposals;Object detection;Image edge
+  detection;Image color analysis;Image segmentation;Heuristic
+  algorithms;Algorithm design and analysis;Object Detection;Object Proposal}
     \strng{namehash}{MSGMGLV1}
     \strng{fullhash}{MSGMGLV1}
     \field{labelnamesource}{author}
@@ -1044,22 +1046,14 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{booktitle}{Proceedings of the 2013 IEEE International Conference on
-  Computer Vision}
+    \field{booktitle}{2013 IEEE International Conference on Computer Vision}
     \verb{doi}
     \verb 10.1109/ICCV.2013.315
     \endverb
-    \field{isbn}{978-1-4799-2840-8}
     \field{pages}{2536\bibrangedash 2543}
-    \field{series}{ICCV '13}
     \field{title}{Prime Object Proposals with Randomized Prim's Algorithm}
-    \verb{url}
-    \verb http://dx.doi.org/10.1109/ICCV.2013.315
-    \endverb
-    \list{location}{1}{%
-      {Washington, DC, USA}%
-    }
     \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{6619185}{inproceedings}{}
@@ -1157,107 +1151,60 @@
     \field{year}{2013}
   \endentry
 
-  \entry{DBLP:journals/corr/DonahueHGRVSD14}{article}{}
-    \name{author}{7}{}{%
-      {{hash=DJ}{%
-         family={Donahue},
-         familyi={D\bibinitperiod},
-         given={Jeff},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=HLA}{%
-         family={Hendricks},
-         familyi={H\bibinitperiod},
-         given={Lisa\bibnamedelima Anne},
-         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=GS}{%
-         family={Guadarrama},
+  \entry{DBLP:journals/corr/GirshickDDM13}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=GR}{%
+         family={{Girshick}},
          familyi={G\bibinitperiod},
-         given={Sergio},
-         giveni={S\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
       }}%
-      {{hash=RM}{%
-         family={Rohrbach},
-         familyi={R\bibinitperiod},
-         given={Marcus},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=VS}{%
-         family={Venugopalan},
-         familyi={V\bibinitperiod},
-         given={Subhashini},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=SK}{%
-         family={Saenko},
-         familyi={S\bibinitperiod},
-         given={Kate},
-         giveni={K\bibinitperiod},
+      {{hash=DJ}{%
+         family={{Donahue}},
+         familyi={D\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
       }}%
       {{hash=DT}{%
-         family={Darrell},
+         family={{Darrell}},
          familyi={D\bibinitperiod},
-         given={Trevor},
+         given={T.},
          giveni={T\bibinitperiod},
       }}%
-    }
-    \strng{namehash}{DJ+1}
-    \strng{fullhash}{DJHLAGSRMVSSKDT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2014}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1411.4389
-    \endverb
-    \field{title}{Long-term Recurrent Convolutional Networks for Visual
-  Recognition and Description}
-    \verb{url}
-    \verb http://arxiv.org/abs/1411.4389
-    \endverb
-    \field{volume}{abs/1411.4389}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2014}
-  \endentry
-
-  \entry{DBLP:journals/corr/GkioxariM14}{article}{}
-    \name{author}{2}{}{%
-      {{hash=GG}{%
-         family={Gkioxari},
-         familyi={G\bibinitperiod},
-         given={Georgia},
-         giveni={G\bibinitperiod},
-      }}%
       {{hash=MJ}{%
-         family={Malik},
+         family={{Malik}},
          familyi={M\bibinitperiod},
-         given={Jitendra},
+         given={J.},
          giveni={J\bibinitperiod},
       }}%
     }
-    \strng{namehash}{GGMJ1}
-    \strng{fullhash}{GGMJ1}
+    \keyw{image segmentation;neural nets;object detection;rich feature
+  hierarchy;semantic segmentation;object detection performance;canonical PASCAL
+  VOC dataset;low-level image feature;detection algorithm;mean average
+  precision;mAP;high-capacity convolutional neural network;bottom-up region
+  proposal;segment objects;labeled training data;supervised
+  pretraining;auxiliary task;domain-specific fine-tuning;performance
+  boost;R-CNN;image features;source code;Proposals;Feature
+  extraction;Training;Visualization;Object detection;Vectors;Support vector
+  machines}
+    \strng{namehash}{GR+1}
+    \strng{fullhash}{GRDJDTMJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1411.6031
+    \field{booktitle}{2014 IEEE Conference on Computer Vision and Pattern
+  Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2014.81
     \endverb
-    \field{title}{Finding Action Tubes}
-    \verb{url}
-    \verb http://arxiv.org/abs/1411.6031
-    \endverb
-    \field{volume}{abs/1411.6031}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{580\bibrangedash 587}
+    \field{title}{Rich Feature Hierarchies for Accurate Object Detection and
+  Semantic Segmentation}
     \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{6909495}{inproceedings}{}
@@ -1460,55 +1407,6 @@
     \field{year}{2014}
   \endentry
 
-  \entry{Tran2014LearningSF}{article}{}
-    \name{author}{5}{}{%
-      {{hash=TD}{%
-         family={Tran},
-         familyi={T\bibinitperiod},
-         given={Du},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=BLD}{%
-         family={Bourdev},
-         familyi={B\bibinitperiod},
-         given={Lubomir\bibnamedelima D.},
-         giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=FR}{%
-         family={Fergus},
-         familyi={F\bibinitperiod},
-         given={Rob},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=TL}{%
-         family={Torresani},
-         familyi={T\bibinitperiod},
-         given={Lorenzo},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=PM}{%
-         family={Paluri},
-         familyi={P\bibinitperiod},
-         given={Manohar},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{TD+1}
-    \strng{fullhash}{TDBLDFRTLPM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2014}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \field{pages}{4489\bibrangedash 4497}
-    \field{title}{Learning Spatiotemporal Features with 3D Convolutional
-  Networks}
-    \field{journaltitle}{2015 IEEE International Conference on Computer Vision
-  (ICCV)}
-    \field{year}{2014}
-  \endentry
-
   \entry{7410734}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=CW}{%
@@ -1607,15 +1505,17 @@
   \entry{Girshick:2015:FR:2919332.2920125}{inproceedings}{}
     \name{author}{1}{}{%
       {{hash=GR}{%
-         family={Girshick},
+         family={{Girshick}},
          familyi={G\bibinitperiod},
-         given={Ross},
+         given={R.},
          giveni={R\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {IEEE Computer Society}%
-    }
+    \keyw{feedforward neural nets;object detection;fast R-CNN;fast region-based
+  convolutional network method;object detection;VGG16
+  network;Python;C++;Caffe;open-source MIT License;Training;Proposals;Feature
+  extraction;Object detection;Pipelines;Computer architecture;Open source
+  software}
     \strng{namehash}{GR1}
     \strng{fullhash}{GR1}
     \field{labelnamesource}{author}
@@ -1624,70 +1524,122 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{booktitle}{Proceedings of the 2015 IEEE International Conference on
-  Computer Vision (ICCV)}
+    \field{booktitle}{2015 IEEE International Conference on Computer Vision
+  (ICCV)}
     \verb{doi}
     \verb 10.1109/ICCV.2015.169
     \endverb
-    \field{isbn}{978-1-4673-8391-2}
     \field{pages}{1440\bibrangedash 1448}
-    \field{series}{ICCV '15}
     \field{title}{Fast R-CNN}
-    \verb{url}
-    \verb http://dx.doi.org/10.1109/ICCV.2015.169
-    \endverb
-    \list{location}{1}{%
-      {Washington, DC, USA}%
-    }
     \field{year}{2015}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/HeZRS15}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HK}{%
-         family={He},
-         familyi={H\bibinitperiod},
-         given={Kaiming},
-         giveni={K\bibinitperiod},
+  \entry{DBLP:journals/corr/GkioxariM14}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=GG}{%
+         family={{Gkioxari}},
+         familyi={G\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
       }}%
-      {{hash=ZX}{%
-         family={Zhang},
-         familyi={Z\bibinitperiod},
-         given={Xiangyu},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=RS}{%
-         family={Ren},
-         familyi={R\bibinitperiod},
-         given={Shaoqing},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=SJ}{%
-         family={Sun},
-         familyi={S\bibinitperiod},
-         given={Jian},
+      {{hash=MJ}{%
+         family={{Malik}},
+         familyi={M\bibinitperiod},
+         given={J.},
          giveni={J\bibinitperiod},
       }}%
     }
-    \strng{namehash}{HK+1}
-    \strng{fullhash}{HKZXRSSJ1}
+    \keyw{feature extraction;image classification;image motion analysis;image
+  representation;neural nets;object detection;shape recognition;video signal
+  processing;action tubes;action detection;videos;object detection;2D
+  images;action models;feature hierarchies;shape cues;kinematic
+  cues;appearance;image region proposals;motion salient;spatio-temporal feature
+  representations extraction;classifiers;convolutional neural
+  networks;Videos;Feature extraction;Electron tubes;Support vector
+  machines;Shape;Optical imaging;Training}
+    \strng{namehash}{GGMJ1}
+    \strng{fullhash}{GGMJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2015}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1512.03385
+    \field{booktitle}{2015 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2015.7298676
     \endverb
-    \field{title}{Deep Residual Learning for Image Recognition}
-    \verb{url}
-    \verb http://arxiv.org/abs/1512.03385
-    \endverb
-    \field{volume}{abs/1512.03385}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{759\bibrangedash 768}
+    \field{title}{Finding action tubes}
     \field{year}{2015}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{DBLP:journals/corr/NgHVVMT15}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=J}{%
+         family={{Joe Yue-Hei Ng}},
+         familyi={J\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={{Hausknecht}},
+         familyi={H\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={{Vijayanarasimhan}},
+         familyi={V\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VO}{%
+         family={{Vinyals}},
+         familyi={V\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={{Monga}},
+         familyi={M\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=TG}{%
+         family={{Toderici}},
+         familyi={T\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{image classification;image recognition;image segmentation;image
+  sequences;neural nets;object detection;video signal processing;video
+  classification;short snippets;convolutional neural networks;CNN;image
+  recognition problems;deep neural network architectures;image information;full
+  length videos;convolutional temporal feature pooling architectures;long
+  short-term memory cells;LSTM;UCF-101 datasets;sports 1 million
+  dataset;optical flow information;Optical imaging;Computer architecture;Logic
+  gates;Training;Time-domain analysis;Neural networks;Image recognition}
+    \strng{namehash}{J+1}
+    \strng{fullhash}{JHMVSVOMRTG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2015 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2015.7299101
+    \endverb
+    \field{pages}{4694\bibrangedash 4702}
+    \field{title}{Beyond short snippets: Deep networks for video
+  classification}
+    \field{year}{2015}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/LiuAESR15}{article}{}
@@ -1756,169 +1708,6 @@
     \field{year}{2015}
   \endentry
 
-  \entry{DBLP:journals/corr/NgHVVMT15}{article}{}
-    \name{author}{6}{}{%
-      {{hash=NJY}{%
-         family={Ng},
-         familyi={N\bibinitperiod},
-         given={Joe\bibnamedelima Yue{-}Hei},
-         giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod},
-      }}%
-      {{hash=HMJ}{%
-         family={Hausknecht},
-         familyi={H\bibinitperiod},
-         given={Matthew\bibnamedelima J.},
-         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=VS}{%
-         family={Vijayanarasimhan},
-         familyi={V\bibinitperiod},
-         given={Sudheendra},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=VO}{%
-         family={Vinyals},
-         familyi={V\bibinitperiod},
-         given={Oriol},
-         giveni={O\bibinitperiod},
-      }}%
-      {{hash=MR}{%
-         family={Monga},
-         familyi={M\bibinitperiod},
-         given={Rajat},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=TG}{%
-         family={Toderici},
-         familyi={T\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{NJY+1}
-    \strng{fullhash}{NJYHMJVSVOMRTG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2015}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1503.08909
-    \endverb
-    \field{title}{Beyond Short Snippets: Deep Networks for Video
-  Classification}
-    \verb{url}
-    \verb http://arxiv.org/abs/1503.08909
-    \endverb
-    \field{volume}{abs/1503.08909}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2015}
-  \endentry
-
-  \entry{DBLP:journals/corr/RedmonDGF15}{article}{}
-    \name{author}{4}{}{%
-      {{hash=RJ}{%
-         family={Redmon},
-         familyi={R\bibinitperiod},
-         given={Joseph},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=DSK}{%
-         family={Divvala},
-         familyi={D\bibinitperiod},
-         given={Santosh\bibnamedelima Kumar},
-         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=GRB}{%
-         family={Girshick},
-         familyi={G\bibinitperiod},
-         given={Ross\bibnamedelima B.},
-         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=FA}{%
-         family={Farhadi},
-         familyi={F\bibinitperiod},
-         given={Ali},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{RJ+1}
-    \strng{fullhash}{RJDSKGRBFA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2015}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1506.02640
-    \endverb
-    \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
-    \verb{url}
-    \verb http://arxiv.org/abs/1506.02640
-    \endverb
-    \field{volume}{abs/1506.02640}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2015}
-  \endentry
-
-  \entry{Ren:2015:FRT:2969239.2969250}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=RS}{%
-         family={Ren},
-         familyi={R\bibinitperiod},
-         given={Shaoqing},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=HK}{%
-         family={He},
-         familyi={H\bibinitperiod},
-         given={Kaiming},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=GR}{%
-         family={Girshick},
-         familyi={G\bibinitperiod},
-         given={Ross},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=SJ}{%
-         family={Sun},
-         familyi={S\bibinitperiod},
-         given={Jian},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MIT Press}%
-    }
-    \strng{namehash}{RS+1}
-    \strng{fullhash}{RSHKGRSJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2015}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \field{booktitle}{Proceedings of the 28th International Conference on
-  Neural Information Processing Systems - Volume 1}
-    \field{pages}{91\bibrangedash 99}
-    \field{series}{NIPS'15}
-    \field{title}{Faster R-CNN: Towards Real-time Object Detection with Region
-  Proposal Networks}
-    \verb{url}
-    \verb http://dl.acm.org/citation.cfm?id=2969239.2969250
-    \endverb
-    \list{location}{1}{%
-      {Montreal, Canada}%
-    }
-    \field{year}{2015}
-    \warn{\item Can't use 'location' + 'address'}
-  \endentry
-
   \entry{7410732}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=SK}{%
@@ -1967,27 +1756,95 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/WeinzaepfelHS15}{article}{}
+  \entry{Tran2014LearningSF}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=TD}{%
+         family={{Tran}},
+         familyi={T\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={{Bourdev}},
+         familyi={B\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={{Fergus}},
+         familyi={F\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={{Torresani}},
+         familyi={T\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={{Paluri}},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{feature extraction;image classification;learning (artificial
+  intelligence);neural nets;spatiotemporal phenomena;video signal
+  processing;spatiotemporal feature learning;3D convolutional networks;deep
+  3-dimensional convolutional networks;3D ConvNets;large scale supervised video
+  dataset;homogeneous architecture;convolution kernels;C3D
+  features;convolutional 3D;linear classifier;UCF101 dataset;Three-dimensional
+  displays;Convolution;Kernel;Feature extraction;Solid modeling;Streaming
+  media;Training}
+    \strng{namehash}{TD+1}
+    \strng{fullhash}{TDBLFRTLPM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2015 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2015.510
+    \endverb
+    \field{pages}{4489\bibrangedash 4497}
+    \field{title}{Learning Spatiotemporal Features with 3D Convolutional
+  Networks}
+    \field{year}{2015}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{DBLP:journals/corr/WeinzaepfelHS15}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=WP}{%
-         family={Weinzaepfel},
+         family={{Weinzaepfel}},
          familyi={W\bibinitperiod},
-         given={Philippe},
+         given={P.},
          giveni={P\bibinitperiod},
       }}%
       {{hash=HZ}{%
-         family={Harchaoui},
+         family={{Harchaoui}},
          familyi={H\bibinitperiod},
-         given={Za{\"{\i}}d},
+         given={Z.},
          giveni={Z\bibinitperiod},
       }}%
       {{hash=SC}{%
-         family={Schmid},
+         family={{Schmid}},
          familyi={S\bibinitperiod},
-         given={Cordelia},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
     }
+    \keyw{image motion analysis;learning (artificial intelligence);visual
+  databases;spatiotemporal action localization;realistic
+  videos;frame-level;static features;motion CNN features;tracking-by-detection
+  approach;instance-level detectors;class-level detectors;motion
+  histogram;sliding-window approach;J-HMDB datasets;UCF-101 datasets;UCF-Sports
+  datasets;Proposals;Tracking;Videos;Feature extraction;Detectors;Object
+  detection;Optical imaging}
     \strng{namehash}{WPHZSC1}
     \strng{fullhash}{WPHZSC1}
     \field{labelnamesource}{author}
@@ -1996,17 +1853,15 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1506.01929
+    \field{booktitle}{2015 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2015.362
     \endverb
-    \field{title}{Learning to track for spatio-temporal action localization}
-    \verb{url}
-    \verb http://arxiv.org/abs/1506.01929
-    \endverb
-    \field{volume}{abs/1506.01929}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{3164\bibrangedash 3172}
+    \field{title}{Learning to Track for Spatio-Temporal Action Localization}
     \field{year}{2015}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{7298735}{inproceedings}{}
@@ -2039,7 +1894,7 @@
     \field{sortinit}{2}
     \field{sortinithash}{2}
     \field{booktitle}{2015 IEEE Conference on Computer Vision and Pattern
-  Recognition (CVPR)}
+  Recognition}
     \verb{doi}
     \verb 10.1109/CVPR.2015.7298735
     \endverb
@@ -2103,27 +1958,36 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/FeichtenhoferPZ16}{article}{}
+  \entry{DBLP:journals/corr/FeichtenhoferPZ16}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=FC}{%
-         family={Feichtenhofer},
+         family={{Feichtenhofer}},
          familyi={F\bibinitperiod},
-         given={Christoph},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
       {{hash=PA}{%
-         family={Pinz},
+         family={{Pinz}},
          familyi={P\bibinitperiod},
-         given={Axel},
+         given={A.},
          giveni={A\bibinitperiod},
       }}%
       {{hash=ZA}{%
-         family={Zisserman},
+         family={{Zisserman}},
          familyi={Z\bibinitperiod},
-         given={Andrew},
+         given={A.},
          giveni={A\bibinitperiod},
       }}%
     }
+    \keyw{convolution;feature extraction;image motion analysis;neural
+  nets;prediction theory;video signal processing;convolutional two-stream
+  network fusion;video action recognition;convolutional neural
+  networks;ConvNets;human action recognition;softmax layer;spatial
+  network;temporal network;convolution layer;class prediction layer;abstract
+  convolutional features;spatiotemporal neighbourhoods;ConvNet
+  architecture;spatiotemporal fusion;video
+  snippets;Fuses;Convolution;Spatiotemporal phenomena;Optical imaging;Two
+  dimensional displays;Pattern recognition;Computer architecture}
     \strng{namehash}{FCPAZA1}
     \strng{fullhash}{FCPAZA1}
     \field{labelnamesource}{author}
@@ -2132,60 +1996,70 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1604.06573
+    \field{booktitle}{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2016.213
     \endverb
+    \field{pages}{1933\bibrangedash 1941}
     \field{title}{Convolutional Two-Stream Network Fusion for Video Action
   Recognition}
-    \verb{url}
-    \verb http://arxiv.org/abs/1604.06573
-    \endverb
-    \field{volume}{abs/1604.06573}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2016}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/HuangLW16a}{article}{}
-    \name{author}{3}{}{%
-      {{hash=HG}{%
-         family={Huang},
+  \entry{DBLP:journals/corr/HeZRS15}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=HK}{%
+         family={{He}},
          familyi={H\bibinitperiod},
-         given={Gao},
-         giveni={G\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
       }}%
-      {{hash=LZ}{%
-         family={Liu},
-         familyi={L\bibinitperiod},
-         given={Zhuang},
-         giveni={Z\bibinitperiod},
+      {{hash=ZX}{%
+         family={{Zhang}},
+         familyi={Z\bibinitperiod},
+         given={X.},
+         giveni={X\bibinitperiod},
       }}%
-      {{hash=WKQ}{%
-         family={Weinberger},
-         familyi={W\bibinitperiod},
-         given={Kilian\bibnamedelima Q.},
-         giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod},
+      {{hash=RS}{%
+         family={{Ren}},
+         familyi={R\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={{Sun}},
+         familyi={S\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
       }}%
     }
-    \strng{namehash}{HGLZWKQ1}
-    \strng{fullhash}{HGLZWKQ1}
+    \keyw{image classification;learning (artificial intelligence);neural
+  nets;object detection;COCO segmentation;ImageNet localization;ILSVRC & COCO
+  2015 competitions;deep residual nets;COCO object detection dataset;visual
+  recognition tasks;CIFAR-10;ILSVRC 2015 classification task;ImageNet test
+  set;VGG nets;residual nets;ImageNet dataset;residual function learning;deeper
+  neural network training;image recognition;deep residual
+  learning;Training;Degradation;Complexity theory;Image recognition;Neural
+  networks;Visualization;Image segmentation}
+    \strng{namehash}{HK+1}
+    \strng{fullhash}{HKZXRSSJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2016}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1608.06993
+    \field{booktitle}{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2016.90
     \endverb
-    \field{title}{Densely Connected Convolutional Networks}
-    \verb{url}
-    \verb http://arxiv.org/abs/1608.06993
-    \endverb
-    \field{volume}{abs/1608.06993}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{770\bibrangedash 778}
+    \field{title}{Deep Residual Learning for Image Recognition}
     \field{year}{2016}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/MettesGS16}{article}{}
@@ -2281,6 +2155,59 @@
     \endverb
     \field{month}{10}
     \field{year}{2016}
+  \endentry
+
+  \entry{DBLP:journals/corr/RedmonDGF15}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=RJ}{%
+         family={{Redmon}},
+         familyi={R\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={{Divvala}},
+         familyi={D\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={{Girshick}},
+         familyi={G\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={{Farhadi}},
+         familyi={F\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{image classification;image representation;neural nets;object
+  detection;you only look once;unified real-time object detection;object
+  classifiers;bounding boxes;class probabilities;neural network;detection
+  pipeline;detection performance;YOLO model;object
+  representation;DPM;R-CNN;natural images;Computer
+  architecture;Microprocessors;Object detection;Training;Real-time
+  systems;Neural networks;Pipelines}
+    \strng{namehash}{RJ+1}
+    \strng{fullhash}{RJDSGRFA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2016.91
+    \endverb
+    \field{pages}{779\bibrangedash 788}
+    \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
+    \field{year}{2016}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/SahaSSTC16}{article}{}
@@ -2490,6 +2417,66 @@
     \field{year}{2016}
   \endentry
 
+  \entry{DBLP:journals/corr/abs-1802-08362}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=ZB}{%
+         family={{Zhang}},
+         familyi={Z\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={{Wang}},
+         familyi={W\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={{Wang}},
+         familyi={W\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=QY}{%
+         family={{Qiao}},
+         familyi={Q\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={{Wang}},
+         familyi={W\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{image recognition;image sequences;learning (artificial
+  intelligence);motion estimation;neural nets;video coding;knowledge
+  learning;recognition performance;video compression;optical flow
+  calculation;video based action recognition;deep two-stream
+  architecture;enhanced motion vector CNNs;real-time action recognition;Optical
+  imaging;Real-time systems;Streaming media;Noise measurement;Training;Optical
+  computing;Video compression}
+    \strng{namehash}{ZB+1}
+    \strng{fullhash}{ZBWLWZQYWH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2016.297
+    \endverb
+    \field{pages}{2718\bibrangedash 2726}
+    \field{title}{Real-Time Action Recognition with Enhanced Motion Vector
+  CNNs}
+    \field{year}{2016}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{DBLP:journals/corr/ZhangWWQW16}{article}{}
     \name{author}{5}{}{%
       {{hash=ZB}{%
@@ -2523,8 +2510,8 @@
          giveni={H\bibinitperiod},
       }}%
     }
-    \strng{namehash}{ZB+1}
-    \strng{fullhash}{ZBWLWZQYWH1}
+    \strng{namehash}{ZB+2}
+    \strng{fullhash}{ZBWLWZQYWH2}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2016}
@@ -2606,33 +2593,39 @@
     \field{year}{2017}
   \endentry
 
-  \entry{DBLP:journals/corr/BodlaSCD17}{article}{}
+  \entry{DBLP:journals/corr/BodlaSCD17}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=BN}{%
-         family={Bodla},
+         family={{Bodla}},
          familyi={B\bibinitperiod},
-         given={Navaneeth},
+         given={N.},
          giveni={N\bibinitperiod},
       }}%
       {{hash=SB}{%
-         family={Singh},
+         family={{Singh}},
          familyi={S\bibinitperiod},
-         given={Bharat},
+         given={B.},
          giveni={B\bibinitperiod},
       }}%
       {{hash=CR}{%
-         family={Chellappa},
+         family={{Chellappa}},
          familyi={C\bibinitperiod},
-         given={Rama},
+         given={R.},
          giveni={R\bibinitperiod},
       }}%
       {{hash=DLS}{%
-         family={Davis},
+         family={{Davis}},
          familyi={D\bibinitperiod},
-         given={Larry\bibnamedelima S.},
+         given={L.\bibnamedelima S.},
          giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
       }}%
     }
+    \keyw{computational complexity;computer vision;learning (artificial
+  intelligence);neural nets;object detection;coco-style mAP metric;PASCAL
+  VOC2007;MS-COCO;deformable-RFCN;computational complexity;detection
+  boxes;nonmaximum suppression;object detection pipeline;Soft-NMS;NMS
+  algorithm;Faster-RCNN;detection scores;predefined overlap threshold;Object
+  detection;Proposals;Pipelines;Detectors;Measurement;Feature extraction}
     \strng{namehash}{BN+1}
     \strng{fullhash}{BNSBCRDLS1}
     \field{labelnamesource}{author}
@@ -2641,34 +2634,40 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1704.04503
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.593
     \endverb
-    \field{title}{Improving Object Detection With One Line of Code}
-    \verb{url}
-    \verb http://arxiv.org/abs/1704.04503
-    \endverb
-    \field{volume}{abs/1704.04503}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{5562\bibrangedash 5570}
+    \field{title}{Soft-NMS — Improving Object Detection with One Line of
+  Code}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/CarreiraZ17}{article}{}
+  \entry{DBLP:journals/corr/CarreiraZ17}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=CJ}{%
-         family={Carreira},
+         family={{Carreira}},
          familyi={C\bibinitperiod},
-         given={Jo{\~{a}}o},
+         given={J.},
          giveni={J\bibinitperiod},
       }}%
       {{hash=ZA}{%
-         family={Zisserman},
+         family={{Zisserman}},
          familyi={Z\bibinitperiod},
-         given={Andrew},
+         given={A.},
          giveni={A\bibinitperiod},
       }}%
     }
+    \keyw{feature extraction;image classification;image motion analysis;image
+  recognition;learning (artificial intelligence);spatiotemporal phenomena;video
+  signal processing;action recognition;kinetics dataset;action
+  classification;Two-Stream Inflated 3D ConvNet;successful ImageNet
+  architecture designs;deep image classification
+  ConvNets;Videos;Three-dimensional displays;Kinetic theory;Two dimensional
+  displays;Kernel;Feature extraction;Solid modeling}
     \strng{namehash}{CJZA1}
     \strng{fullhash}{CJZA1}
     \field{labelnamesource}{author}
@@ -2677,18 +2676,16 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1705.07750
+    \field{booktitle}{2017 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2017.502
     \endverb
-    \field{title}{Quo Vadis, Action Recognition? {A} New Model and the Kinetics
+    \field{pages}{4724\bibrangedash 4733}
+    \field{title}{Quo Vadis, Action Recognition? A New Model and the Kinetics
   Dataset}
-    \verb{url}
-    \verb http://arxiv.org/abs/1705.07750
-    \endverb
-    \field{volume}{abs/1705.07750}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/abs-1711-08200}{article}{}
@@ -2758,6 +2755,86 @@
     \field{year}{2017}
   \endentry
 
+  \entry{DBLP:journals/corr/DonahueHGRVSD14}{article}{}
+    \name{author}{7}{}{%
+      {{hash=DJ}{%
+         family={{Donahue}},
+         familyi={D\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HLA}{%
+         family={{Hendricks}},
+         familyi={H\bibinitperiod},
+         given={L.\bibnamedelima A.},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={{Rohrbach}},
+         familyi={R\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={{Venugopalan}},
+         familyi={V\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={{Guadarrama}},
+         familyi={G\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={{Saenko}},
+         familyi={S\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=DT}{%
+         family={{Darrell}},
+         familyi={D\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{backpropagation;computer vision;image sequences;neural net
+  architecture;object recognition;recurrent neural nets;long-term recurrent
+  convolutional networks;visual recognition;visual description;recurrent
+  convolutional architectures;large-scale visual understanding tasks;activity
+  recognition;image captioning;video description;compositional representation
+  learning;long-term dependency Learning;network state updates;differentiable
+  recurrent models;variable-length input mapping;variable-length output
+  mapping;complex temporal dynamics;backpropagation;recurrent sequence
+  models;visual convolutional network models;temporal dynamic
+  learning;convolutional perceptual representations;Visualization;Computational
+  modeling;Computer architecture;Data models;Logic gates;Predictive
+  models;Recurrent neural networks;Computer vision;convolutional nets;deep
+  learning;transfer learning}
+    \strng{namehash}{DJ+1}
+    \strng{fullhash}{DJHLARMVSGSSKDT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \verb{doi}
+    \verb 10.1109/TPAMI.2016.2599174
+    \endverb
+    \field{number}{4}
+    \field{pages}{677\bibrangedash 691}
+    \field{title}{Long-Term Recurrent Convolutional Networks for Visual
+  Recognition and Description}
+    \field{volume}{39}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{DBLP:journals/corr/abs-1711-01467}{article}{}
     \name{author}{2}{}{%
       {{hash=GR}{%
@@ -2794,172 +2871,36 @@
     \field{year}{2017}
   \endentry
 
-  \entry{DBLP:journals/corr/abs-1712-09184}{article}{}
-    \name{author}{5}{}{%
-      {{hash=GR}{%
-         family={Girdhar},
-         familyi={G\bibinitperiod},
-         given={Rohit},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=GG}{%
-         family={Gkioxari},
-         familyi={G\bibinitperiod},
-         given={Georgia},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=TL}{%
-         family={Torresani},
-         familyi={T\bibinitperiod},
-         given={Lorenzo},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=PM}{%
-         family={Paluri},
-         familyi={P\bibinitperiod},
-         given={Manohar},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=TD}{%
-         family={Tran},
-         familyi={T\bibinitperiod},
-         given={Du},
-         giveni={D\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GR+1}
-    \strng{fullhash}{GRGGTLPMTD1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2017}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1712.09184
-    \endverb
-    \field{title}{Detect-and-Track: Efficient Pose Estimation in Videos}
-    \verb{url}
-    \verb http://arxiv.org/abs/1712.09184
-    \endverb
-    \field{volume}{abs/1712.09184}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2017}
-  \endentry
-
-  \entry{DBLP:journals/corr/GuSVPRTLRSSM17}{article}{}
-    \name{author}{11}{}{%
-      {{hash=GC}{%
-         family={Gu},
-         familyi={G\bibinitperiod},
-         given={Chunhui},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=SC}{%
-         family={Sun},
-         familyi={S\bibinitperiod},
-         given={Chen},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=VS}{%
-         family={Vijayanarasimhan},
-         familyi={V\bibinitperiod},
-         given={Sudheendra},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=PC}{%
-         family={Pantofaru},
-         familyi={P\bibinitperiod},
-         given={Caroline},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=RDA}{%
-         family={Ross},
-         familyi={R\bibinitperiod},
-         given={David\bibnamedelima A.},
-         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=TG}{%
-         family={Toderici},
-         familyi={T\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=LY}{%
-         family={Li},
-         familyi={L\bibinitperiod},
-         given={Yeqing},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=RS}{%
-         family={Ricco},
-         familyi={R\bibinitperiod},
-         given={Susanna},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Sukthankar},
-         familyi={S\bibinitperiod},
-         given={Rahul},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=SC}{%
-         family={Schmid},
-         familyi={S\bibinitperiod},
-         given={Cordelia},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=MJ}{%
-         family={Malik},
-         familyi={M\bibinitperiod},
-         given={Jitendra},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GC+1}
-    \strng{fullhash}{GCSCVSPCRDATGLYRSSRSCMJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2017}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1705.08421
-    \endverb
-    \field{title}{{AVA:} {A} Video Dataset of Spatio-temporally Localized
-  Atomic Visual Actions}
-    \verb{url}
-    \verb http://arxiv.org/abs/1705.08421
-    \endverb
-    \field{volume}{abs/1705.08421}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2017}
-  \endentry
-
-  \entry{DBLP:journals/corr/abs-1708-07632}{article}{}
+  \entry{DBLP:journals/corr/abs-1708-07632}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=HK}{%
-         family={Hara},
+         family={{Hara}},
          familyi={H\bibinitperiod},
-         given={Kensho},
+         given={K.},
          giveni={K\bibinitperiod},
       }}%
       {{hash=KH}{%
-         family={Kataoka},
+         family={{Kataoka}},
          familyi={K\bibinitperiod},
-         given={Hirokatsu},
+         given={H.},
          giveni={H\bibinitperiod},
       }}%
       {{hash=SY}{%
-         family={Satoh},
+         family={{Satoh}},
          familyi={S\bibinitperiod},
-         given={Yutaka},
+         given={Y.},
          giveni={Y\bibinitperiod},
       }}%
     }
+    \keyw{computer vision;convolution;feature extraction;feedforward neural
+  nets;image classification;image motion analysis;image recognition;learning
+  (artificial intelligence);object detection;object recognition;spatiotemporal
+  phenomena;video databases;video signal processing;spatio-temporal
+  features;residual networks;action recognition;convolutional neural
+  networks;spatio-temporal 3D kernels;spatiotemporal features;videos;deep
+  neural networks;2D-based CNNs;action representation;C3D;video databases;3D
+  CNNs;Three-dimensional displays;Videos;Training;Kinetic theory;Kernel;Two
+  dimensional displays;Databases}
     \strng{namehash}{HKKHSY1}
     \strng{fullhash}{HKKHSY1}
     \field{labelnamesource}{author}
@@ -2968,139 +2909,100 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1708.07632
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  Workshops (ICCVW)}
+    \verb{doi}
+    \verb 10.1109/ICCVW.2017.373
     \endverb
+    \field{pages}{3154\bibrangedash 3160}
     \field{title}{Learning Spatio-Temporal Features with 3D Residual Networks
   for Action Recognition}
-    \verb{url}
-    \verb http://arxiv.org/abs/1708.07632
-    \endverb
-    \field{volume}{abs/1708.07632}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/HeIDM17}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HJ}{%
-         family={He},
-         familyi={H\bibinitperiod},
-         given={Jiawei},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=IMS}{%
-         family={Ibrahim},
-         familyi={I\bibinitperiod},
-         given={Mostafa\bibnamedelima S.},
-         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=DZ}{%
-         family={Deng},
-         familyi={D\bibinitperiod},
-         given={Zhiwei},
-         giveni={Z\bibinitperiod},
-      }}%
-      {{hash=MG}{%
-         family={Mori},
-         familyi={M\bibinitperiod},
-         given={Greg},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HJ+1}
-    \strng{fullhash}{HJIMSDZMG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2017}
-    \field{extradate}{1}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1705.10861
-    \endverb
-    \field{title}{Generic Tubelet Proposals for Action Localization}
-    \verb{url}
-    \verb http://arxiv.org/abs/1705.10861
-    \endverb
-    \field{volume}{abs/1705.10861}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2017}
-  \endentry
-
-  \entry{DBLP:journals/corr/HeGDG17}{article}{}
+  \entry{DBLP:journals/corr/HeGDG17}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=HK}{%
-         family={He},
+         family={{He}},
          familyi={H\bibinitperiod},
-         given={Kaiming},
+         given={K.},
          giveni={K\bibinitperiod},
       }}%
       {{hash=GG}{%
-         family={Gkioxari},
+         family={{Gkioxari}},
          familyi={G\bibinitperiod},
-         given={Georgia},
+         given={G.},
          giveni={G\bibinitperiod},
       }}%
       {{hash=DP}{%
-         family={Doll{\'{a}}r},
+         family={{Dollár}},
          familyi={D\bibinitperiod},
-         given={Piotr},
+         given={P.},
          giveni={P\bibinitperiod},
       }}%
-      {{hash=GRB}{%
-         family={Girshick},
+      {{hash=GR}{%
+         family={{Girshick}},
          familyi={G\bibinitperiod},
-         given={Ross\bibnamedelima B.},
-         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
       }}%
     }
+    \keyw{feature extraction;image segmentation;object detection;pose
+  estimation;conceptually simple framework;bounding-box object detection;object
+  mask;Faster R-CNN;called Mask R-CNN;high-quality segmentation mask;object
+  instance segmentation;Feature extraction;Image segmentation;Object
+  detection;Semantics;Quantization (signal);Robustness}
     \strng{namehash}{HK+1}
-    \strng{fullhash}{HKGGDPGRB1}
+    \strng{fullhash}{HKGGDPGR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2017}
-    \field{extradate}{2}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1703.06870
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.322
     \endverb
-    \field{title}{Mask {R-CNN}}
-    \verb{url}
-    \verb http://arxiv.org/abs/1703.06870
-    \endverb
-    \field{volume}{abs/1703.06870}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{2980\bibrangedash 2988}
+    \field{title}{Mask R-CNN}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/HouCS17}{article}{}
+  \entry{DBLP:journals/corr/HouCS17}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=HR}{%
-         family={Hou},
+         family={{Hou}},
          familyi={H\bibinitperiod},
-         given={Rui},
+         given={R.},
          giveni={R\bibinitperiod},
       }}%
       {{hash=CC}{%
-         family={Chen},
+         family={{Chen}},
          familyi={C\bibinitperiod},
-         given={Chen},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
       {{hash=SM}{%
-         family={Shah},
+         family={{Shah}},
          familyi={S\bibinitperiod},
-         given={Mubarak},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
     }
+    \keyw{convolution;feature extraction;image classification;image motion
+  analysis;image recognition;learning (artificial intelligence);neural
+  nets;object detection;video signal processing;ConvNet;untrimmed videos;video
+  datasets;spatio-temporal action detection;3D Convolutional Network
+  features;Tube Convolutional Neural Network;end-to-end deep network;temporal
+  feature;spatial feature;two-stream CNN framework;frame-level action proposal
+  generation;video action detection approaches;video analysis;object
+  detection;image classification;deep learning;T-CNN;Tube convolutional neural
+  network;Videos;Proposals;Three-dimensional displays;Electron tubes;Feature
+  extraction;Two dimensional displays;Machine learning}
     \strng{namehash}{HRCCSM1}
     \strng{fullhash}{HRCCSM1}
     \field{labelnamesource}{author}
@@ -3109,47 +3011,103 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1703.10664
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.620
     \endverb
-    \field{title}{Tube Convolutional Neural Network {(T-CNN)} for Action
+    \field{pages}{5823\bibrangedash 5832}
+    \field{title}{Tube Convolutional Neural Network (T-CNN) for Action
   Detection in Videos}
-    \verb{url}
-    \verb http://arxiv.org/abs/1703.10664
-    \endverb
-    \field{volume}{abs/1703.10664}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{DBLP:journals/corr/HuangLW16a}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=HG}{%
+         family={{Huang}},
+         familyi={H\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={{Liu}},
+         familyi={L\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=vdML}{%
+         prefix={v.\bibnamedelima d.},
+         prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={{Maaten}},
+         familyi={M\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WKQ}{%
+         family={{Weinberger}},
+         familyi={W\bibinitperiod},
+         given={K.\bibnamedelima Q.},
+         giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod},
+      }}%
+    }
+    \keyw{convolution;feedforward neural nets;learning (artificial
+  intelligence);DenseNet;traditional convolutional networks;feature
+  propagation;feature reuse;object recognition benchmark tasks;dense
+  convolutional network;vanishing-gradient problem;Training;Convolution;Network
+  architecture;Convolutional codes;Neural networks;Road transportation}
+    \strng{namehash}{HG+1}
+    \strng{fullhash}{HGLZMLvdWKQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2017 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2017.243
+    \endverb
+    \field{pages}{2261\bibrangedash 2269}
+    \field{title}{Densely Connected Convolutional Networks}
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{kalogeiton17iccv:hal-01519812}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=KV}{%
-         family={Kalogeiton},
+         family={{Kalogeiton}},
          familyi={K\bibinitperiod},
-         given={Vicky},
+         given={V.},
          giveni={V\bibinitperiod},
       }}%
       {{hash=WP}{%
-         family={Weinzaepfel},
+         family={{Weinzaepfel}},
          familyi={W\bibinitperiod},
-         given={Philippe},
+         given={P.},
          giveni={P\bibinitperiod},
       }}%
       {{hash=FV}{%
-         family={Ferrari},
+         family={{Ferrari}},
          familyi={F\bibinitperiod},
-         given={Vittorio},
+         given={V.},
          giveni={V\bibinitperiod},
       }}%
       {{hash=SC}{%
-         family={Schmid},
+         family={{Schmid}},
          familyi={S\bibinitperiod},
-         given={Cordelia},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
     }
+    \keyw{convolution;feature extraction;image sequences;object
+  detection;regression analysis;video signal processing;ACT-detector;action
+  Tubelet detector;spatio-temporal action localization;anchor boxes;temporal
+  stacking;object detectors;Detectors;Videos;Proposals;Feature
+  extraction;Convolutional codes;Electron tubes;Shape}
     \strng{namehash}{KV+1}
     \strng{fullhash}{KVWPFVSC1}
     \field{labelnamesource}{author}
@@ -3158,15 +3116,16 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{booktitle}{{ICCV 2017 - IEEE International Conference on Computer
-  Vision}}
-    \field{title}{{Action Tubelet Detector for Spatio-Temporal Action
-  Localization}}
-    \list{location}{1}{%
-      {Venice, Italy}%
-    }
-    \field{month}{10}
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.472
+    \endverb
+    \field{pages}{4415\bibrangedash 4423}
+    \field{title}{Action Tubelet Detector for Spatio-Temporal Action
+  Localization}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/KayCSZHVVGBNSZ17}{article}{}
@@ -3265,6 +3224,71 @@
     \field{year}{2017}
   \endentry
 
+  \entry{8099589}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=LT}{%
+         family={{Lin}},
+         familyi={L\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={{Dollár}},
+         familyi={D\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={{Girshick}},
+         familyi={G\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={{He}},
+         familyi={H\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={{Hariharan}},
+         familyi={H\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={{Belongie}},
+         familyi={B\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{feature extraction;image representation;neural nets;object
+  detection;object recognition;deep convolutional networks;pyramidal
+  hierarchy;high-level semantic feature maps;Feature Pyramid Network;generic
+  feature extractor;basic Faster R-CNN system;COCO detection
+  benchmark;multiscale object detection;pyramid representations;FPN;Feature
+  extraction;Detectors;Semantics;Computer architecture;Proposals;Object
+  detection;Robustness}
+    \strng{namehash}{LT+1}
+    \strng{fullhash}{LTDPGRHKHBBS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2017 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR.2017.106
+    \endverb
+    \field{pages}{936\bibrangedash 944}
+    \field{title}{Feature Pyramid Networks for Object Detection}
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{DBLP:journals/corr/MaCKA17}{article}{}
     \name{author}{4}{}{%
       {{hash=MC}{%
@@ -3314,22 +3338,31 @@
     \field{year}{2017}
   \endentry
 
-  \entry{DBLP:journals/corr/MettesS17}{article}{}
+  \entry{DBLP:journals/corr/MettesS17}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=MP}{%
-         family={Mettes},
+         family={{Mettes}},
          familyi={M\bibinitperiod},
-         given={Pascal},
+         given={P.},
          giveni={P\bibinitperiod},
       }}%
       {{hash=SCGM}{%
-         family={Snoek},
+         family={{Snoek}},
          familyi={S\bibinitperiod},
-         given={Cees G.\bibnamedelima M.},
+         given={C.\bibnamedelima G.\bibnamedelima M.},
          giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim
   M\bibinitperiod},
       }}%
     }
+    \keyw{image classification;image motion analysis;object detection;object
+  recognition;video signal processing;spatial awareness;object detectors;word
+  embedding space;object positions;spatial-aware embedding;classification
+  experiments;zero-shot localization;classification settings;human
+  actions;global attribute;spatial-aware object embedding;action video
+  datasets;spatial preferences;object awareness;spatiotemporal action
+  retrieval;supervised action localization;spatial-aware object
+  embeddings;actor-object interaction;action classification;Electron
+  tubes;Proposals;Detectors;Training;Semantics;Sports equipment;Trajectory}
     \strng{namehash}{MPSCGM1}
     \strng{fullhash}{MPSCGM1}
     \field{labelnamesource}{author}
@@ -3338,41 +3371,108 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1707.09145
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.476
     \endverb
+    \field{pages}{4453\bibrangedash 4462}
     \field{title}{Spatial-Aware Object Embeddings for Zero-Shot Localization
   and Classification of Actions}
-    \verb{url}
-    \verb http://arxiv.org/abs/1707.09145
-    \endverb
-    \field{volume}{abs/1707.09145}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{DBLP:journals/corr/SahaSC17}{article}{}
+  \entry{Ren:2015:FRT:2969239.2969250}{article}{}
+    \name{author}{4}{}{%
+      {{hash=RS}{%
+         family={{Ren}},
+         familyi={R\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={{He}},
+         familyi={H\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={{Girshick}},
+         familyi={G\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={{Sun}},
+         familyi={S\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{graphics processing units;neural nets;object
+  detection;faster-R-CNN;real-time object detection;region proposal
+  networks;RPN;full-image convolutional features;high-quality region
+  proposals;attention mechanisms;deep VGG-16 model;GPU;object detection
+  accuracy;PASCAL VOC 2007;PASCAL VOC 2012;MS COCO datasets;COCO 2015
+  competitions;ILSVRC;Proposals;Object detection;Convolutional codes;Feature
+  extraction;Search problems;Detectors;Training;Object detection;region
+  proposal;convolutional neural network}
+    \strng{namehash}{RS+1}
+    \strng{fullhash}{RSHKGRSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \verb{doi}
+    \verb 10.1109/TPAMI.2016.2577031
+    \endverb
+    \field{number}{6}
+    \field{pages}{1137\bibrangedash 1149}
+    \field{title}{Faster R-CNN: Towards Real-Time Object Detection with Region
+  Proposal Networks}
+    \field{volume}{39}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{DBLP:journals/corr/SahaSC17}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=SS}{%
-         family={Saha},
+         family={{Saha}},
          familyi={S\bibinitperiod},
-         given={Suman},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
       {{hash=SG}{%
-         family={Singh},
+         family={{Singh}},
          familyi={S\bibinitperiod},
-         given={Gurkirt},
+         given={G.},
          giveni={G\bibinitperiod},
       }}%
       {{hash=CF}{%
-         family={Cuzzolin},
+         family={{Cuzzolin}},
          familyi={C\bibinitperiod},
-         given={Fabio},
+         given={F.},
          giveni={F\bibinitperiod},
       }}%
     }
+    \keyw{convolution;feature extraction;image classification;image motion
+  analysis;image recognition;image representation;learning (artificial
+  intelligence);neural nets;object detection;optimisation;stereo image
+  processing;video signal processing;video frames;AMTnet;3D region proposal
+  classification;temporal encoding;complete action tubes;microtubes;test time
+  the network;classification;action localisation;expensive flow maps;3D-RPN
+  net;classical region proposal networks;deep net framework;action detection
+  problem;video subsets;deep network architecture;post-processing
+  step;frame-level detections;end-to-end trainable deep
+  architecture;action-microtube regression;Proposals;Three-dimensional
+  displays;Training;Electron tubes;Computer architecture;Encoding;Optical fiber
+  networks}
     \strng{namehash}{SSSGCF1}
     \strng{fullhash}{SSSGCF1}
     \field{labelnamesource}{author}
@@ -3381,53 +3481,59 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1704.04952
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.473
     \endverb
-    \field{title}{AMTnet: Action-Micro-Tube regression by end-to-end trainable
-  deep architecture}
-    \verb{url}
-    \verb http://arxiv.org/abs/1704.04952
-    \endverb
-    \field{volume}{abs/1704.04952}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{4424\bibrangedash 4433}
+    \field{title}{AMTnet: Action-Micro-Tube Regression by End-to-end Trainable
+  Deep Architecture}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{singh2016online}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=SG}{%
-         family={Singh},
+         family={{Singh}},
          familyi={S\bibinitperiod},
-         given={Gurkirt},
+         given={G.},
          giveni={G\bibinitperiod},
       }}%
       {{hash=SS}{%
-         family={Saha},
+         family={{Saha}},
          familyi={S\bibinitperiod},
-         given={Suman},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
       {{hash=SM}{%
-         family={Sapienza},
+         family={{Sapienza}},
          familyi={S\bibinitperiod},
-         given={Michael},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
       {{hash=TP}{%
-         family={Torr},
+         family={{Torr}},
          familyi={T\bibinitperiod},
-         given={Philip},
+         given={P.},
          giveni={P\bibinitperiod},
       }}%
       {{hash=CF}{%
-         family={Cuzzolin},
+         family={{Cuzzolin}},
          familyi={C\bibinitperiod},
-         given={Fabio},
+         given={F.},
          giveni={F\bibinitperiod},
       }}%
     }
+    \keyw{feature extraction;image classification;learning (artificial
+  intelligence);object detection;video signal processing;real-time SSD;Single
+  Shot MultiBox Detector;video frame;action tubes;SSD frame level
+  detections;S/T detection;online S/T action localisation;online real-time
+  multiple spatiotemporal action localisation;deep-learning framework;online
+  algorithm;multiple spatiotemporal action classification;detection boxes
+  classification;Real-time systems;Streaming media;Electron
+  tubes;Proposals;Optical imaging;Detectors;Computer architecture}
     \strng{namehash}{SG+1}
     \strng{fullhash}{SGSSSMTPCF1}
     \field{labelnamesource}{author}
@@ -3436,9 +3542,16 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{title}{Online Real time Multiple Spatiotemporal Action Localisation
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.393
+    \endverb
+    \field{pages}{3657\bibrangedash 3666}
+    \field{title}{Online Real-Time Multiple Spatiotemporal Action Localisation
   and Prediction}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{8237344}{inproceedings}{}
@@ -3483,67 +3596,6 @@
     \field{title}{Unsupervised Action Discovery and Localization in Videos}
     \field{year}{2017}
     \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{DBLP:journals/corr/abs-1711-11248}{article}{}
-    \name{author}{6}{}{%
-      {{hash=TD}{%
-         family={Tran},
-         familyi={T\bibinitperiod},
-         given={Du},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=WH}{%
-         family={Wang},
-         familyi={W\bibinitperiod},
-         given={Heng},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=TL}{%
-         family={Torresani},
-         familyi={T\bibinitperiod},
-         given={Lorenzo},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=RJ}{%
-         family={Ray},
-         familyi={R\bibinitperiod},
-         given={Jamie},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=LY}{%
-         family={LeCun},
-         familyi={L\bibinitperiod},
-         given={Yann},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=PM}{%
-         family={Paluri},
-         familyi={P\bibinitperiod},
-         given={Manohar},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{TD+1}
-    \strng{fullhash}{TDWHTLRJLYPM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2017}
-    \field{labeldatesource}{year}
-    \field{sortinit}{2}
-    \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1711.11248
-    \endverb
-    \field{title}{A Closer Look at Spatiotemporal Convolutions for Action
-  Recognition}
-    \verb{url}
-    \verb http://arxiv.org/abs/1711.11248
-    \endverb
-    \field{volume}{abs/1711.11248}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
-    \field{year}{2017}
   \endentry
 
   \entry{jjfaster2rcnn}{article}{}
@@ -3684,33 +3736,40 @@
     \field{year}{2017}
   \endentry
 
-  \entry{DBLP:journals/corr/ZolfaghariOSB17}{article}{}
+  \entry{DBLP:journals/corr/ZolfaghariOSB17}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=ZM}{%
-         family={Zolfaghari},
+         family={{Zolfaghari}},
          familyi={Z\bibinitperiod},
-         given={Mohammadreza},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
       {{hash=OGL}{%
-         family={Oliveira},
+         family={{Oliveira}},
          familyi={O\bibinitperiod},
-         given={Gabriel\bibnamedelima L.},
+         given={G.\bibnamedelima L.},
          giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod},
       }}%
       {{hash=SN}{%
-         family={Sedaghat},
+         family={{Sedaghat}},
          familyi={S\bibinitperiod},
-         given={Nima},
+         given={N.},
          giveni={N\bibinitperiod},
       }}%
       {{hash=BT}{%
-         family={Brox},
+         family={{Brox}},
          familyi={B\bibinitperiod},
-         given={Thomas},
+         given={T.},
          giveni={T\bibinitperiod},
       }}%
     }
+    \keyw{image classification;image motion analysis;image sequences;Markov
+  processes;pose estimation;spatiotemporal phenomena;video signal
+  processing;chained multistream networks;human action recognition;visual
+  cues;action classification performance;HMDB51 dataset;J-HMDB dataset;NTU
+  RGB+D dataset;UCF101 dataset;temporal action localization;spatial action
+  localization;Markov chain model;raw images;Videos;Computer
+  architecture;Optical imaging;Image segmentation;Markov processes;Training}
     \strng{namehash}{ZM+1}
     \strng{fullhash}{ZMOGLSNBT1}
     \field{labelnamesource}{author}
@@ -3719,18 +3778,16 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1704.00616
+    \field{booktitle}{2017 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2017.316
     \endverb
+    \field{pages}{2923\bibrangedash 2932}
     \field{title}{Chained Multi-stream Networks Exploiting Pose, Motion, and
   Appearance for Action Classification and Detection}
-    \verb{url}
-    \verb http://arxiv.org/abs/1704.00616
-    \endverb
-    \field{volume}{abs/1704.00616}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:DibaFSKAYG18}{inproceedings}{}
@@ -3798,41 +3855,62 @@
     \field{year}{2018}
   \endentry
 
-  \entry{DBLP:journals/corr/abs-1802-08362}{article}{}
-    \name{author}{2}{}{%
-      {{hash=EA}{%
-         family={El{-}Nouby},
-         familyi={E\bibinitperiod},
-         given={Alaaeldin},
-         giveni={A\bibinitperiod},
+  \entry{DBLP:journals/corr/abs-1712-09184}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=GR}{%
+         family={{Girdhar}},
+         familyi={G\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
       }}%
-      {{hash=TGW}{%
-         family={Taylor},
+      {{hash=GG}{%
+         family={{Gkioxari}},
+         familyi={G\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={{Torresani}},
          familyi={T\bibinitperiod},
-         given={Graham\bibnamedelima W.},
-         giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={{Paluri}},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={{Tran}},
+         familyi={T\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
       }}%
     }
-    \strng{namehash}{EATGW1}
-    \strng{fullhash}{EATGW1}
+    \keyw{object detection;object tracking;pose estimation;tracking;video
+  signal processing;human body keypoints;keypoint estimation;keypoint
+  predictions;multi-person video pose estimation benchmark;human detection;mask
+  R-CNN;detect-and-track;multi-object tracking accuracy metric;MOTA;video pose
+  estimation;Videos;Three-dimensional displays;Electron tubes;Pose
+  estimation;Two dimensional displays;Task analysis;Optimization}
+    \strng{namehash}{GR+1}
+    \strng{fullhash}{GRGGTLPMTD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2018}
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1802.08362
+    \field{booktitle}{2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2018.00044
     \endverb
-    \field{title}{Real-Time End-to-End Action Detection with Two-Stream
-  Networks}
-    \verb{url}
-    \verb http://arxiv.org/abs/1802.08362
-    \endverb
-    \field{volume}{abs/1802.08362}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
+    \field{pages}{350\bibrangedash 359}
+    \field{title}{Detect-and-Track: Efficient Pose Estimation in Videos}
     \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/abs-1807-10066}{article}{}
@@ -3862,7 +3940,7 @@
          giveni={A\bibinitperiod},
       }}%
     }
-    \strng{namehash}{GR+1}
+    \strng{namehash}{GR+2}
     \strng{fullhash}{GRCJDCZA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -3881,6 +3959,107 @@
     \field{journaltitle}{CoRR}
     \field{eprinttype}{arXiv}
     \field{year}{2018}
+  \endentry
+
+  \entry{DBLP:journals/corr/GuSVPRTLRSSM17}{inproceedings}{}
+    \name{author}{12}{}{%
+      {{hash=GC}{%
+         family={{Gu}},
+         familyi={G\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={{Sun}},
+         familyi={S\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RDA}{%
+         family={{Ross}},
+         familyi={R\bibinitperiod},
+         given={D.\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VC}{%
+         family={{Vondrick}},
+         familyi={V\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={{Pantofaru}},
+         familyi={P\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={{Li}},
+         familyi={L\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={{Vijayanarasimhan}},
+         familyi={V\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TG}{%
+         family={{Toderici}},
+         familyi={T\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={{Ricco}},
+         familyi={R\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={{Sukthankar}},
+         familyi={S\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={{Schmid}},
+         familyi={S\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={{Malik}},
+         familyi={M\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{image motion analysis;video signal processing;video dataset;AVA
+  dataset;composite actions;atomic actions;action
+  representations;spatio-temporal action recognition;action complexity;action
+  localization;video clips;spatio-temporally localized atomic visual
+  actions;spatio-temporal annotations;Motion
+  pictures;Visualization;Vocabulary;Sports;YouTube;Labeling;Detectors}
+    \strng{namehash}{GC+1}
+    \strng{fullhash}{GCSCRDAVCPCLYVSTGRSSRSCMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2018.00633
+    \endverb
+    \field{pages}{6047\bibrangedash 6056}
+    \field{title}{AVA: A Video Dataset of Spatio-Temporally Localized Atomic
+  Visual Actions}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Guo_2018_ECCV}{inproceedings}{}
@@ -3940,24 +4119,32 @@
   \entry{hara3dcnns}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=HK}{%
-         family={Hara},
+         family={{Hara}},
          familyi={H\bibinitperiod},
-         given={Kensho},
+         given={K.},
          giveni={K\bibinitperiod},
       }}%
       {{hash=KH}{%
-         family={Kataoka},
+         family={{Kataoka}},
          familyi={K\bibinitperiod},
-         given={Hirokatsu},
+         given={H.},
          giveni={H\bibinitperiod},
       }}%
       {{hash=SY}{%
-         family={Satoh},
+         family={{Satoh}},
          familyi={S\bibinitperiod},
-         given={Yutaka},
+         given={Y.},
          giveni={Y\bibinitperiod},
       }}%
     }
+    \keyw{computer vision;convolutional neural nets;image motion
+  analysis;spatiotemporal phenomena;stereo image processing;video signal
+  processing;ImageNet;deep convolutional neural networks;spatiotemporal 3D
+  CNN;2D CNN;video datasets;spatio-temporal 3D kernels;action
+  recognition;ResNet-18 training;Kinetics dataset;Kinetics test
+  set;UCF-101;HMDB-51;computer vision;Three-dimensional displays;Kinetic
+  theory;Two dimensional displays;Training;Task analysis;Kernel;Computer
+  vision}
     \strng{namehash}{HKKHSY1}
     \strng{fullhash}{HKKHSY1}
     \field{labelnamesource}{author}
@@ -3966,12 +4153,69 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
-  Pattern Recognition (CVPR)}
+    \field{booktitle}{2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2018.00685
+    \endverb
     \field{pages}{6546\bibrangedash 6555}
     \field{title}{Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and
   ImageNet?}
     \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{DBLP:journals/corr/HeIDM17}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=HJ}{%
+         family={{He}},
+         familyi={H\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DZ}{%
+         family={{Deng}},
+         familyi={D\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=IMS}{%
+         family={{Ibrahim}},
+         familyi={I\bibinitperiod},
+         given={M.\bibnamedelima S.},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={{Mori}},
+         familyi={M\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{image classification;image motion analysis;object detection;video
+  signal processing;action localization;video-level tubelet proposals;video
+  analysis tasks;unified temporal deep network;action classification;generic
+  tubelet proposal method;class-independent TPN;tubelet generation methods;tube
+  proposal network;TPN;L1 loss function;UCF-101 dataset;UCF-Sports
+  dataset;J-HMDB21 dataset;Proposals;Videos;Electron tubes;Object
+  detection;Task analysis;Trajectory;Standards}
+    \strng{namehash}{HJ+1}
+    \strng{fullhash}{HJDZIMSMG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2018 IEEE Winter Conference on Applications of Computer
+  Vision (WACV)}
+    \verb{doi}
+    \verb 10.1109/WACV.2018.00044
+    \endverb
+    \field{pages}{343\bibrangedash 351}
+    \field{title}{Generic Tubelet Proposals for Action Localization}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/abs-1806-11230}{article}{}
@@ -4010,27 +4254,33 @@
     \field{year}{2018}
   \endentry
 
-  \entry{DBLP:journals/corr/abs-1802-09232}{article}{}
+  \entry{DBLP:journals/corr/abs-1802-09232}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=LDC}{%
-         family={Luvizon},
+         family={{Luvizon}},
          familyi={L\bibinitperiod},
-         given={Diogo\bibnamedelima C.},
+         given={D.\bibnamedelima C.},
          giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
       }}%
       {{hash=PD}{%
-         family={Picard},
+         family={{Picard}},
          familyi={P\bibinitperiod},
-         given={David},
+         given={D.},
          giveni={D\bibinitperiod},
       }}%
       {{hash=TH}{%
-         family={Tabia},
+         family={{Tabia}},
          familyi={T\bibinitperiod},
-         given={Hedi},
+         given={H.},
          giveni={H\bibinitperiod},
       }}%
     }
+    \keyw{image motion analysis;image representation;image sequences;learning
+  (artificial intelligence);pose estimation;2D-3D pose estimation;multitask
+  deep learning;Penn Action;single architecture;video sequences;human action
+  recognition;multitask framework;Pose estimation;Three-dimensional
+  displays;Two dimensional displays;Visualization;Heating systems;Task
+  analysis;Skeleton}
     \strng{namehash}{LDCPDTH1}
     \strng{fullhash}{LDCPDTH1}
     \field{labelnamesource}{author}
@@ -4039,18 +4289,83 @@
     \field{labeldatesource}{year}
     \field{sortinit}{2}
     \field{sortinithash}{2}
-    \verb{eprint}
-    \verb 1802.09232
+    \field{booktitle}{2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2018.00539
     \endverb
-    \field{title}{2D/3D Pose Estimation and Action Recognition using Multitask
+    \field{pages}{5137\bibrangedash 5146}
+    \field{title}{2D/3D Pose Estimation and Action Recognition Using Multitask
   Deep Learning}
-    \verb{url}
-    \verb http://arxiv.org/abs/1802.09232
-    \endverb
-    \field{volume}{abs/1802.09232}
-    \field{journaltitle}{CoRR}
-    \field{eprinttype}{arXiv}
     \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{DBLP:journals/corr/abs-1711-11248}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=TD}{%
+         family={{Tran}},
+         familyi={T\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={{Wang}},
+         familyi={W\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={{Torresani}},
+         familyi={T\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={{Ray}},
+         familyi={R\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={{LeCun}},
+         familyi={L\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={{Paluri}},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{convolution;feedforward neural nets;image filtering;image motion
+  analysis;image recognition;learning (artificial intelligence);object
+  recognition;video signal processing;spatiotemporal convolutions;action
+  recognition;video analysis;3D convolutional filters;spatial
+  components;temporal components;R(2+1)D spatiotemporal convolutional block;2D
+  CNNs;residual learning;Three-dimensional displays;Two dimensional
+  displays;Spatiotemporal phenomena;Solid modeling;Feature extraction;Computer
+  architecture}
+    \strng{namehash}{TD+1}
+    \strng{fullhash}{TDWHTLRJLYPM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{booktitle}{2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2018.00675
+    \endverb
+    \field{pages}{6450\bibrangedash 6459}
+    \field{title}{A Closer Look at Spatiotemporal Convolutions for Action
+  Recognition}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{DBLP:journals/corr/abs-1903-00304}{article}{}

@@ -1,0 +1,14 @@
+\beamer@sectionintoc {1}{Introduction}{7}{0}{1}
+\beamer@subsectionintoc {1}{1}{Problem statement}{7}{0}{1}
+\beamer@sectionintoc {2}{Background}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Machine Learning}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Object Detectors}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Losses and Metrics}{8}{0}{2}
+\beamer@sectionintoc {3}{Tube Proposal Network}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{Approach 1}{8}{0}{3}
+\beamer@subsectionintoc {3}{2}{Approach 2}{8}{0}{3}
+\beamer@sectionintoc {4}{Connection Algorithm}{8}{0}{4}
+\beamer@subsectionintoc {4}{1}{Approach 1}{8}{0}{4}
+\beamer@subsectionintoc {4}{2}{Approach 2}{8}{0}{4}
+\beamer@subsectionintoc {4}{3}{Approach 3}{8}{0}{4}
+\beamer@sectionintoc {5}{Classification stage}{8}{0}{5}

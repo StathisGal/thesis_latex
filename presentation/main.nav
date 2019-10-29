@@ -1,7 +1,46 @@
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\beamer@partpages {1}{1}}
-\headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\beamer@sectionpages {1}{1}}
-\headcommand {\beamer@documentpages {1}}
-\headcommand {\gdef \inserttotalframenumber {1}}
+\headcommand {\slideentry {0}{0}{2}{2/6}{}{0}}
+\headcommand {\beamer@framepages {2}{6}}
+\headcommand {\beamer@sectionpages {1}{6}}
+\headcommand {\beamer@subsectionpages {1}{6}}
+\headcommand {\sectionentry {1}{Introduction}{7}{Introduction}{0}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{7}{Problem statement}}
+\headcommand {\slideentry {1}{1}{1}{7/7}{Problem statement}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@sectionpages {7}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\sectionentry {2}{Background}{8}{Background}{0}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{8}{Machine Learning}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{8}{Object Detectors}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{8}{Losses and Metrics}}
+\headcommand {\beamer@sectionpages {8}{7}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\sectionentry {3}{Tube Proposal Network}{8}{Tube Proposal Network}{0}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{8}{Approach 1}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{8}{Approach 2}}
+\headcommand {\beamer@sectionpages {8}{7}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\sectionentry {4}{Connection Algorithm}{8}{Connection Algorithm}{0}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{8}{Approach 1}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{8}{Approach 2}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{8}{Approach 3}}
+\headcommand {\beamer@sectionpages {8}{7}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\sectionentry {5}{Classification stage}{8}{Classification stage}{0}}
+\headcommand {\slideentry {5}{0}{1}{8/8}{}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@partpages {1}{8}}
+\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\beamer@sectionpages {8}{8}}
+\headcommand {\beamer@documentpages {8}}
+\headcommand {\gdef \inserttotalframenumber {4}}

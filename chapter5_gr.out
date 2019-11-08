@@ -1,0 +1,8 @@
+\BOOKMARK [0][-]{chapter.1}{greekenglishClassification stagegreekgreek}{}% 1
+\BOOKMARK [1][-]{section.1.1}{JHDMB dataset}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{\265 greekenglishLinear, SVM greekgreek greekenglishRNN greekgreek}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{greekenglishTemporal pooling greekgreek}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{ \040greekenglishgroundtruth tubesgreekgreek}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{\265 greekenglishMultiLayer Perceptron \(MLP\)}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.3.1}{ greekenglishtraining}{section.1.3}% 7
+\BOOKMARK [2][-]{subsection.1.3.2}{ }{section.1.3}% 8

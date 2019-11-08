@@ -1,0 +1,42 @@
+\documentclass{report}
+
+\usepackage{subcaption} % package for subfigures
+\usepackage{hyperref}  % package for linking figures etc
+\usepackage{enumitem}  % package for description with bullets
+\usepackage{graphicx}  % package for importing images
+\usepackage{mathtools} % package for math equation
+\usepackage{mathrsfs}  % package for math font
+\usepackage{indentfirst} % package for getting ident after section or paragraph
+\usepackage[export]{adjustbox}
+\usepackage{multirow}  % package for tables, multir
+\usepackage{amssymb}
+% \usepackage{tabu}   % for tables 
+\setlength{\parindent}{2em} % how much indent to use when we start a paragraph
+
+\graphicspath{ {./theory/figures/} }       % path for images
+
+\begin{document}
+
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{||c | c || c  c  c ||}
+    \hline
+    \textbf{Dataset} & \textbf{Pooling}  & \textbf{Recall} &  \textbf{ Recall SR}  &  \textbf{Recall SRF} \\
+    \hline
+    \multirow{2}{*}{JHMDB} & mean &  0.6828  & 0.5112  & 0.7610 \\
+    \cline{2-5}
+    {} & max &  0.8582 & 0.7985 & 0.5914\\
+    \hline
+    \multirow{2}{*}{UCF} & mean & 0.5055 & 0.4286 & 0.5889 \\
+    \cline{2-5}
+    {} & max & 0.5186 & 0.4990 & 0.5708 \\
+    \hline
+
+  \end{tabular}
+  \caption{Recall performance using 3 different feature maps as Regressor's input and 2 pooling methods}
+  \label{table:reg_1_2}
+\end{table}
+
+
+\end{document}

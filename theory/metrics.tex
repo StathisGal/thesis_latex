@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage{hyperref}  % package for linking figures etc
+
+\begin{document}
+
+\section{Metrics}
+Evaluating our machine learning algorithm is an essential part of any project. The way we choose our metrics influences how the performance of machine learning algorithms is measured and compared.
+They influence how to weight the importance of different characteristics in the results and finally, the ultimate choice of which algorithm to choose. Most of the times we use classification accuracy
+to measure the performance of our model, however it is not enough to truly judge our model.
+
+\subsection{Precision, Recall \& F1 score}
+
+\begin{description}
+\item[ Precision ]  measures how accurate is your predictions. i.e. the percentage of your predictions are correct.
+\item[ Recall ] measures how good you find all the positives. For example, we can find 80\% of the possible positive cases in our top K predictions.
+\end{description}
+Their definisions are:
+\[ Precision = \frac{TP}{TP + FP} \]  
+\[  Recall = \frac{TP}{TP + FN} \] 
+\[ F1 = 2 \cdot \frac{precision \cdot recall}{precision + recall} \]
+where \begin{itemize}
+\item TP = True positive
+\item TN = True negative
+\item FP = False positive
+\item FN = False negative
+\end{itemize}
+
+\subsection{Intersection over Union}
+
+Intersection over Union (IoU)  measures the overlap between 2 boundaries. We use that to measure how much our predicted boundary overlaps with the ground truth (the real object boundary).
+In some datasets, we predefine an IoU threshold (say 0.5) in classifying whether the prediction is a true positive or a false positive.
+
+\subsection{mAP}
+Precision and recall are single-value metrics based on the whole list of predictions. By looking their formulas, we can see that there is
+a trade-off between precision and recall performance. This trade-off can be adjusted by the softmax threshold, used in model's final layer.
+In order to have high precision performance, we need to decrease the number of FP. But this will lead to decrease recall performance and
+vice-versa. \par
+As a result, these metrics fail to determine if a model is performing well in object detection tasks as well as action detection tasks. For
+that reason, we use mAP metric
+\par{AP (Average precision)} is a popular metric in measuring the accuracy of object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
+
+% AP (Average precision) is a popular metric in measuring the accuracy of object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
+% It sounds complicated but actually pretty simple as we illustrate it with an example.
+\subsection{Our metrics}
+According to \cite{DBLP:journals/corr/GkioxariM14} we use the following metrics in order to quantify our results:
+\begin{description}
+\item[ frame-AP ] measures the area under the precision-recallcurve of the detections for each frame (similar to the PASCAL  VOC  detection  challenge  \cite{Everingham10}).   A  detection is correct
+  if the intersection-over-union with theground truth at that frame is greater than and the ac-tion label is correctly predicted.
+\item [ video-AP ] measures the area under the precision-recallcurve of the action tubes predictions. A tube is correctif the mean per frame intersection-over-union with theground truth across the
+  frames of the video is greaterthan and the action label is correctly predicted.
+\item [ AUC ] measures the area under the ROC curve, a metricpreviously used on this task.  An action tube is correctunder the same conditions as invideo-AP. Following
+  \cite{Tian:2013:SDP:2514950.2515975} , the ROC curve is plotted until a false positive rateof 0.6, while keeping the top-3 detections per class andper video. Consequently,
+  the best possible AUC scoreis 60\%.
+\end{description}
+\bibliography{References}
+\bibliographystyle{plain}
+\end{document}

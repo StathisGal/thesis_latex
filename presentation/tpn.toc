@@ -1,0 +1,6 @@
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\beamer@sectionintoc {1}{\textlatin {Tube Proposal Network}}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{\textlatin {Background}}{1}{0}{1}
+\beamer@subsectionintoc {1}{2}{1\textsuperscript {\IeC {\texteta }} \IeC {\textpi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textsigma }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textgamma }\IeC {\textgamma }\IeC {\textiota }\IeC {\textsigma }\IeC {\texteta }}{11}{0}{1}
+\beamer@subsectionintoc {1}{3}{2\textsuperscript {\IeC {\texteta }} \IeC {\textpi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textsigma }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textgamma }\IeC {\textgamma }\IeC {\textiota }\IeC {\textsigma }\IeC {\texteta }}{14}{0}{1}

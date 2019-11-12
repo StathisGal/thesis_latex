@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.5)  8 NOV 2019 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.5)  10 NOV 2019 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1740,6 +1740,12 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 \openout5 = `main_file.toc'.
 
  [16] (./main_file.lot
+Underfull \hbox (badness 3240) in paragraph at lines 2752--2752
+ [][] [][][][]\LGR/cmr/m/n/10 Ta a-po-te-lèsma-ta tou \OT1/cmr/m/n/10 mAP \LGR/
+cmr/m/n/10 gia ton ta-xi-no-mh-t  \OT1/cmr/m/n/10 MLP \LGR/cmr/m/n/10 ek-pai-de
+-Ôo-ntac ton 
+ []
+
 [17
 
 ] [18])
@@ -2318,7 +2324,7 @@ Underfull \hbox (badness 1910) in paragraph at lines 82--88
 sh-ma-nti-kìte-rec pro-kl seic
  []
 
-<./theory/figures/open_example.png, id=1052, 801.99625pt x 337.26pt>
+<./theory/figures/open_example.png, id=1059, 801.99625pt x 337.26pt>
 File: ./theory/figures/open_example.png Graphic file (type png)
 <use ./theory/figures/open_example.png>
 Package pdftex.def Info: ./theory/figures/open_example.png  used on input line 
@@ -3105,7 +3111,7 @@ Underfull \hbox (badness 6758) in paragraph at lines 47--49
 n/10 (3D Con-vo-lu-tional Net-work)[][]\LGR/cmr/m/n/10 , to o-po-Ðo
  []
 
-<./theory/figures/final_structure.png, id=1274, 595.22375pt x 847.165pt>
+<./theory/figures/final_structure.png, id=1281, 595.22375pt x 847.165pt>
 File: ./theory/figures/final_structure.png Graphic file (type png)
 <use ./theory/figures/final_structure.png>
 Package pdftex.def Info: ./theory/figures/final_structure.png  used on input li
@@ -3415,24 +3421,24 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./theory/figures/final_structure.png>]
-<./figures/original_image.jpg, id=1295, 321.2pt x 240.9pt>
+<./figures/original_image.jpg, id=1302, 321.2pt x 240.9pt>
 File: ./figures/original_image.jpg Graphic file (type jpg)
 <use ./figures/original_image.jpg>
 Package pdftex.def Info: ./figures/original_image.jpg  used on input line 100.
 (pdftex.def)             Requested size: 146.39133pt x 109.79713pt.
-<./figures/original_image_rois.jpg, id=1296, 321.2pt x 240.9pt>
+<./figures/original_image_rois.jpg, id=1303, 321.2pt x 240.9pt>
 File: ./figures/original_image_rois.jpg Graphic file (type jpg)
 <use ./figures/original_image_rois.jpg>
 Package pdftex.def Info: ./figures/original_image_rois.jpg  used on input line 
 107.
 (pdftex.def)             Requested size: 146.39133pt x 109.79713pt.
-<./figures/transformed_image.jpg, id=1297, 112.42pt x 112.42pt>
+<./figures/transformed_image.jpg, id=1304, 112.42pt x 112.42pt>
 File: ./figures/transformed_image.jpg Graphic file (type jpg)
 <use ./figures/transformed_image.jpg>
 Package pdftex.def Info: ./figures/transformed_image.jpg  used on input line 11
 4.
 (pdftex.def)             Requested size: 146.39133pt x 146.40843pt.
-<./figures/transformed_image_rois.jpg, id=1298, 112.42pt x 112.42pt>
+<./figures/transformed_image_rois.jpg, id=1305, 112.42pt x 112.42pt>
 File: ./figures/transformed_image_rois.jpg Graphic file (type jpg)
 <use ./figures/transformed_image_rois.jpg>
 Package pdftex.def Info: ./figures/transformed_image_rois.jpg  used on input li
@@ -3744,49 +3750,49 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\texteta' on input line 141.
 
-<./theory/figures/anchor_6d.png, id=1307, 418.56375pt x 282.05376pt>
+<./theory/figures/anchor_6d.png, id=1314, 418.56375pt x 282.05376pt>
 File: ./theory/figures/anchor_6d.png Graphic file (type png)
 <use ./theory/figures/anchor_6d.png>
 Package pdftex.def Info: ./theory/figures/anchor_6d.png  used on input line 148
 .
 (pdftex.def)             Requested size: 209.28136pt x 141.02652pt.
 [36 <./theory/figures/anchor_6d.png>]
-<./theory/figures/tpn_1_1.png, id=1317, 882.29625pt x 191.71625pt>
+<./theory/figures/tpn_1_1.png, id=1324, 882.29625pt x 191.71625pt>
 File: ./theory/figures/tpn_1_1.png Graphic file (type png)
 <use ./theory/figures/tpn_1_1.png>
 Package pdftex.def Info: ./theory/figures/tpn_1_1.png  used on input line 177.
 (pdftex.def)             Requested size: 418.25368pt x 90.88185pt.
-<./theory/figures/output/img_0.jpg, id=1319, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_0.jpg, id=1326, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_0.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_0.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_0.jpg  used on input line 
 193.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
-<./theory/figures/output/img_3.jpg, id=1320, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_3.jpg, id=1327, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_3.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_3.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_3.jpg  used on input line 
 196.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
-<./theory/figures/output/img_5.jpg, id=1321, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_5.jpg, id=1328, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_5.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_5.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_5.jpg  used on input line 
 199.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
-<./theory/figures/output/img_7.jpg, id=1322, 129.48375pt x 241.90375pt>
+<./theory/figures/output/img_7.jpg, id=1329, 129.48375pt x 241.90375pt>
 File: ./theory/figures/output/img_7.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_7.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_7.jpg  used on input line 
 202.
 (pdftex.def)             Requested size: 62.73549pt x 117.20505pt.
-<./theory/figures/output/img_11.jpg, id=1323, 128.48pt x 250.9375pt>
+<./theory/figures/output/img_11.jpg, id=1330, 128.48pt x 250.9375pt>
 File: ./theory/figures/output/img_11.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_11.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_11.jpg  used on input line
  205.
 (pdftex.def)             Requested size: 62.73549pt x 122.53159pt.
-<./theory/figures/output/img_15.jpg, id=1324, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_15.jpg, id=1331, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_15.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_15.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_15.jpg  used on input line
@@ -3861,7 +3867,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textomicron' on input line 316.
 
 [39]
-<./theory/figures/tpn_1_2.png, id=1345, 720.6925pt x 505.89pt>
+<./theory/figures/tpn_1_2.png, id=1352, 720.6925pt x 505.89pt>
 File: ./theory/figures/tpn_1_2.png Graphic file (type png)
 <use ./theory/figures/tpn_1_2.png>
 Package pdftex.def Info: ./theory/figures/tpn_1_2.png  used on input line 333.
@@ -3874,127 +3880,134 @@ a-sh kai sth su-nèqeia na
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 419.
+(hyperref)                removing `\<let>-command' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 419.
+(hyperref)                removing `\bbl@hymapsel' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 419.
+(hyperref)                removing `\tw@' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 419.
+(hyperref)                removing `\<def>-command' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 419.
+(hyperref)                removing `\bbl@language@stack' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 419.
+(hyperref)                removing `\aftergroup' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 419.
+(hyperref)                removing `\<def>-command' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 419.
+(hyperref)                removing `\languagename' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 419.
+(hyperref)                removing `\<def>-command' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 419.
+(hyperref)                removing `\bbl@language@stack' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 419.
+(hyperref)                removing `\<let>-command' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 419.
+(hyperref)                removing `\bbl@ifrestoring' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 419.
+(hyperref)                removing `\<let>-command' on input line 420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 419.
+(hyperref)                removing `\bbl@ifrestoring' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textPi' on input line 419.
+(hyperref)                removing `\textPi' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 419.
+(hyperref)                removing `\textrho' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 419.
+(hyperref)                removing `\textomicron' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 419.
+(hyperref)                removing `\textsigma' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttheta' on input line 419.
+(hyperref)                removing `\texttheta' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 419.
+(hyperref)                removing `\ensuregreek' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 419.
+(hyperref)                removing `\acctonos' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 419.
+(hyperref)                removing `\texteta' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 419.
+(hyperref)                removing `\textkappa' on input line 420.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 419.
+(hyperref)                removing `\texteta' on input line 420.
 
 [41]
-Underfull \hbox (badness 1331) in paragraph at lines 448--455
+Underfull \hbox (badness 1331) in paragraph at lines 449--456
  [] \OT1/cmr/bx/n/10 Trai-ning[] \LGR/cmr/m/n/10 Gia na ek-pai-de-Ôsou-me ton [
 ][]\OT1/cmr/m/n/10 Re-gres-sor [][]\LGR/cmr/m/n/10 mac, a-ko-lou-jo-Ôme ta Ðdia
  b ma-ta pou
  []
 
 [42]
-Underfull \hbox (badness 4205) in paragraph at lines 470--472
+Underfull \hbox (badness 3019) in paragraph at lines 471--473
 []\LGR/cmr/m/n/10 pou e-Ðnai h [][]\OT1/cmr/m/n/10 re-call [][]\LGR/cmr/m/n/10 
-me-tri-k  gia ta pro-tei-nìme-na tris-di-ˆsta-ta kou-ti-ˆ.
+me-tri-k  gia ta pro-tei-nìme-na tris-di-ˆsta-ta \OT1/cmr/m/n/10 cu-boids\LGR/c
+mr/m/n/10 .
  []
 
-<./theory/figures/regressor_1_1.png, id=1378, 720.6925pt x 308.15125pt>
+
+Underfull \hbox (badness 2512) in paragraph at lines 473--474
+[]\LGR/cmr/m/n/10 h o-po-Ða e-Ðnai h e-pÐdo-sh [][]\OT1/cmr/m/n/10 re-call [][]
+\LGR/cmr/m/n/10 gia tic pro-tei-nìme-nec a-ko-lou-jÐec
+ []
+
+<./theory/figures/regressor_1_1.png, id=1385, 720.6925pt x 308.15125pt>
 File: ./theory/figures/regressor_1_1.png Graphic file (type png)
 <use ./theory/figures/regressor_1_1.png>
 Package pdftex.def Info: ./theory/figures/regressor_1_1.png  used on input line
- 486.
+ 487.
 (pdftex.def)             Requested size: 345.92847pt x 147.9109pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./theory/figures/regressor_1_2.png, id=1379, 720.6925pt x 308.15125pt>
+<./theory/figures/regressor_1_2.png, id=1386, 720.6925pt x 308.15125pt>
 File: ./theory/figures/regressor_1_2.png Graphic file (type png)
 <use ./theory/figures/regressor_1_2.png>
 Package pdftex.def Info: ./theory/figures/regressor_1_2.png  used on input line
- 495.
+ 496.
 (pdftex.def)             Requested size: 345.92847pt x 147.9109pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -4007,245 +4020,310 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [43]
 
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textTau' on input line 580.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@hymapsel' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tw@' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\aftergroup' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\languagename' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 584.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\textTau' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 580.
+(hyperref)                removing `\textalpha' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 580.
+(hyperref)                removing `\texttau' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 580.
+(hyperref)                removing `\textrho' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 580.
+(hyperref)                removing `\textiota' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textdelta' on input line 580.
+(hyperref)                removing `\textsigma' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 580.
+(hyperref)                removing `\textdelta' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 580.
+(hyperref)                removing `\textiota' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 580.
+(hyperref)                removing `\ensuregreek' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\acctonos' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 580.
+(hyperref)                removing `\textalpha' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 580.
+(hyperref)                removing `\textsigma' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\texttau' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 580.
+(hyperref)                removing `\textalpha' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\texttau' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomega' on input line 580.
+(hyperref)                removing `\textalpha' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textvarsigma' on input line 580.
+(hyperref)                removing `\textomega' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textdelta' on input line 580.
+(hyperref)                removing `\textvarsigma' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 580.
+(hyperref)                removing `\textdelta' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\textiota' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textnu' on input line 580.
+(hyperref)                removing `\textalpha' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 580.
+(hyperref)                removing `\textnu' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 580.
+(hyperref)                removing `\ensuregreek' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textupsilon' on input line 580.
+(hyperref)                removing `\acctonos' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 580.
+(hyperref)                removing `\textupsilon' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\textsigma' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 580.
+(hyperref)                removing `\textalpha' on input line 584.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 580.
+(hyperref)                removing `\texttau' on input line 584.
 
-[44 <./theory/figures/regressor_1_1.png> <./theory/figures/regressor_1_2.png>]
-<./theory/figures/anchor_4k.png, id=1400, 399.4925pt x 320.19624pt>
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textalpha' on input line 584.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <./theory/figures/regressor_1_1.png> <./theory/figures/regressor_1_2.png>]
+<./theory/figures/anchor_4k.png, id=1407, 399.4925pt x 320.19624pt>
 File: ./theory/figures/anchor_4k.png Graphic file (type png)
 <use ./theory/figures/anchor_4k.png>
-Package pdftex.def Info: ./theory/figures/anchor_4k.png  used on input line 589
+Package pdftex.def Info: ./theory/figures/anchor_4k.png  used on input line 594
 .
 (pdftex.def)             Requested size: 199.74576pt x 160.09772pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./theory/figures/tpn_2.png, id=1401, 717.68124pt x 546.04pt>
+<./theory/figures/tpn_2.png, id=1408, 717.68124pt x 546.04pt>
 File: ./theory/figures/tpn_2.png Graphic file (type png)
 <use ./theory/figures/tpn_2.png>
-Package pdftex.def Info: ./theory/figures/tpn_2.png  used on input line 607.
+Package pdftex.def Info: ./theory/figures/tpn_2.png  used on input line 614.
 (pdftex.def)             Requested size: 287.06741pt x 218.41212pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45]
+Package biblatex Info: Trying to load language 'GREEK'...
+Package biblatex Info: ... file 'GREEK.lbx' not found.
+
+Package biblatex Warning: Language 'GREEK' not supported.
+(biblatex)                Using fallback language 'greek' on input line 632.
+
+[45] [46 <./theory/figures/anchor_4k.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 665.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 665.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 665.
+(hyperref)                removing `\<let>-command' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 665.
+(hyperref)                removing `\bbl@hymapsel' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 665.
+(hyperref)                removing `\tw@' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 665.
+(hyperref)                removing `\<def>-command' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 665.
+(hyperref)                removing `\bbl@language@stack' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 665.
+(hyperref)                removing `\aftergroup' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 665.
+(hyperref)                removing `\<def>-command' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 665.
+(hyperref)                removing `\languagename' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 665.
+(hyperref)                removing `\<def>-command' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 665.
+(hyperref)                removing `\bbl@language@stack' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 665.
+(hyperref)                removing `\<let>-command' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 665.
+(hyperref)                removing `\bbl@ifrestoring' on input line 674.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 674.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textPi' on input line 665.
+(hyperref)                removing `\textPi' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 665.
+(hyperref)                removing `\textrho' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 665.
+(hyperref)                removing `\textomicron' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 665.
+(hyperref)                removing `\textsigma' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttheta' on input line 665.
+(hyperref)                removing `\texttheta' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 665.
+(hyperref)                removing `\ensuregreek' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 665.
+(hyperref)                removing `\acctonos' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 665.
+(hyperref)                removing `\texteta' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 665.
+(hyperref)                removing `\textkappa' on input line 674.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 665.
+(hyperref)                removing `\texteta' on input line 674.
 
-[46 <./theory/figures/anchor_4k.png>] [47 <./theory/figures/tpn_2.png>]
-Underfull \hbox (badness 5607) in paragraph at lines 698--700
+[47 <./theory/figures/tpn_2.png>]
+Underfull \hbox (badness 5607) in paragraph at lines 707--709
 []\LGR/cmr/m/n/10 AntÐstoiqa dia-fo-ro-poio-Ôme kai touc qˆr-tec e-ner-go-po-Ðh
 -shc ìpou a-pì dia-stˆseic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--700
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k; \OT1/cmr/m/n/10 64\OML/cmm/m/it/10 ; sampl
 eduration; \OT1/cmr/m/n/10 7\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7)$ \LGR/cmr/m/n
 /10 ka-ta-l gou-me se qˆr-tec me dia-stˆseic $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
@@ -4254,143 +4332,143 @@ eduration; \OT1/cmr/m/n/10 7\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7)$ \LGR/cmr/m/n
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textMu' on input line 756.
+(hyperref)                removing `\textMu' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 756.
+(hyperref)                removing `\textepsilon' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 756.
+(hyperref)                removing `\ensuregreek' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 756.
+(hyperref)                removing `\acctonos' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 756.
+(hyperref)                removing `\textiota' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomega' on input line 756.
+(hyperref)                removing `\textomega' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 756.
+(hyperref)                removing `\textsigma' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 756.
+(hyperref)                removing `\texteta' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 756.
+(hyperref)                removing `\texttau' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 756.
+(hyperref)                removing `\texteta' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textvarsigma' on input line 756.
+(hyperref)                removing `\textvarsigma' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textdelta' on input line 756.
+(hyperref)                removing `\textdelta' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 756.
+(hyperref)                removing `\textiota' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 756.
+(hyperref)                removing `\ensuregreek' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 756.
+(hyperref)                removing `\acctonos' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 756.
+(hyperref)                removing `\textalpha' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 756.
+(hyperref)                removing `\textrho' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 756.
+(hyperref)                removing `\textkappa' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 756.
+(hyperref)                removing `\textepsilon' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 756.
+(hyperref)                removing `\textiota' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 756.
+(hyperref)                removing `\textalpha' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textvarsigma' on input line 756.
+(hyperref)                removing `\textvarsigma' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 756.
+(hyperref)                removing `\texttau' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 756.
+(hyperref)                removing `\textomicron' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textupsilon' on input line 756.
+(hyperref)                removing `\textupsilon' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textdelta' on input line 756.
+(hyperref)                removing `\textdelta' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 756.
+(hyperref)                removing `\textepsilon' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 756.
+(hyperref)                removing `\ensuregreek' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 756.
+(hyperref)                removing `\acctonos' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 756.
+(hyperref)                removing `\textiota' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 756.
+(hyperref)                removing `\textgamma' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 756.
+(hyperref)                removing `\textalpha' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 756.
+(hyperref)                removing `\texttau' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 756.
+(hyperref)                removing `\textomicron' on input line 770.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textvarsigma' on input line 756.
+(hyperref)                removing `\textvarsigma' on input line 770.
 
 [48]) [49]
 \openout2 = `chapter4_gr.aux'.
@@ -4937,137 +5015,137 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textvarsigma' on input line 59.
 
 [51]
-<./theory/figures/connection_algo.png, id=1456, 1441.385pt x 717.68124pt>
+<./theory/figures/connection_algo.png, id=1463, 1441.385pt x 717.68124pt>
 File: ./theory/figures/connection_algo.png Graphic file (type png)
 <use ./theory/figures/connection_algo.png>
 Package pdftex.def Info: ./theory/figures/connection_algo.png  used on input li
 ne 77.
 (pdftex.def)             Requested size: 324.31963pt x 161.48225pt.
-Package biblatex Info: Trying to load language 'GREEK'...
-Package biblatex Info: ... file 'GREEK.lbx' not found.
 
-
-Package biblatex Warning: Language 'GREEK' not supported.
-(biblatex)                Using fallback language 'greek' on input line 104.
+Underfull \hbox (badness 1048) in paragraph at lines 79--79
+[]\OT1/cmr/m/n/10 Figure 4.1: |[][]\LGR/cmr/m/n/10 'E-na pa-rˆdeig-ma u-po-lo-g
+i-smo-Ô twn \OT1/cmr/m/n/10 sco-re \LGR/cmr/m/n/10 sÔn-de-shc gia 3 tu-qa-Ða \O
+T1/cmr/m/n/10 ToIs\LGR/cmr/m/n/10 , ìpwc
+ []
 
 Package biblatex Info: Trying to load language 'ENGLISH'...
 Package biblatex Info: ... file 'ENGLISH.lbx' not found.
 
 Package biblatex Warning: Language 'ENGLISH' not supported.
-(biblatex)                Using fallback language 'greek' on input line 104.
+(biblatex)                Using fallback language 'GREEK' on input line 106.
 
 [52 <./theory/figures/connection_algo.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 129.
+(hyperref)                removing `\<let>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 129.
+(hyperref)                removing `\bbl@hymapsel' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 129.
+(hyperref)                removing `\tw@' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 129.
+(hyperref)                removing `\<def>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 129.
+(hyperref)                removing `\bbl@language@stack' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 129.
+(hyperref)                removing `\aftergroup' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 129.
+(hyperref)                removing `\<def>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 129.
+(hyperref)                removing `\languagename' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 129.
+(hyperref)                removing `\<def>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 129.
+(hyperref)                removing `\bbl@language@stack' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 129.
+(hyperref)                removing `\<let>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 129.
+(hyperref)                removing `\bbl@ifrestoring' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 129.
+(hyperref)                removing `\<let>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 129.
+(hyperref)                removing `\bbl@ifrestoring' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 129.
+(hyperref)                removing `\<let>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 129.
+(hyperref)                removing `\bbl@hymapsel' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 129.
+(hyperref)                removing `\tw@' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 129.
+(hyperref)                removing `\<def>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 129.
+(hyperref)                removing `\bbl@language@stack' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 129.
+(hyperref)                removing `\aftergroup' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 129.
+(hyperref)                removing `\<def>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 129.
+(hyperref)                removing `\languagename' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 129.
+(hyperref)                removing `\<def>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 129.
+(hyperref)                removing `\bbl@language@stack' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 129.
+(hyperref)                removing `\<let>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 129.
+(hyperref)                removing `\bbl@ifrestoring' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 129.
+(hyperref)                removing `\<let>-command' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 129.
+(hyperref)                removing `\bbl@ifrestoring' on input line 131.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5076,23 +5154,23 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [53]
-Overfull \hbox (3.61118pt too wide) in paragraph at lines 147--147
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 149--149
 []|\OT1/cmr/m/n/10 combination|  
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 150.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 152.
 
-Underfull \vbox (badness 10000) detected at line 169
+Underfull \vbox (badness 10000) detected at line 172
  []
 
 
-Overfull \hbox (3.61118pt too wide) in paragraph at lines 187--187
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 190--190
 []|\OT1/cmr/m/n/10 combination|  
  []
 
 
-Underfull \vbox (badness 10000) detected at line 208
+Underfull \vbox (badness 10000) detected at line 212
  []
 
 
@@ -5102,484 +5180,488 @@ Overfull \vbox (15.95871pt too high) has occurred while \output is active []
 [54]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 214.
+(hyperref)                removing `\<let>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 214.
+(hyperref)                removing `\bbl@hymapsel' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 214.
+(hyperref)                removing `\tw@' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 214.
+(hyperref)                removing `\<def>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 214.
+(hyperref)                removing `\bbl@language@stack' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 214.
+(hyperref)                removing `\aftergroup' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 214.
+(hyperref)                removing `\<def>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 214.
+(hyperref)                removing `\languagename' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 214.
+(hyperref)                removing `\<def>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 214.
+(hyperref)                removing `\bbl@language@stack' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 214.
+(hyperref)                removing `\<let>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 214.
+(hyperref)                removing `\bbl@ifrestoring' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 214.
+(hyperref)                removing `\<let>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 214.
+(hyperref)                removing `\bbl@ifrestoring' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 214.
+(hyperref)                removing `\<let>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 214.
+(hyperref)                removing `\bbl@hymapsel' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 214.
+(hyperref)                removing `\tw@' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 214.
+(hyperref)                removing `\<def>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 214.
+(hyperref)                removing `\bbl@language@stack' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 214.
+(hyperref)                removing `\aftergroup' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 214.
+(hyperref)                removing `\<def>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 214.
+(hyperref)                removing `\languagename' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 214.
+(hyperref)                removing `\<def>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 214.
+(hyperref)                removing `\bbl@language@stack' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 214.
+(hyperref)                removing `\<let>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 214.
+(hyperref)                removing `\bbl@ifrestoring' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 214.
+(hyperref)                removing `\<let>-command' on input line 218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 214.
+(hyperref)                removing `\bbl@ifrestoring' on input line 218.
 
 
-Overfull \hbox (2.86101pt too wide) in paragraph at lines 258--258
+Overfull \hbox (2.86101pt too wide) in paragraph at lines 262--262
 \OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 16,\OMS/cmsy/b/n/10 g\OT1/cmr/m/n/10 17,18,.
 ..,23 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 273
+Underfull \vbox (badness 10000) detected at line 278
  []
 
 [55]
-Overfull \hbox (2.86101pt too wide) in paragraph at lines 301--301
+Overfull \hbox (2.86101pt too wide) in paragraph at lines 306--306
 \OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 16,\OMS/cmsy/b/n/10 g\OT1/cmr/m/n/10 17,18,.
 ..,23 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 317
+Underfull \vbox (badness 10000) detected at line 323
  []
 
 
-Overfull \hbox (2.30557pt too wide) in paragraph at lines 341--341
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 347--347
 \OT1/cmr/m/n/10 thresh|  
  []
 
 
-Overfull \hbox (2.38892pt too wide) in paragraph at lines 341--341
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 347--347
 []|\OT1/cmr/m/n/10 PreNMS 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 362
+Underfull \vbox (badness 10000) detected at line 369
  []
 
 [56]
-Overfull \hbox (2.30557pt too wide) in paragraph at lines 371--371
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 378--378
 \OT1/cmr/m/n/10 thresh|  
  []
 
 
-Overfull \hbox (2.38892pt too wide) in paragraph at lines 371--371
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 378--378
 []|\OT1/cmr/m/n/10 PreNMS 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 392
+Underfull \vbox (badness 10000) detected at line 400
  []
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textDelta' on input line 401.
+(hyperref)                removing `\textDelta' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 401.
+(hyperref)                removing `\textepsilon' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 401.
+(hyperref)                removing `\ensuregreek' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 401.
+(hyperref)                removing `\acctonos' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textupsilon' on input line 401.
+(hyperref)                removing `\textupsilon' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 401.
+(hyperref)                removing `\texttau' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 401.
+(hyperref)                removing `\textepsilon' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 401.
+(hyperref)                removing `\textrho' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 401.
+(hyperref)                removing `\texteta' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textpi' on input line 401.
+(hyperref)                removing `\textpi' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 401.
+(hyperref)                removing `\textrho' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 401.
+(hyperref)                removing `\textomicron' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 401.
+(hyperref)                removing `\textsigma' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 401.
+(hyperref)                removing `\ensuregreek' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 401.
+(hyperref)                removing `\acctonos' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 401.
+(hyperref)                removing `\textepsilon' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 401.
+(hyperref)                removing `\textgamma' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 401.
+(hyperref)                removing `\textgamma' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 401.
+(hyperref)                removing `\textiota' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 401.
+(hyperref)                removing `\textsigma' on input line 409.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 401.
+(hyperref)                removing `\texteta' on input line 409.
 
 [57]
-LaTeX Info: Redefining \anw@print on input line 431.
-LaTeX Info: Redefining \anw@print on input line 432.
+LaTeX Info: Redefining \anw@print on input line 439.
 LaTeX Info: Redefining \anw@print on input line 440.
 LaTeX Info: Redefining \anw@print on input line 448.
+LaTeX Info: Redefining \anw@print on input line 456.
 
-Underfull \vbox (badness 10000) detected at line 483
+Underfull \vbox (badness 10000) detected at line 493
  []
+
+
+Overfull \vbox (14.60709pt too high) has occurred while \output is active []
+
 
 [58]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 490.
+(hyperref)                removing `\<let>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 490.
+(hyperref)                removing `\bbl@hymapsel' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 490.
+(hyperref)                removing `\tw@' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 490.
+(hyperref)                removing `\<def>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 490.
+(hyperref)                removing `\bbl@language@stack' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 490.
+(hyperref)                removing `\aftergroup' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 490.
+(hyperref)                removing `\<def>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 490.
+(hyperref)                removing `\languagename' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 490.
+(hyperref)                removing `\<def>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 490.
+(hyperref)                removing `\bbl@language@stack' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 490.
+(hyperref)                removing `\<let>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 490.
+(hyperref)                removing `\bbl@ifrestoring' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 490.
+(hyperref)                removing `\<let>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 490.
+(hyperref)                removing `\bbl@ifrestoring' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 490.
+(hyperref)                removing `\<let>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 490.
+(hyperref)                removing `\bbl@hymapsel' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 490.
+(hyperref)                removing `\tw@' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 490.
+(hyperref)                removing `\<def>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 490.
+(hyperref)                removing `\bbl@language@stack' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 490.
+(hyperref)                removing `\aftergroup' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 490.
+(hyperref)                removing `\<def>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 490.
+(hyperref)                removing `\languagename' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 490.
+(hyperref)                removing `\<def>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 490.
+(hyperref)                removing `\bbl@language@stack' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 490.
+(hyperref)                removing `\<let>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 490.
+(hyperref)                removing `\bbl@ifrestoring' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 490.
+(hyperref)                removing `\<let>-command' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 490.
+(hyperref)                removing `\bbl@ifrestoring' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 490.
+(hyperref)                removing `\textrho' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 490.
+(hyperref)                removing `\ensuregreek' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 490.
+(hyperref)                removing `\acctonos' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 490.
+(hyperref)                removing `\textiota' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 490.
+(hyperref)                removing `\texttau' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 490.
+(hyperref)                removing `\texteta' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textpi' on input line 490.
+(hyperref)                removing `\textpi' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 490.
+(hyperref)                removing `\textrho' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 490.
+(hyperref)                removing `\textomicron' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 490.
+(hyperref)                removing `\textsigma' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 490.
+(hyperref)                removing `\ensuregreek' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 490.
+(hyperref)                removing `\acctonos' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 490.
+(hyperref)                removing `\textepsilon' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 490.
+(hyperref)                removing `\textgamma' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 490.
+(hyperref)                removing `\textgamma' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 490.
+(hyperref)                removing `\textiota' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 490.
+(hyperref)                removing `\textsigma' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 490.
+(hyperref)                removing `\texteta' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 490.
+(hyperref)                removing `\ensuregreek' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 490.
+(hyperref)                removing `\acctonos' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 490.
+(hyperref)                removing `\textomicron' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textnu' on input line 490.
+(hyperref)                removing `\textnu' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 490.
+(hyperref)                removing `\textomicron' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 490.
+(hyperref)                removing `\textgamma' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 490.
+(hyperref)                removing `\textiota' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 490.
+(hyperref)                removing `\textalpha' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 490.
+(hyperref)                removing `\texttau' on input line 500.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 490.
+(hyperref)                removing `\textomicron' on input line 500.
 
 
-Underfull \vbox (badness 10000) detected at line 528
+Underfull \vbox (badness 10000) detected at line 540
  []
 
 ) [59]
@@ -5705,10 +5787,90 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\bbl@ifrestoring' on input line 42.
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 55--59
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textSigma' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\texttau' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\ensuregreek' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\acctonos' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textalpha' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textdelta' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textiota' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textomicron' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textTau' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textalpha' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textxi' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textiota' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textnu' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\ensuregreek' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\acctonos' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textomicron' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\texteta' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textsigma' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\texteta' on input line 42.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textvarsigma' on input line 42.
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 55--59
 \OT1/cmr/m/n/10 Vec-tor Ma-chine (SVM) [][]\LGR/cmr/m/n/10 kai èna [][]\OT1/cmr
-/m/n/10 Mul-ti-layer Per-cep-tron(MLP)[][]\LGR/cmr/m/n/10 . E-pÐshc, pei-ra-ma-
-ti-zìma-ste
+/m/n/10 Mul-ti-layer Per-cep-tron (MLP)[][]\LGR/cmr/m/n/10 . E-pÐshc, pei-ra-ma
+-ti-zìma-ste
  []
 
 
@@ -6010,454 +6172,460 @@ u-ne-p¸c qrh-si-mo-poio-Ôme mia
  []
 
 [62]
-Underfull \vbox (badness 10000) detected at line 152
+Underfull \vbox (badness 10000) detected at line 155
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 156.
+(hyperref)                removing `\<let>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 156.
+(hyperref)                removing `\bbl@hymapsel' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 156.
+(hyperref)                removing `\tw@' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 156.
+(hyperref)                removing `\<def>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 156.
+(hyperref)                removing `\bbl@language@stack' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 156.
+(hyperref)                removing `\aftergroup' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 156.
+(hyperref)                removing `\<def>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 156.
+(hyperref)                removing `\languagename' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 156.
+(hyperref)                removing `\<def>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 156.
+(hyperref)                removing `\bbl@language@stack' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 156.
+(hyperref)                removing `\<let>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 156.
+(hyperref)                removing `\bbl@ifrestoring' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 156.
+(hyperref)                removing `\<let>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 156.
+(hyperref)                removing `\bbl@ifrestoring' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 156.
+(hyperref)                removing `\<let>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 156.
+(hyperref)                removing `\bbl@hymapsel' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 156.
+(hyperref)                removing `\tw@' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 156.
+(hyperref)                removing `\<def>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 156.
+(hyperref)                removing `\bbl@language@stack' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 156.
+(hyperref)                removing `\aftergroup' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 156.
+(hyperref)                removing `\<def>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 156.
+(hyperref)                removing `\languagename' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 156.
+(hyperref)                removing `\<def>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 156.
+(hyperref)                removing `\bbl@language@stack' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 156.
+(hyperref)                removing `\<let>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 156.
+(hyperref)                removing `\bbl@ifrestoring' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 156.
+(hyperref)                removing `\<let>-command' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 156.
+(hyperref)                removing `\bbl@ifrestoring' on input line 159.
 
 [63]
-Underfull \vbox (badness 10000) detected at line 186
+Underfull \vbox (badness 10000) detected at line 190
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 189.
+(hyperref)                removing `\<let>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 189.
+(hyperref)                removing `\bbl@hymapsel' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 189.
+(hyperref)                removing `\tw@' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 189.
+(hyperref)                removing `\<def>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 189.
+(hyperref)                removing `\bbl@language@stack' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 189.
+(hyperref)                removing `\aftergroup' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 189.
+(hyperref)                removing `\<def>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 189.
+(hyperref)                removing `\languagename' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 189.
+(hyperref)                removing `\<def>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 189.
+(hyperref)                removing `\bbl@language@stack' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 189.
+(hyperref)                removing `\<let>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 189.
+(hyperref)                removing `\bbl@ifrestoring' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 189.
+(hyperref)                removing `\<let>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 189.
+(hyperref)                removing `\bbl@ifrestoring' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 189.
+(hyperref)                removing `\<let>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 189.
+(hyperref)                removing `\bbl@hymapsel' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 189.
+(hyperref)                removing `\tw@' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 189.
+(hyperref)                removing `\<def>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 189.
+(hyperref)                removing `\bbl@language@stack' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 189.
+(hyperref)                removing `\aftergroup' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 189.
+(hyperref)                removing `\<def>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 189.
+(hyperref)                removing `\languagename' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 189.
+(hyperref)                removing `\<def>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 189.
+(hyperref)                removing `\bbl@language@stack' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 189.
+(hyperref)                removing `\<let>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 189.
+(hyperref)                removing `\bbl@ifrestoring' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 189.
+(hyperref)                removing `\<let>-command' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 189.
+(hyperref)                removing `\bbl@ifrestoring' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textPi' on input line 189.
+(hyperref)                removing `\textPi' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 189.
+(hyperref)                removing `\textrho' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 189.
+(hyperref)                removing `\textomicron' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 189.
+(hyperref)                removing `\textsigma' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttheta' on input line 189.
+(hyperref)                removing `\texttheta' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 189.
+(hyperref)                removing `\ensuregreek' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 189.
+(hyperref)                removing `\acctonos' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 189.
+(hyperref)                removing `\texteta' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 189.
+(hyperref)                removing `\textkappa' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 189.
+(hyperref)                removing `\texteta' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textpi' on input line 189.
+(hyperref)                removing `\textpi' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 189.
+(hyperref)                removing `\textepsilon' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 189.
+(hyperref)                removing `\textrho' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 189.
+(hyperref)                removing `\textiota' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 189.
+(hyperref)                removing `\textsigma' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 189.
+(hyperref)                removing `\textsigma' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 189.
+(hyperref)                removing `\ensuregreek' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 189.
+(hyperref)                removing `\acctonos' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 189.
+(hyperref)                removing `\textomicron' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 189.
+(hyperref)                removing `\texttau' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 189.
+(hyperref)                removing `\textepsilon' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 189.
+(hyperref)                removing `\textrho' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomega' on input line 189.
+(hyperref)                removing `\textomega' on input line 193.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textnu' on input line 189.
+(hyperref)                removing `\textnu' on input line 193.
 
 
-Underfull \vbox (badness 10000) detected at line 237
+Underfull \vbox (badness 10000) detected at line 242
  []
 
 [64]
-Underfull \vbox (badness 10000) detected at line 289
+Underfull \vbox (badness 10000) detected at line 295
  []
 
 
-Underfull \vbox (badness 10000) detected at line 350
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+[]\LGR/cmr/m/n/10 'Opwc pro-a-na-fèr-jh-ke, ek-pai-de-Ôou-me ton ta-xi-no-mh-t 
+ [][]\OT1/cmr/m/n/10 SVM [][]\LGR/cmr/m/n/10 qrh-si-mo-poi-¸ntac tic
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 357
  []
 
 [65]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 366.
+(hyperref)                removing `\<let>-command' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 366.
+(hyperref)                removing `\bbl@hymapsel' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 366.
+(hyperref)                removing `\tw@' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 366.
+(hyperref)                removing `\<def>-command' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 366.
+(hyperref)                removing `\bbl@language@stack' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 366.
+(hyperref)                removing `\aftergroup' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 366.
+(hyperref)                removing `\<def>-command' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 366.
+(hyperref)                removing `\languagename' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 366.
+(hyperref)                removing `\<def>-command' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 366.
+(hyperref)                removing `\bbl@language@stack' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 366.
+(hyperref)                removing `\<let>-command' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 366.
+(hyperref)                removing `\bbl@ifrestoring' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 366.
+(hyperref)                removing `\<let>-command' on input line 373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 366.
+(hyperref)                removing `\bbl@ifrestoring' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textTau' on input line 366.
+(hyperref)                removing `\textTau' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 366.
+(hyperref)                removing `\textalpha' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textxi' on input line 366.
+(hyperref)                removing `\textxi' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 366.
+(hyperref)                removing `\textiota' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textnu' on input line 366.
+(hyperref)                removing `\textnu' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 366.
+(hyperref)                removing `\textomicron' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 366.
+(hyperref)                removing `\texteta' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 366.
+(hyperref)                removing `\texttau' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 366.
+(hyperref)                removing `\ensuregreek' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 366.
+(hyperref)                removing `\acctonos' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 366.
+(hyperref)                removing `\texteta' on input line 373.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textvarsigma' on input line 366.
+(hyperref)                removing `\textvarsigma' on input line 373.
 
-<./theory/figures/mlp.png, id=1576, 720.6925pt x 313.17pt>
+<./theory/figures/mlp.png, id=1582, 720.6925pt x 313.17pt>
 File: ./theory/figures/mlp.png Graphic file (type png)
 <use ./theory/figures/mlp.png>
-Package pdftex.def Info: ./theory/figures/mlp.png  used on input line 371.
+Package pdftex.def Info: ./theory/figures/mlp.png  used on input line 378.
 (pdftex.def)             Requested size: 302.68878pt x 131.53049pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -6465,215 +6633,215 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [66]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 395.
+(hyperref)                removing `\<let>-command' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 395.
+(hyperref)                removing `\bbl@hymapsel' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 395.
+(hyperref)                removing `\tw@' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 395.
+(hyperref)                removing `\<def>-command' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 395.
+(hyperref)                removing `\bbl@language@stack' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 395.
+(hyperref)                removing `\aftergroup' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 395.
+(hyperref)                removing `\<def>-command' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 395.
+(hyperref)                removing `\languagename' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 395.
+(hyperref)                removing `\<def>-command' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 395.
+(hyperref)                removing `\bbl@language@stack' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 395.
+(hyperref)                removing `\<let>-command' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 395.
+(hyperref)                removing `\bbl@ifrestoring' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 395.
+(hyperref)                removing `\<let>-command' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 395.
+(hyperref)                removing `\bbl@ifrestoring' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textKappa' on input line 395.
+(hyperref)                removing `\textKappa' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textlambda' on input line 395.
+(hyperref)                removing `\textlambda' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 395.
+(hyperref)                removing `\textalpha' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 395.
+(hyperref)                removing `\textsigma' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 395.
+(hyperref)                removing `\textsigma' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 395.
+(hyperref)                removing `\textiota' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 395.
+(hyperref)                removing `\textkappa' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 395.
+(hyperref)                removing `\ensuregreek' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 395.
+(hyperref)                removing `\acctonos' on input line 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomicron' on input line 395.
+(hyperref)                removing `\textomicron' on input line 404.
 
 
-Underfull \vbox (badness 10000) detected at line 428
+Underfull \vbox (badness 10000) detected at line 438
  []
 
 
-Overfull \vbox (87.04666pt too high) has occurred while \output is active []
+Overfull \vbox (15.04666pt too high) has occurred while \output is active []
 
 
 [67 <./theory/figures/mlp.png>]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textEpsilon' on input line 438.
+(hyperref)                removing `\textEpsilon' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textxi' on input line 438.
+(hyperref)                removing `\textxi' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 438.
+(hyperref)                removing `\textalpha' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 438.
+(hyperref)                removing `\textgamma' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomega' on input line 438.
+(hyperref)                removing `\textomega' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textgamma' on input line 438.
+(hyperref)                removing `\textgamma' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 438.
+(hyperref)                removing `\ensuregreek' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 438.
+(hyperref)                removing `\acctonos' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 438.
+(hyperref)                removing `\texteta' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textchi' on input line 438.
+(hyperref)                removing `\textchi' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 438.
+(hyperref)                removing `\textalpha' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 438.
+(hyperref)                removing `\textrho' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 438.
+(hyperref)                removing `\textalpha' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 438.
+(hyperref)                removing `\textkappa' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 438.
+(hyperref)                removing `\texttau' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 438.
+(hyperref)                removing `\texteta' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 438.
+(hyperref)                removing `\textrho' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 438.
+(hyperref)                removing `\textiota' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 438.
+(hyperref)                removing `\textsigma' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 438.
+(hyperref)                removing `\texttau' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 438.
+(hyperref)                removing `\textiota' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textkappa' on input line 438.
+(hyperref)                removing `\textkappa' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 438.
+(hyperref)                removing `\ensuregreek' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 438.
+(hyperref)                removing `\acctonos' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textomega' on input line 438.
+(hyperref)                removing `\textomega' on input line 450.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textnu' on input line 438.
+(hyperref)                removing `\textnu' on input line 450.
 
 
-Underfull \vbox (badness 10000) detected at line 473
+Underfull \vbox (badness 10000) detected at line 487
  []
 
 ) [68]
@@ -6863,12 +7031,6 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textvarsigma' on input line 43.
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 53--59
-\LGR/cmr/m/n/10 qrh-si-mo-poi-¸ntac ge-ni-keu-mèna [][]\OT1/cmr/m/n/10 an-chors
- [][]\LGR/cmr/m/n/10 kai ìqi su-gke-kri-mèna gia kˆje sÔno-lo de-do-mènwn.
- []
-
-
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textMu' on input line 75.
 
@@ -6969,7 +7131,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textvarsigma' on input line 75.
 
 
-Underfull \vbox (badness 5954) has occurred while \output is active []
+Underfull \vbox (badness 1661) has occurred while \output is active []
 
  [69
 
@@ -6986,12 +7148,6 @@ OT1/cmr/m/n/10 ToIs [][]\LGR/cmr/m/n/10 gia thn prìta-sh [][]\OT1/cmr/m/n/10 ac
 Underfull \hbox (badness 10000) in paragraph at lines 108--112
  []\LGR/cmr/bx/n/10 ExereÔnhsh ˆl-lwn te-qni-k¸n ta-xi-nìmh-shc[] \LGR/cmr/m/n/
 10 Gia to stˆdio ta-xi-nìmh-shc,
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 108--112
-\LGR/cmr/m/n/10 ja mpo-ro-Ôsa-me na do-ki-mˆsou-me ˆl-lec te-qni-kèc ta-xi-nìmh
--shc ìpwc [][]\OT1/cmr/m/n/10 Ran-dom Forests [][]\LGR/cmr/m/n/10   na
  []
 
 ) [70]
@@ -7022,7 +7178,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Chapter 8.
-<./theory/figures/supervised_leaning_example2.png, id=1673, 604.2575pt x 370.38
+<./theory/figures/supervised_leaning_example2.png, id=1679, 604.2575pt x 370.38
 374pt>
 File: ./theory/figures/supervised_leaning_example2.png Graphic file (type png)
 <use ./theory/figures/supervised_leaning_example2.png>
@@ -7033,7 +7189,7 @@ Package pdftex.def Info: ./theory/figures/supervised_leaning_example2.png  used
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [77]
-<./theory/figures/unsupervised_learning_example.png, id=1683, 803.0pt x 312.166
+<./theory/figures/unsupervised_learning_example.png, id=1689, 803.0pt x 312.166
 24pt>
 File: ./theory/figures/unsupervised_learning_example.png Graphic file (type png
 )
@@ -7043,7 +7199,7 @@ ed on input line 86.
 (pdftex.def)             Requested size: 240.90186pt x 93.65059pt.
  [78 <./theory/figures/supervised_leaning_example2.png (PNG copy)> <./theory/fi
 gures/unsupervised_learning_example.png>]
-<./theory/figures/reinforment_learning_example.png, id=1691, 604.2575pt x 431.6
+<./theory/figures/reinforment_learning_example.png, id=1697, 604.2575pt x 431.6
 125pt>
 File: ./theory/figures/reinforment_learning_example.png Graphic file (type png)
 
@@ -7051,7 +7207,7 @@ File: ./theory/figures/reinforment_learning_example.png Graphic file (type png)
 Package pdftex.def Info: ./theory/figures/reinforment_learning_example.png  use
 d on input line 107.
 (pdftex.def)             Requested size: 181.27864pt x 129.48474pt.
-<./theory/figures/perceptron.png, id=1694, 285.065pt x 152.06813pt>
+<./theory/figures/perceptron.png, id=1700, 285.065pt x 152.06813pt>
 File: ./theory/figures/perceptron.png Graphic file (type png)
 <use ./theory/figures/perceptron.png>
 Package pdftex.def Info: ./theory/figures/perceptron.png  used on input line 13
@@ -7059,13 +7215,13 @@ Package pdftex.def Info: ./theory/figures/perceptron.png  used on input line 13
 (pdftex.def)             Requested size: 285.0643pt x 152.06775pt.
  [79 <./theory/figures/reinforment_learning_example.png (PNG copy)>] [80 <./the
 ory/figures/perceptron.png>]
-<./theory/figures/activation_figures.png, id=1708, 375.4025pt x 113.42375pt>
+<./theory/figures/activation_figures.png, id=1714, 375.4025pt x 113.42375pt>
 File: ./theory/figures/activation_figures.png Graphic file (type png)
 <use ./theory/figures/activation_figures.png>
 Package pdftex.def Info: ./theory/figures/activation_figures.png  used on input
  line 168.
 (pdftex.def)             Requested size: 375.40158pt x 113.42346pt.
-<./theory/figures/feedforwardnetwork.png, id=1709, 249.93375pt x 184.69pt>
+<./theory/figures/feedforwardnetwork.png, id=1715, 249.93375pt x 184.69pt>
 File: ./theory/figures/feedforwardnetwork.png Graphic file (type png)
 <use ./theory/figures/feedforwardnetwork.png>
 Package pdftex.def Info: ./theory/figures/feedforwardnetwork.png  used on input
@@ -7081,7 +7237,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 214.
 
 [82 <./theory/figures/feedforwardnetwork.png>]
-<./theory/figures/convolutional_neural_network_structure.png, id=1720, 337.26pt
+<./theory/figures/convolutional_neural_network_structure.png, id=1727, 337.26pt
  x 152.36925pt>
 File: ./theory/figures/convolutional_neural_network_structure.png Graphic file 
 (type png)
@@ -7089,12 +7245,12 @@ File: ./theory/figures/convolutional_neural_network_structure.png Graphic file
 Package pdftex.def Info: ./theory/figures/convolutional_neural_network_structur
 e.png  used on input line 230.
 (pdftex.def)             Requested size: 236.08038pt x 106.65773pt.
-<./theory/figures/conv_1.png, id=1722, 397.485pt x 279.0425pt>
+<./theory/figures/conv_1.png, id=1729, 397.485pt x 279.0425pt>
 File: ./theory/figures/conv_1.png Graphic file (type png)
 <use ./theory/figures/conv_1.png>
 Package pdftex.def Info: ./theory/figures/conv_1.png  used on input line 246.
 (pdftex.def)             Requested size: 167.2989pt x 117.44826pt.
-<./theory/figures/conv_2.png, id=1723, 397.485pt x 279.0425pt>
+<./theory/figures/conv_2.png, id=1730, 397.485pt x 279.0425pt>
 File: ./theory/figures/conv_2.png Graphic file (type png)
 <use ./theory/figures/conv_2.png>
 Package pdftex.def Info: ./theory/figures/conv_2.png  used on input line 250.
@@ -7104,13 +7260,13 @@ Package pdftex.def Info: ./theory/figures/conv_2.png  used on input line 250.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [83 <./theory/figures/convolutional_neural_network_structure.png>]
-<./theory/figures/max_pooling.png, id=1731, 560.0925pt x 278.03876pt>
+<./theory/figures/max_pooling.png, id=1737, 560.0925pt x 278.03876pt>
 File: ./theory/figures/max_pooling.png Graphic file (type png)
 <use ./theory/figures/max_pooling.png>
 Package pdftex.def Info: ./theory/figures/max_pooling.png  used on input line 2
 73.
 (pdftex.def)             Requested size: 196.03531pt x 97.31502pt.
-<./theory/figures/3d_conv.png, id=1732, 672.5125pt x 682.55pt>
+<./theory/figures/3d_conv.png, id=1738, 672.5125pt x 682.55pt>
 File: ./theory/figures/3d_conv.png Graphic file (type png)
 <use ./theory/figures/3d_conv.png>
 Package pdftex.def Info: ./theory/figures/3d_conv.png  used on input line 291.
@@ -7121,7 +7277,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [84 <./theory/figures/conv_1.png> <./theory/figures/conv_2.png> <./theory/figur
 es/max_pooling.png>]
-<./theory/figures/RPN_structure.png, id=1737, 614.295pt x 361.35pt>
+<./theory/figures/RPN_structure.png, id=1743, 614.295pt x 361.35pt>
 File: ./theory/figures/RPN_structure.png Graphic file (type png)
 <use ./theory/figures/RPN_structure.png>
 Package pdftex.def Info: ./theory/figures/RPN_structure.png  used on input line
@@ -7132,38 +7288,38 @@ Package pdftex.def Info: ./theory/figures/RPN_structure.png  used on input line
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [85 <./theory/figures/3d_conv.png>]
-<./theory/figures/anchors.png, id=1752, 704.6325pt x 525.965pt>
+<./theory/figures/anchors.png, id=1758, 704.6325pt x 525.965pt>
 File: ./theory/figures/anchors.png Graphic file (type png)
 <use ./theory/figures/anchors.png>
 Package pdftex.def Info: ./theory/figures/anchors.png  used on input line 347.
 (pdftex.def)             Requested size: 211.39139pt x 157.79071pt.
  [86 <./theory/figures/RPN_structure.png (PNG copy)> <./theory/figures/anchors.
 png>]
-<./theory/figures/roi_align_1.png, id=1764, 376.40625pt x 377.41pt>
+<./theory/figures/roi_align_1.png, id=1770, 376.40625pt x 377.41pt>
 File: ./theory/figures/roi_align_1.png Graphic file (type png)
 <use ./theory/figures/roi_align_1.png>
 Package pdftex.def Info: ./theory/figures/roi_align_1.png  used on input line 3
 74.
 (pdftex.def)             Requested size: 112.92273pt x 113.22386pt.
-<./theory/figures/roi_al_3.png, id=1765, 374.39874pt x 382.42876pt>
+<./theory/figures/roi_al_3.png, id=1771, 374.39874pt x 382.42876pt>
 File: ./theory/figures/roi_al_3.png Graphic file (type png)
 <use ./theory/figures/roi_al_3.png>
 Package pdftex.def Info: ./theory/figures/roi_al_3.png  used on input line 381.
 
 (pdftex.def)             Requested size: 112.32048pt x 114.7295pt.
-<./theory/figures/roi_al_2.png, id=1766, 334.24875pt x 237.88875pt>
+<./theory/figures/roi_al_2.png, id=1772, 334.24875pt x 237.88875pt>
 File: ./theory/figures/roi_al_2.png Graphic file (type png)
 <use ./theory/figures/roi_al_2.png>
 Package pdftex.def Info: ./theory/figures/roi_al_2.png  used on input line 388.
 
 (pdftex.def)             Requested size: 100.27539pt x 71.36716pt.
-<./theory/figures/roi_al_4.png, id=1767, 331.2375pt x 235.88126pt>
+<./theory/figures/roi_al_4.png, id=1773, 331.2375pt x 235.88126pt>
 File: ./theory/figures/roi_al_4.png Graphic file (type png)
 <use ./theory/figures/roi_al_4.png>
 Package pdftex.def Info: ./theory/figures/roi_al_4.png  used on input line 395.
 
 (pdftex.def)             Requested size: 99.37201pt x 70.76491pt.
-<./theory/figures/roi_align_2.png, id=1772, 448.67625pt x 450.68375pt>
+<./theory/figures/roi_align_2.png, id=1778, 448.67625pt x 450.68375pt>
 File: ./theory/figures/roi_align_2.png Graphic file (type png)
 <use ./theory/figures/roi_align_2.png>
 Package pdftex.def Info: ./theory/figures/roi_align_2.png  used on input line 4
@@ -7175,7 +7331,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [87 <./theory/figures/roi_align_1.png> <./theory/figures/roi_al_3.png> <./theor
 y/figures/roi_al_2.png> <./theory/figures/roi_al_4.png>]
-<./theory/figures/soft_nms.jpeg, id=1779, 1284.8pt x 1034.86626pt>
+<./theory/figures/soft_nms.jpeg, id=1785, 1284.8pt x 1034.86626pt>
 File: ./theory/figures/soft_nms.jpeg Graphic file (type jpg)
 <use ./theory/figures/soft_nms.jpeg>
 Package pdftex.def Info: ./theory/figures/soft_nms.jpeg  used on input line 440
@@ -7186,13 +7342,13 @@ Package pdftex.def Info: ./theory/figures/soft_nms.jpeg  used on input line 440
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [88 <./theory/figures/roi_align_2.png>] [89 <./theory/figures/soft_nms.jpeg>]
-<./theory/figures/c_entropy.png, id=1807, 1172.38pt x 819.06pt>
+<./theory/figures/c_entropy.png, id=1813, 1172.38pt x 819.06pt>
 File: ./theory/figures/c_entropy.png Graphic file (type png)
 <use ./theory/figures/c_entropy.png>
 Package pdftex.def Info: ./theory/figures/c_entropy.png  used on input line 518
 .
 (pdftex.def)             Requested size: 199.15884pt x 128.0278pt.
-<./theory/figures/smooth_l1.png, id=1808, 604.2575pt x 342.27875pt>
+<./theory/figures/smooth_l1.png, id=1814, 604.2575pt x 342.27875pt>
 File: ./theory/figures/smooth_l1.png Graphic file (type png)
 <use ./theory/figures/smooth_l1.png>
 Package pdftex.def Info: ./theory/figures/smooth_l1.png  used on input line 526
@@ -7202,28 +7358,28 @@ Package pdftex.def Info: ./theory/figures/smooth_l1.png  used on input line 526
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./theory/figures/iou.png, id=1814, 602.25pt x 248.93pt>
+<./theory/figures/iou.png, id=1820, 602.25pt x 248.93pt>
 File: ./theory/figures/iou.png Graphic file (type png)
 <use ./theory/figures/iou.png>
 Package pdftex.def Info: ./theory/figures/iou.png  used on input line 551.
 (pdftex.def)             Requested size: 331.23851pt x 136.91191pt.
 [90] [91 <./theory/figures/c_entropy.png> <./theory/figures/smooth_l1.png> <./t
 heory/figures/iou.png>] [92] [93]
-<./theory/figures/pr_curve.png, id=1847, 576.1525pt x 424.58624pt>
+<./theory/figures/pr_curve.png, id=1853, 576.1525pt x 424.58624pt>
 File: ./theory/figures/pr_curve.png Graphic file (type png)
 <use ./theory/figures/pr_curve.png>
 Package pdftex.def Info: ./theory/figures/pr_curve.png  used on input line 681.
 
 (pdftex.def)             Requested size: 230.45691pt x 169.83148pt.
  [94 <./theory/figures/pr_curve.png>]
-<./theory/figures/pr_curve2.png, id=1856, 584.1825pt x 431.6125pt>
+<./theory/figures/pr_curve2.png, id=1862, 584.1825pt x 431.6125pt>
 File: ./theory/figures/pr_curve2.png Graphic file (type png)
 <use ./theory/figures/pr_curve2.png>
 Package pdftex.def Info: ./theory/figures/pr_curve2.png  used on input line 707
 .
 (pdftex.def)             Requested size: 233.66885pt x 172.64194pt.
  [95 <./theory/figures/pr_curve2.png>]
-<./theory/figures/mabo.png, id=1865, 1040.88875pt x 787.94376pt>
+<./theory/figures/mabo.png, id=1871, 1040.88875pt x 787.94376pt>
 File: ./theory/figures/mabo.png Graphic file (type png)
 <use ./theory/figures/mabo.png>
 Package pdftex.def Info: ./theory/figures/mabo.png  used on input line 728.
@@ -7385,31 +7541,31 @@ Underfull \vbox (badness 1286) has occurred while \output is active []
 
  [116]
 [117] [118]
-<./theory/figures/proposals0_half.png, id=2136, 1283.79625pt x 321.2pt>
+<./theory/figures/proposals0_half.png, id=2143, 1283.79625pt x 321.2pt>
 File: ./theory/figures/proposals0_half.png Graphic file (type png)
 <use ./theory/figures/proposals0_half.png>
 Package pdftex.def Info: ./theory/figures/proposals0_half.png  used on input li
 ne 804.
 (pdftex.def)             Requested size: 334.6019pt x 59.1564pt.
-<./theory/figures/proposals1_half.png, id=2137, 1284.8pt x 321.2pt>
+<./theory/figures/proposals1_half.png, id=2144, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposals1_half.png Graphic file (type png)
 <use ./theory/figures/proposals1_half.png>
 Package pdftex.def Info: ./theory/figures/proposals1_half.png  used on input li
 ne 811.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
-<./theory/figures/proposals2_half.png, id=2138, 1284.8pt x 321.2pt>
+<./theory/figures/proposals2_half.png, id=2145, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposals2_half.png Graphic file (type png)
 <use ./theory/figures/proposals2_half.png>
 Package pdftex.def Info: ./theory/figures/proposals2_half.png  used on input li
 ne 818.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
-<./theory/figures/proposal_gt.png, id=2139, 1284.8pt x 321.2pt>
+<./theory/figures/proposal_gt.png, id=2146, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposal_gt.png Graphic file (type png)
 <use ./theory/figures/proposal_gt.png>
 Package pdftex.def Info: ./theory/figures/proposal_gt.png  used on input line 8
 25.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
-<./theory/figures/proposal_gt1.png, id=2140, 1284.8pt x 321.2pt>
+<./theory/figures/proposal_gt1.png, id=2147, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposal_gt1.png Graphic file (type png)
 <use ./theory/figures/proposal_gt1.png>
 Package pdftex.def Info: ./theory/figures/proposal_gt1.png  used on input line 
@@ -7606,7 +7762,7 @@ Underfull \vbox (badness 10000) detected at line 691
 Underfull \vbox (badness 10000) detected at line 735
  []
 
-<./theory/figures/tube_ex2_half.png, id=2284, 1284.8pt x 1283.79625pt>
+<./theory/figures/tube_ex2_half.png, id=2290, 1284.8pt x 1283.79625pt>
 File: ./theory/figures/tube_ex2_half.png Graphic file (type png)
 <use ./theory/figures/tube_ex2_half.png>
 Package pdftex.def Info: ./theory/figures/tube_ex2_half.png  used on input line
@@ -7620,7 +7776,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (./chapter6.tex
 Chapter 11.
-<./theory/figures/model_withoutnms_v2.png, id=2296, 595.22375pt x 847.165pt>
+<./theory/figures/model_withoutnms_v2.png, id=2302, 595.22375pt x 847.165pt>
 File: ./theory/figures/model_withoutnms_v2.png Graphic file (type png)
 <use ./theory/figures/model_withoutnms_v2.png>
 Package pdftex.def Info: ./theory/figures/model_withoutnms_v2.png  used on inpu
@@ -7634,7 +7790,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [136 <./theory/figures/model_withoutnms_v2.png>]
-<./theory/figures/rnn.jpeg, id=2313, 1333.98375pt x 417.56pt>
+<./theory/figures/rnn.jpeg, id=2319, 1333.98375pt x 417.56pt>
 File: ./theory/figures/rnn.jpeg Graphic file (type jpg)
 <use ./theory/figures/rnn.jpeg>
 Package pdftex.def Info: ./theory/figures/rnn.jpeg  used on input line 86.
@@ -7694,7 +7850,7 @@ Underfull \vbox (badness 10000) detected at line 702
  []
 
 [146]
-<./theory/figures/model_withnms.png, id=2408, 595.22375pt x 847.165pt>
+<./theory/figures/model_withnms.png, id=2414, 595.22375pt x 847.165pt>
 File: ./theory/figures/model_withnms.png Graphic file (type png)
 <use ./theory/figures/model_withnms.png>
 Package pdftex.def Info: ./theory/figures/model_withnms.png  used on input line
@@ -7814,7 +7970,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
 Package rerunfilecheck Info: File `main_file.out' has not changed.
-(rerunfilecheck)             Checksum: 002BFFB3783EB83DB89C3EE5DC4A4FC2;8923.
+(rerunfilecheck)             Checksum: 463696ABD0D98EF1B5A789E121875F8B;8920.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -7829,13 +7985,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  )
 (\end occurred when \iftrue on line 68 was incomplete) 
 Here is how much of TeX's memory you used:
- 20117 strings out of 492616
- 369008 string characters out of 6128968
- 842480 words of memory out of 5000000
- 22885 multiletter control sequences out of 15000+600000
+ 20120 strings out of 492616
+ 369059 string characters out of 6128968
+ 853645 words of memory out of 5000000
+ 22888 multiletter control sequences out of 15000+600000
  21991 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,17n,95p,2350b,9499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,17n,95p,2350b,9329s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/t
@@ -7851,24 +8007,23 @@ onts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
-c/cbfonts/grmi1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/c
-bfonts/grmn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfo
-nts/grmn2074.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts
-/grxn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/gr
-xn1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn1
-440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn1728
-.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on main_file.pdf (164 pages, 8075359 bytes).
+/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/cbfonts/grmi1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
+/cbfonts/grmn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cb
+fonts/grmn2074.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfon
+ts/grxn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/
+grxn1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grx
+n1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn17
+28.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn2074.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
+Output written on main_file.pdf (164 pages, 8070446 bytes).
 PDF statistics:
- 2913 PDF objects out of 2984 (max. 8388607)
- 2608 compressed objects within 27 object streams
+ 2916 PDF objects out of 2984 (max. 8388607)
+ 2612 compressed objects within 27 object streams
  685 named destinations out of 1000 (max. 500000)
  1313 words of extra memory for PDF output out of 10000 (max. 10000000)
 

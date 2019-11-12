@@ -282,7 +282,7 @@ cuboids\gr.
 
 
 Για να επιβεβαιώσουμε την ιδέα μας, εκπαιδεύουμε το \en TPN \gr χρησιμοποιώντας τόσο το \en IoU \gr κριτήριο όσο και το \en mIoU \gr  για την επικάλυψη των \en cuboids\gr.
-Στο πίνακα \ref{table:gr_iou_miou} μπορούμε να δούμε την απόδοση σε κάθε περίπτωση και για τα δύο σύνολα δεδομένων, \en JHMDB \gr και \en UCF\gr. Το \en recall \gr όριο για αυτή
+Στο πίνακα \ref{table:gr_iou_miou} μπορούμε να δούμε την απόδοση σε κάθε περίπτωση και για τα δύο σύνολα δεδομένων, \en JHMDB \gr και \en UCF-101\gr. Το \en recall \gr όριο για αυτή
 την περίπτωση είναι 0,5 και κατά την διάρκεια του \en validation \gr χρησιμοποιούμε το κανονικό \en IoU \gr για να καθορίσουμε αν 2 \en cuboids \gr επικαλύπτονται.
 
 \en
@@ -301,7 +301,7 @@ cuboids\gr.
     {} & mIoU & 0.4829 \\
     \hline      
   \end{tabular}
-  \caption{\gr Τα αποτελέσματα του \tl{Recall} και για τα 2 σύνολα δεδομένων
+  \caption{\gr Τα αποτελέσματα του \tl{recall} και για τα 2 σύνολα δεδομένων
     χρησιμοποιώντας τις μετρικές \tl{IoU} και \tl{mIoU}}
   % \caption{\en Recall results for both datasets using IoU and mIoU metrics}
 
@@ -309,7 +309,7 @@ cuboids\gr.
 \end{table}
 \gr
 
-Ο πίνακας  \ref{table:gr_iou_miou} μας δείχνει ότι το τροποποιημένο-\en IoU \gr μας δίνει ελαφρώς καλύτερη απόδοση \en recall \gr μόνο στο σύνολο δεδομένων \en UCF\gr.
+Ο πίνακας  \ref{table:gr_iou_miou} μας δείχνει ότι το τροποποιημένο-\en IoU \gr μας δίνει ελαφρώς καλύτερη απόδοση \en recall \gr μόνο στο σύνολο δεδομένων \en UCF-101\gr.
 Αυτό είναι λογικό, επειδή το σύνολο δεδομένων \en JHMDB \gr χρησιμοποιεί κομμένα βίντεο, συνεπώς  η χρονική διάρκεια δεν επηρεάζει πολύ. Έτσι, από τώρα και στο εξής,
 κατά τη διάρκεια του \en training \gr χρησιμοποιούμε το \en mIoU  \gr ως επικαλυπτόμενη πολιτική βαθμολογίας.
 
@@ -407,7 +407,8 @@ cuboids\gr.
     {} & {} & Mean & 0.4885 \\
     \hline      
   \end{tabular}
-  \caption{\en Recall results after adding fixed time duration anchors}
+  \caption{\gr Τα αποτελέσματα του \tl{recall} μετά την προσθήκη \tl{anchor} με σταθερή χρονική διάρκεια}
+  % \caption{\en Recall results after adding fixed time duration anchors}
   \label{table:gr_add_16}
 \end{table}
 \gr
@@ -467,11 +468,11 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 \paragraph{\tl{Validation}}
 Χρησιμοποιούμε, ξανά, τη μετρική \en recall \gr για να αξιολογήσουμε την απόδοση τoυ παλινδρομητή. Υπολογίζουμε 3 επιδόσεις \en recall\gr:
 \begin{description}
-\item [\tl{Cuboid Recall},] που είναι η \en recall \gr μετρική για τα προτεινόμενα τρισδιάστατα κουτιά. Ενδιαφερόμαστε για αυτήν την επίδοση γιατί,
-  θέλουμε να μάθουμε πόσο καλές είναι οι προτάσεις μας πριν τις τροποποιήσουμε σε σειρές κουτιών.
-\item [\tl{Single frame Recall},] η οποία είναι η επίδοση \en recall \gr για τις προτεινόμενες ακολουθίες κουτιών σε σχέση με τις πραγματικές.
-\item[\tl{Follow-up Single Frame Recall},] που είναι η απόδοση της ανάκλησης μόνο για τα τρισδιάστατα Κουτιά που ήταν πάνω από το όριο επικάλυψης μεταξύ
-  των προτεινόμενων κύβων και των πραγματικών κύβων. Χρησιμοποιούμε αυτή τη μετρική για να γνωρίζουμε πόσα από τους προτεινόμενα τρισδιάστατα κουτιά
+\item [\tl{Cuboid Recall},] που είναι η \en recall \gr μετρική για τα προτεινόμενα τρισδιάστατα \tl{cuboids}. Ενδιαφερόμαστε για αυτήν την επίδοση γιατί,
+  θέλουμε να μάθουμε πόσο καλές είναι οι προτάσεις μας πριν τις τροποποιήσουμε σε σειρές πλαισίων οριοθέτησης.
+\item [\tl{Single frame Recall},] η οποία είναι η επίδοση \en recall \gr για τις προτεινόμενες ακολουθίες δισδιάστατων κουτιών σε σχέση με τις πραγματικές.
+\item[\tl{Follow-up Single Frame Recall},] που είναι η απόδοση της ανάκλησης μόνο για τα τρισδιάστατα \tl{cuboids} που ήταν πάνω από το όριο επικάλυψης μεταξύ
+  των προτεινόμενων κύβων και των πραγματικών κύβων. Χρησιμοποιούμε αυτή τη μετρική για να γνωρίζουμε πόσα από τα προτεινόμενα τρισδιάστατα κουτιά
   κατέληξαν να είναι καλές προτάσεις.
 \end{description}
 
@@ -484,7 +485,7 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.48]{regressor_1_1}
-  \caption{\en Structure of Regressor}
+  \caption{\gr Η δομή του \tl{Regressor} της πρώτης προσέγγισης}
   \label{fig:gr_regressor_3d}
 \end{figure}
 \gr
@@ -493,7 +494,7 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
   \en
   \centering
   \includegraphics[scale=0.48]{regressor_1_2}
-  \caption{\en Structure of Regressor}
+  \caption{\gr Η δομή του \tl{Regressor} της δεύτερης προσέγγισης}
   \label{fig:gr_reg_1_2}
 \end{figure}
 \gr
@@ -502,10 +503,10 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 \begin{enumerate}
 \item Αρχικά εξάγουμε τα αντίστοιχα \en feature maps \gr για κάθε \en ToI \gr χρησιμοποιώντας \en 3D Roi Align\gr, και ακολούθως τα κανονικοποιούμε. Μετά, στην πρώτη προσέγγιση
 τροφοδοτούμε ένα \en 3D Convolutional Layer \gr με \en  kernel \gr ίσο με 1, \en stride \gr ίσο με 1 και χωρίς \en padding\gr. Στην συνέχεια, εφαρμόζουμε μια
-\en pooling \grδιαδικασία στην διάσταση του χρόνου (είτε \en avg \gr είτε \en max pooling\gr). Απ'   την άλλη, στην δεύτερη προσέγγιση, πρώτα εφαρμόζουμε \en avg/max pooling \gr στην
+\en pooling \grδιαδικασία στην διάσταση του χρόνου (είτε \en avg \gr είτε \en max pooling\gr). Απ'   την άλλη, στην δεύτερη προσέγγιση, πρώτα εφαρμόζουμε \en avg/max pooling \gr μόνο στην
 διάσταση του χρόνου και στην συνέχεια τροφοδοτούμε ένα \en 2D Convolutional Layer \gr με \en kernel = 1, stride = 1 \gr και χωρίς \en padding\gr.
 \item Και στις δύο περιπτώσεις λαμβάνουμε ως έξοδο ένα \en feature map \gr με διαστάσεις (64,7,7) το οποίο περνάμε διαδοχικά από 1 γραμμικό  \en layer, 1 Relu Layer, 1 Dropout Layer, \gr
-  άλλο ένα γραμμικό \en Layer\gr, άλλο ένα \en ReLu layer \gr και ένα τελικό γραμμικό \en layer\gr. Το τελευταίο \en layer \gr μας δίνει ως έξοδο 64 στόχους, 4 $\cdot$ 16 μετακινήσεις.
+  άλλο ένα γραμμικό \en Layer\gr, άλλο ένα \en ReLu layer \gr και ένα τελικό γραμμικό \en layer\gr. Το τελευταίο \en layer \gr μας δίνει ως έξοδο 64 στόχους, δηλαδή 4 $\cdot$ 16 μετακινήσεις.
 \end{enumerate}
 
 \en
@@ -526,7 +527,8 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
     \cline{1-5}
                                    
   \end{tabular}
-  \caption{\en Recall results after convertying cuboids into sequences of frames}
+  % \caption{\en Recall results after converting cuboids into sequences of frames}
+  \caption{\gr Τα αποτελέσματα του \tl{recall} αφού μετατρέψουμε τα \tl{cuboids} σε ακολουθίες από δισδιάστατα κουτιά }
   \label{table:gr_reg_1_1}
 \end{table}
 \gr
@@ -536,7 +538,7 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
   \centering
   \begin{tabular}{||c | c | c || c  c  c ||}
     \hline
-    \textbf{Dataset} & \textbf{Pooling} & \textbf{F. Map} & \textbf{Recall} &  \textbf{ Recall SR}  &  \textbf{Recall SRF} \\
+    \textbf{Dataset} & \textbf{Pooling} & \textbf{F. Map} & \textbf{Recall} &  \textbf{ Recall SF}  &  \textbf{Recall FSF} \\
     \hline
     \multirow{6}{*}{JHMDB} & \multirow{3}{*}{mean} & 64 &  0.6828  & 0.5112  & 0.7610 \\
     \cline{3-6}
@@ -564,20 +566,22 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
     \hline
 
   \end{tabular}
-  \caption{\en Recall performance using 3 different feature maps as Regressor's input and 2 pooling methods}
+  \caption{\gr Τα αποτελέσματα του \tl{recall} όταν χρησιμοποιούμε 3 διαφορετικά \tl{feature maps} ως είσοδο στον
+  \tl{Regressor} και 2 \tl{pooling} μεθόδους}
+  % \caption{\en Recall performance using 3 different feature maps as Regressor's input and 2 pooling methods}
   \label{table:gr_reg_1_2}
 \end{table}
 \gr
 Οι πίνακες \ref{table:gr_reg_1_1} και \ref{table:gr_reg_1_2} περιέχουν τα αποτελέσματα για την πρώτη και δεύτερη προσέγγιση. Μάλιστα, για την δεύτερη προσέγγιση ελέγξαμε 3 διαφορετικούς χάρτες
 χαρακτηριστικών, ενώ και στις 2 περιπτώσεις πειραματιστήκαμε χρησιμοποιώντας και τις 2 προαναφερθέντες \en pooling \gr μεθόδους για τα σύνολα δεδομένων \en JHMDB \gr και \en UCF-101\gr.
-Παρατηρούμε ότι, με βάση τα παραπάνω αποτελέσματα, λαμβάνουμε σχετικά χαμηλή \en recall \gr απόδοση για το \en dataset UCF \gr ενώ για το \en JHMDB \gr  τα αποτελέσματα είναι κάπως καλύτερα.
-Πιο συγκεκριμένα, με βάση την πρώτη προσέγγιση λαμβάνουμε τελικά \en recall \gr απόδοση ίση με 76-77\% για το \en JHMDB \gr και 46-50\% για το \en UCF\gr. Με βάση την δεύτερη προσέγγιση,
-στην καλύτερη περίπτωση λαμβάνουμε 80\% απόδοση \en recall  \gr για το \en JHMDB \gr ενώ για το \en UCF \gr παραμένουμε στα ίδια περίπου αποτελέσματα.
+Παρατηρούμε ότι, με βάση τα παραπάνω αποτελέσματα, λαμβάνουμε σχετικά χαμηλή \en recall \gr απόδοση για το \en dataset UCF-101 \gr ενώ για το \en JHMDB \gr  τα αποτελέσματα είναι κάπως καλύτερα.
+Πιο συγκεκριμένα, με βάση την πρώτη προσέγγιση λαμβάνουμε τελικά \en recall \gr απόδοση ίση με 76-77\% για το \en JHMDB \gr και 46-50\% για το \en UCF-101\gr. Με βάση την δεύτερη προσέγγιση,
+στην καλύτερη περίπτωση λαμβάνουμε 80\% απόδοση \en recall  \gr για το \en JHMDB \gr ενώ για το \en UCF-101 \gr παραμένουμε στα ίδια περίπου αποτελέσματα.
 Παράλληλα παρατηρούμε ότι χάνουμε περίπου 30-40\% από τις καλές \en cuboid \gr προτάσεις και στις 2 περιπτώσεις, το οποίο αποτελεί μεγάλο πρόβλημα και των δύο προσεγγίσεων.
 Όλ' αυτά μας κάνουν να ξανασκεφτούμε τον τρόπο που σχεδιάσαμε το \en TPN \gr και μας οδήγησε στο να σχεδιάσουμε ένα νέο μοντέλο.
 
 
-\section{Τα τρισδιάστατα \tl{anchors} ως \tl{4k} διανύσματα}
+\section{\gr Τα τρισδιάστατα \tl{anchors} ως \tl{4k} διανύσματα}
 Σε αυτή την προσέγγιση, ορίζουμε τους \en 3D anchors \gr ως διανύσματα με \en 4k \gr συντεταγμένες (\tl{k} = 16 καρέ = διάρκεια δείγματος).
 Έτσι ένα τυπικό \en anchor \gr γράφεται ως ($x_1, y_1, x'_1, y'_1, x_2, y_2, ...$)
 όπου $x_1, y_1, x'_1, y'_1 $ είναι οι συντεταγμένες για 1ο καρέ, $x_2, y_2, x'_2, y'_2$ για το 2ο καρέ κλπ, όπως παρουσιάστηκε από τους \en\cite{DBLP:journals/corr/abs-1712-09184}\gr. 
@@ -585,9 +589,12 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 
 \en
 \begin{figure}[h]
+  \en
   \centering
   \includegraphics[scale=0.5]{anchor_4k}
-  \caption{An example of the anchor $(x_1,y_1,x'_1,y'_1,x_2,y_2, ...)$}
+  \caption{\gr 'Ενα παράδειγμα του \en anchor $(x_1,y_1,x'_1,y'_1,x_2,y_2, ...)$}
+  % \caption{An example of the anchor $(x_1,y_1,x'_1,y'_1,x_2,y_2, ...)$}
+
   \label{fig:gr_anchor_4k}
 \end{figure}
 \gr
@@ -595,7 +602,7 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 Το κύριο πλεονέκτημα αυτής της προσέγγισης είναι ότι δεν χρειάζεται να μεταφράσουμε τα \en 3D anchors \gr σε δισδιάστατα κουτιά, γεγονός που προκάλεσε πολλά προβλήματα στην προηγούμενη προσέγγιση.
 Ωστόσο, αυτή η προσέγγιση έχει ένα μεγάλο μειονέκτημα, το οποίο είναι το γεγονός ότι αυτός ο τύπος \en anchor \gr έχει σταθερή χρονική διάρκεια.
 Για να αντιμετωπίσουμε αυτό το πρόβλημα, έχουμε ορίσει \en anchors \gr με διαφορετικές χρονικές διάρκειες, οι οποίες είναι 16, 12, 8 και 4 καρέ.
-\en Anchors \gr με διάρκεια $<$  διάρκεια του δείγματος (16 καρέ) μπορούν  να γραφτούν ως διάνυσμα \en 4k \gr με μηδενικές συντεταγμένες στα καρέ μεγαλύτερα από τη χρονική διάρκεια.
+\en Anchors \gr με διάρκεια $<$  διάρκεια του δείγματος (16 καρέ) μπορούν  να γραφτούν ως διάνυσμα διάστασης \en 4k \gr με μηδενικές συντεταγμένες στα καρέ εκτός χρονικών ορίων.
 Για παράδειγμα, ένα \en anchor \gr με 2 καρέ διάρκεια, ξεκινώντας από το 2ο καρέ και τερματίζοντας στον 3ο μπορεί να γραφεί ως
 (0, 0, 0, 0, $x_1, y_1, x'_1, y'_1, x_2, y_2, x'_2, y'_2$, 0, 0, 0, 0)  εάν η διάρκεια δείγματος
 είναι 4 καρέ. 
@@ -605,13 +612,14 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
   \centering
   % \includegraphics[width=1.\textwidth]{tpn_2}
   \includegraphics[scale=0.4]{tpn_2}
-  \caption{\en The structure of TPN according to new approach}
+  \caption{\gr Η δομή του \tl{TPN} σύμφωνα με την νέα προσέγγιση}
+  % \caption{\en The structure of TPN according to new approach}
   \label{fig:gr_New_structure}
 \end{figure}
 
 \gr
 
-Αυτή η νέα προσέγγιση μας οδήγησε στο να αλλάξουμε την δομή του \en TPN\gr. Η νέο δομή του απεικονίζεται στην εικόνα  \ref{fig:gr_New_structure}. Όπως
+Αυτή η νέα προσέγγιση μας οδήγησε στο να αλλάξουμε την δομή του \en TPN\gr. Η νέα του δομή  απεικονίζεται στην εικόνα  \ref{fig:gr_New_structure}. Όπως
 μπορούμε να δούμε, προσθέσαμε \en scoring \gr και \en regression layers \gr για κάθε διάρκεια. Έτσι, το \en TPN \gr ακολουθεί τα επόμενα βήματα για να παράγει \en ToIs\gr.
 \begin{enumerate}
 \item Στην αρχή, τροφοδοτούμε τον χάρτη χαρακτηριστικών, που εξάγεται από το \en 3D ResNet34\gr, ως είσοδο σε ένα \en 3D Convolutional Layer \gr με μέγεθος πυρήνα = 1,
@@ -650,7 +658,8 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
     {} & max & 0.6418 & 0.7255 & 0.7898 \\
     \hline
   \end{tabular}
-  \caption{\en Recall results using 2nd approach for anchors}
+  \caption{\gr Τα αποτελέσματα του \tl{recall} όταν χρησιμοποιούμε την δεύτερη προσέγγιση για τα \tl{anchors}}
+  % \caption{\en Recall results using 2nd approach for anchors}
   \label{table:gr_tpn_2_1}
 \end{table}
 \gr
@@ -670,7 +679,7 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 
 \paragraph{\tl{3D Roi align}}
 Σε αυτή την προσέγγιση, γνωρίζουμε ήδη τις χωρικές συντεταγμένες. Έτσι, μπορούμε να χρησιμοποιήσουμε τη μέθοδο που προτείνεται από τους \en\cite{DBLP:journals/corr/abs-1712-09184}\gr. Αποτελεί
-επέκταση του \en RoiAlign \gr χωρίζοντας το \en tube \gr σε $T$ δισδιάστατα κουτιά. Στη συνέχεια, χρησιμοποιείται το  κλασικό \en RoiAlign \gr για να εξαχθεί  μια περιοχή από κάθε μίας από τα 
+επέκταση του \en RoiAlign \gr χωρίζοντας το \en tube \gr σε $T$ δισδιάστατα κουτιά. Στη συνέχεια, χρησιμοποιείται το  κλασικό \en RoiAlign \gr για να εξαχθεί  μια περιοχή από κάθε μία από τα 
 χρονικά \en slices \gr στον χάρτη ενεργοποίησης. Μετά από αυτό, τα \en feature maps \gr που προέκυψαν μέσω του \en RoiAlign \gr συνδέονται στην διάσταση του χρόνου, ώστε να προκύψει
 χάρτης χαρακτηριστικών με διαστάσεις $T \times R \times R$,  όπου $R $ είναι η ανάλυση εξόδου του \en RoiAlign\gr, το οποίο είναι 7 στην περίπτωσή μας.  \par
 
@@ -678,9 +687,9 @@ $(0,0,0,0, ..., x_{T_1},y_{T_1},x'_{T_1},y'_{T_1}, ... ,x_{i},y_{i},x'_{i}, ...,
 Εκπαιδεύουμε τον \en Regressor \gr μας χρησιμοποιώντας την ίδια \en loss function \gr όπως ο τύπος της προηγούμενης προσέγγισης που είναι:
 \begin{equation*} 
 \begin{split}
- L  =  \sum_iL_{cls}(p_i, p_i^*) + \sum_iL_{cls}(p_{fixed,i}, p_{fixed,i}^*) + \\
- \sum_ip_i^*L_{reg}(t_i,t_i^*) + \sum_ip_{fixed,i}^*L_{reg}(t_{fixed,i},t_{fixed,i}^*) + \\
-  \sum_iq_i^*L_{reg}(c_{i}, c_{i}^*) + \\
+ L  =  \sum_iL_{cls}(p_i, p_i^*) +
+ \sum_ip_i^*L_{reg}(t_i,t_i^*) +  
+  \sum_iq_i^*L_{reg}(c_{i}, c_{i}^*)  \\
   % \sum_iL_{cls}(p_i, p_i^*) + \sum_iL_{cls}(p_{fixed,i}, p_{fixed,i}^*) 
 \end{split}
 \end{equation*}
@@ -717,7 +726,9 @@ Convolution Layer \gr ακολουθούμενο, και αυτό, από 2 γρ
     \hline
 
   \end{tabular}
-  \caption{Recall performance when using a 3D Convolutional Layer in Regressor's architecture}
+  \caption{\gr Η επίδοση του \tl{recall} όταν χρησιμοποιούμε ένα \tl{3D Convolutional Layer} στην
+    αρχιτεκτονική του \tl{Regressor}}
+  % \caption{Recall performance when using a 3D Convolutional Layer in Regressor's architecture}
   \label{table:gr_reg_2_1}
 \end{table}
 \gr
@@ -743,7 +754,10 @@ Convolution Layer \gr ακολουθούμενο, και αυτό, από 2 γρ
     \hline
 
   \end{tabular}
-  \caption{Recall performance when using a 2D Convolutional Layer instead of 3D in Regressor's model}
+  \caption{\gr Η επίδοση του \tl{recall} όταν χρησιμοποιούμε ένα \tl{2D Convolutional Layer} αντί για \tl{3D} στην
+    αρχιτεκτονική του \tl{Regressor}}
+
+  % \caption{Recall performance when using a 2D Convolutional Layer instead of 3D in Regressor's model}
   \label{table:gr_reg_2_2}
 \end{table}
 \gr
@@ -752,10 +766,10 @@ Convolution Layer \gr ακολουθούμενο, και αυτό, από 2 γρ
 αποτέλεσμα ήταν αναμενόμενο γιατί αυτοί οι χάρτες ενεργοποίησης βρίσκονται «πιο κοντά» στα πραγματικά χαρακτηριστικά. Συγκρίνοντας
 τις δύο προτεινόμενες μεθόδους παρατηρούμε ότι η δεύτερη, αυτή δηλαδή που χρησιμοποιεί \en 2D Convolutional Layer \gr έχει τα καλύτερα
 αποτελέσματα. Αν και βελτιώσαμε την απόδοση του \en TPN \gr ακόμα δεν έχουμε καταφέρει να έχουμε σχεδόν σε όλες τις περιπτώσεις
-καλές προτάσεις \en tube\gr.
+καλές προτάσεις \en ToIs\gr.
 \subsection{Μείωση της διάρκειας του δείγματος}
 Προκειμένου να πετύχουμε καλύτερα αποτελέσματα αποφασίσαμε να μειώσουμε την διάρκεια του δείγματος από τα 16 καρέ σε 8 και 4 αντίστοιχα. Κι
-αυτό γιατί με αυτόν τον τρόπο θα μειωθούν παράλληλα με τον αριθμός τους οι διαστάσεις των \en anchors, \gr  άρα και οι διαστάσεις των στόχων παλινδρόμησης και γενικά ο αριθμός των παραμέτρων που πρέπει να εκπαιδευτούν από το σύστημα. \par
+αυτό γιατί με αυτόν τον τρόπο θα μειωθούν, παράλληλα με τον αριθμός τους, οι διαστάσεις των \en anchors, \gr  άρα και οι διαστάσεις των στόχων παλινδρόμησης και γενικά ο αριθμός των παραμέτρων που πρέπει να εκπαιδευτούν από το σύστημα. \par
 Εκπαιδεύουμε το \en TPN \gr με και χωρίς \en Regressor \gr προκειμένου να βρούμε την κατάλληλη αρχιτεκτονική. Τα αποτελέσματα χωρίς \en Regressor \gr
 παρουσιάζονται στον πίνακα \ref{table:gr_new_sample} ενώ τα αποτελέσματα της αρχιτεκτονικής με \en Regressor \gr στον πίνακα \ref{table:gr_new_sample_reg}.
 
@@ -780,7 +794,9 @@ Convolution Layer \gr ακολουθούμενο, και αυτό, από 2 γρ
     \hline
     
   \end{tabular}
-  \caption{\en Recall results when reducing sample duration to 4 and 8 frames per video segment}
+  \caption{\gr Η επίδοση του \tl{recall} όταν μειώσουμε την διάρκεια δείγματος σε 4 και 8 καρέ αντίστοιχα για κάθε
+  τμήμα του βίντεο}
+  % \caption{\en Recall results when reducing sample duration to 4 and 8 frames per video segment}
   \label{table:gr_new_sample}
 \end{table}
 \gr
@@ -810,7 +826,9 @@ Convolution Layer \gr ακολουθούμενο, και αυτό, από 2 γρ
     \hline
     
   \end{tabular}
-  \caption{\en Recall results when a regressor and sample duration equal with 4 or 8 frames per video segment}
+  \caption{\gr Τα αποτελέσματα του \tl{recall} όταν χρησιμοποιούμε \tl{Regressor} και θέτουμε την διάρκεια
+  δείγματος ίση με 4 ή 8 καρέ για κάθε τμήμα βίντεο}
+  % \caption{\en Recall results when a regressor and sample duration equal with 4 or 8 frames per video segment}
   \label{table:gr_new_sample_reg}
 
 \end{table}

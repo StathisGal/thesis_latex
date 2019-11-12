@@ -30,17 +30,17 @@
 \BOOKMARK [2][-]{subsection.3.4.4}{Modified Intersection over Union\(mIoU\) \040}{section.3.4}% 30
 \BOOKMARK [2][-]{subsection.3.4.5}{ \040 TPN score}{section.3.4}% 31
 \BOOKMARK [2][-]{subsection.3.4.6}{greekgreek Regressor}{section.3.4}% 32
-\BOOKMARK [1][-]{section.3.5}{ \040anchors \0404k \265}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.5}{greekgreek \040anchors \0404k \265}{chapter.3}% 33
 \BOOKMARK [2][-]{subsection.3.5.1}{Training}{section.3.5}% 34
 \BOOKMARK [2][-]{subsection.3.5.2}{greekgreek Regressor}{section.3.5}% 35
 \BOOKMARK [2][-]{subsection.3.5.3}{ \040 \040\265}{section.3.5}% 36
 \BOOKMARK [0][-]{chapter.4}{greekgreek\265 \040 greekenglishaction tubesgreekgreek}{}% 37
 \BOOKMARK [1][-]{section.4.1}{ : \265 \040 \040}{chapter.4}% 38
 \BOOKMARK [2][-]{subsection.4.1.1}{greekenglishJHMDB Datasetgreekgreek}{section.4.1}% 39
-\BOOKMARK [2][-]{subsection.4.1.2}{greekenglishUCF Datasetgreekgreek}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.2}{greekenglishUCF-101 Datasetgreekgreek}{section.4.1}% 40
 \BOOKMARK [1][-]{section.4.2}{ }{chapter.4}% 41
 \BOOKMARK [1][-]{section.4.3}{T \040\(\265 \040 greekenglishJHMDB\)greekgreek}{chapter.4}% 42
-\BOOKMARK [0][-]{chapter.5}{greekenglishClassification stagegreekgreek}{}% 43
+\BOOKMARK [0][-]{chapter.5}{greekgreek \265greekgreek}{}% 43
 \BOOKMARK [1][-]{section.5.1}{JHDMB dataset}{chapter.5}% 44
 \BOOKMARK [2][-]{subsection.5.1.1}{\265 greekenglishLinear, SVM greekgreek greekenglishRNN greekgreek}{section.5.1}% 45
 \BOOKMARK [2][-]{subsection.5.1.2}{greekenglishTemporal pooling greekgreek}{section.5.1}% 46

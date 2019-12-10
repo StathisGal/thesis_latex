@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.5)  10 NOV 2019 01:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.5)  18 NOV 2019 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,10 +1139,7 @@ LaTeX Font Info:    Try loading font information for LGR+cmr on input line 28.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
-)
-(./chapter1_gr.aux) (./chapter2_gr.aux) (./chapter3_gr.aux) (./chapter4_gr.aux)
-(./chapter5_gr.aux) (./chapter6_gr.aux) (./chapter1.aux) (./chapter2_3.aux)
-(./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./chapter7.aux))
+))
 \openout1 = `main_file.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -1545,7 +1542,7 @@ Package biblatex Warning: BibTeX reported the following issues
 )
 Package biblatex Info: Reference section=0 on input line 65.
 Package biblatex Info: Reference segment=0 on input line 65.
-<pyroforos.pdf, id=522, 556.90388pt x 556.17007pt>
+<pyroforos.pdf, id=12, 556.90388pt x 556.17007pt>
 File: pyroforos.pdf Graphic file (type pdf)
 <use pyroforos.pdf>
 Package pdftex.def Info: pyroforos.pdf  used on input line 68.
@@ -1640,98 +1637,98 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--68
 ]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textEpsilon' on input line 69.
+(hyperref)                removing `\textPi' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textupsilon' on input line 69.
+(hyperref)                removing `\textepsilon' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textchi' on input line 69.
+(hyperref)                removing `\textrho' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textalpha' on input line 69.
+(hyperref)                removing `\acctonos' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 69.
+(hyperref)                removing `\textiota' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 69.
+(hyperref)                removing `\textlambda' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textsigma' on input line 69.
+(hyperref)                removing `\texteta' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texttau' on input line 69.
+(hyperref)                removing `\textpsi' on input line 71.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\ensuregreek' on input line 69.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 69.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 69.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 69.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textvarsigma' on input line 69.
+(hyperref)                removing `\texteta' on input line 71.
 
 [7] [8
+
+] [9] [10
 
 ]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textPi' on input line 81.
+(hyperref)                removing `\textEpsilon' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textepsilon' on input line 81.
+(hyperref)                removing `\textupsilon' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textrho' on input line 81.
+(hyperref)                removing `\textchi' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\acctonos' on input line 81.
+(hyperref)                removing `\textalpha' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textiota' on input line 81.
+(hyperref)                removing `\textrho' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textlambda' on input line 81.
+(hyperref)                removing `\textiota' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 81.
+(hyperref)                removing `\textsigma' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\textpsi' on input line 81.
+(hyperref)                removing `\texttau' on input line 138.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\texteta' on input line 81.
+(hyperref)                removing `\ensuregreek' on input line 138.
 
-[9] [10
 
-] [11] [12
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\acctonos' on input line 138.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textiota' on input line 138.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textepsilon' on input line 138.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textvarsigma' on input line 138.
+
+[11] [12
 
 ] (./main_file.toc [13
 
@@ -1740,7 +1737,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 \openout5 = `main_file.toc'.
 
  [16] (./main_file.lot
-Underfull \hbox (badness 3240) in paragraph at lines 2752--2752
+Underfull \hbox (badness 3240) in paragraph at lines 2914--2914
  [][] [][][][]\LGR/cmr/m/n/10 Ta a-po-te-lèsma-ta tou \OT1/cmr/m/n/10 mAP \LGR/
 cmr/m/n/10 gia ton ta-xi-no-mh-t  \OT1/cmr/m/n/10 MLP \LGR/cmr/m/n/10 ek-pai-de
 -Ôo-ntac ton 
@@ -1754,7 +1751,24 @@ cmr/m/n/10 gia ton ta-xi-no-mh-t  \OT1/cmr/m/n/10 MLP \LGR/cmr/m/n/10 ek-pai-de
 
  [19] [20
 
-] (./main_file.lof [21])
+] (./main_file.lof
+
+LaTeX Warning: Hyper reference `fig:cross_entropy' on page 21 undefined on inpu
+t line 3031.
+
+
+LaTeX Warning: Reference `sub@fig:cross_entropy' on page 21 undefined on input 
+line 3031.
+
+
+LaTeX Warning: Hyper reference `fig:smooth_l1' on page 21 undefined on input li
+ne 3031.
+
+
+LaTeX Warning: Reference `sub@fig:smooth_l1' on page 21 undefined on input line
+ 3031.
+
+[21])
 \tf@lof=\write7
 \openout7 = `main_file.lof'.
 
@@ -2319,12 +2333,17 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textiota' on input line 71.
 
 [24]
+
+LaTeX Warning: Reference `fig:gr_open_example' on page 25 undefined on input li
+ne 86.
+
+
 Underfull \hbox (badness 1910) in paragraph at lines 82--88
 \LGR/cmr/m/n/10 pou pe-ri-lam-bˆnoun su-st ma-ta a-na-gn¸ri-shc thc drˆshc. Oi 
 sh-ma-nti-kìte-rec pro-kl seic
  []
 
-<./theory/figures/open_example.png, id=1059, 801.99625pt x 337.26pt>
+<./theory/figures/open_example.png, id=676, 801.99625pt x 337.26pt>
 File: ./theory/figures/open_example.png Graphic file (type png)
 <use ./theory/figures/open_example.png>
 Package pdftex.def Info: ./theory/figures/open_example.png  used on input line 
@@ -3111,7 +3130,11 @@ Underfull \hbox (badness 6758) in paragraph at lines 47--49
 n/10 (3D Con-vo-lu-tional Net-work)[][]\LGR/cmr/m/n/10 , to o-po-Ðo
  []
 
-<./theory/figures/final_structure.png, id=1281, 595.22375pt x 847.165pt>
+
+LaTeX Warning: Reference `fig:gr_whole_network_' on page 33 undefined on input 
+line 63.
+
+<./theory/figures/final_structure.png, id=898, 595.22375pt x 847.165pt>
 File: ./theory/figures/final_structure.png Graphic file (type png)
 <use ./theory/figures/final_structure.png>
 Package pdftex.def Info: ./theory/figures/final_structure.png  used on input li
@@ -3418,27 +3441,39 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textnu' on input line 84.
 
 
+LaTeX Warning: Reference `fig:gr_Preprocess_example' on page 34 undefined on in
+put line 91.
+
+
+LaTeX Warning: Reference `fig:gr_original_image_rois' on page 34 undefined on i
+nput line 93.
+
+
+LaTeX Warning: Reference `fig:gr_trans_image_rois' on page 34 undefined on inpu
+t line 93.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./theory/figures/final_structure.png>]
-<./figures/original_image.jpg, id=1302, 321.2pt x 240.9pt>
+<./figures/original_image.jpg, id=916, 321.2pt x 240.9pt>
 File: ./figures/original_image.jpg Graphic file (type jpg)
 <use ./figures/original_image.jpg>
 Package pdftex.def Info: ./figures/original_image.jpg  used on input line 100.
 (pdftex.def)             Requested size: 146.39133pt x 109.79713pt.
-<./figures/original_image_rois.jpg, id=1303, 321.2pt x 240.9pt>
+<./figures/original_image_rois.jpg, id=917, 321.2pt x 240.9pt>
 File: ./figures/original_image_rois.jpg Graphic file (type jpg)
 <use ./figures/original_image_rois.jpg>
 Package pdftex.def Info: ./figures/original_image_rois.jpg  used on input line 
 107.
 (pdftex.def)             Requested size: 146.39133pt x 109.79713pt.
-<./figures/transformed_image.jpg, id=1304, 112.42pt x 112.42pt>
+<./figures/transformed_image.jpg, id=918, 112.42pt x 112.42pt>
 File: ./figures/transformed_image.jpg Graphic file (type jpg)
 <use ./figures/transformed_image.jpg>
 Package pdftex.def Info: ./figures/transformed_image.jpg  used on input line 11
 4.
 (pdftex.def)             Requested size: 146.39133pt x 146.40843pt.
-<./figures/transformed_image_rois.jpg, id=1305, 112.42pt x 112.42pt>
+<./figures/transformed_image_rois.jpg, id=919, 112.42pt x 112.42pt>
 File: ./figures/transformed_image_rois.jpg Graphic file (type jpg)
 <use ./figures/transformed_image_rois.jpg>
 Package pdftex.def Info: ./figures/transformed_image_rois.jpg  used on input li
@@ -3750,58 +3785,78 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\texteta' on input line 141.
 
-<./theory/figures/anchor_6d.png, id=1314, 418.56375pt x 282.05376pt>
+
+LaTeX Warning: Reference `fig:gr_anchor_6d' on page 36 undefined on input line 
+144.
+
+<./theory/figures/anchor_6d.png, id=927, 418.56375pt x 282.05376pt>
 File: ./theory/figures/anchor_6d.png Graphic file (type png)
 <use ./theory/figures/anchor_6d.png>
 Package pdftex.def Info: ./theory/figures/anchor_6d.png  used on input line 148
 .
 (pdftex.def)             Requested size: 209.28136pt x 141.02652pt.
 [36 <./theory/figures/anchor_6d.png>]
-<./theory/figures/tpn_1_1.png, id=1324, 882.29625pt x 191.71625pt>
+
+LaTeX Warning: Reference `fig:gr_tpn_1_1' on page 37 undefined on input line 17
+2.
+
+<./theory/figures/tpn_1_1.png, id=935, 882.29625pt x 191.71625pt>
 File: ./theory/figures/tpn_1_1.png Graphic file (type png)
 <use ./theory/figures/tpn_1_1.png>
 Package pdftex.def Info: ./theory/figures/tpn_1_1.png  used on input line 177.
 (pdftex.def)             Requested size: 418.25368pt x 90.88185pt.
-<./theory/figures/output/img_0.jpg, id=1326, 128.48pt x 241.90375pt>
+
+LaTeX Warning: Reference `fig:gr_gt_tubes_and_rois' on page 37 undefined on inp
+ut line 186.
+
+<./theory/figures/output/img_0.jpg, id=936, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_0.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_0.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_0.jpg  used on input line 
 193.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
-<./theory/figures/output/img_3.jpg, id=1327, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_3.jpg, id=937, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_3.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_3.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_3.jpg  used on input line 
 196.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
-<./theory/figures/output/img_5.jpg, id=1328, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_5.jpg, id=938, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_5.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_5.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_5.jpg  used on input line 
 199.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
-<./theory/figures/output/img_7.jpg, id=1329, 129.48375pt x 241.90375pt>
+<./theory/figures/output/img_7.jpg, id=939, 129.48375pt x 241.90375pt>
 File: ./theory/figures/output/img_7.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_7.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_7.jpg  used on input line 
 202.
 (pdftex.def)             Requested size: 62.73549pt x 117.20505pt.
-<./theory/figures/output/img_11.jpg, id=1330, 128.48pt x 250.9375pt>
+<./theory/figures/output/img_11.jpg, id=940, 128.48pt x 250.9375pt>
 File: ./theory/figures/output/img_11.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_11.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_11.jpg  used on input line
  205.
 (pdftex.def)             Requested size: 62.73549pt x 122.53159pt.
-<./theory/figures/output/img_15.jpg, id=1331, 128.48pt x 241.90375pt>
+<./theory/figures/output/img_15.jpg, id=941, 128.48pt x 241.90375pt>
 File: ./theory/figures/output/img_15.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_15.jpg>
 Package pdftex.def Info: ./theory/figures/output/img_15.jpg  used on input line
  208.
 (pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
- [37 <./theory/figures/tpn_1_1.png> <./theory/figures/output/img_0.jpg> <./theo
-ry/figures/output/img_3.jpg> <./theory/figures/output/img_5.jpg> <./theory/figu
-res/output/img_7.jpg> <./theory/figures/output/img_11.jpg> <./theory/figures/ou
-tput/img_15.jpg>] [38]
+[37 <./theory/figures/tpn_1_1.png> <./theory/figures/output/img_0.jpg> <./theor
+y/figures/output/img_3.jpg> <./theory/figures/output/img_5.jpg> <./theory/figur
+es/output/img_7.jpg> <./theory/figures/output/img_11.jpg> <./theory/figures/out
+put/img_15.jpg>] [38]
+
+LaTeX Warning: Reference `table:gr_iou_miou' on page 39 undefined on input line
+ 285.
+
+
+LaTeX Warning: Reference `table:gr_iou_miou' on page 39 undefined on input line
+ 312.
+
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textBeta' on input line 316.
@@ -3867,16 +3922,28 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textomicron' on input line 316.
 
 [39]
-<./theory/figures/tpn_1_2.png, id=1352, 720.6925pt x 505.89pt>
+
+LaTeX Warning: Reference `fig:gr_tpn_1_2' on page 40 undefined on input line 32
+7.
+
+<./theory/figures/tpn_1_2.png, id=959, 720.6925pt x 505.89pt>
 File: ./theory/figures/tpn_1_2.png Graphic file (type png)
 <use ./theory/figures/tpn_1_2.png>
 Package pdftex.def Info: ./theory/figures/tpn_1_2.png  used on input line 333.
 (pdftex.def)             Requested size: 360.34537pt x 252.94437pt.
- [40 <./theory/figures/tpn_1_2.png>]
+[40 <./theory/figures/tpn_1_2.png>]
 Underfull \hbox (badness 2073) in paragraph at lines 346--347
 []\LGR/cmr/m/n/10 Na u-po-lo-gÐsou-me tic mèsec ti-mèc a-pì th qro-ni-k  di-ˆst
 a-sh kai sth su-nèqeia na
  []
+
+
+LaTeX Warning: Reference `table:gr_add_16' on page 41 undefined on input line 3
+88.
+
+
+LaTeX Warning: Reference `table:gr_add_16' on page 41 undefined on input line 4
+16.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -3994,7 +4061,15 @@ Underfull \hbox (badness 2512) in paragraph at lines 473--474
 \LGR/cmr/m/n/10 gia tic pro-tei-nìme-nec a-ko-lou-jÐec
  []
 
-<./theory/figures/regressor_1_1.png, id=1385, 720.6925pt x 308.15125pt>
+
+LaTeX Warning: Reference `fig:gr_regressor_3d' on page 43 undefined on input li
+ne 481.
+
+
+LaTeX Warning: Reference `fig:gr_reg_1_2' on page 43 undefined on input line 48
+1.
+
+<./theory/figures/regressor_1_1.png, id=988, 720.6925pt x 308.15125pt>
 File: ./theory/figures/regressor_1_1.png Graphic file (type png)
 <use ./theory/figures/regressor_1_1.png>
 Package pdftex.def Info: ./theory/figures/regressor_1_1.png  used on input line
@@ -4003,7 +4078,7 @@ Package pdftex.def Info: ./theory/figures/regressor_1_1.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./theory/figures/regressor_1_2.png, id=1386, 720.6925pt x 308.15125pt>
+<./theory/figures/regressor_1_2.png, id=989, 720.6925pt x 308.15125pt>
 File: ./theory/figures/regressor_1_2.png Graphic file (type png)
 <use ./theory/figures/regressor_1_2.png>
 Package pdftex.def Info: ./theory/figures/regressor_1_2.png  used on input line
@@ -4017,6 +4092,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `table:gr_reg_1_1' on page 43 undefined on input line 
+575.
+
+
+LaTeX Warning: Reference `table:gr_reg_1_2' on page 43 undefined on input line 
+575.
 
 [43]
 
@@ -4192,10 +4275,11 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textalpha' on input line 584.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `fig:gr_anchor_4k' on page 44 undefined on input line 
+588.
 
- [44 <./theory/figures/regressor_1_1.png> <./theory/figures/regressor_1_2.png>]
-<./theory/figures/anchor_4k.png, id=1407, 399.4925pt x 320.19624pt>
+[44 <./theory/figures/regressor_1_1.png> <./theory/figures/regressor_1_2.png>]
+<./theory/figures/anchor_4k.png, id=1008, 399.4925pt x 320.19624pt>
 File: ./theory/figures/anchor_4k.png Graphic file (type png)
 <use ./theory/figures/anchor_4k.png>
 Package pdftex.def Info: ./theory/figures/anchor_4k.png  used on input line 594
@@ -4205,7 +4289,7 @@ Package pdftex.def Info: ./theory/figures/anchor_4k.png  used on input line 594
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./theory/figures/tpn_2.png, id=1408, 717.68124pt x 546.04pt>
+<./theory/figures/tpn_2.png, id=1009, 717.68124pt x 546.04pt>
 File: ./theory/figures/tpn_2.png Graphic file (type png)
 <use ./theory/figures/tpn_2.png>
 Package pdftex.def Info: ./theory/figures/tpn_2.png  used on input line 614.
@@ -4213,13 +4297,21 @@ Package pdftex.def Info: ./theory/figures/tpn_2.png  used on input line 614.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `fig:gr_New_structure' on page 45 undefined on input l
+ine 622.
+
 Package biblatex Info: Trying to load language 'GREEK'...
 Package biblatex Info: ... file 'GREEK.lbx' not found.
 
 Package biblatex Warning: Language 'GREEK' not supported.
 (biblatex)                Using fallback language 'greek' on input line 632.
 
-[45] [46 <./theory/figures/anchor_4k.png>]
+[45]
+
+LaTeX Warning: Reference `table:gr_tpn_2_1' on page 46 undefined on input line 
+668.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\<let>-command' on input line 674.
@@ -4316,7 +4408,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\texteta' on input line 674.
 
-[47 <./theory/figures/tpn_2.png>]
+[46 <./theory/figures/anchor_4k.png>] [47 <./theory/figures/tpn_2.png>]
 Underfull \hbox (badness 5607) in paragraph at lines 707--709
 []\LGR/cmr/m/n/10 AntÐstoiqa dia-fo-ro-poio-Ôme kai touc qˆr-tec e-ner-go-po-Ðh
 -shc ìpou a-pì dia-stˆseic
@@ -4329,6 +4421,14 @@ eduration; \OT1/cmr/m/n/10 7\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7)$ \LGR/cmr/m/n
 /10 ka-ta-l gou-me se qˆr-tec me dia-stˆseic $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  k \OMS/cmsy/m/n/10 ^^A
  []
+
+
+LaTeX Warning: Reference `table:gr_reg_2_1' on page 48 undefined on input line 
+765.
+
+
+LaTeX Warning: Reference `table:gr_reg_2_2' on page 48 undefined on input line 
+765.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
@@ -4469,6 +4569,40 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textvarsigma' on input line 770.
+
+
+LaTeX Warning: Reference `table:gr_new_sample' on page 48 undefined on input li
+ne 774.
+
+
+LaTeX Warning: Reference `table:gr_new_sample_reg' on page 48 undefined on inpu
+t line 774.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `table:gr_new_sample' on page 48 undefined on input li
+ne 837.
+
+
+LaTeX Warning: Reference `table:gr_new_sample_reg' on page 48 undefined on inpu
+t line 837.
+
+
+LaTeX Warning: Reference `table:gr_new_sample_reg' on page 48 undefined on inpu
+t line 838.
+
+
+LaTeX Warning: Reference `table:gr_reg_2_1' on page 48 undefined on input line 
+839.
+
+
+LaTeX Warning: Reference `table:gr_reg_2_2' on page 48 undefined on input line 
+839.
 
 [48]) [49]
 \openout2 = `chapter4_gr.aux'.
@@ -5015,7 +5149,11 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textvarsigma' on input line 59.
 
 [51]
-<./theory/figures/connection_algo.png, id=1463, 1441.385pt x 717.68124pt>
+
+LaTeX Warning: Reference `fig:gr_connection_algo' on page 52 undefined on input
+ line 72.
+
+<./theory/figures/connection_algo.png, id=1051, 1441.385pt x 717.68124pt>
 File: ./theory/figures/connection_algo.png Graphic file (type png)
 <use ./theory/figures/connection_algo.png>
 Package pdftex.def Info: ./theory/figures/connection_algo.png  used on input li
@@ -5148,6 +5286,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\bbl@ifrestoring' on input line 131.
 
 
+LaTeX Warning: Reference `table:gr_step14_16' on page 53 undefined on input lin
+e 139.
+
+
+LaTeX Warning: Reference `table:gr_step14_16' on page 53 undefined on input lin
+e 141.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 22.4317pt.
 We now make it that large for the rest of the document.
@@ -5165,6 +5311,10 @@ Underfull \vbox (badness 10000) detected at line 172
  []
 
 
+LaTeX Warning: Reference `table:gr_step8_678 ' on page 54 undefined on input li
+ne 182.
+
+
 Overfull \hbox (3.61118pt too wide) in paragraph at lines 190--190
 []|\OT1/cmr/m/n/10 combination|  
  []
@@ -5179,60 +5329,8 @@ Overfull \vbox (15.95871pt too high) has occurred while \output is active []
 
 [54]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@hymapsel' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\languagename' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@language@stack' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bbl@ifrestoring' on input line 218.
+LaTeX Warning: Reference `table:gr_step8_678 ' on page 55 undefined on input li
+ne 214.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -5289,6 +5387,70 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\bbl@ifrestoring' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@hymapsel' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tw@' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\aftergroup' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\languagename' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 218.
+
+
+LaTeX Warning: Reference `table:gr_ucf_recall' on page 55 undefined on input li
+ne 229.
+
+
+LaTeX Warning: Reference `table:gr_ucf_temp_recall' on page 55 undefined on inp
+ut line 230.
 
 
 Overfull \hbox (2.86101pt too wide) in paragraph at lines 262--262
@@ -5309,6 +5471,22 @@ Overfull \hbox (2.86101pt too wide) in paragraph at lines 306--306
 
 Underfull \vbox (badness 10000) detected at line 323
  []
+
+
+LaTeX Warning: Reference `table:gr_ucf_recall' on page 56 undefined on input li
+ne 326.
+
+
+LaTeX Warning: Reference `table:gr_ucf_temp_recall' on page 56 undefined on inp
+ut line 326.
+
+
+LaTeX Warning: Reference `table:gr_ucf_nms_noup_recall' on page 56 undefined on
+ input line 337.
+
+
+LaTeX Warning: Reference `table:gr_ucf_nms_noup_temp_recall' on page 56 undefin
+ed on input line 337.
 
 
 Overfull \hbox (2.30557pt too wide) in paragraph at lines 347--347
@@ -5337,6 +5515,14 @@ Overfull \hbox (2.38892pt too wide) in paragraph at lines 378--378
 
 Underfull \vbox (badness 10000) detected at line 400
  []
+
+
+LaTeX Warning: Reference `table:gr_ucf_nms_noup_recall' on page 57 undefined on
+ input line 403.
+
+
+LaTeX Warning: Reference `table:gr_ucf_recall' on page 57 undefined on input li
+ne 404.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
@@ -5436,6 +5622,10 @@ Overfull \vbox (14.60709pt too high) has occurred while \output is active []
 
 
 [58]
+
+LaTeX Warning: Reference `table:gr_conn_app2' on page 59 undefined on input lin
+e 496.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\<let>-command' on input line 500.
@@ -5659,6 +5849,10 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textomicron' on input line 500.
+
+
+LaTeX Warning: Reference `table:gr_gr_conn_app3' on page 59 undefined on input 
+line 511.
 
 
 Underfull \vbox (badness 10000) detected at line 540
@@ -6166,6 +6360,14 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textiota' on input line 75.
 
 
+LaTeX Warning: Reference `table:gr_rnn_linear' on page 62 undefined on input li
+ne 102.
+
+
+LaTeX Warning: Reference `table:gr_svm_first_results' on page 62 undefined on i
+nput line 103.
+
+
 Underfull \hbox (badness 2253) in paragraph at lines 99--104
 \LGR/cmr/m/n/10 ta-xi-no-mh-t c qrei-ˆze-tai èna sta-je-rì mège-joc ei-sìdou, s
 u-ne-p¸c qrh-si-mo-poio-Ôme mia
@@ -6286,6 +6488,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\bbl@ifrestoring' on input line 159.
+
+
+LaTeX Warning: Reference `table:gr_svm_temp_pooling' on page 63 undefined on in
+put line 169.
 
 [63]
 Underfull \vbox (badness 10000) detected at line 190
@@ -6500,12 +6706,41 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textnu' on input line 193.
 
 
+LaTeX Warning: Reference `table:gr_rnn_increased' on page 64 undefined on input
+ line 203.
+
+
 Underfull \vbox (badness 10000) detected at line 242
  []
 
+
+LaTeX Warning: Reference `table:gr_rnn_increased' on page 64 undefined on input
+ line 245.
+
 [64]
+
+LaTeX Warning: Reference `table:gr_rnn_linear' on page 65 undefined on input li
+ne 254.
+
+
+LaTeX Warning: Reference `table:gr_linear_increased' on page 65 undefined on in
+put line 256.
+
+
 Underfull \vbox (badness 10000) detected at line 295
  []
+
+
+LaTeX Warning: Reference `table:gr_rnn_increased' on page 65 undefined on input
+ line 298.
+
+
+LaTeX Warning: Reference `table:gr_linear_increased' on page 65 undefined on in
+put line 298.
+
+
+LaTeX Warning: Reference `table:gr_svm_increased' on page 65 undefined on input
+ line 314.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 313--315
@@ -6622,13 +6857,17 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textvarsigma' on input line 373.
 
-<./theory/figures/mlp.png, id=1582, 720.6925pt x 313.17pt>
+<./theory/figures/mlp.png, id=1146, 720.6925pt x 313.17pt>
 File: ./theory/figures/mlp.png Graphic file (type png)
 <use ./theory/figures/mlp.png>
 Package pdftex.def Info: ./theory/figures/mlp.png  used on input line 378.
 (pdftex.def)             Requested size: 302.68878pt x 131.53049pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:gr_mlp_structure' on page 66 undefined on input l
+ine 386.
 
 [66]
 
@@ -6726,6 +6965,10 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textomicron' on input line 404.
+
+
+LaTeX Warning: Reference `table:gr_mlp_reg' on page 67 undefined on input line 
+414.
 
 
 Underfull \vbox (badness 10000) detected at line 438
@@ -6841,8 +7084,20 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textnu' on input line 450.
 
 
+LaTeX Warning: Reference `table:gr_mlp_extract_jhdmb' on page 68 undefined on i
+nput line 457.
+
+
 Underfull \vbox (badness 10000) detected at line 487
  []
+
+
+LaTeX Warning: Reference `table:gr_mlp_extract_jhdmb' on page 68 undefined on i
+nput line 490.
+
+
+LaTeX Warning: Reference `table:gr_mlp_reg' on page 68 undefined on input line 
+490.
 
 ) [68]
 \openout2 = `chapter6_gr.aux'.
@@ -7160,12 +7415,15 @@ Chapter 7.
 
 
 ]
+
+LaTeX Warning: Reference `fig:open_example' on page 72 undefined on input line 
+79.
+
 File: ./theory/figures/open_example.png Graphic file (type png)
 <use ./theory/figures/open_example.png>
 Package pdftex.def Info: ./theory/figures/open_example.png  used on input line 
 84.
 (pdftex.def)             Requested size: 240.60072pt x 101.17877pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -7178,7 +7436,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Chapter 8.
-<./theory/figures/supervised_leaning_example2.png, id=1679, 604.2575pt x 370.38
+<./theory/figures/supervised_leaning_example2.png, id=1237, 604.2575pt x 370.38
 374pt>
 File: ./theory/figures/supervised_leaning_example2.png Graphic file (type png)
 <use ./theory/figures/supervised_leaning_example2.png>
@@ -7188,8 +7446,12 @@ Package pdftex.def Info: ./theory/figures/supervised_leaning_example2.png  used
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `fig:supervised_learning_example' on page 77 undefined
+ on input line 62.
+
 [77]
-<./theory/figures/unsupervised_learning_example.png, id=1689, 803.0pt x 312.166
+<./theory/figures/unsupervised_learning_example.png, id=1246, 803.0pt x 312.166
 24pt>
 File: ./theory/figures/unsupervised_learning_example.png Graphic file (type png
 )
@@ -7197,9 +7459,14 @@ File: ./theory/figures/unsupervised_learning_example.png Graphic file (type png
 Package pdftex.def Info: ./theory/figures/unsupervised_learning_example.png  us
 ed on input line 86.
 (pdftex.def)             Requested size: 240.90186pt x 93.65059pt.
- [78 <./theory/figures/supervised_leaning_example2.png (PNG copy)> <./theory/fi
-gures/unsupervised_learning_example.png>]
-<./theory/figures/reinforment_learning_example.png, id=1697, 604.2575pt x 431.6
+
+
+LaTeX Warning: Reference `fig:unsupervised_learning_example' on page 78 undefin
+ed on input line 90.
+
+[78 <./theory/figures/supervised_leaning_example2.png (PNG copy)> <./theory/fig
+ures/unsupervised_learning_example.png>]
+<./theory/figures/reinforment_learning_example.png, id=1253, 604.2575pt x 431.6
 125pt>
 File: ./theory/figures/reinforment_learning_example.png Graphic file (type png)
 
@@ -7207,26 +7474,46 @@ File: ./theory/figures/reinforment_learning_example.png Graphic file (type png)
 Package pdftex.def Info: ./theory/figures/reinforment_learning_example.png  use
 d on input line 107.
 (pdftex.def)             Requested size: 181.27864pt x 129.48474pt.
-<./theory/figures/perceptron.png, id=1700, 285.065pt x 152.06813pt>
+
+
+LaTeX Warning: Reference `fig:reinforment_learning_example' on page 79 undefine
+d on input line 111.
+
+
+LaTeX Warning: Reference `fig:Perceptron' on page 79 undefined on input line 12
+7.
+
+<./theory/figures/perceptron.png, id=1254, 285.065pt x 152.06813pt>
 File: ./theory/figures/perceptron.png Graphic file (type png)
 <use ./theory/figures/perceptron.png>
 Package pdftex.def Info: ./theory/figures/perceptron.png  used on input line 13
 0.
 (pdftex.def)             Requested size: 285.0643pt x 152.06775pt.
- [79 <./theory/figures/reinforment_learning_example.png (PNG copy)>] [80 <./the
-ory/figures/perceptron.png>]
-<./theory/figures/activation_figures.png, id=1714, 375.4025pt x 113.42375pt>
+
+LaTeX Warning: Reference `fig:Perceptron' on page 79 undefined on input line 13
+6.
+
+[79 <./theory/figures/reinforment_learning_example.png (PNG copy)>] [80 <./theo
+ry/figures/perceptron.png>]
+
+LaTeX Warning: Reference `fig:Activation' on page 81 undefined on input line 16
+5.
+
+<./theory/figures/activation_figures.png, id=1266, 375.4025pt x 113.42375pt>
 File: ./theory/figures/activation_figures.png Graphic file (type png)
 <use ./theory/figures/activation_figures.png>
 Package pdftex.def Info: ./theory/figures/activation_figures.png  used on input
  line 168.
 (pdftex.def)             Requested size: 375.40158pt x 113.42346pt.
-<./theory/figures/feedforwardnetwork.png, id=1715, 249.93375pt x 184.69pt>
+<./theory/figures/feedforwardnetwork.png, id=1267, 249.93375pt x 184.69pt>
 File: ./theory/figures/feedforwardnetwork.png Graphic file (type png)
 <use ./theory/figures/feedforwardnetwork.png>
 Package pdftex.def Info: ./theory/figures/feedforwardnetwork.png  used on input
  line 180.
 (pdftex.def)             Requested size: 249.93314pt x 184.68953pt.
+
+LaTeX Warning: Reference `fig:feedforwardnetwork' on page 81 undefined on input
+ line 184.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -7237,7 +7524,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 214.
 
 [82 <./theory/figures/feedforwardnetwork.png>]
-<./theory/figures/convolutional_neural_network_structure.png, id=1727, 337.26pt
+<./theory/figures/convolutional_neural_network_structure.png, id=1277, 337.26pt
  x 152.36925pt>
 File: ./theory/figures/convolutional_neural_network_structure.png Graphic file 
 (type png)
@@ -7245,28 +7532,32 @@ File: ./theory/figures/convolutional_neural_network_structure.png Graphic file
 Package pdftex.def Info: ./theory/figures/convolutional_neural_network_structur
 e.png  used on input line 230.
 (pdftex.def)             Requested size: 236.08038pt x 106.65773pt.
-<./theory/figures/conv_1.png, id=1729, 397.485pt x 279.0425pt>
+
+
+LaTeX Warning: Reference `fig:conv_example' on page 83 undefined on input line 
+237.
+
+<./theory/figures/conv_1.png, id=1278, 397.485pt x 279.0425pt>
 File: ./theory/figures/conv_1.png Graphic file (type png)
 <use ./theory/figures/conv_1.png>
 Package pdftex.def Info: ./theory/figures/conv_1.png  used on input line 246.
 (pdftex.def)             Requested size: 167.2989pt x 117.44826pt.
-<./theory/figures/conv_2.png, id=1730, 397.485pt x 279.0425pt>
+<./theory/figures/conv_2.png, id=1279, 397.485pt x 279.0425pt>
 File: ./theory/figures/conv_2.png Graphic file (type png)
 <use ./theory/figures/conv_2.png>
 Package pdftex.def Info: ./theory/figures/conv_2.png  used on input line 250.
 (pdftex.def)             Requested size: 167.2989pt x 117.44826pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [83 <./theory/figures/convolutional_neural_network_structure.png>]
-<./theory/figures/max_pooling.png, id=1737, 560.0925pt x 278.03876pt>
+<./theory/figures/max_pooling.png, id=1286, 560.0925pt x 278.03876pt>
 File: ./theory/figures/max_pooling.png Graphic file (type png)
 <use ./theory/figures/max_pooling.png>
 Package pdftex.def Info: ./theory/figures/max_pooling.png  used on input line 2
 73.
 (pdftex.def)             Requested size: 196.03531pt x 97.31502pt.
-<./theory/figures/3d_conv.png, id=1738, 672.5125pt x 682.55pt>
+<./theory/figures/3d_conv.png, id=1287, 672.5125pt x 682.55pt>
 File: ./theory/figures/3d_conv.png Graphic file (type png)
 <use ./theory/figures/3d_conv.png>
 Package pdftex.def Info: ./theory/figures/3d_conv.png  used on input line 291.
@@ -7277,7 +7568,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [84 <./theory/figures/conv_1.png> <./theory/figures/conv_2.png> <./theory/figur
 es/max_pooling.png>]
-<./theory/figures/RPN_structure.png, id=1743, 614.295pt x 361.35pt>
+<./theory/figures/RPN_structure.png, id=1292, 614.295pt x 361.35pt>
 File: ./theory/figures/RPN_structure.png Graphic file (type png)
 <use ./theory/figures/RPN_structure.png>
 Package pdftex.def Info: ./theory/figures/RPN_structure.png  used on input line
@@ -7287,99 +7578,193 @@ Package pdftex.def Info: ./theory/figures/RPN_structure.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `fig:rpn_structure' on page 85 undefined on input line
+ 336.
+
 [85 <./theory/figures/3d_conv.png>]
-<./theory/figures/anchors.png, id=1758, 704.6325pt x 525.965pt>
+
+LaTeX Warning: Reference `fig:anchors' on page 86 undefined on input line 343.
+
+<./theory/figures/anchors.png, id=1306, 704.6325pt x 525.965pt>
 File: ./theory/figures/anchors.png Graphic file (type png)
 <use ./theory/figures/anchors.png>
 Package pdftex.def Info: ./theory/figures/anchors.png  used on input line 347.
 (pdftex.def)             Requested size: 211.39139pt x 157.79071pt.
- [86 <./theory/figures/RPN_structure.png (PNG copy)> <./theory/figures/anchors.
-png>]
-<./theory/figures/roi_align_1.png, id=1770, 376.40625pt x 377.41pt>
+[86 <./theory/figures/RPN_structure.png (PNG copy)> <./theory/figures/anchors.p
+ng>]
+
+LaTeX Warning: Reference `fig:roi_pooling_align_1' on page 87 undefined on inpu
+t line 366.
+
+
+LaTeX Warning: Reference `fig:roi_pooling_align_2' on page 87 undefined on inpu
+t line 367.
+
+<./theory/figures/roi_align_1.png, id=1316, 376.40625pt x 377.41pt>
 File: ./theory/figures/roi_align_1.png Graphic file (type png)
 <use ./theory/figures/roi_align_1.png>
 Package pdftex.def Info: ./theory/figures/roi_align_1.png  used on input line 3
 74.
 (pdftex.def)             Requested size: 112.92273pt x 113.22386pt.
-<./theory/figures/roi_al_3.png, id=1771, 374.39874pt x 382.42876pt>
+<./theory/figures/roi_al_3.png, id=1317, 374.39874pt x 382.42876pt>
 File: ./theory/figures/roi_al_3.png Graphic file (type png)
 <use ./theory/figures/roi_al_3.png>
 Package pdftex.def Info: ./theory/figures/roi_al_3.png  used on input line 381.
 
 (pdftex.def)             Requested size: 112.32048pt x 114.7295pt.
-<./theory/figures/roi_al_2.png, id=1772, 334.24875pt x 237.88875pt>
+<./theory/figures/roi_al_2.png, id=1318, 334.24875pt x 237.88875pt>
 File: ./theory/figures/roi_al_2.png Graphic file (type png)
 <use ./theory/figures/roi_al_2.png>
 Package pdftex.def Info: ./theory/figures/roi_al_2.png  used on input line 388.
 
 (pdftex.def)             Requested size: 100.27539pt x 71.36716pt.
-<./theory/figures/roi_al_4.png, id=1773, 331.2375pt x 235.88126pt>
+<./theory/figures/roi_al_4.png, id=1319, 331.2375pt x 235.88126pt>
 File: ./theory/figures/roi_al_4.png Graphic file (type png)
 <use ./theory/figures/roi_al_4.png>
 Package pdftex.def Info: ./theory/figures/roi_al_4.png  used on input line 395.
 
 (pdftex.def)             Requested size: 99.37201pt x 70.76491pt.
-<./theory/figures/roi_align_2.png, id=1778, 448.67625pt x 450.68375pt>
+
+LaTeX Warning: Reference `fig:roi_pooling_align_3' on page 87 undefined on inpu
+t line 404.
+
+
+LaTeX Warning: Reference `fig:roi_pooling_align_4' on page 87 undefined on inpu
+t line 405.
+
+
+LaTeX Warning: Reference `fig:roi_align_2' on page 87 undefined on input line 4
+06.
+
+<./theory/figures/roi_align_2.png, id=1321, 448.67625pt x 450.68375pt>
 File: ./theory/figures/roi_align_2.png Graphic file (type png)
 <use ./theory/figures/roi_align_2.png>
 Package pdftex.def Info: ./theory/figures/roi_align_2.png  used on input line 4
 10.
 (pdftex.def)             Requested size: 157.03903pt x 157.74167pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [87 <./theory/figures/roi_align_1.png> <./theory/figures/roi_al_3.png> <./theor
 y/figures/roi_al_2.png> <./theory/figures/roi_al_4.png>]
-<./theory/figures/soft_nms.jpeg, id=1785, 1284.8pt x 1034.86626pt>
+
+LaTeX Warning: Reference `fig:nms_eg' on page 88 undefined on input line 436.
+
+<./theory/figures/soft_nms.jpeg, id=1327, 1284.8pt x 1034.86626pt>
 File: ./theory/figures/soft_nms.jpeg Graphic file (type jpg)
 <use ./theory/figures/soft_nms.jpeg>
 Package pdftex.def Info: ./theory/figures/soft_nms.jpeg  used on input line 440
 .
 (pdftex.def)             Requested size: 256.95544pt x 206.96957pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[88 <./theory/figures/roi_align_2.png>] [89 <./theory/figures/soft_nms.jpeg>]
-<./theory/figures/c_entropy.png, id=1813, 1172.38pt x 819.06pt>
+[88 <./theory/figures/roi_align_2.png>]
+
+LaTeX Warning: Reference `fig:cross_l1' on page 89 undefined on input line 474.
+
+
+[89 <./theory/figures/soft_nms.jpeg>]
+
+LaTeX Warning: Reference `fig:smooth_l1' on page 90 undefined on input line 511
+.
+
+<./theory/figures/c_entropy.png, id=1353, 1172.38pt x 819.06pt>
 File: ./theory/figures/c_entropy.png Graphic file (type png)
 <use ./theory/figures/c_entropy.png>
 Package pdftex.def Info: ./theory/figures/c_entropy.png  used on input line 518
 .
 (pdftex.def)             Requested size: 199.15884pt x 128.0278pt.
-<./theory/figures/smooth_l1.png, id=1814, 604.2575pt x 342.27875pt>
+<./theory/figures/smooth_l1.png, id=1354, 604.2575pt x 342.27875pt>
 File: ./theory/figures/smooth_l1.png Graphic file (type png)
 <use ./theory/figures/smooth_l1.png>
 Package pdftex.def Info: ./theory/figures/smooth_l1.png  used on input line 526
 .
 (pdftex.def)             Requested size: 204.9466pt x 116.0912pt.
 
+LaTeX Warning: Hyper reference `fig:cross_entropy' on page 90 undefined on inpu
+t line 533.
+
+
+LaTeX Warning: Reference `sub@fig:cross_entropy' on page 90 undefined on input 
+line 533.
+
+
+LaTeX Warning: Hyper reference `fig:smooth_l1' on page 90 undefined on input li
+ne 533.
+
+
+LaTeX Warning: Reference `sub@fig:smooth_l1' on page 90 undefined on input line
+ 533.
+
+
+LaTeX Warning: Hyper reference `fig:cross_entropy' on page 90 undefined on inpu
+t line 533.
+
+
+LaTeX Warning: Reference `sub@fig:cross_entropy' on page 90 undefined on input 
+line 533.
+
+
+LaTeX Warning: Hyper reference `fig:smooth_l1' on page 90 undefined on input li
+ne 533.
+
+
+LaTeX Warning: Reference `sub@fig:smooth_l1' on page 90 undefined on input line
+ 533.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./theory/figures/iou.png, id=1820, 602.25pt x 248.93pt>
+
+LaTeX Warning: Reference `fig:iou_fig' on page 90 undefined on input line 548.
+
+<./theory/figures/iou.png, id=1355, 602.25pt x 248.93pt>
 File: ./theory/figures/iou.png Graphic file (type png)
 <use ./theory/figures/iou.png>
 Package pdftex.def Info: ./theory/figures/iou.png  used on input line 551.
 (pdftex.def)             Requested size: 331.23851pt x 136.91191pt.
-[90] [91 <./theory/figures/c_entropy.png> <./theory/figures/smooth_l1.png> <./t
-heory/figures/iou.png>] [92] [93]
-<./theory/figures/pr_curve.png, id=1853, 576.1525pt x 424.58624pt>
+[90]
+
+LaTeX Warning: Reference `fig:iou_fig' on page 91 undefined on input line 558.
+
+[91 <./theory/figures/c_entropy.png> <./theory/figures/smooth_l1.png> <./theory
+/figures/iou.png>] [92] [93]
+
+LaTeX Warning: Reference `table:map_1' on page 94 undefined on input line 648.
+
+<./theory/figures/pr_curve.png, id=1385, 576.1525pt x 424.58624pt>
 File: ./theory/figures/pr_curve.png Graphic file (type png)
 <use ./theory/figures/pr_curve.png>
 Package pdftex.def Info: ./theory/figures/pr_curve.png  used on input line 681.
 
 (pdftex.def)             Requested size: 230.45691pt x 169.83148pt.
- [94 <./theory/figures/pr_curve.png>]
-<./theory/figures/pr_curve2.png, id=1862, 584.1825pt x 431.6125pt>
+
+LaTeX Warning: Reference `fig:pr_curve' on page 94 undefined on input line 686.
+
+
+[94 <./theory/figures/pr_curve.png>]
+
+LaTeX Warning: Reference `fig:pr_curve' on page 95 undefined on input line 696.
+
+
+
+LaTeX Warning: Reference `fig:pr_curve2' on page 95 undefined on input line 702
+.
+
+<./theory/figures/pr_curve2.png, id=1391, 584.1825pt x 431.6125pt>
 File: ./theory/figures/pr_curve2.png Graphic file (type png)
 <use ./theory/figures/pr_curve2.png>
 Package pdftex.def Info: ./theory/figures/pr_curve2.png  used on input line 707
 .
 (pdftex.def)             Requested size: 233.66885pt x 172.64194pt.
- [95 <./theory/figures/pr_curve2.png>]
-<./theory/figures/mabo.png, id=1871, 1040.88875pt x 787.94376pt>
+
+LaTeX Warning: Reference `fig:mabo_fig' on page 95 undefined on input line 724.
+
+
+[95 <./theory/figures/pr_curve2.png>]
+<./theory/figures/mabo.png, id=1399, 1040.88875pt x 787.94376pt>
 File: ./theory/figures/mabo.png Graphic file (type png)
 <use ./theory/figures/mabo.png>
 Package pdftex.def Info: ./theory/figures/mabo.png  used on input line 728.
@@ -7406,6 +7791,10 @@ Underfull \vbox (badness 2111) has occurred while \output is active []
 
 ]
 Chapter 9.
+
+LaTeX Warning: Reference `fig:whole_network_' on page 103 undefined on input li
+ne 42.
+
 File: ./theory/figures/final_structure.png Graphic file (type png)
 <use ./theory/figures/final_structure.png>
 Package pdftex.def Info: ./theory/figures/final_structure.png  used on input li
@@ -7414,7 +7803,24 @@ ne 48.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[103] [104]
+[103]
+
+LaTeX Warning: Reference `fig:original_image' on page 104 undefined on input li
+ne 71.
+
+
+LaTeX Warning: Reference `fig:trans_image' on page 104 undefined on input line 
+71.
+
+
+LaTeX Warning: Reference `fig:original_image_rois' on page 104 undefined on inp
+ut line 72.
+
+
+LaTeX Warning: Reference `fig:trans_image_rois' on page 104 undefined on input 
+line 72.
+
+[104]
 File: ./figures/original_image.jpg Graphic file (type jpg)
 <use ./figures/original_image.jpg>
 Package pdftex.def Info: ./figures/original_image.jpg  used on input line 77.
@@ -7434,19 +7840,31 @@ File: ./figures/transformed_image_rois.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./figures/transformed_image_rois.jpg  used on input li
 ne 95.
 (pdftex.def)             Requested size: 146.39133pt x 146.40843pt.
+
+
+LaTeX Warning: Reference `fig:anchor_6d' on page 105 undefined on input line 11
+8.
+
 File: ./theory/figures/anchor_6d.png Graphic file (type png)
 <use ./theory/figures/anchor_6d.png>
 Package pdftex.def Info: ./theory/figures/anchor_6d.png  used on input line 121
 .
 (pdftex.def)             Requested size: 209.28136pt x 141.02652pt.
- [105]
+[105]
+
+LaTeX Warning: Reference `fig:tpn_1_1' on page 106 undefined on input line 141.
+
+
 File: ./theory/figures/tpn_1_1.png Graphic file (type png)
 <use ./theory/figures/tpn_1_1.png>
 Package pdftex.def Info: ./theory/figures/tpn_1_1.png  used on input line 144.
 (pdftex.def)             Requested size: 418.25368pt x 90.88185pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:gt_tubes_and_rois' on page 106 undefined on input
+ line 152.
 
 File: ./theory/figures/output/img_0.jpg Graphic file (type jpg)
 <use ./theory/figures/output/img_0.jpg>
@@ -7483,35 +7901,70 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [106] [107]
 
+LaTeX Warning: Reference `table:iou_miou' on page 108 undefined on input line 2
+43.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `table:iou_miou' on page 108 undefined on input line 2
+65.
+
 [108]
+
+LaTeX Warning: Reference `fig:tpn_1_2' on page 109 undefined on input line 279.
+
+
 File: ./theory/figures/tpn_1_2.png Graphic file (type png)
 <use ./theory/figures/tpn_1_2.png>
 Package pdftex.def Info: ./theory/figures/tpn_1_2.png  used on input line 284.
 (pdftex.def)             Requested size: 360.34537pt x 252.94437pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[109] [110] [111]
+[109]
+
+LaTeX Warning: Reference `table:add_16' on page 110 undefined on input line 331
+.
+
+
+LaTeX Warning: Reference `table:add_16' on page 110 undefined on input line 356
+.
+
+[110] [111]
+
+LaTeX Warning: Reference `fig:regressor_3d' on page 112 undefined on input line
+ 410.
+
 File: ./theory/figures/regressor_1_1.png Graphic file (type png)
 <use ./theory/figures/regressor_1_1.png>
 Package pdftex.def Info: ./theory/figures/regressor_1_1.png  used on input line
  413.
 (pdftex.def)             Requested size: 345.92847pt x 147.9109pt.
- [112]
+[112]
+
+LaTeX Warning: Reference `fig:reg_1_2' on page 113 undefined on input line 463.
+
+
 File: ./theory/figures/regressor_1_2.png Graphic file (type png)
 <use ./theory/figures/regressor_1_2.png>
 Package pdftex.def Info: ./theory/figures/regressor_1_2.png  used on input line
  473.
 (pdftex.def)             Requested size: 345.92847pt x 147.9109pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `table:reg_1_2' on page 113 undefined on input line 47
+9.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:anchor_4k' on page 113 undefined on input line 52
+4.
 
 File: ./theory/figures/anchor_4k.png Graphic file (type png)
 <use ./theory/figures/anchor_4k.png>
@@ -7531,53 +7984,160 @@ Package pdftex.def Info: ./theory/figures/tpn_2.png  used on input line 543.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 552--557
-[]\OT1/cmr/m/n/10 From Con-vo-lu-tional Layer, we get as out-put an ac-ti-va-ti
-on map with di-men-sions
- []
+LaTeX Warning: Reference `fig:New_structure' on page 114 undefined on input lin
+e 548.
 
-[114] [115]
-Underfull \vbox (badness 1286) has occurred while \output is active []
+[114]
 
- [116]
-[117] [118]
-<./theory/figures/proposals0_half.png, id=2143, 1283.79625pt x 321.2pt>
+LaTeX Warning: Reference `table:tpn_2_1' on page 115 undefined on input line 58
+9.
+
+[115] [116]
+
+LaTeX Warning: Reference `table:reg_2_1' on page 117 undefined on input line 65
+0.
+
+
+LaTeX Warning: Reference `table:tpn_2_1' on page 117 undefined on input line 65
+3.
+
+
+LaTeX Warning: Reference `table:reg_2_1' on page 117 undefined on input line 65
+3.
+
+
+LaTeX Warning: Reference `table:reg_2_2' on page 117 undefined on input line 67
+2.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[117]
+
+LaTeX Warning: Reference `table:new_sample' on page 118 undefined on input line
+ 724.
+
+
+LaTeX Warning: Reference `table:tpn_2_1' on page 118 undefined on input line 72
+5.
+
+
+LaTeX Warning: Reference `table:new_sample' on page 118 undefined on input line
+ 751.
+
+
+LaTeX Warning: Reference `table:new_sample_reg' on page 118 undefined on input 
+line 758.
+
+[118]
+
+LaTeX Warning: Reference `table:new_sample_reg' on page 119 undefined on input 
+line 788.
+
+
+LaTeX Warning: Reference `table:new_sample' on page 119 undefined on input line
+ 791.
+
+
+LaTeX Warning: Reference `table:new_sample_reg' on page 119 undefined on input 
+line 791.
+
+
+LaTeX Warning: Reference `fig:proposals' on page 119 undefined on input line 79
+9.
+
+<./theory/figures/proposals0_half.png, id=1642, 1283.79625pt x 321.2pt>
 File: ./theory/figures/proposals0_half.png Graphic file (type png)
 <use ./theory/figures/proposals0_half.png>
 Package pdftex.def Info: ./theory/figures/proposals0_half.png  used on input li
 ne 804.
 (pdftex.def)             Requested size: 334.6019pt x 59.1564pt.
-<./theory/figures/proposals1_half.png, id=2144, 1284.8pt x 321.2pt>
+<./theory/figures/proposals1_half.png, id=1643, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposals1_half.png Graphic file (type png)
 <use ./theory/figures/proposals1_half.png>
 Package pdftex.def Info: ./theory/figures/proposals1_half.png  used on input li
 ne 811.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
-<./theory/figures/proposals2_half.png, id=2145, 1284.8pt x 321.2pt>
+<./theory/figures/proposals2_half.png, id=1644, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposals2_half.png Graphic file (type png)
 <use ./theory/figures/proposals2_half.png>
 Package pdftex.def Info: ./theory/figures/proposals2_half.png  used on input li
 ne 818.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
-<./theory/figures/proposal_gt.png, id=2146, 1284.8pt x 321.2pt>
+<./theory/figures/proposal_gt.png, id=1645, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposal_gt.png Graphic file (type png)
 <use ./theory/figures/proposal_gt.png>
 Package pdftex.def Info: ./theory/figures/proposal_gt.png  used on input line 8
 25.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
-<./theory/figures/proposal_gt1.png, id=2147, 1284.8pt x 321.2pt>
+<./theory/figures/proposal_gt1.png, id=1646, 1284.8pt x 321.2pt>
 File: ./theory/figures/proposal_gt1.png Graphic file (type png)
 <use ./theory/figures/proposal_gt1.png>
 Package pdftex.def Info: ./theory/figures/proposal_gt1.png  used on input line 
 832.
 (pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[119]) [120 <./theory/figures/proposals0_half.png> <./theory/figures/proposals1
-_half.png> <./theory/figures/proposals2_half.png> <./theory/figures/proposal_gt
-.png> <./theory/figures/proposal_gt1.png>]
+
+LaTeX Warning: Reference `fig:proposals' on page 119 undefined on input line 84
+6.
+
+
+LaTeX Warning: Reference `fig:proposals0' on page 119 undefined on input line 8
+47.
+
+
+LaTeX Warning: Reference `fig:proposals1' on page 119 undefined on input line 8
+47.
+
+
+LaTeX Warning: Reference `fig:proposals2' on page 119 undefined on input line 8
+47.
+
+
+LaTeX Warning: Reference `fig:proposals1' on page 119 undefined on input line 8
+48.
+
+
+LaTeX Warning: Reference `fig:proposals0' on page 119 undefined on input line 8
+48.
+
+
+LaTeX Warning: Reference `fig:proposals2' on page 119 undefined on input line 8
+48.
+
+
+LaTeX Warning: Reference `fig:proposals0' on page 119 undefined on input line 8
+49.
+
+
+LaTeX Warning: Reference `fig:proposals2' on page 119 undefined on input line 8
+49.
+
+
+LaTeX Warning: Reference `fig:proposals0' on page 119 undefined on input line 8
+49.
+
+
+LaTeX Warning: Reference `fig:proposals2' on page 119 undefined on input line 8
+49.
+
+
+LaTeX Warning: Reference `fig:proposals_gt0' on page 119 undefined on input lin
+e 851.
+
+
+LaTeX Warning: Reference `fig:proposals_gt1' on page 119 undefined on input lin
+e 851.
+
+
+LaTeX Warning: Reference `fig:proposals_gt1' on page 119 undefined on input lin
+e 853.
+
+) [119] [120 <./theory/figures/proposals0_half.png> <./theory/figures/proposals
+1_half.png> <./theory/figures/proposals2_half.png> <./theory/figures/proposal_g
+t.png> <./theory/figures/proposal_gt1.png>]
 \openout2 = `chapter5.aux'.
 
  (./chapter5.tex
@@ -7587,12 +8147,21 @@ Chapter 10.
 
 
 ]
+
+LaTeX Warning: Reference `fig:connection_algo' on page 122 undefined on input l
+ine 47.
+
 File: ./theory/figures/connection_algo.png Graphic file (type png)
 <use ./theory/figures/connection_algo.png>
 Package pdftex.def Info: ./theory/figures/connection_algo.png  used on input li
 ne 51.
 (pdftex.def)             Requested size: 324.31963pt x 161.48225pt.
- [122] [123]
+[122]
+
+LaTeX Warning: Reference `table:step8_16' on page 123 undefined on input line 1
+07.
+
+[123]
 Overfull \hbox (3.61118pt too wide) in paragraph at lines 115--115
 []|\OT1/cmr/m/n/10 combination|  
  []
@@ -7600,6 +8169,10 @@ Overfull \hbox (3.61118pt too wide) in paragraph at lines 115--115
 
 Underfull \vbox (badness 10000) detected at line 148
  []
+
+
+LaTeX Warning: Reference `table:step12_16' on page 124 undefined on input line 
+163.
 
 
 Overfull \hbox (3.61118pt too wide) in paragraph at lines 169--169
@@ -7611,6 +8184,11 @@ Underfull \vbox (badness 10000) detected at line 188
  []
 
 [124]
+
+LaTeX Warning: Reference `table:step14_16' on page 125 undefined on input line 
+192.
+
+
 Overfull \hbox (3.61118pt too wide) in paragraph at lines 197--197
 []|\OT1/cmr/m/n/10 combination|  
  []
@@ -7618,6 +8196,14 @@ Overfull \hbox (3.61118pt too wide) in paragraph at lines 197--197
 
 Underfull \vbox (badness 10000) detected at line 219
  []
+
+
+LaTeX Warning: Reference `table:step4_8' on page 125 undefined on input line 22
+6.
+
+
+LaTeX Warning: Reference `table:step8_678 ' on page 125 undefined on input line
+ 227.
 
 
 Overfull \hbox (3.61118pt too wide) in paragraph at lines 234--234
@@ -7641,6 +8227,22 @@ Underfull \vbox (badness 10000) detected at line 280
  []
 
 
+LaTeX Warning: Reference `table:step4_8' on page 126 undefined on input line 28
+3.
+
+
+LaTeX Warning: Reference `table:step8_678 ' on page 126 undefined on input line
+ 283.
+
+
+LaTeX Warning: Reference `table:ucf_recall' on page 126 undefined on input line
+ 295.
+
+
+LaTeX Warning: Reference `table:ucf_temp_recall ' on page 126 undefined on inpu
+t line 295.
+
+
 Overfull \hbox (2.86101pt too wide) in paragraph at lines 323--323
 \OMS/cmsy/b/n/10 f\OT1/cmr/bx/sc/10 16,\OMS/cmsy/b/n/10 g\OT1/cmr/m/n/10 17,18,
 ...,23 
@@ -7660,7 +8262,36 @@ Overfull \hbox (2.86101pt too wide) in paragraph at lines 370--370
 Underfull \vbox (badness 10000) detected at line 386
  []
 
+
+LaTeX Warning: Reference `table:ucf_recall' on page 127 undefined on input line
+ 389.
+
+
+LaTeX Warning: Reference `table:ucf_recall' on page 127 undefined on input line
+ 395.
+
 [127]
+
+LaTeX Warning: Reference `table:ucf_temp_recall ' on page 128 undefined on inpu
+t line 401.
+
+
+LaTeX Warning: Reference `table:ucf_recall' on page 128 undefined on input line
+ 403.
+
+
+LaTeX Warning: Reference `table:ucf_temp_recall ' on page 128 undefined on inpu
+t line 403.
+
+
+LaTeX Warning: Reference `table:ucf_nms_recall' on page 128 undefined on input 
+line 420.
+
+
+LaTeX Warning: Reference `table:ucf_nms_temp_recall' on page 128 undefined on i
+nput line 421.
+
+
 Overfull \hbox (2.30557pt too wide) in paragraph at lines 428--428
 \OT1/cmr/m/n/10 thresh|  
  []
@@ -7687,6 +8318,30 @@ Overfull \hbox (2.38892pt too wide) in paragraph at lines 458--458
 
 Underfull \vbox (badness 10000) detected at line 478
  []
+
+
+LaTeX Warning: Reference `table:ucf_nms_recall' on page 129 undefined on input 
+line 481.
+
+
+LaTeX Warning: Reference `table:ucf_recall' on page 129 undefined on input line
+ 481.
+
+
+LaTeX Warning: Reference `table:ucf_recall' on page 129 undefined on input line
+ 483.
+
+
+LaTeX Warning: Reference `table:ucf_temp_recall ' on page 129 undefined on inpu
+t line 483.
+
+
+LaTeX Warning: Reference `table:ucf_nms_noup_recall' on page 129 undefined on i
+nput line 493.
+
+
+LaTeX Warning: Reference `table:ucf_nms_noup_temp_recall' on page 129 undefined
+ on input line 493.
 
 
 Overfull \hbox (2.30557pt too wide) in paragraph at lines 502--502
@@ -7717,6 +8372,27 @@ Underfull \vbox (badness 10000) detected at line 552
  []
 
 [129]
+
+LaTeX Warning: Reference `table:ucf_nms_noup_recall' on page 130 undefined on i
+nput line 555.
+
+
+LaTeX Warning: Reference `table:ucf_nms_recall' on page 130 undefined on input 
+line 555.
+
+
+LaTeX Warning: Reference `table:ucf_recall' on page 130 undefined on input line
+ 556.
+
+
+LaTeX Warning: Reference `table:ucf_softnms_recall' on page 130 undefined on in
+put line 565.
+
+
+LaTeX Warning: Reference `table:ucf_softnms_temp_recall' on page 130 undefined 
+on input line 565.
+
+
 Overfull \hbox (2.30557pt too wide) in paragraph at lines 572--572
 \OT1/cmr/m/n/10 thresh|  
  []
@@ -7749,6 +8425,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [130]
 
+LaTeX Warning: Reference `table:ucf_softnms_recall' on page 131 undefined on in
+put line 606.
+
+
+LaTeX Warning: Reference `table:ucf_softnms_temp_recall' on page 131 undefined 
+on input line 606.
+
+
+LaTeX Warning: Reference `table:ucf_nms_noup_recall' on page 131 undefined on i
+nput line 607.
+
+
+LaTeX Warning: Reference `table:ucf_nms_noup_temp_recall' on page 131 undefined
+ on input line 607.
+
+
 Package Fancyhdr Warning: \headheight is too small (22.4317pt): 
 Make it at least 22.43335pt.
 We now make it that large for the rest of the document.
@@ -7758,11 +8450,15 @@ This may cause the page layout to be inconsistent, however.
 Underfull \vbox (badness 10000) detected at line 691
  []
 
+
+LaTeX Warning: Reference `table:conn_app2' on page 132 undefined on input line 
+694.
+
 [132]
 Underfull \vbox (badness 10000) detected at line 735
  []
 
-<./theory/figures/tube_ex2_half.png, id=2290, 1284.8pt x 1283.79625pt>
+<./theory/figures/tube_ex2_half.png, id=1741, 1284.8pt x 1283.79625pt>
 File: ./theory/figures/tube_ex2_half.png Graphic file (type png)
 <use ./theory/figures/tube_ex2_half.png>
 Package pdftex.def Info: ./theory/figures/tube_ex2_half.png  used on input line
@@ -7771,12 +8467,16 @@ Package pdftex.def Info: ./theory/figures/tube_ex2_half.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `fig:tube_ex' on page 133 undefined on input line 755.
+
+
 ) [133] [134 <./theory/figures/tube_ex2_half.png>]
 \openout2 = `chapter6.aux'.
 
  (./chapter6.tex
 Chapter 11.
-<./theory/figures/model_withoutnms_v2.png, id=2302, 595.22375pt x 847.165pt>
+<./theory/figures/model_withoutnms_v2.png, id=1752, 595.22375pt x 847.165pt>
 File: ./theory/figures/model_withoutnms_v2.png Graphic file (type png)
 <use ./theory/figures/model_withoutnms_v2.png>
 Package pdftex.def Info: ./theory/figures/model_withoutnms_v2.png  used on inpu
@@ -7785,29 +8485,77 @@ t line 47.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `fig:whole_network' on page 135 undefined on input lin
+e 61.
+
 [135
 
 
 
-] [136 <./theory/figures/model_withoutnms_v2.png>]
-<./theory/figures/rnn.jpeg, id=2319, 1333.98375pt x 417.56pt>
+]
+
+LaTeX Warning: Reference `fig:rnn' on page 136 undefined on input line 80.
+
+[136 <./theory/figures/model_withoutnms_v2.png>]
+<./theory/figures/rnn.jpeg, id=1767, 1333.98375pt x 417.56pt>
 File: ./theory/figures/rnn.jpeg Graphic file (type jpg)
 <use ./theory/figures/rnn.jpeg>
 Package pdftex.def Info: ./theory/figures/rnn.jpeg  used on input line 86.
 (pdftex.def)             Requested size: 418.25368pt x 130.92043pt.
- [137 <./theory/figures/rnn.jpeg>] [138]
+
+
+LaTeX Warning: Reference `table:rnn_linear' on page 137 undefined on input line
+ 111.
+
+[137 <./theory/figures/rnn.jpeg>]
+
+LaTeX Warning: Reference `table:rnn_linear' on page 138 undefined on input line
+ 142.
+
+[138]
+
+LaTeX Warning: Reference `table:svm_first_results' on page 139 undefined on inp
+ut line 181.
+
+
 Underfull \vbox (badness 10000) detected at line 233
  []
+
+
+LaTeX Warning: Reference `table:svm_mod_roialign' on page 139 undefined on inpu
+t line 258.
 
 [139]
 Underfull \vbox (badness 10000) detected at line 281
  []
 
 
+LaTeX Warning: Reference `table:svm_mod_roialign' on page 140 undefined on inpu
+t line 284.
+
+
+LaTeX Warning: Reference `table:svm_temp_pooling' on page 140 undefined on inpu
+t line 298.
+
+
 Underfull \vbox (badness 10000) detected at line 320
  []
 
 [140]
+
+LaTeX Warning: Reference `table:svm_mod_roialign' on page 141 undefined on inpu
+t line 323.
+
+
+LaTeX Warning: Reference `table:svm_temp_pooling' on page 141 undefined on inpu
+t line 323.
+
+
+LaTeX Warning: Reference `table:svm_temp_pooling_16' on page 141 undefined on i
+nput line 330.
+
+
 Overfull \hbox (2.87468pt too wide) in paragraph at lines 336--336
 []|\OT1/cmr/bx/sc/10 Temporal 
  []
@@ -7816,47 +8564,161 @@ Overfull \hbox (2.87468pt too wide) in paragraph at lines 336--336
 Underfull \vbox (badness 10000) detected at line 352
  []
 
+
+LaTeX Warning: Reference `table:svm_temp_pooling_16' on page 141 undefined on i
+nput line 355.
+
+
+LaTeX Warning: Reference `table:svm_mod_roialign' on page 141 undefined on inpu
+t line 358.
+
 [141]
+
+LaTeX Warning: Reference `table:rnn_increased' on page 142 undefined on input l
+ine 373.
+
+
 Underfull \vbox (badness 10000) detected at line 413
  []
+
+
+LaTeX Warning: Reference `table:rnn_increased' on page 142 undefined on input l
+ine 416.
+
+
+LaTeX Warning: Reference `table:rnn_linear' on page 142 undefined on input line
+ 421.
+
+
+LaTeX Warning: Reference `table:linear_increased' on page 142 undefined on inpu
+t line 422.
 
 
 Underfull \vbox (badness 10000) detected at line 460
  []
 
 [142]
+
+LaTeX Warning: Reference `table:rnn_increased' on page 143 undefined on input l
+ine 463.
+
+
+LaTeX Warning: Reference `table:linear_increased' on page 143 undefined on inpu
+t line 463.
+
+
+LaTeX Warning: Reference `table:svm_increased' on page 143 undefined on input l
+ine 473.
+
+
 Underfull \vbox (badness 10000) detected at line 514
  []
 
 [143]
+
+LaTeX Warning: Reference `table:svm_temp_pooling_16' on page 144 undefined on i
+nput line 528.
+
+
+LaTeX Warning: Reference `table:rnn_16' on page 144 undefined on input line 529
+.
+
+
+LaTeX Warning: Reference `table:linear_16' on page 144 undefined on input line 
+530.
+
+
 Underfull \vbox (badness 10000) detected at line 559
  []
+
+
+LaTeX Warning: Reference `table:rnn_16' on page 144 undefined on input line 562
+.
+
+
+LaTeX Warning: Reference `table:rnn_increased' on page 144 undefined on input l
+ine 562.
 
 
 Underfull \vbox (badness 10000) detected at line 592
  []
 
 [144]
+
+LaTeX Warning: Reference `table:linear_16' on page 145 undefined on input line 
+596.
+
+
+LaTeX Warning: Reference `table:linear_increased' on page 145 undefined on inpu
+t line 596.
+
 File: ./theory/figures/mlp.png Graphic file (type png)
 <use ./theory/figures/mlp.png>
 Package pdftex.def Info: ./theory/figures/mlp.png  used on input line 605.
 (pdftex.def)             Requested size: 302.68878pt x 131.53049pt.
- [145]
+
+LaTeX Warning: Reference `fig:mlp_structure' on page 145 undefined on input lin
+e 613.
+
+
+LaTeX Warning: Reference `fig:whole_network' on page 145 undefined on input lin
+e 629.
+
+
+LaTeX Warning: Reference `table:mlp_reg' on page 145 undefined on input line 64
+1.
+
+[145]
 Underfull \vbox (badness 10000) detected at line 663
  []
+
+
+LaTeX Warning: Reference `table:mlp_extract_jhdmb' on page 146 undefined on inp
+ut line 675.
 
 
 Underfull \vbox (badness 10000) detected at line 702
  []
 
 [146]
-<./theory/figures/model_withnms.png, id=2414, 595.22375pt x 847.165pt>
+
+LaTeX Warning: Reference `table:mlp_extract_jhdmb' on page 147 undefined on inp
+ut line 705.
+
+
+LaTeX Warning: Reference `table:mlp_reg' on page 147 undefined on input line 70
+5.
+
+
+LaTeX Warning: Reference `fig:network_nms' on page 147 undefined on input line 
+718.
+
+
+LaTeX Warning: Reference `table:svm_nms' on page 147 undefined on input line 71
+9.
+
+
+LaTeX Warning: Reference `table:rnn_nms' on page 147 undefined on input line 71
+9.
+
+
+LaTeX Warning: Reference `table:linear_nms' on page 147 undefined on input line
+ 719.
+
+
+LaTeX Warning: Reference `table:mlp_nms' on page 147 undefined on input line 71
+9.
+
+
+LaTeX Warning: Reference `table:svm_nms' on page 147 undefined on input line 72
+2.
+
+<./theory/figures/model_withnms.png, id=1825, 595.22375pt x 847.165pt>
 File: ./theory/figures/model_withnms.png Graphic file (type png)
 <use ./theory/figures/model_withnms.png>
 Package pdftex.def Info: ./theory/figures/model_withnms.png  used on input line
  727.
 (pdftex.def)             Requested size: 238.08528pt x 338.85999pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -7864,29 +8726,85 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) detected at line 757
  []
 
+
+LaTeX Warning: Reference `table:svm_nms' on page 147 undefined on input line 76
+0.
+
+
+LaTeX Warning: Reference `table:svm_increased' on page 147 undefined on input l
+ine 760.
+
 [147]
+
+LaTeX Warning: Reference `table:rnn_nms' on page 148 undefined on input line 76
+4.
+
+
 Underfull \vbox (badness 10000) detected at line 791
  []
 
 [148 <./theory/figures/model_withnms.png>]
+
+LaTeX Warning: Reference `table:linear_nms' on page 149 undefined on input line
+ 796.
+
+
 Underfull \vbox (badness 10000) detected at line 823
  []
+
+
+LaTeX Warning: Reference `table:linear_nms' on page 149 undefined on input line
+ 827.
+
+
+LaTeX Warning: Reference `table:linear_increased' on page 149 undefined on inpu
+t line 827.
+
+
+LaTeX Warning: Reference `table:mlp_nms' on page 149 undefined on input line 83
+1.
 
 
 Underfull \vbox (badness 10000) detected at line 858
  []
 
 
-Overfull \vbox (14.66975pt too high) has occurred while \output is active []
+Overfull \vbox (2.66975pt too high) has occurred while \output is active []
 
 
-[149] [150]
+[149]
+
+LaTeX Warning: Reference `table:mlp_nms' on page 150 undefined on input line 86
+1.
+
+
+LaTeX Warning: Reference `table:mlp_extract_jhdmb' on page 150 undefined on inp
+ut line 861.
+
+[150]
+
+LaTeX Warning: Reference `table:temp_cls_1' on page 151 undefined on input line
+ 911.
+
+
 Underfull \vbox (badness 10000) detected at line 956
  []
 
 [151]
 Underfull \vbox (badness 10000) detected at line 985
  []
+
+
+LaTeX Warning: Reference `table:temp_cls_1' on page 152 undefined on input line
+ 988.
+
+
+LaTeX Warning: Reference `table:temp_cls_recall_1' on page 152 undefined on inp
+ut line 989.
+
+
+LaTeX Warning: Reference `table:tp_fp' on page 152 undefined on input line 993.
+
 
 
 Underfull \vbox (badness 10000) detected at line 1033
@@ -7896,21 +8814,89 @@ Underfull \vbox (badness 10000) detected at line 1033
 Underfull \vbox (badness 10000) detected at line 1087
  []
 
+
+LaTeX Warning: Reference `table:temp_cls_2' on page 153 undefined on input line
+ 1095.
+
+
+LaTeX Warning: Reference `table:temp_cls_recall_1' on page 153 undefined on inp
+ut line 1095.
+
+
+LaTeX Warning: Reference `table:temp_cls_3' on page 153 undefined on input line
+ 1105.
+
 [153]
 Underfull \vbox (badness 10000) detected at line 1131
  []
+
+
+LaTeX Warning: Reference `table:temp_cls_3' on page 154 undefined on input line
+ 1135.
+
+
+LaTeX Warning: Reference `table:temp_cls_4' on page 154 undefined on input line
+ 1138.
 
 
 Underfull \vbox (badness 10000) detected at line 1163
  []
 
 
+LaTeX Warning: Reference `table:temp_cls_4' on page 154 undefined on input line
+ 1167.
+
+
+LaTeX Warning: Reference `table:temp_cls_3' on page 154 undefined on input line
+ 1167.
+
+
+LaTeX Warning: Reference `table:temp_cls_5' on page 154 undefined on input line
+ 1172.
+
+
+LaTeX Warning: Reference `table:temp_cls_6' on page 154 undefined on input line
+ 1172.
+
+
+LaTeX Warning: Reference `table:temp_cls_5' on page 154 undefined on input line
+ 1172.
+
+
+LaTeX Warning: Reference `table:temp_cls_6' on page 154 undefined on input line
+ 1173.
+
+[154]
 Underfull \vbox (badness 10000) detected at line 1199
  []
 
-[154]
+
 Underfull \vbox (badness 10000) detected at line 1244
  []
+
+
+LaTeX Warning: Reference `table:temp_cls_6' on page 155 undefined on input line
+ 1247.
+
+
+LaTeX Warning: Reference `table:temp_cls_5' on page 155 undefined on input line
+ 1247.
+
+
+LaTeX Warning: Reference `table:temp_cls_4' on page 155 undefined on input line
+ 1247.
+
+
+LaTeX Warning: Reference `table:temp_cls_3' on page 155 undefined on input line
+ 1247.
+
+
+LaTeX Warning: Reference `table:temp_cls_6' on page 155 undefined on input line
+ 1248.
+
+
+LaTeX Warning: Reference `table:temp_cls_5' on page 155 undefined on input line
+ 1249.
 
 ) [155]
 \openout2 = `chapter7.aux'.
@@ -7922,13 +8908,13 @@ Underfull \vbox (badness 10000) detected at line 1244
 ]
 Chapter 12.
 [157]) [158]
-Underfull \hbox (badness 1796) in paragraph at lines 183--183
+Underfull \hbox (badness 1796) in paragraph at lines 185--185
 []\OT1/cmr/m/n/10 Laptev and Lin-de-berg. ``Space-time in-ter-est points''. In:
  \OT1/cmr/m/it/10 Pro-ceed-ings Ninth IEEE
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 183--183
+Underfull \hbox (badness 1910) in paragraph at lines 185--185
 \OT1/cmr/m/n/10 mov-ing cam-eras''. In: \OT1/cmr/m/it/10 Tenth IEEE In-ter-na-t
 ional Con-fer-ence on Com-puter Vi-sion
  []
@@ -7937,93 +8923,114 @@ ional Con-fer-ence on Com-puter Vi-sion
 
 
 ]
-Underfull \hbox (badness 2334) in paragraph at lines 183--183
+Underfull \hbox (badness 2334) in paragraph at lines 185--185
 []\OT1/cmr/m/n/10 H. Jhuang et al. ``To-wards Un-der-stand-ing Ac-tion Recog-ni
 -tion''. In: \OT1/cmr/m/it/10 2013 IEEE
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 183--183
+Underfull \hbox (badness 2521) in paragraph at lines 185--185
 []\OT1/cmr/m/n/10 A. Karpa-thy et al. ``Large-Scale Video Clas-si-fi-ca-tion wi
 th Con-vo-lu-tional Neu-ral
  []
 
 [160] [161] [162]
-Underfull \hbox (badness 2277) in paragraph at lines 183--183
+Underfull \hbox (badness 2277) in paragraph at lines 185--185
 []\OT1/cmr/m/n/10 Jianwei Yang et al. ``A Faster Py-torch Im-ple-men-ta-tion of
  Faster R-CNN''. In:
  []
 
 [163]
-Underfull \hbox (badness 1931) in paragraph at lines 183--183
+Underfull \hbox (badness 1931) in paragraph at lines 185--185
 []\OT1/cmr/m/n/10 Michelle Guo et al. ``Neu-ral Graph Match-ing Net-works for F
 ew-shot 3D Ac-tion
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
 [164]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
  (./main_file.aux (./chapter1_gr.aux) (./chapter2_gr.aux)
 (./chapter3_gr.aux) (./chapter4_gr.aux) (./chapter5_gr.aux) (./chapter6_gr.aux)
 (./chapter1.aux) (./chapter2_3.aux) (./chapter4.aux) (./chapter5.aux)
 (./chapter6.aux) (./chapter7.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
-Package rerunfilecheck Info: File `main_file.out' has not changed.
-(rerunfilecheck)             Checksum: 463696ABD0D98EF1B5A789E121875F8B;8920.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 
+
+Package rerunfilecheck Warning: File `main_file.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main_file.out':
+(rerunfilecheck)             Before: 28B53A639C1E25CAE61437A5EE965A82;80
+(rerunfilecheck)             After:  8334172AE6BB64804242ECCC04D8DBBC;8928.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
 
 Package logreq Info: Writing requests to 'main_file.run.xml'.
 \openout1 = `main_file.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  )
 (\end occurred when \iftrue on line 68 was incomplete) 
 Here is how much of TeX's memory you used:
- 20120 strings out of 492616
- 369059 string characters out of 6128968
- 853645 words of memory out of 5000000
- 22888 multiletter control sequences out of 15000+600000
+ 19960 strings out of 492616
+ 366623 string characters out of 6128968
+ 827157 words of memory out of 5000000
+ 22749 multiletter control sequences out of 15000+600000
  21991 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,17n,95p,2350b,9329s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
-lic/cbfonts/grmi1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
-/cbfonts/grmn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cb
-fonts/grmn2074.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfon
-ts/grxn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/
-grxn1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grx
-n1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn17
-28.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn2074.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on main_file.pdf (164 pages, 8070446 bytes).
+ 55i,17n,92p,2350b,9653s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): na
+me{section*.5} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.4} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/cbfonts/grmi1000.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/cbfonts/grmn1000.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/cbfonts/grmn2074.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/cbfonts/grxn1000.pfb></usr/local/texlive/2018/texmf-dist/fo
+nts/type1/public/cbfonts/grxn1200.pfb></usr/local/texlive/2018/texmf-dist/fonts
+/type1/public/cbfonts/grxn1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/cbfonts/grxn1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
+/public/cbfonts/grxn2074.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
+blic/cbfonts/grxn2488.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/esvect/vect10.pfb>
+Output written on main_file.pdf (164 pages, 8057659 bytes).
 PDF statistics:
- 2916 PDF objects out of 2984 (max. 8388607)
- 2612 compressed objects within 27 object streams
- 685 named destinations out of 1000 (max. 500000)
- 1313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2294 PDF objects out of 2487 (max. 8388607)
+ 1999 compressed objects within 20 object streams
+ 688 named destinations out of 1000 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

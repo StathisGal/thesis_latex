@@ -1,0 +1,207 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {2.1}{\ignorespaces Ordered by confidence predictions and their precision and recall values\relax }}{44}{table.caption.43}% 
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.1}{\ignorespaces Recall results for both datasets using IoU and mIoU metrics\relax }}{59}{table.caption.54}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.2}{\ignorespaces Recall results after adding fixed time duration anchors\relax }}{60}{table.caption.56}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.3}{\ignorespaces Recall results after converting cuboids into sequences of frames\relax }}{63}{table.caption.62}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.4}{\ignorespaces Recall performance using 3 different feature maps as Regressor's input and 2 pooling methods\relax }}{64}{table.caption.64}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.5}{\ignorespaces Recall results using 2nd approach for anchors\relax }}{65}{table.caption.67}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.6}{\ignorespaces Recall performance when using a 3D Convolutional Layer in Regressor's architecture\relax }}{67}{table.caption.69}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.7}{\ignorespaces Recall performance when using a 2D Convolutional Layer instead of 3D in Regressor's model\relax }}{68}{table.caption.70}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.8}{\ignorespaces Recall results when reducing sample duration to 4 and 8 frames per video segment\relax }}{68}{table.caption.72}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.9}{\ignorespaces Recall results when a regressor and sample duration equal to 4 or 8 frames per video segment\relax }}{69}{table.caption.74}% 
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Recall results for step = 8\relax }}{74}{table.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Recall results for step = 12\relax }}{75}{table.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.3}{\ignorespaces Recall results for steps = 14, 15 and 16\relax }}{75}{table.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.4}{\ignorespaces Recall results for step = 4\relax }}{75}{table.4.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.5}{\ignorespaces Recall results for steps = 6, 7 and 8\relax }}{76}{table.4.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.6}{\ignorespaces Recall results for UCF-101 dataset\relax }}{77}{table.4.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.7}{\ignorespaces Temporal Recall results for UCF-101 dataset\relax }}{77}{table.4.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.8}{\ignorespaces Spatiotemporal Recall results for UCF-101 dataset\relax }}{78}{table.4.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.9}{\ignorespaces Temporal Recall results for UCF-101 dataset\relax }}{79}{table.4.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.10}{\ignorespaces Spatiotemporal Recall results for UCF-101 dataset\relax }}{79}{table.4.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.11}{\ignorespaces Temporal Recall results for UCF-101 dataset\relax }}{80}{table.4.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.12}{\ignorespaces Spatiotemporal Recall results for UCF-101 dataset using Soft-NMS\relax }}{80}{table.4.12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.13}{\ignorespaces Temporal Recall results for UCF-101 dataset using SoftNMS\relax }}{80}{table.4.13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.14}{\ignorespaces Recall results for second approach with step = 8, 16 and their corresponding steps \relax }}{82}{table.4.14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.15}{\ignorespaces Recall results for third approach with step = 8, 16 and their corresponding steps\relax }}{83}{table.4.15}% 
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.1}{\ignorespaces First classification results using Linear and RNN classifiers\relax }}{88}{table.caption.89}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Our architecture's performance using 5 different policies and 2 different feature maps while pooling in tubes' dimension. With bold is the best scoring case\relax }}{89}{table.5.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.3}{\ignorespaces Our architecture's performance using 2 different policies and 2 different pooling methods using modified Roi Align.\relax }}{90}{table.5.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.4}{\ignorespaces mAP results using temporal pooling for both RoiAlign approaches\relax }}{91}{table.5.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.5}{\ignorespaces mAP results for policies 1,4 for sample duration = 16 \relax }}{91}{table.5.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.6}{\ignorespaces RNN results \relax }}{92}{table.5.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.7}{\ignorespaces Linear results \relax }}{93}{table.5.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.8}{\ignorespaces SVM results \relax }}{93}{table.5.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.9}{\ignorespaces RNN results for sample duration equal to 16\relax }}{94}{table.5.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.10}{\ignorespaces Linear results for sample duration equal to 16\relax }}{95}{table.5.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.11}{\ignorespaces MLP's mAP performance for regular training procedure\relax }}{96}{table.5.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.12}{\ignorespaces mAP results for MLP trained using extracted features\relax }}{97}{table.5.12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.13}{\ignorespaces mAP results for SVM classifier after adding NMS algorithm\relax }}{97}{table.5.13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.14}{\ignorespaces mAP results for RNN classifier after adding NMS algorithm\relax }}{99}{table.5.14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.15}{\ignorespaces mAP results for Linear classifier after adding NMS algorithm\relax }}{99}{table.5.15}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.16}{\ignorespaces mAP results for MLP classifier after adding NMS algorithm\relax }}{99}{table.5.16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.17}{\ignorespaces UCF-101's temporal localization mAP performance\relax }}{102}{table.5.17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.18}{\ignorespaces UCF-101's temporal localization recall and MABO performances\relax }}{102}{table.5.18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.19}{\ignorespaces Comparing TP and FP for both approaches\relax }}{103}{table.5.19}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.20}{\ignorespaces UCF-101's temporal localization mAP performance\relax }}{103}{table.5.20}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.21}{\ignorespaces UCF-101's temporal localization mAP performance calculating sum of confidence scores\relax }}{104}{table.5.21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.22}{\ignorespaces UCF-101's temporal localization mAP performance after adding softmax before calculation the sum\relax }}{104}{table.5.22}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.23}{\ignorespaces UCF-101's temporal localization mAP performance using new classifier without softmax before the calculation of the sums\relax }}{105}{table.5.23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.24}{\ignorespaces UCF-101's temporal localization mAP performance using new classifier with softmax before the calculation of the sums\relax }}{105}{table.5.24}% 
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\babel@toc {english}{}

@@ -1,0 +1,343 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\textPi \textepsilon \textrho \acctonos \textiota \textlambda \texteta \textpsi \texteta }{7}{chapter*.1}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{9}{chapter*.3}% 
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\selectlanguage {greek}\IeC {\textEpsilon }\IeC {\textupsilon }\IeC {\textchi }\IeC {\textalpha }\IeC {\textrho }\IeC {\textiota }\IeC {\textsigma }\IeC {\texttau }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textepsilon }\IeC {\textvarsigma } \selectlanguage {english}}{11}{chapter*.5}% 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {1em}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Contents}{13}{chapter*.5}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{15}{chapter*.6}% 
+\babel@toc {english}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{18}{chapter*.7}% 
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{21}{chapter.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Problem statement}{21}{section.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}Human Action Recognition}{21}{subsection.1.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.2}Human Action Localization}{21}{subsection.1.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Applications}{21}{section.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Challenges and Datasets}{22}{section.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}JHMDB Dataset}{23}{subsection.1.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}UCF-101 Dataset}{23}{subsection.1.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Motivation and Contributions}{23}{section.1.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Thesis structure}{24}{section.1.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Background}{27}{chapter.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Machine Learning}{27}{section.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Introduction}{27}{subsection.2.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Supervised Learning}{27}{section*.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Unsupervised Learning}{28}{section*.12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Reinforcement Learning}{29}{section*.14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Neural Networks}{29}{subsection.2.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}A single Neuron}{29}{subsection.2.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Activation Functions}{30}{section*.17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Feed-forward Neural Network}{31}{section*.19}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.4}2D Convolutional Neural Network}{32}{subsection.2.1.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Convolutional Layers}{33}{section*.22}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pooling Layers}{33}{section*.24}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.5}3D Convolutional Neural Network}{34}{subsection.2.1.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Object Detection}{35}{section.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1} Region Proposal Network}{35}{subsection.2.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Roi Align}{37}{subsection.2.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Non-maximum suppression (NMS) algorithm}{37}{subsection.2.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Soft NMS}{38}{section*.32}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Losses and Metrics}{39}{section.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Losses}{39}{subsection.2.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cross Entropy Loss}{39}{section*.33}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Smooth L1-loss}{40}{section*.34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Metrics}{40}{subsection.2.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Intersection over Union}{41}{section*.36}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{1D IoU}{42}{section*.38}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D IoU}{42}{section*.39}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Precision \& Recall }{43}{section*.40}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{mAP }{43}{section*.41}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{AP (Average precision)}{43}{section*.42}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Interpolated Precision}{45}{section*.45}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mean Average Best Overlap - MABO}{46}{section*.47}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Related work}{46}{section.2.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Action Recognition}{47}{subsection.2.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Action Localization}{49}{subsection.2.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Tube Proposal Network}{53}{chapter.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1} Our implementation's architecture}{53}{section.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Introduction to TPN}{53}{section.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Preparation before TPN}{54}{section.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Preparing data}{54}{subsection.3.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}3D ResNet}{55}{subsection.3.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4} 3D anchors as 6-dim vector}{56}{section.3.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}First Description}{56}{subsection.3.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Training}{56}{subsection.3.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Validation}{58}{subsection.3.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.4}Modified Intersection over Union(mIoU)}{58}{subsection.3.4.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.5}Improving TPN score}{59}{subsection.3.4.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.6}Adding regressor}{61}{subsection.3.4.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D Roi Align}{61}{section*.57}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Regression procedure}{61}{section*.58}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{ Training}{61}{section*.59}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{First regression Network}{62}{section*.60}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.7}Changing Regressor - from 3D to 2d}{63}{subsection.3.4.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5} 3D anchors as 4k-dim vector}{63}{section.3.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.1}Training}{65}{subsection.3.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.2}Adding regressor}{66}{subsection.3.5.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{3D Roi align}{66}{section*.68}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.3}From 3D to 2D}{67}{subsection.3.5.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.4}Changing sample duration}{68}{subsection.3.5.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Without Regressor}{68}{section*.71}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{With Regressor}{68}{section*.73}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}General comments}{69}{section.3.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Connecting Tubes}{71}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Introduction}{71}{section.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}First approach: combine overlap and actioness}{71}{section.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}JHMDB Dataset}{73}{subsection.4.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Sample duration equal to 16 frames}{73}{section*.77}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Sample duration equal to 8}{75}{section*.78}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}UCF-101 dataset}{76}{subsection.4.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Adding NMS algorithm}{78}{section*.79}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Stop updating threshold}{79}{section*.80}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Soft-nms instead of nms}{80}{section*.81}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Second approach: use progression and progress rate}{81}{section.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Third approach : use naive algorithm - only for JHMDB}{82}{section.4.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}General comments}{83}{section.4.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Classification stage}{85}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Introduction}{85}{section.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Preparing data and first classification results}{86}{section.5.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Linear Classifier}{86}{section*.84}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{RNN}{87}{section*.85}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Training}{87}{section*.87}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Validation}{88}{section*.88}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Support Vector Machine (SVM)}{88}{section.5.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Modifying 3D Roi Align}{90}{subsection.5.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Temporal pooling}{90}{subsection.5.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Increasing sample duration to 16 frames}{91}{section.5.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Adding more groundtruth tubes}{91}{section.5.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.1}Increasing again sample duration (only for RNN and Linear)}{94}{subsection.5.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.6}MultiLayer Perceptron (MLP)}{95}{section.5.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.1}Regular training}{96}{subsection.5.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.2}Extract features}{96}{subsection.5.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.7}Adding nms algorithm}{97}{section.5.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7.1}General comments}{100}{subsection.5.7.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.8}Classifying dataset UCF-101}{100}{section.5.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.1}Introduction}{100}{subsection.5.8.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.2}Only temporal classification}{100}{subsection.5.8.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Training}{101}{section*.92}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Validation}{101}{section*.93}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion - Future work}{107}{chapter.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Conclusion}{107}{section.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Future work}{107}{section.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Improving TPN proposals}{107}{section*.94}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Changing Connection algorithm}{108}{section*.95}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Explore other classification techniques}{108}{section*.96}% 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{109}{section*.96}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{}{114}{section*.98}% 

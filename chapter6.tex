@@ -31,7 +31,7 @@ it belongs to the background. This is because we may produce good proposals for 
 is unable to distinguish them, our system will again fail to recognize the actions. \par
 
 The right choice of a classifier is a big dilemma we are facing and we need to answer. However, this classifier will get as input
-some activation maps in order to be classified. Therefore, apart from the good selection of classifier, equally, 
+some activation maps in order to be classified. Therefore, apart from the picking the most suitable classifier, equally, 
 good choice of features is important, too. Finally, the training process of the classifier plays a major role in order to 
 be able to generalize and to avoid overfitting situations. \par
 
@@ -60,7 +60,7 @@ The whole procedure of classification is consisted from the following steps:
 
 The general structure of the whole network is depicted in figure \ref{fig:whole_network}, in which we can see the aforementioned steps if we
 follow the arrows.  \par
-We treated each dataset seperately, because we didn't manage to achieve good recall performance for UCF-101 dataset, it is preferable to
+We treated each dataset seperately, because we didn't manage to achieve good recall performance for UCF-101 dataset, so it is preferable to
 experiment mainly at JHMDB dataset for spatiotemporal localization. Then, we performed temporal localization for UCF-101, because we achieve
 good temporal recall performance during connection stage.
 
@@ -867,12 +867,12 @@ To sum up, in this section we tried to find the most suitable classifier for ach
 temporal pooling in order to have a fix-size input, we get the best results. The most suitable method for training is using about 4 foreground action tubes and only 2 background which using
 both background action tubes and action tubes from other classes as hard-negatives. \par
 
-\section{Classifying dataset UCF}
+\section{Classifying dataset UCF-101}
 \subsection{Introduction}
 During previous section we explore different classification methods using several classifiers. On top of that, it became clear how important is generating good proposal considering the situation
 where we added NMS algorithm. NMS algorithm reduced the number of proposed action tubes, so most of the classifiers failed to improve their performance. Considering recall and MABO performances presented
 in chapter 4, it is clear that our network would fail to recognize most of the groundtruth spatiotemporal action tubes and correctly classifying them. However, in most cases, MABO performance
-got score about 92-94\%. So, we came with the idea of rather than performing spatiotemporal localization and classification, and getting very bad classification results, for the dataset UCF, we performed
+got score about 92-94\%. So, we came with the idea of rather than performing spatiotemporal localization and classification, and getting very bad classification results, for the dataset UCF-101, we performed
 only temporal localization and explored our network's potential. Temporal localization  means that  our network tries to detect the video segments in which an action is performed, and simultaneously
 determine the class of this performed action.
 
@@ -956,7 +956,7 @@ threshold for deciding if an action is contained or not. All the different combi
 
     \hline
 
-    \caption{UCF's temporal localization mAP performance}
+    \caption{UCF-101's temporal localization mAP performance}
     \label{table:temp_cls_1}
   \end{longtable}
 \end{center}
@@ -980,7 +980,7 @@ threshold for deciding if an action is contained or not. All the different combi
       \hline
       0.2 & 0.1217  & 0.2000 & 0.3163 & 0.5769587340803654 \\
       \hline
-    \caption{UCF's temporal localization recall and MABO performances}
+    \caption{UCF-101's temporal localization recall and MABO performances}
     \label{table:temp_cls_recall_1}
   \end{longtable}
 \end{center}
@@ -1087,7 +1087,7 @@ their confidence score is over a predefined threshold.
 
     \hline
 
-    \caption{UCF's temporal localization mAP performance}
+    \caption{UCF-101's temporal localization mAP performance}
     \label{table:temp_cls_2}
   \end{longtable}
 \end{center}
@@ -1126,7 +1126,7 @@ are not worth being considered. Table \ref{table:temp_cls_3} shows mAP results a
     {} & 0.85 & 4.3 & 4.76 & 5.61 & {}\\
     \hline
 
-    \caption{UCF's temporal localization mAP performance calculating sum of confidence scores}
+    \caption{UCF-101's temporal localization mAP performance calculating sum of confidence scores}
     \label{table:temp_cls_3}
   \end{longtable}
 \end{center}
@@ -1158,7 +1158,7 @@ method are shown in Table \ref{table:temp_cls_4}.
     {} & 0.85 & 7.92 & 9.03 & 10.69 & {}\\
     \hline
 
-    \caption{UCF's temporal localization mAP performance after adding softmax before calculation the sum}
+    \caption{UCF-101's temporal localization mAP performance after adding softmax before calculation the sum}
     \label{table:temp_cls_4}
   \end{longtable}
 \end{center}
@@ -1194,7 +1194,7 @@ table \ref{table:temp_cls_6} contains these performances when using it.
     {} & 0.85 & 8.81 & 17.36 & 25.74 & {} \\
     \hline
 
-    \caption{UCF's temporal localization mAP performance using new classifier without softmax before the calculation of the sums}
+    \caption{UCF-101's temporal localization mAP performance using new classifier without softmax before the calculation of the sums}
     \label{table:temp_cls_5}
   \end{longtable}
 \end{center}
@@ -1239,7 +1239,7 @@ table \ref{table:temp_cls_6} contains these performances when using it.
     {} & 0.85 & 44.54 & 47.53 & 51.25 & {}\\
     \hline
 
-    \caption{UCF's temporal localization mAP performance using new classifier with softmax before the calculation of the sums}
+    \caption{UCF-101's temporal localization mAP performance using new classifier with softmax before the calculation of the sums}
     \label{table:temp_cls_6}
   \end{longtable}
 \end{center}

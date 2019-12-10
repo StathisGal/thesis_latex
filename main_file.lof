@@ -66,6 +66,8 @@
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
@@ -1673,22 +1675,26 @@
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
-\babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
-\babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
-\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1794,23 +1800,19 @@
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {greek}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.10}{\ignorespaces \selectlanguage {greek}\IeC {\textEta } \IeC {\textdelta }\IeC {\textomicron }\IeC {\textmu }\IeC {\ensuregreek {\acctonos \texteta }} \IeC {\texttau }\IeC {\textomicron }\IeC {\textupsilon } \textlatin {TPN} \IeC {\textsigma }\IeC {\ensuregreek {\acctonos \textupsilon }}\IeC {\textmu }\IeC {\textphi }\IeC {\textomega }\IeC {\textnu }\IeC {\textalpha } \IeC {\textmu }\IeC {\textepsilon } \IeC {\texttau }\IeC {\texteta }\IeC {\textnu } \IeC {\textnu }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textalpha } \IeC {\textpi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textsigma }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textgamma }\IeC {\textgamma }\IeC {\textiota }\IeC {\textsigma }\IeC {\texteta }\relax }}{47}{figure.caption.28}% 
 \babel@toc {greek}{}
 \babel@toc {english}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1901,8 +1903,6 @@
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
-\babel@toc {greek}{}
-\babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1917,10 +1917,12 @@
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
-\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
+\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -3064,7 +3066,7 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.1}{\ignorespaces An example of calculating connection score for 3 random TOIs taken from \cite {DBLP:journals/corr/HouCS17}\relax }}{122}{figure.caption.113}% 
+\contentsline {figure}{\numberline {10.1}{\ignorespaces An example of calculating connection score for 3 random ToIs taken from \cite {DBLP:journals/corr/HouCS17}\relax }}{122}{figure.caption.113}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {10.2}{\ignorespaces Example of connected tubes\relax }}{134}{figure.caption.119}% 
 \defcounter {refsection}{0}\relax 

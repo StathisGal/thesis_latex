@@ -1,0 +1,82 @@
+\BOOKMARK [0][-]{chapter*.1}{}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter*.5}{greekgreek greekenglish}{}% 3
+\BOOKMARK [0][-]{chapter*.5}{Contents}{}% 4
+\BOOKMARK [0][-]{chapter*.6}{List of Tables}{}% 5
+\BOOKMARK [0][-]{chapter*.7}{List of Figures}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Problem statement}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.1.1}{Human Action Recognition}{section.1.1}% 9
+\BOOKMARK [2][-]{subsection.1.1.2}{Human Action Localization}{section.1.1}% 10
+\BOOKMARK [1][-]{section.1.2}{Applications}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.3}{Challenges and Datasets}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.3.1}{JHMDB Dataset}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.2}{UCF-101 Dataset}{section.1.3}% 14
+\BOOKMARK [1][-]{section.1.4}{Motivation and Contributions}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.5}{Thesis structure}{chapter.1}% 16
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 17
+\BOOKMARK [1][-]{section.2.1}{Machine Learning}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.1.1}{Introduction}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.2}{Neural Networks}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.3}{A single Neuron}{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.4}{2D Convolutional Neural Network}{section.2.1}% 22
+\BOOKMARK [2][-]{subsection.2.1.5}{3D Convolutional Neural Network}{section.2.1}% 23
+\BOOKMARK [1][-]{section.2.2}{Object Detection}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.1}{ Region Proposal Network}{section.2.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.2}{Roi Align}{section.2.2}% 26
+\BOOKMARK [2][-]{subsection.2.2.3}{Non-maximum suppression \(NMS\) algorithm}{section.2.2}% 27
+\BOOKMARK [1][-]{section.2.3}{Losses and Metrics}{chapter.2}% 28
+\BOOKMARK [2][-]{subsection.2.3.1}{Losses}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.2}{Metrics}{section.2.3}% 30
+\BOOKMARK [1][-]{section.2.4}{Related work}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.4.1}{Action Recognition}{section.2.4}% 32
+\BOOKMARK [2][-]{subsection.2.4.2}{Action Localization}{section.2.4}% 33
+\BOOKMARK [0][-]{chapter.3}{Tube Proposal Network}{}% 34
+\BOOKMARK [1][-]{section.3.1}{ Our implementation's architecture}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.2}{Introduction to TPN}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.3}{Preparation before TPN}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.3.1}{Preparing data}{section.3.3}% 38
+\BOOKMARK [2][-]{subsection.3.3.2}{3D ResNet}{section.3.3}% 39
+\BOOKMARK [1][-]{section.3.4}{ 3D anchors as 6-dim vector}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.4.1}{First Description}{section.3.4}% 41
+\BOOKMARK [2][-]{subsection.3.4.2}{Training}{section.3.4}% 42
+\BOOKMARK [2][-]{subsection.3.4.3}{Validation}{section.3.4}% 43
+\BOOKMARK [2][-]{subsection.3.4.4}{Modified Intersection over Union\(mIoU\)}{section.3.4}% 44
+\BOOKMARK [2][-]{subsection.3.4.5}{Improving TPN score}{section.3.4}% 45
+\BOOKMARK [2][-]{subsection.3.4.6}{Adding regressor}{section.3.4}% 46
+\BOOKMARK [2][-]{subsection.3.4.7}{Changing Regressor - from 3D to 2d}{section.3.4}% 47
+\BOOKMARK [1][-]{section.3.5}{ 3D anchors as 4k-dim vector}{chapter.3}% 48
+\BOOKMARK [2][-]{subsection.3.5.1}{Training}{section.3.5}% 49
+\BOOKMARK [2][-]{subsection.3.5.2}{Adding regressor}{section.3.5}% 50
+\BOOKMARK [2][-]{subsection.3.5.3}{From 3D to 2D}{section.3.5}% 51
+\BOOKMARK [2][-]{subsection.3.5.4}{Changing sample duration}{section.3.5}% 52
+\BOOKMARK [1][-]{section.3.6}{General comments}{chapter.3}% 53
+\BOOKMARK [0][-]{chapter.4}{Connecting Tubes}{}% 54
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 55
+\BOOKMARK [1][-]{section.4.2}{First approach: combine overlap and actioness}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.2.1}{JHMDB Dataset}{section.4.2}% 57
+\BOOKMARK [2][-]{subsection.4.2.2}{UCF-101 dataset}{section.4.2}% 58
+\BOOKMARK [1][-]{section.4.3}{Second approach: use progression and progress rate}{chapter.4}% 59
+\BOOKMARK [1][-]{section.4.4}{Third approach : use naive algorithm - only for JHMDB}{chapter.4}% 60
+\BOOKMARK [1][-]{section.4.5}{General comments}{chapter.4}% 61
+\BOOKMARK [0][-]{chapter.5}{Classification stage}{}% 62
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.2}{Preparing data and first classification results}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.3}{Support Vector Machine \(SVM\)}{chapter.5}% 65
+\BOOKMARK [2][-]{subsection.5.3.1}{Modifying 3D Roi Align}{section.5.3}% 66
+\BOOKMARK [2][-]{subsection.5.3.2}{Temporal pooling}{section.5.3}% 67
+\BOOKMARK [1][-]{section.5.4}{Increasing sample duration to 16 frames}{chapter.5}% 68
+\BOOKMARK [1][-]{section.5.5}{Adding more groundtruth tubes}{chapter.5}% 69
+\BOOKMARK [2][-]{subsection.5.5.1}{Increasing again sample duration \(only for RNN and Linear\)}{section.5.5}% 70
+\BOOKMARK [1][-]{section.5.6}{MultiLayer Perceptron \(MLP\)}{chapter.5}% 71
+\BOOKMARK [2][-]{subsection.5.6.1}{Regular training}{section.5.6}% 72
+\BOOKMARK [2][-]{subsection.5.6.2}{Extract features}{section.5.6}% 73
+\BOOKMARK [1][-]{section.5.7}{Adding nms algorithm}{chapter.5}% 74
+\BOOKMARK [2][-]{subsection.5.7.1}{General comments}{section.5.7}% 75
+\BOOKMARK [1][-]{section.5.8}{Classifying dataset UCF-101}{chapter.5}% 76
+\BOOKMARK [2][-]{subsection.5.8.1}{Introduction}{section.5.8}% 77
+\BOOKMARK [2][-]{subsection.5.8.2}{Only temporal classification}{section.5.8}% 78
+\BOOKMARK [0][-]{chapter.6}{Conclusion - Future work}{}% 79
+\BOOKMARK [1][-]{section.6.1}{Conclusion}{chapter.6}% 80
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 81
+\BOOKMARK [0][-]{section*.96}{Bibliography}{}% 82

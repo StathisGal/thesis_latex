@@ -111,7 +111,7 @@ where it continuously trains itself using trial and error method.
 In Figure \ref{fig:reinforment_learning_example}, we can see that the agent is given 2 options i.e. a path with water or a path with fire. A reinforcement algorithm
 works on reward a system i.e. if the agent uses the fire path then the rewards are subtracted and agent tries to learn that it should avoid
 the fire path. If it had chosen the water path or the safe path then some points would have been added to the reward points, the agent then
-would try to learn what path is safe and what path isn’t
+would try to learn which path is safe and which path isn’t.
 
 \subsection{Neural Networks}
 Neural Networks are a class of models within the general machine learning literature. Neural networks are a specific set of algorithms that
@@ -171,9 +171,9 @@ Figure \ref{fig:Activation}  show each of the above activation functions.
 \end{figure}
 
 \subsubsection{Feed-forward Neural Network}
-Till now we have covered neuron and activation functions which together for the basic building blocks of any neural network. The feedforward
+Till now we have covered neuron and activation functions which together are used for the basic building blocks of any neural network. The feedforward
 neural network was the first and simplest type of artificial neural network devised. It contains multiple neurons (nodes) arranged in layers.
-A layer is nothing but a collection of neurons which take in an input and provide an output. Inputs to each of these neurons are processed
+A layer is nothing but a collection of neurons which takes in an input and provides an output. Inputs to each of these neurons are processed
 through the activation functions assigned to the neurons. Nodes from adjacent layers have connections or edges between them. All these connections have weights associated with them.
 \begin{figure}[h]
   \centering
@@ -214,14 +214,14 @@ structure of the Visual Cortex. However, most ConvNets consist mainly in 2 parts
 \item [ Feature extractor] : \\
   This part of the network takes as input the image and extract features that are meaningful for its classification. It amplifies aspects
   of the input that are important for discrimination and suppresses irrelevant variations. Usually, the feature extractor consists of
-  several layers. For instance, an image which could be seen as an array of pixel values. The first layer often learns representation
+  several layers. For instance, an image could be seen as an array of pixel values. The first layer often learns a representation
   that represent the presence or absence of edges at particular orientations and locations in the image. The second layer typically
   detects motifs by spotting particular arrangements of edges, regardless of small variations in the edge positions. Finally, the third
   may assemble motifs into larger combinations that correspond to paths of familiar objects, and subsequent layers would detect objects
   as combinations of these parts.
   
 \item [ Classifier ] : \\
-  This part of the network takes as input the previously computed features and use them to predict the correct label.
+  This part of the network takes as input the previously computed features and uses them to predict the correct label.
 \end{description}
 
 \begin{figure}[h]
@@ -276,9 +276,9 @@ The pooling operation is specified, rather than learned. Two common functions us
 \end{figure}
 
 \subsection{3D Convolutional Neural Network}
-Traditionally, ConvNets are targeting RGB images (3 channels). The goal of 3D CNN is to take as input a video and extract features from it.
+Traditionally, ConvNets target RGB images (3 channels). The goal of 3D CNN is to take as input a video and extract features from it.
 When ConvNets extract the graphical characteristics of a single image and put them in a vector (a low-level representation), 3D ConvNets
-extract the graphical characteristics of a set of images. 3D CNNs takes in to account a temporal dimension (the order of the images in the
+extract the graphical characteristics of a set of images. 3D CNNs take in to account a temporal dimension (the order of the images in the
 video). From a set of images, 3D CNNs find a low-level representation of a set of images, and this representation is useful to find the
 right label of the video (a given action is performed). In order to extract such features, 3D ConvNets  use 3D convolution operations, whose kernel
 shape for a 3D Convolution is specified along 3 dimensions. When thinking about the convolution operation in terms of a kernel sliding
@@ -333,7 +333,7 @@ because, they were not be proposed to be classified.
 The first Object-Detection CNNs use several algorithms for proposing ROIs. For example, R-CNN(\cite{DBLP:journals/corr/GirshickDDM13}),
 and Fast R-CNN(\cite{Girshick:2015:FR:2919332.2920125}) used Selective Search Algorithm for extracting ROIs.
 One of novelties introduced by the Faster R-CNN(\cite{Ren:2015:FRT:2969239.2969250}) is \textbf{Region Proposal Network} (RPN). Its
-function is to propose ROIs and its structure can be shown in \ref{fig:rpn_structure}. As we can see, RPN is consisted of:
+function is to propose ROIs and its structure is shown in \ref{fig:rpn_structure}. As we can see, RPN is consisted of:
 \begin{itemize}
 \item 1 2D Convolutional Layer
 \item 1 score layer 
@@ -443,7 +443,7 @@ where red and blue boxes will be removed because of the presence of the black bo
 \end{figure}
 
 \subsubsection{Soft NMS}
-A simple and efficient way to deal the aforementioned situation is to use Soft-NMS algorithm, which is presented in \cite{DBLP:journals/corr/BodlaSCD17}.
+A simple and efficient way to deal the aforementioned situation is to use Soft-NMS algorithm, which is presented by \cite{DBLP:journals/corr/BodlaSCD17}.
 Soft-NMS algorithm is based on the idea of
 reducing confidence score of the proposals proportional to their overlap score, instead of completely removing them.
 The score calculation follows the formula 
@@ -540,11 +540,11 @@ of machine learning algorithms is measured and compared.
 They influence how to weight the importance of different characteristics in the results and finally,
 the ultimate choice of classification algorithm. Most of the times we use classification accuracy
 to measure the performance of our model, however it is not enough to truly judge our model. \par
-At first, we introduce some basic evaluation metrics in order,then, to present those we use for our assessment.
+At first, we introduce some basic evaluation metrics in order, then, to present those we use for our assessment.
 
 \subsubsection{Intersection over Union}
 The first and most important metric that we use is Intersection over Union (IoU). IoU  measures the overlap between 2 boundaries.
-It is usually used in Object Recognition Networks in order to define how good overlap a predicted bounding box  with the actual
+It is usually used in Object Recognition Networks in order to define how good  a predicted bounding box overlap with the actual
 bounding box as shown in Figure \ref{fig:iou_fig}. We predefine an IoU threshold (say 0.5) in classifying whether the prediction is a true positive or a false positive.
 \begin{figure}[h]
   \centering
@@ -555,7 +555,7 @@ bounding box as shown in Figure \ref{fig:iou_fig}. We predefine an IoU threshold
 
 Intersection over Union is defined as:
 \[ IoU = \frac{\text{area of overlap}}{\text{area of union}} \]
-In Figure \ref{fig:iou_fig}, spatial IoU between 2 bounding boxes, $(x_1,y_1,x_2,y_2)$ and $(x_3,y_3,x_4,y_4)$,is presented, which means IoU metric is implemented for x-y dimensions.
+In Figure \ref{fig:iou_fig}, spatial IoU between 2 bounding boxes, $(x_1,y_1,x_2,y_2)$ and $(x_3,y_3,x_4,y_4)$, is presented, which means IoU metric is implemented for x-y dimensions.
 Area of overlap and area of union can be defined as:
 \[\text{ Area of overlap } = \lVert( min(x_2,x_4) - max(x_1,x_3), min(y_2,y_4)- max(y_1,y_3) )\rVert\]
 \[\text{ Area of union  }  = \lVert( max(x_2,x_4) - min(x_1,x_3), max(y_2,y_4) - min(y_1,y_3) )\rVert\]
@@ -591,7 +591,7 @@ So, the IoU overlap between 2 boxes, $(x_1,y_1,z_1,x_2,y_2,z_2)$
   \item$ X_1^i =  (x_1^i,y_1^i,x_2^i,y_2^i)$ and $X_2^i =  (x_3^i,y_3^i,x_4^i,y_4^i) $
   \end{itemize}
 \item IoU is the average spatial-IoU if we consider 2D boxes as $(0,0,0,0)$ if $ t \notin [t_{start},t_{finish}]$ and it is written as:
-  \[ IoU = \frac{1}{K} \sum_{i = min(t_1,t_3}^{max(t_2,t_4)} IoU(X_1^i,X_2^i) \]
+  \[ IoU = \frac{1}{K} \sum_{i = min(t_1,t_3)}^{max(t_2,t_4)} IoU(X_1^i,X_2^i) \]
   \begin{itemize}
   \item $K = max(t_2,t_4) - min(t_1,t_3)$
   \item $ X_1 = (x_1,y_1,x_2,y_2)  \text{ if } i \in [t_1,t_2] \text{ or }
@@ -602,7 +602,7 @@ So, the IoU overlap between 2 boxes, $(x_1,y_1,z_1,x_2,y_2,z_2)$
   
 \end{enumerate}
 \end{description}
-From above implementations, we are involve mostly with temporal and spatiotemporal IoU.
+From above implementations, we are involved mostly with temporal and spatiotemporal IoU.
 
 \subsubsection{Precision  \& Recall }
 
@@ -638,16 +638,16 @@ As a result, these metrics fail to determine if a model is performing well in ob
 that reason, we use mean Average Precision (mAP) metric, which for videos is named video-AP as introduced by \cite{DBLP:journals/corr/GkioxariM14}.
 \paragraph{AP (Average precision)} Before defining mAP metric, we will define Average Precision metric (AP). AP is a popular metric in measuring the accuracy of
 object detectors like Faster R-CNN, SSD, etc. Average precision computes the average precision value for recall value over 0 to 1.
-As mentioned before, during classification stage, our prediction results in True positive(TP), False positive(FP), True Negative(TN) or False Negative(FN). For object recognition and action
-localization networks, we don't care about TN. We consider a prediction as True positive when our prediction (an bounding box for object detection network or a sequence of bounding boxes in
+As mentioned before, during classification stage, our prediction results in True positive (TP), False positive (FP), True Negative (TN) or False Negative (FN). For object recognition and action
+localization networks, we don't care about TN. We consider a prediction as True positive when our prediction (a bounding box for object detection network or a sequence of bounding boxes in
 action localization networks) overlaps with the groundtruth bounding box/action tube over a predefined threshold, and our predicted class is the same as groundtruth's. In addition, we
 consider a False Negative when either no detection overlaps with the groundtruth bounding box/action tube or our prediction's class label was incorrect. We consider a prediction as False positive, when more that
 one predictions overlap with the groundtruth. In this situation, we consider the prediction with the biggest confidence score as TP and the rest as FP.\par
 
-For a class, we need to calculate, first, its precision and recall scores in order to calculate its AP score. We sort our predictions according to their confidence score and for each new prediction we
+For a class, we need to calculate, firstly, its precision and recall scores in order to calculate its AP score. We sort our predictions according to their confidence score and for each new prediction we
 calculate precision and recall values. An example, for a class containing 4 TP and 8 predictions  is shown at Table \ref{table:map_1}. Precision and recall
-are calculated according to the number of elements that are above in the order. So, for rank \#3, Precision is calculated as the proportion of TP = 2/3 = 0.67
-and Recall as the proportion of TP out of all the possible TP = 2/4 = 0.5.
+are calculated according to the number of elements that are above in the order. So, for rank \#3, precision is calculated as the proportion of TP = 2/3 = 0.67
+and recall as the proportion of TP out of all the possible TP = 2/4 = 0.5.
 
 \begin{table}[h]
   \centering
@@ -699,7 +699,7 @@ Interpolated precision is calculated at each recall level $r$ by taking the maxi
 \[ p_{interp}(r) = \max_{\tilde{r}:\tilde{r}\ge r} p(\tilde{r}) \]
 
 where $p(\tilde{r})$ is the measured precision at recall $\tilde{r}$. Graphically, at each recall level, we replace each precision value
-with the maximum precision value to the right of that recall level.  At Figure \ref{fig:pr_curve2} are shown both P-R curves. The previous P-R curve has blue
+with the maximum precision value to the right of that recall level.  At Figure \ref{fig:pr_curve2}, both P-R curves are shown. The previous P-R curve has blue
 color and the interpolated has red color.
 
 \begin{figure}[h]
@@ -709,8 +709,8 @@ color and the interpolated has red color.
   \label{fig:pr_curve2}
 \end{figure}
 
-In order to calculate AP, we sample the curve at all unique recalls values, whenever the maximum precision drops. On top of that, we define mean Average Precision (mAP)
-the mean of the AP for each class. So, AP and mAP are defined as
+In order to calculate AP, we sample the curve at all unique recalls values, whenever the maximum precision drops. On top of that, we define mean Average Precision (mAP) as 
+the mean of the AP for each class. So, AP and mAP are defined as:
 \[  AP = \sum (r_{n+1} - r_n) p_{interp} (r_{n+1}) \]
 \[ p_{interp}(r_{n+1}) = \max_{\tilde{r} \ge r_{n+1} p(\tilde{r})}p(\tilde{r}) \]
 \[ mAP = \frac{1}{N} \sum_{i=1}^N AP_i \]
@@ -721,7 +721,7 @@ In order to evaluate the quality of our proposals, both during TPN and connectin
 That's because recall metric tells us only for how many actual objects/action tubes, there was at least 1 proposal that satisfied the detection
 criterion. However, it doesn't tells us how close these proposals are to the actual objects/action tubes. In order to quantify this performance,
 Mean Average Best Overlap (MABO) was introduced by \cite{DBLP:journals/corr/WinschelLE16}. The importance of MABO can be clarified 
-we consider figure \ref{fig:mabo_fig}.
+if we consider figure \ref{fig:mabo_fig}.
 
 \begin{figure}[h]
   \centering
@@ -734,8 +734,8 @@ As we can see, recall performance is almost perfect, but, MABO performance, whic
 is just fine and not perfect. \par
 In order to define MABO, we need first to define Average Best Overlap. Let $ c \in C$ denote a class $c$ from the set of all
 classes $C$ and $G^c$ the set of ground truth annotations of this class in all images; let $L$ be the set of all generated object proposals
-for all images. Average Best Overlap is defined as the average value of the maximum overlap score, (in our situation, we use intersection
-over union) of $L$ with each groundtruth annotation $g \in G^c$. The Mean Average Best Overlap (MABO) is defined as the average value of all
+for all images. Average Best Overlap is defined as the average value of the maximum overlap score of $L$ with each groundtruth annotation $g \in G^c$ (in our situation, we use intersection
+over union). The Mean Average Best Overlap (MABO) is defined as the average value of all
 class ABO values :
 \[ MABO = \frac{1}{|C|} \sum_{c \in C} [ \frac {1}{|G^C|} \sum_{g \in G^c} \max_{l \in L} IoU(g,l)]  \]
 In our situation, which we care only for the quality of our proposals,  we consider only 1 class, foreground class. As a result, MABO's performance identifies with ABO's.
@@ -754,12 +754,12 @@ The system extracts the class label of the unknown video by corresponding to the
 several variations of space-time representations. Instead of volume representation, the system may represent the action as trajectories
 in space-time dimensions  or even more, the action can be represented as a set of features extracted from the volume or the trajectories.
 Pure space-time volume representations include methods of comparing foreground regions of a person (i.e. silhouettes) like \cite{BobickAaron}
-did, comparing volumes in terms of their patches like \cite{1467296}.  \cite{4270510} method uses oversegmented volumes, automatically
+did, comparing volumes in terms of their patches like \cite{1467296}.  \cite{4270510} introduced a method which uses oversegmented volumes and  automatically
 calculating a set of 3-D XYT volume segments that corresponds to a moving human. \cite{4587727} proposed filters for
 capturing the volume's characteristics, in order to match them more reliably and efficiently. From the other hand, trajectory-based approaches
 include representing an action as a set of 13 joint trajectories (\cite{1541250}) or using a set of \textit{XYZT}-dimensions joint trajectories
 obtained from moving cameras (\cite{1541251}). Finally, several methods use local features extracted from 3-dimensional space-time volumes,
-like extracting local features at every frame and concatenate them temporally (\cite{784616, 990935, 1544882}, extracting sparse
+like extracting local features at every frame and concatenate them temporally (\cite{784616, 990935, 1544882}) or extracting sparse
 spatiotemporal local interest points from 3D volumes (\cite{1238378, 1570899, Niebles, 1467373, Ryoo2006})
 These approaches made the choice of
 features a significant factor for network's performance. That's because different action classes may appear dramatically
@@ -771,40 +771,40 @@ Recent results in deep architectures and especially in image classification moti
 the task of action recognition. The first significant attempt was made by \cite{6909619}. They designed their architecture based on the best-scoring CNN
 in the ImageNet competition. They explored several methods for the  fusion of spatiotemporal features using 2D operations mostly and 3D convolution only in slow fusion.
 \cite{simonyan2014two}  used 2 CNNs, one for spatial information and one for optical flow and combined them using late fusion.
-They show that extracting spatial context from videos and motion context from optical flow can improve significantly action recognition accuracy.
-\cite{DBLP:journals/corr/FeichtenhoferPZ16} extend this approach by using early fusion at the end of convolutional layers,  instead of late fusion which
+They showed that extracting spatial context from videos and motion context from optical flow can improve significantly action recognition accuracy.
+\cite{DBLP:journals/corr/FeichtenhoferPZ16} extended this approach by using early fusion at the end of convolutional layers,  instead of late fusion which
 takes places at the last layer of the network. On top that, they used a second network for temporal context which they fuse with the other network using late
 fusion. Furthermore, \cite{DBLP:journals/corr/WangXW0LTG16} based their method on the one proposed by \cite{simonyan2014two}, too. They deal with the problem of capturing long-range
 temporal context and training their network given limited training samples. Their approach, which they named Temporal Segment Network (TSN), separates the input
 video in K segments and a short snippet from each segment is chosen for analysis. Then they fuse  the extracted spatiotemporal context, making, eventually, their
 prediction.
-Most recently, \cite{DBLP:journals/corr/ZhangWWQW16} and \cite{DBLP:journals/corr/ZhuLNH17a} used two-stream approach, too. \cite{DBLP:journals/corr/ZhangWWQW16} replace optical flow with motion vector which can be obtained directly from compressed videos without extra calculation and feeding it to the  network . \cite{DBLP:journals/corr/ZhuLNH17a} trained a CNN for calculating optical flow, calling it
-MotionNet and used a  CNN as temporal stream for project motion information to action labels. Finally, they use late fusion through the weighted averaging of the prediction scores of the temporal and spatial streams. On the other hand, a novel approach was introduced by \cite{DBLP:journals/corr/abs-1711-01467} incorporating attention maps to give significant improvement in action recognition performance. \par 
+Most recently, \cite{DBLP:journals/corr/ZhangWWQW16} and \cite{DBLP:journals/corr/ZhuLNH17a} used two-stream approach, too. \cite{DBLP:journals/corr/ZhangWWQW16} replaced optical flow with motion vector which can be obtained directly from compressed videos without extra calculation and feeding it to the  network . \cite{DBLP:journals/corr/ZhuLNH17a} trained a CNN for calculating optical flow, calling it
+MotionNet and used a  CNN as temporal stream for projecting motion information to action labels. Finally, they use late fusion through the weighted averaging of the prediction scores of the temporal and spatial streams. On the other hand, a novel approach was introduced by \cite{DBLP:journals/corr/abs-1711-01467} incorporating attention maps to give significant improvement in action recognition performance. \par 
 
-Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and \cite{DBLP:journals/corr/MaCKA17}.  \cite{DBLP:journals/corr/DonahueHGRVSD14} address the challenge of variable lengths of
-input and output sequences, exploiting convolutional layers and long-range temporal recursions. They propose a Long-term Recurrent
-Convolutional Network (LRCN) which is capable of dealing with the tasks of action Recognition, image caption and video description. In order to classify a given sequence of frames, LRCN firstly gets as input a frame, and in particular its RGB channels and optical flow, and predicts a class label. After that, it extracts video class by averaging label probabilities, choosing the most probable class.
-\cite{DBLP:journals/corr/NgHVVMT15} firstly explore several approaches for temporal feature pooling. These techniques include handling video
-frames individually by 2 CNN architectures: either AlexNet or GoogleNet, and consisted of early fusion, late fusion of a combination of
-them. Furthermore, they propose a recurrent neural Network architecture in order to consider video clips as a sequence of CNN activations.
+Some other methods included a RNN or LSTM network for classification like \cite{DBLP:journals/corr/DonahueHGRVSD14}, \cite{DBLP:journals/corr/NgHVVMT15} and \cite{DBLP:journals/corr/MaCKA17}.  \cite{DBLP:journals/corr/DonahueHGRVSD14} addressed the challenge of variable lengths of
+input and output sequences, exploiting convolutional layers and long-range temporal recursions. They proposed a Long-term Recurrent
+Convolutional Network (LRCN) which is capable of dealing with the tasks of action recognition, image caption and video description. In order to classify a given sequence of frames, LRCN firstly gets as input a frame, and in particular its RGB channels and optical flow, and predicts a class label. After that, it extracts video class by averaging label probabilities, choosing the most probable class.
+\cite{DBLP:journals/corr/NgHVVMT15} firstly explored several approaches for temporal feature pooling. These techniques include handling video
+frames individually by 2 CNN architectures: either AlexNet or GoogleNet, and are consisted of early fusion, late fusion and a combination of
+them. Furthermore, they proposed a recurrent neural Network architecture in order to consider video clips as a sequence of CNN activations.
 Proposed LSTM takes as input the output of the final CNN layer at each consecutive video frame and after five stacked LSTM layers using a
-Softmax classifier, it proposes a class label. For video classification, they return a label after last time step, max-pool the predictions
+Softmax classifier, it generates a class label. For video classification, they return a label after last time step, max-pool the predictions
 over time, sum predictions over time and return the max or linearly weight the predictions over time by a factor g, sum them and return the max.
-They showed that all approaches are 1\% different with a bias for using weighting predictions for supporting the idea that LSTM becomes progressively more informed. Last but not least,  \cite{DBLP:journals/corr/MaCKA17} use a two-stream ConvNet for feature extraction and either an LSTM or convolutional layers over temporally-constructed feature matrices, for fusing spatial and temporal information. They use a ResNet-101 for
-extracting feature maps for both spatial and temporal streams. They divide video frames into several segments like \cite{DBLP:journals/corr/WangXW0LTG16} did, and use a temporal pooling layer to extract distinguished features. Taken these features, LSTM extracts embedded features from all segments.\par
+They showed that all approaches are 1\% different with a bias for using weighting predictions for supporting the idea that LSTM becomes progressively more informed. Last but not least,  \cite{DBLP:journals/corr/MaCKA17} used a two-stream ConvNet for feature extraction and either an LSTM or convolutional layers over temporally-constructed feature matrices, for fusing spatial and temporal information. They use a ResNet-101 for
+extracting feature maps for both spatial and temporal streams. They divided video frames into several segments like \cite{DBLP:journals/corr/WangXW0LTG16} did, and used a temporal pooling layer to extract distinguished features. Taken these features, LSTM extracts embedded features from all segments.\par
 
 Additionally, \cite{Tran2014LearningSF} explored 3D Convolutional Networks (\cite{pmid:22392705}) and introduced C3D network, which  has
 3D convolutional layers with kernels $ 3 \times 3 \times 3$.
 This network is able to  model appearance and motion context simultaneously using 3D convolutions and it can be used as a feature extractor, too.
 Combining Two-stream architecture and 3D Convolutions, \cite{DBLP:journals/corr/CarreiraZ17} proposed
-I3D network. On top of that, the authors emphasize in the advantages of transfer learning for the task of action recognition by repeating 2D pre-trained weights
+I3D network. On top of that, the authors emphasized in the advantages of transfer learning for the task of action recognition by repeating 2D pre-trained weights
 in the 3rd dimension. \cite{DBLP:journals/corr/abs-1708-07632} proposed a 3D ResNet Network for action recognition based on Residual Networks (ResNet)
-(\cite{DBLP:journals/corr/HeZRS15}) and explore the effectiveness of ResNet with 3D Convolutional kernels.
-On the other hand, \cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets(\cite{DBLP:journals/corr/HuangLW16a}) and extend
-DenseNet architecture by using 3D filters and pooling kernels instead of 2D, naming this approach as DenseNet3D. Futhermore, they introduce
+(\cite{DBLP:journals/corr/HeZRS15}) and explored the effectiveness of ResNet with 3D Convolutional kernels.
+On the other hand, \cite{DBLP:journals/corr/abs-1711-08200}  based their approach on DenseNets (\cite{DBLP:journals/corr/HuangLW16a}) and extended 
+DenseNet architecture by using 3D filters and pooling kernels instead of 2D, naming this approach as DenseNet3D. Futhermore, they introduced
 Temporal Transition Layer (TTL), which concatenates temporal feature maps extracted at different temporal depth ranges and replaces DenseNet's
 transition layer. On top of that, \cite{DBLP:DibaFSKAYG18} introduced  a new temporal layer that models variable  temporal Convolution kernel depths.
-Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experimented with several residual network architectures using combinations of 2D and 3D convolutional layer. Their purpose is
+Last but not least, \cite{DBLP:journals/corr/abs-1711-11248} experimented with several residual network architectures using combinations of 2D and 3D convolutional layers. Their purpose was
 to show that a 2D spatial convolution followed by a 1D temporal convolution achieves state-of-the-art classification performance, naming
 this type of convolution layer as R(2+1)D. 
 Recently \cite{Guo_2018_ECCV} proposed a framework which can learn to recognize a previous unseen 3D action class with only a few examples
@@ -818,41 +818,41 @@ boxes in a single image, the goal of action localization systems is to output ac
 contain an performed action. So, there are several approaches usually including an object-detector network  and a classifier. \par
 
 
-The first object detection approaches included extending a object proposal algorithm into 3-dimensions. \cite{6619185} extended deformable part models (\cite{5255236})  by treating actions as spatiotemporal patterns and generated a deformable part for each action. \cite{6909495} introduced the concept of tubelets, aka sequences of bounding boxes and based their method on the selective search algorithm
+The first object detection approaches included extending a object proposal algorithm into 3-dimensions. \cite{6619185} extended deformable part models (\cite{5255236})  by treating actions as spatiotemporal patterns and generated a deformable part model for each action. \cite{6909495} introduced the concept of tubelets, aka sequences of bounding boxes and based their method on the selective search algorithm
 (\cite{Uijlings13}), extending super-pixels to super-voxels for producing spatiotemporal shapes. On the other hand, \cite{Oneata}
-extend a randomized superpixel merging procedure which was used for object proposals as presented by \cite{Manen:2013:POP:2586117.2587333}.
-\cite{7298735} first propose bounding boxes for each frame using a human and motion detector and then by picking the best-scoring bounding boxes,
-they proposed a greedy linking algorithm by formulating linking task as a maximum set coverage problem. \cite{BMVC2015_177} generate spatiotemporal proposals directly from dense trajectories, which also used for classification. \cite{7410734} create a spatiotemporal trajectory
-graph and select action proposals based only on intentional movement extracted from the graph. \cite{7410732} separate the video segments
-into supervoxels and use their context as a spatial relation between supervoxels relative to foreground action. They create a graph for each
-video, where supervoxels form the nodes and directed edges capture the spatial relations between them. During testing, they  perform a context
-walk where each step is guided by the context relations learned during training, resulting in a probability distribution of an action over all the supervoxels. \cite{DBLP:journals/corr/MettesGS16}, instead of annotating boxes in all frames, annotate points on a sparse subset of video
-frames, and use proposals obtained by an overlap measure between action proposals and points. \cite{DBLP:journals/corr/BehlSSSCT17} deal with
+extended a randomized superpixel merging procedure which was used for object proposals as presented by \cite{Manen:2013:POP:2586117.2587333}.
+\cite{7298735} first proposed bounding boxes for each frame using a human and motion detector and then by picking the best-scoring bounding boxes,
+they proposed a greedy linking algorithm, formulating, finally, linking task as a maximum set coverage problem. \cite{BMVC2015_177} generated spatiotemporal proposals directly from dense trajectories, which also used for classification. \cite{7410734} created a spatiotemporal trajectory
+graph and selected action proposals based only on intentional movement extracted from the graph. \cite{7410732} separated the video segments
+into supervoxels and used their context as a spatial relation between supervoxels relative to foreground action. They created a graph for each
+video, where supervoxels form the nodes and directed edges capture the spatial relations between them. During testing, they  performed a context
+walk where each step is guided by the context relations learned during training, resulting in a probability distribution of an action over all the supervoxels. \cite{DBLP:journals/corr/MettesGS16}, instead of annotating boxes in all frames, annotated points on a sparse subset of video
+frames, and used proposals obtained by an overlap measure between action proposals and points. \cite{DBLP:journals/corr/BehlSSSCT17} dealt with
 on-line action detection and localization by getting per-frame action proposal and  proposing a linking algorithm which is able to construct and update action tubes at each frame.
 Most recently, \cite{8237344} tried to deal with the problem of unsupervised
 action detection and localization. Their approach included extracting supervoxel segmentation and then assigning a weight to each supervoxel.
-Using extracted supervoxels, they create a graph and then using a discriminate clustering approach a classifier is trained.\par
+Using extracted supervoxels, they created a graph and then using a discriminate clustering approach a classifier is trained.\par
 
 \par
 
 The introduction of R-CNN (\cite{DBLP:journals/corr/GirshickDDM13}) achieved significant improvement
 in the performance of Object Detection Networks. This architecture, firstly, proposes regions in the image which are likely to
 contain an object and then it classifies them using an SVM classifier. Inspired by this architecture, \cite{DBLP:journals/corr/GkioxariM14}
-design a 2-stream RCNN network in order to generate action proposals for each frame, one stream for frame level and one for optical flow.
-Then they  connect them using the Viterbi connection algorithm. \cite{DBLP:journals/corr/WeinzaepfelHS15} extend this approach, by performing
+designed a 2-stream RCNN network in order to generate action proposals for each frame, one stream for frame level and one for optical flow.
+Then they  connected them using the Viterbi connection algorithm. \cite{DBLP:journals/corr/WeinzaepfelHS15} extended this approach, by performing
 frame-level proposals and using a tracker for connecting those proposals using both spatial and optical flow features. Also, their method performs
 temporal localization using a sliding window over the tracked tubes.
 
 The introduction of Faster RCNN (\cite{Ren:2015:FRT:2969239.2969250}) contributed a lot to the improvement of the performance of Action Localization Networks.
-\cite{peng:hal-01349107} and \cite{DBLP:journals/corr/SahaSSTC16}   use Faster R-CNN  instead of RCNN
+\cite{peng:hal-01349107} and \cite{DBLP:journals/corr/SahaSSTC16}   used Faster R-CNN  instead of RCNN
 for frame-level proposals, using RPN for both RGB and optical flow images.
-After getting spatial and motion proposals, \cite{peng:hal-01349107} fuse them  and from each proposed ROI, generate 4 ROIs in order to focus on specific
-body parts of the actor. After that, they connect the proposal using Viterbi algorithm for each class and perform temporal localization by using a sliding window, with multiple
-temporal scales and stride using a maximum subarray method. From the other hand, \cite{DBLP:journals/corr/SahaSSTC16} perform, too, frame-level classification. After that,
+After getting spatial and motion proposals, \cite{peng:hal-01349107} fused them  and, from each proposed ROI, generated 4 ROIs in order to focus on specific
+body parts of the actor. After that, they connected the proposal using Viterbi algorithm for each class and performed temporal localization by using a sliding window, with multiple
+temporal scales and stride using a maximum subarray method. From the other hand, \cite{DBLP:journals/corr/SahaSSTC16} performed, too, frame-level classification. After that,
 their method performs fusion based on a combination between the actioness scores of the appearance and motion based proposals and their overlap score. Finally, temporal localization
-takes place using dynamic programming. Additionally, \cite{DBLP:journals/corr/WeinzaepfelMS16} use
+takes place using dynamic programming. Additionally, \cite{DBLP:journals/corr/WeinzaepfelMS16} used
 Faster RCNN for extracting human tubes from videos focusing  on weakly-supervised action localization problem.
-Then, using dense trajectories and a  multi-fold Multiple  Instance  Learning approach (\cite{7420739}) they train a classifier.
+Then, using dense trajectories and a  multi-fold Multiple  Instance  Learning approach (\cite{7420739}) they trained a classifier.
 \cite{DBLP:journals/corr/MettesS17} introduced a method for zero-shot action localization. Their approach includes scoring proposed action tubes according to the interactions between
 actors and local objects. They used Faster-RCNN, in the first step, for detecting both actors and objects and then using spatial relations between them, they link the proposed boxes over
 time based on zero-shot likelihood from the presence of actors, relevant objects around the actors and the expected spatial relations between objects and actors.
@@ -865,27 +865,27 @@ and Fast-RCNN's RPN for generation ``person'' proposals for the center frame.
 On top of that, \cite{singh2016online} and \cite{kalogeiton17iccv:hal-01519812} designed their networks based on the Single Shot Multibox Detector \cite{DBLP:journals/corr/LiuAESR15}).
 \cite{singh2016online} created an real-time spatiotemporal network. In order their network to execute real-time,  \cite{singh2016online} proposed a novel and efficient algorithm
 by adding boxes in tubes in every frame if they overlap over a threshold, or alternatively, terminate the action tube if for k-frames no box was added.  \cite{kalogeiton17iccv:hal-01519812}
-designed a two-stream network, which they called ACT-detector, and introduced anchor cuboids. For K frames, for both networks, \cite{kalogeiton17iccv:hal-01519812} extract spatial
-features in frame-level, then they stack these features. Finally, using cuboid anchors, the network extracts tubelets,  with their corresponding classification
-scores and regression targets. For linking the tubelets, \cite{kalogeiton17iccv:hal-01519812} follow about the same steps as \cite{singh2016online} did. For temporal localization, they use
+designed a two-stream network, which they called ACT-detector, and introduced anchor cuboids. For K frames, for both networks, \cite{kalogeiton17iccv:hal-01519812} extracted spatial
+features in frame-level, then they stacked these features. Finally, using cuboid anchors, the network extracts tubelets,  with their corresponding classification
+scores and regression targets. For linking the tubelets, \cite{kalogeiton17iccv:hal-01519812} followed about the same steps as \cite{singh2016online} did. For temporal localization, they used
 a temporal smoothing approach. \par
 
 Most recently, YOLO Network (\cite{DBLP:journals/corr/RedmonDGF15}) became the inspiration for \cite{DBLP:journals/corr/abs-1903-00304} and
-\cite{DBLP:journals/corr/abs-1802-08362}. In approach proposed by \cite{DBLP:journals/corr/abs-1903-00304}, concepts of progression and progress
-rate were introduced. Except from proposing bounding boxes in frame level, they use YOLO together with a RNN classifier for extracting temporal information for the proposals.
-Based on this information, they create action tubes, separated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232} do. 
-They proposed a method for calculating 2D and 3D poses and then they performed action classification. They use the diffferentiable Soft-argamax function for estimating 2D and 3D joints, because
-argmax function is not differentiable. Then, for T adjacent poses, they create an image representation with time and $N_j$ joints as $x-y$ dimensions and having 2 channels for 2D poses and 3
-channels for 3D poses. They use Convolutional Layers in order to produce action heats and then using max plus min pooling and a Softmax activation they perform action classification.
+\cite{DBLP:journals/corr/abs-1802-08362}. In the approach proposed by \cite{DBLP:journals/corr/abs-1903-00304}, concepts of progression and progress
+rate were introduced. Except from proposing bounding boxes in frame level, they used YOLO together with a RNN classifier for extracting temporal information for the proposals.
+Based on this information, they created action tubes, separated into classes. Some other approaches include pose estimation like \cite{DBLP:journals/corr/abs-1802-09232} do. 
+They proposed a method for calculating 2D and 3D poses and then they performed action classification. They used the diffferentiable Soft-argamax function for estimating 2D and 3D joints, because
+argmax function is not differentiable. Then, for T adjacent poses, they created an image representation with time and $N_j$ joints as $x-y$ dimensions and having 2 channels for 2D poses and 3
+channels for 3D poses. They used Convolutional Layers in order to produce action heats and then using max plus min pooling and a Softmax activation, they performed action classification.
 \cite{DBLP:journals/corr/ZolfaghariOSB17} proposed a three-stream architecture which includes 2D pose, optical flow and RGB information. These streams are integrated sequentially via a Markov
 chain model. In addition, \cite{8237881} proposed an architecture using a temporal convolutional regression network, for capturing the long-term dependency and contexts among adjacent
 frames, and a spatial regression network,
 getting per-frame proposals. They use tracking methods and dynamic programming for generating action proposals.\par
 
-Most of aforementioned networks use per-frame spatial proposals and extract their temporal infomation by calculating optical flow. On the other hand,  \cite{DBLP:journals/corr/SahaSC17} and  \cite{DBLP:journals/corr/HouCS17} designed an architecture which includes proposals in video segment level, which mean  more that 1 frame simultaneously. \cite{DBLP:journals/corr/SahaSC17} proposed a 3D-RPN which
+Most of aforementioned networks use per-frame spatial proposals and extract their temporal infomation by calculating optical flow. On the other hand,  \cite{DBLP:journals/corr/SahaSC17} and  \cite{DBLP:journals/corr/HouCS17} designed an architecture which includes proposals in video segment level, which means handling  more that 1 frames simultaneously. \cite{DBLP:journals/corr/SahaSC17} proposed a 3D-RPN which
 is able to generate and classify 3D region proposals consisted of two successive frames. Also, they proposed a linking algorithm, modifying the one proposed by \cite{DBLP:journals/corr/SahaSSTC16}.
 On top of that, \cite{DBLP:journals/corr/HouCS17} designed an architecture for generating action proposals for more than 2 frames, which they called Tube CNN (T-CNN). In their approach, video segment level means that the whole video is separated into equal length video clips, and
-using a C3D for extracting features, it returns spatiotemporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} link the tube proposals by an algorithm based on tubes'
+using a C3D for extracting features, it returns spatiotemporal proposals. After getting proposals, \cite{DBLP:journals/corr/HouCS17} linked the tube proposals by an algorithm based on tubes'
 actioness score and overlap. Finally, classification operation is performed for the linked video proposals.
 
 % \printbibliography

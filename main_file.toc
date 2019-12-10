@@ -2,9 +2,7 @@
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\IeC {\textEpsilon }\IeC {\textupsilon }\IeC {\textchi }\IeC {\textalpha }\IeC {\textrho }\IeC {\textiota }\IeC {\textsigma }\IeC {\texttau }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textepsilon }\IeC {\textvarsigma }}{7}{chapter*.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\textPi \textepsilon \textrho \acctonos \textiota \textlambda \texteta \textpsi \texteta }{9}{chapter*.2}% 
+\contentsline {chapter}{\textPi \textepsilon \textrho \acctonos \textiota \textlambda \texteta \textpsi \texteta }{7}{chapter*.1}% 
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -71,12 +69,16 @@
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abstract}{11}{chapter*.4}% 
+\contentsline {chapter}{Abstract}{9}{chapter*.3}% 
+\babel@toc {greek}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\IeC {\textEpsilon }\IeC {\textupsilon }\IeC {\textchi }\IeC {\textalpha }\IeC {\textrho }\IeC {\textiota }\IeC {\textsigma }\IeC {\texttau }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textepsilon }\IeC {\textvarsigma }}{11}{chapter*.5}% 
+\babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {1em}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Contents}{13}{section*.5}% 
+\contentsline {chapter}{Contents}{13}{chapter*.5}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
@@ -1722,23 +1724,15 @@
 \babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {greek}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}\selectlanguage {greek}\IeC {\textTau }\IeC {\textalpha } \IeC {\texttau }\IeC {\textrho }\IeC {\textiota }\IeC {\textsigma }\IeC {\textdelta }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\textsigma }\IeC {\texttau }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha } \textlatin {anchors} \IeC {\textomega }\IeC {\textvarsigma } \textlatin {4k} \IeC {\textdelta }\IeC {\textiota }\IeC {\textalpha }\IeC {\textnu }\IeC {\ensuregreek {\acctonos \textupsilon }}\IeC {\textsigma }\IeC {\textmu }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha }}{45}{section.3.5}% 
+\contentsline {section}{\numberline {3.5}\selectlanguage {greek}\IeC {\textTau }\IeC {\textalpha } \IeC {\texttau }\IeC {\textrho }\IeC {\textiota }\IeC {\textsigma }\IeC {\textdelta }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\textsigma }\IeC {\texttau }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha } \textlatin {anchors} \IeC {\textomega }\IeC {\textvarsigma } \textlatin {4k} \IeC {\textdelta }\IeC {\textiota }\IeC {\textalpha }\IeC {\textnu }\IeC {\ensuregreek {\acctonos \textupsilon }}\IeC {\textsigma }\IeC {\textmu }\IeC {\textalpha }\IeC {\texttau }\IeC {\textalpha }}{44}{section.3.5}% 
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
-\babel@toc {english}{}
+\babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
@@ -1746,23 +1740,11 @@
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
-\babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
-\babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1784,10 +1766,30 @@
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1848,10 +1850,6 @@
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
-\babel@toc {greek}{}
-\babel@toc {greek}{}
-\babel@toc {greek}{}
-\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1863,6 +1861,10 @@
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
+\babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {greek}{}
 \defcounter {refsection}{0}\relax 
@@ -1959,8 +1961,6 @@
 \babel@toc {greek}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.3}\IeC {\textMu }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textomega }\IeC {\textsigma }\IeC {\texteta } \IeC {\texttau }\IeC {\texteta }\IeC {\textvarsigma } \IeC {\textdelta }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\textrho }\IeC {\textkappa }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textalpha }\IeC {\textvarsigma } \IeC {\texttau }\IeC {\textomicron }\IeC {\textupsilon } \IeC {\textdelta }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textgamma }\IeC {\textmu }\IeC {\textalpha }\IeC {\texttau }\IeC {\textomicron }\IeC {\textvarsigma }}{48}{subsection.3.5.3}% 
-\babel@toc {greek}{}
-\babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -1975,10 +1975,12 @@
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
-\babel@toc {english}{}
+\babel@toc {greek}{}
+\babel@toc {greek}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
+\babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {greek}{}
 \babel@toc {english}{}
@@ -3230,7 +3232,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Without Regressor}{118}{section*.108}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{With Regressor}{119}{section*.110}% 
+\contentsline {subsubsection}{With Regressor}{118}{section*.110}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.6}General comments}{119}{section.9.6}% 
 \defcounter {refsection}{0}\relax 
@@ -3246,7 +3248,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Sample duration equal to 8}{125}{section*.115}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.2}UCF dataset}{126}{subsection.10.2.2}% 
+\contentsline {subsection}{\numberline {10.2.2}UCF-101 dataset}{126}{subsection.10.2.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Adding NMS algorithm}{128}{section*.116}% 
 \defcounter {refsection}{0}\relax 
@@ -3296,7 +3298,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.7.1}General comments}{150}{subsection.11.7.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.8}Classifying dataset UCF}{150}{section.11.8}% 
+\contentsline {section}{\numberline {11.8}Classifying dataset UCF-101}{150}{section.11.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.8.1}Introduction}{150}{subsection.11.8.1}% 
 \defcounter {refsection}{0}\relax 

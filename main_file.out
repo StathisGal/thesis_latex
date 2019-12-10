@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter*.1}{}{}% 1
-\BOOKMARK [0][-]{chapter*.2}{}{}% 2
-\BOOKMARK [0][-]{chapter*.4}{Abstract}{}% 3
-\BOOKMARK [0][-]{section*.5}{Contents}{}% 4
+\BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter*.5}{}{}% 3
+\BOOKMARK [0][-]{chapter*.5}{Contents}{}% 4
 \BOOKMARK [0][-]{chapter*.6}{List of Tables}{}% 5
 \BOOKMARK [0][-]{chapter*.7}{List of Figures}{}% 6
 \BOOKMARK [0][-]{chapter.1}{}{}% 7
@@ -102,7 +102,7 @@
 \BOOKMARK [1][-]{section.10.1}{Introduction}{chapter.10}% 102
 \BOOKMARK [1][-]{section.10.2}{First approach: combine overlap and actioness}{chapter.10}% 103
 \BOOKMARK [2][-]{subsection.10.2.1}{JHMDB Dataset}{section.10.2}% 104
-\BOOKMARK [2][-]{subsection.10.2.2}{UCF dataset}{section.10.2}% 105
+\BOOKMARK [2][-]{subsection.10.2.2}{UCF-101 dataset}{section.10.2}% 105
 \BOOKMARK [1][-]{section.10.3}{Second approach: use progression and progress rate}{chapter.10}% 106
 \BOOKMARK [1][-]{section.10.4}{Third approach : use naive algorithm - only for JHMDB}{chapter.10}% 107
 \BOOKMARK [1][-]{section.10.5}{General comments}{chapter.10}% 108
@@ -120,7 +120,7 @@
 \BOOKMARK [2][-]{subsection.11.6.2}{Extract features}{section.11.6}% 120
 \BOOKMARK [1][-]{section.11.7}{Adding nms algorithm}{chapter.11}% 121
 \BOOKMARK [2][-]{subsection.11.7.1}{General comments}{section.11.7}% 122
-\BOOKMARK [1][-]{section.11.8}{Classifying dataset UCF}{chapter.11}% 123
+\BOOKMARK [1][-]{section.11.8}{Classifying dataset UCF-101}{chapter.11}% 123
 \BOOKMARK [2][-]{subsection.11.8.1}{Introduction}{section.11.8}% 124
 \BOOKMARK [2][-]{subsection.11.8.2}{Only temporal classification}{section.11.8}% 125
 \BOOKMARK [0][-]{chapter.12}{Conclusion - Future work}{}% 126

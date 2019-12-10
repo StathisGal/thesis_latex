@@ -24,9 +24,9 @@
 \section{Introduction}
 In the previous chapter, we described methods for generating candidate action tubes given a small video segment lasting 8 or 16 frames. However, actual videos
 and actual human actions, in the  wild, last more than 16 frames most of the times. Current networks are unable to process a whole video at once, in order to generate action tubes
-due to memory and computing power issues.  As mentioned in chapter 2, a lot action localization approaches deal with this situation by giving a video either
-propose candidate areas in the frame-level and then they connect these in order to generate action tube proposal either, separate it into video segments,
-proposing  sequences of bounding boxes for each video segment and then link them in order to generate action proposals. Both aforementioned techniques make
+due to memory and computing power issues.  As mentioned in chapter 2, a lot action localization approaches deal with this situation given a video, either by 
+proposing candidate areas in the frame-level and then  connecting them in order to generate action tube proposal either, separating the video into video segments,
+proposing  sequences of bounding boxes for each video segment and then linking them in order to generate action proposals. Both aforementioned techniques make
 the suitable choice of linking method an important factor for the performance of the network. That's because, even though frame-level or video segment-level proposals
 might be very good, if the proposed connection algorithm doesn't work well, final action tube proposals won't be efficient, so the final model will never
 be able to achieve high classification performance. In other words, if connecting algorithm doesn't generate action proposals with great recall and MABO performance,
@@ -34,27 +34,27 @@ the model's classifier won't be able to perform suitable classification, because
 In this chapter, we present 3 different approaches used for linking proposed ToIs generated from TPN in the previous chapter.
 
 \section{First approach: combine overlap and actioness}
-Our algorithm is inspired by \cite{DBLP:journals/corr/HouCS17}, which calculates all possible sequences of ToIs. In order find the best candidate action tubes,
-it uses a score, which tells us how likely a sequence of TOIs is  to contain an action. This score is a combination of 2 metrics:
+Our algorithm is inspired by \cite{DBLP:journals/corr/HouCS17}, which calculates all possible sequences of ToIs. In order to find the best candidate action tubes,
+it uses a score, which tells us how likely a sequence of ToIs is  to contain an action. This score is a combination of 2 metrics:
 \begin{description}
-\item[ Actioness,  ] which is the TOI's possibility to contain an action. This score is produced by TPN's scoring layers.
-\item [ TOIs' overlapping, ] which is the IoU of the last bounding boxes of the first TOI and the first frames of the second TOI.
+\item[ Actioness,  ] which is the ToI's possibility to contain an action. This score is produced by TPN's scoring layers.
+\item [ ToIs' overlapping, ] which is the IoU of the last bounding boxes of the first ToI and the first frames of the second ToI.
 \end{description}
 
 The above scoring policy can be described by the following formula:
 \[ S = \frac{1}{m} \sum_ {i=1}^{m} Actioness_i + \frac{1}{m-1} \sum_{j=1}^{m-1} Overlap_{j,j+1} \]
 
-For every possible combination of TOIs we calculate their score as show in figure \ref{fig:connection_algo}.
+For every possible combination of ToIs we calculate their score as shown in figure \ref{fig:connection_algo}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.225]{connection_algo}
-  \caption{An example of calculating connection score for 3 random TOIs taken from \cite{DBLP:journals/corr/HouCS17}}
+  \caption{An example of calculating connection score for 3 random ToIs taken from \cite{DBLP:journals/corr/HouCS17}}
   \label{fig:connection_algo}
 \end{figure}
 
 The above approach, however, needs too much memory for all needed calculations, so a memory usage  problem is
-appeared. The reason is, for every new video segment, we propose \textit{k TOIs} (16 during training and 150 during validation).
+appeared. The reason is, for every new video segment, we propose \textit{k ToIs} (16 during training and 150 during validation).
 As a result, for a small video separated into  \textbf{10 segments}, we need to calculate 
 \textbf{  150\textsuperscript{10} scores} during validation stage. This causes our system to overload and it takes too much time to process
 just one video. \par
@@ -71,18 +71,18 @@ parallel process the same code using different data. Our algorithm is described 
   \item Final tubes list contains all tubes which are the most likely to contain an action, and their score list contains their
     corresponding scores. We refer to each tube by its index, which is related a tensor, in which we saved all the ToIs proposed
     from TPN for each video segment.
-  \item Active tubes list contains all tubes that will be matched with the new TOIs. Their overlapping sum list and actioness sum list
+  \item Active tubes list contains all tubes that will be matched with the new ToIs. Their overlapping sum list and actioness sum list
     contain their sums in order to avoid calculating then for each loop. 
   \end{itemize}
 Also, we initialize  connection threshold equal to 0.5 .
-\item For the first video segment, we add all the TOIs to both active tubes and final tubes. Their scores are only their actioness because
+\item For the first video segment, we add all the ToIs to both active tubes and final tubes. Their scores are only their actioness because
   there are no tubes for calculating their overlapping score. So, we set their overlaping sum equal to 0.
 \item For each next video, after getting the proposed ToIs, firstly we calculate their overlapping score with each active tube. Then, we
   empty active tubes, active tubes' duration, overlapping sum and actioness score lists.  For each new tube that has a score higher than the
   connection threshold,  we add both to final tubes and to active tubes and their corresponding lists, and we increase their duration.
 \item If the number of active tubes is higher than a threshold, we set connection threshold equal to the score of
   the 100th higher score. On top of that, we update the final tubes list, removing all tubes that have score lower than the threshold.
-\item After that, we add in active tubes, the current video segment's proposed TOIs, alongside with their actioness scores in the  actioness sum list and
+\item After that, we add in active tubes, the current video segment's proposed ToIs, alongside with their actioness scores in the  actioness sum list and
   zero values in corresponding positions in the overlaps sum list (such as in the 1st step).
 \item We repeat the previous 3 steps until there is no video segment left.
 \item Finally, as we mentioned before, we have a list which contains the indexes of the saved tubes. So, we modify them in order to have
@@ -96,14 +96,14 @@ Also, we initialize  connection threshold equal to 0.5 .
 
 In order to validate our algorithm, we firstly experiment in JHMDB dataset's videos in order to define the best overlapping policy and
 the video overlapping step. Again, we use recall as evaluation metric. A groundtruth action tube is considered to be found, as well as positive,
-if there is at least 1 video tube which overlaps with it over a predefined threshold, otherwise it .  These thresholds are again 0.5, 0.4 and 0.3.
+if there is at least 1 video tube which overlaps with it over a predefined threshold, otherwise it is considered not found.  These thresholds are again 0.5, 0.4 and 0.3.
 We set TPN to return 30 ToIs per video segment.
 We chose to update threshold when active tubes are more than 500 and to keep the first 100 tubes as active. We did so, because, a big part of the
 code is performing in the CPU. That's because, we use lists, which are very easy to handle for adding and removing elements. So, if we use bigger update
 limits, it takes much more time to process them.
 
-\paragraph{Sample duration equal to 16 frames} At first we use as sample duration = 16 and video step = 8. As overlapping frames we count frames
-\textit{(8...15)} so we have \#8 frames. Also, we use only \#4 frames with combinations \textit{(8...11), (10...13) and (12...15)} and 
+\paragraph{Sample duration equal to 16 frames} At first, we use as sample duration = 16 frames and video step = 8. As overlapping frames we count frames
+\textit{(8...15)} so we have overlapping scores from \#8 frames, which we calculate their average value. Also, we use only \#4 frames with combinations \textit{(8...11), (10...13) and (12...15)} and 
 \#2 frames with combinations \textit{(8,9), (10,11), (12,13), and (14,15)}. The results are shown in Table \ref{table:step8_16} (in bold are
 the frames with which we calculate the overlap score).
 
@@ -282,8 +282,8 @@ shows recall performance for sample duration = 8 and video step = 4 and Table \r
 
 According to Tables \ref{table:step4_8} and \ref{table:step8_678 }, it is clearly shown that, we achieve the  best results, for $step = sample duration$ and overlapping scores is calculated between the last box of the current tubes and the first box of next tubes.
 
-\subsection{UCF dataset}
-In previous steps, we tried to find the best overlap policy for our algorithm in JHMDB dataset. After that, it's time to apply our algorithm in UCF dataset using the best scoring
+\subsection{UCF-101 dataset}
+In previous steps, we tried to find the best overlap policy for our algorithm in JHMDB dataset. After that, it's time to apply our algorithm in UCF-101 dataset using the best scoring
 overlap policy. We did some modifications in the code, in order to use less memory and we moved most parts of the code to the GPU. This happened by using tensors instead of lists for scores while
 most operations are, from now on, matrix operations. On top that, the last step of the algorithm, which is the modification from indices to actual action tubes is written, now, in CUDA code so
 it takes place in the GPU, too. So, we are now able to increase the number of ToIs returned by TPN, the max number of active tubes before updating threshold and the max number of final
@@ -292,7 +292,7 @@ The first experiments we performed were related to the number of the final tubes
 tubes' number. We experiment for cases, in which TPN proposes 30, 100 and 150 ToIs, our final network proposes 500, 2000 and 4000
 candidate action tubes for sample durations equal to 8 and 16 frames.
 For the sample duration equal to 8 we return 100 ToIs because, when we tried to return 150 proposed ToIs, we got OutOfMemory error.
-Table \ref{table:ucf_recall} show the spatiotemporal recall and MABO performance of those approaches. Furthermore, Table \ref{table:ucf_temp_recall } show their temporal recall and MABO performance. We are interested in temporal performance, because UCF consists of
+Table \ref{table:ucf_recall} show the spatiotemporal recall and MABO performance of those approaches. Furthermore, Table \ref{table:ucf_temp_recall } show their temporal recall and MABO performance. We are interested in temporal performance, because UCF-101 consists of
 untrimmed videos, unlike JHMDB which has only trimmed videos. So, we want to know how well our network is able to propose action tubes that
 overlap temporally with the groundtruth action tubes over a ``big'' threshold. For temporal localization, we don't use 0.5, 0.4 and 0.3
 overlapping threshold, but instead, we use 0.9, 0.8 and 0.7, because it is very important our network to be able to propose tubes that
@@ -302,7 +302,7 @@ overlapping threshold, but instead, we use 0.9, 0.8 and 0.7, because it is very 
 \begin{longtable}{||c | c | c ||c c c | c|}
 
   \hline
-  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  \multicolumn{3}{}{overlap thresh} & \multirow{2}{*}{MABO} \\
+  \multirow{2}{*}{combination} & \multirow{2}{2.5em}{TPN tubes} & \multirow{2}{2.5em}{Final tubes} &  {} & overlap thresh & {} & \multirow{2}{*}{MABO} \\
   {} & {} & {} &  0.5 &  0.4 & 0.3 & {}\\         
   \hline
   
@@ -333,7 +333,7 @@ overlapping threshold, but instead, we use 0.9, 0.8 and 0.7, because it is very 
   {} &  {}   & 4000   & 0.4266  & 0.5521 & 0.6722 & 0.4162\\
   \hline                                    
 
-  \caption{Recall results for UCF dataset}
+  \caption{Recall results for UCF-101 dataset}
   \label{table:ucf_recall}
 \end{longtable} 
 \end{center}
@@ -380,7 +380,7 @@ overlapping threshold, but instead, we use 0.9, 0.8 and 0.7, because it is very 
                                     {} &  {}   & 4000   &  0.8403  & 0.9179 & 0.9437 & 0.9389\\
   \hline                                    
   % \end{tabular}
-  \caption{Temporal Recall results for UCF dataset}
+  \caption{Temporal Recall results for UCF-101 dataset}
   \label{table:ucf_temp_recall }
 % \end{table}
 \end{longtable} 
@@ -444,7 +444,7 @@ performance and at Table \ref{table:ucf_nms_temp_recall} for temporal performanc
 
   \hline                                    
 
-  \caption{Spatiotemporal Recall results for UCF dataset}
+  \caption{Spatiotemporal Recall results for UCF-101 dataset}
   \label{table:ucf_nms_recall}
 \end{longtable} 
 \end{center}
@@ -473,7 +473,7 @@ performance and at Table \ref{table:ucf_nms_temp_recall} for temporal performanc
   {} &  0.9   & {}   & 0.854 & 0.9346 & 0.9529 & 0.9434986107 \\
   \hline                                    
 
-  \caption{Temporal Recall results for UCF dataset}
+  \caption{Temporal Recall results for UCF-101 dataset}
   \label{table:ucf_nms_temp_recall}
 \end{longtable} 
 \end{center}
@@ -490,7 +490,7 @@ to add action tubes with score below this score. However, after serious consider
 threshold leads to not detecting action tubes that start after some frames. That's because, until then, linking threshold may be too big that
 won't let new action tubes to be created. So, we came with the modification of not updating linking threshold, but just filtering proposed
 tubes, by keeping k-best scoring each time their number is bigger that the a specific number. The rest algorithm remains the same. Tables
-\ref{table:ucf_nms_noup_recall} and \ref{table:ucf_nms_noup_temp_recall} show spatiotemporal and temporal, recall and MABO performance respectively.
+\ref{table:ucf_nms_noup_recall} and \ref{table:ucf_nms_noup_temp_recall} show spatiotemporal and temporal recall and MABO performance respectively.
 We experiment for cases in which either we don't use the  NMS algorithm at all, either we set overlap threshold equal to 0.7 and 0.9 as shown
 below.
 
@@ -518,7 +518,7 @@ below.
 
   \hline                                    
 
-  \caption{Spatiotemporal Recall results for UCF dataset}
+  \caption{Spatiotemporal Recall results for UCF-101 dataset}
   \label{table:ucf_nms_noup_recall}
 \end{longtable} 
 \end{center}
@@ -547,7 +547,7 @@ below.
   {} &  0.9   & {}   & 0.6183 & 0.7696 & 0.8388 & 0.8628507037919737 \\
   \hline                                    
 
-  \caption{Temporal Recall results for UCF dataset}
+  \caption{Temporal Recall results for UCF-101 dataset}
   \label{table:ucf_nms_noup_temp_recall}
 \end{longtable} 
 \end{center}
@@ -555,7 +555,7 @@ below.
 Comparing recall and MABO performances shown at Table \ref{table:ucf_nms_noup_recall} with those included in Tables \ref{table:ucf_nms_recall}
 and \ref{table:ucf_recall}, we deduce that for the sample duration equal to 8, stopping updating linking threshold results in worse performance
 when we set nms threshold equal to 0.7, but it achieves the best performances  when setting NMS threshold equal to 0.9 . Furthermore, for sample duration
-equal to 16, we get, now,  best performance performance when we set nms threshold equal to 0.7 and worse performance for nms threshold equal to 0.9 .
+equal to 16, we get, now,  best performance when we set nms threshold equal to 0.7 and worse performance for nms threshold equal to 0.9 .
 
 \subsubsection{Soft-nms instead of nms}
 
@@ -578,7 +578,7 @@ Recall and MABO performance are presented in Tables \ref{table:ucf_softnms_recal
   {} &  0.9   & {}   & 0.4023 & 0.5430 & 0.6502 & 0.398845313 \\
   \hline                                    
 
-  \caption{Spatiotemporal Recall results for UCF dataset using Soft-NMS}
+  \caption{Spatiotemporal Recall results for UCF-101 dataset using Soft-NMS}
   \label{table:ucf_softnms_recall}
 \end{longtable} 
 \end{center}
@@ -598,7 +598,7 @@ Recall and MABO performance are presented in Tables \ref{table:ucf_softnms_recal
   {} &  0.9   & {}   & 0.7741 & 0.8768 & 0.9255 & 0.922677864 \\
   \hline                                    
 
-  \caption{Temporal Recall results for UCF dataset using SoftNMS}
+  \caption{Temporal Recall results for UCF-101 dataset using SoftNMS}
   \label{table:ucf_softnms_temp_recall}
 \end{longtable} 
 \end{center}
@@ -618,7 +618,7 @@ algorithm introduces two new metrics according to \cite{DBLP:journals/corr/abs-1
 
 % TODO add more description
 \begin{description}
-\item[ Progression,  ] which describes the probability of a specific action being performed in the TOI. 
+\item[ Progression,  ] which describes the probability of a specific action being performed in the ToI. 
   We add this factor because we have noticed that actioness is tolerant to false positives. Progression is
   mainly a rescoring mechanism for each class (as mentioned in \cite{DBLP:journals/corr/abs-1903-00304})
 
@@ -626,29 +626,29 @@ algorithm introduces two new metrics according to \cite{DBLP:journals/corr/abs-1
   
 \end{description}
 
-So, each action tube is described as a set of TOIs
+So, each action tube is described as a set of ToIs
 \[  T = {\{ {\bf t}_i^{(k)} | {\bf t}_i^{(k)} = ( t_i^{(k)}, s_i^{(k)}, r_i^{(k)} ) \}}_{i=1:n^{(k)},k=1:K} \]
-where $ t_i^{(k)} $ contains TOI's spatiotemporal information, $ s_i^{(k)} $ its confidence score and $ r_i^{(k)} $ its progress rate.
+where $ t_i^{(k)} $ contains ToI's spatiotemporal information, $ s_i^{(k)} $ its confidence score and $ r_i^{(k)} $ its progress rate.
 
-In this approach, each class is handled separately, so for the rest section, we discuss action tube generation for one class only. In order to link 2 TOIs, for
+In this approach, each class is handled separately, so for the rest section, we discuss action tube generation for one class only. In order to link 2 ToIs, for
 a video with N video segments, the following steps are applied:
 \begin{enumerate}
-\item For the first video segment (k = 1), initialize an array with the M best scoring TOIs, which will be considered as active action tubes ( AT ).
+\item For the first video segment (k = 1), initialize an array with the M best scoring ToIs, which will be considered as active action tubes ( AT ).
   Correspondingly, initialize an array with M progress rates  and M confidence scores.
 \item For k = 2:N, execute (a) to (c) steps:
   \begin{enumerate}
-  \item Calculate overlaps between $ AT^{(k)} $ and $ TOIs^{(k)}. $
+  \item Calculate overlaps between $ AT^{(k)} $ and $ ToIs^{(k)}. $
   \item Connect all tubes which satisfy the following criteria:
     \begin{enumerate}
     \item $ overlap score(at_i^{(k)},t_j^{(k)})   > \theta, 
-      at  \in AT^{(k)}, t \in TOIs^{(k)}  $
+      at  \in AT^{(k)}, t \in ToIs^{(k)}  $
     \item $r(at_i^{(k)}) < r(t_j^{(k)}) $ or 
       $r(t_i^{(k)}) - r(at_i{(k)}) < \lambda $
     \end{enumerate}
     
   \item For all new tubes update confidence score and progress rate as follows:
     \begin{description}
-    \item The new confidence score is the average score of all connected TOIs:
+    \item The new confidence score is the average score of all connected ToIs:
       \[  s_z^{(k+1)} = \frac {1} {n} \sum_{n=0}^{k} s_i^{(n)}\]
     \item New progress rate is the highest progress rate:
       \[r(at_z^{(k+1)} = max(r(at_i^{(k)}), r(t_j^{(k)})) \]

@@ -1,0 +1,2723 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.5)  19 NOV 2019 16:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**only_english.tex
+(./only_english.tex
+LaTeX2e <2018-12-01>
+(./cvsp-thesis-eng.cls
+
+LaTeX Warning: You have requested document class `cvsp-thesis-eng',
+               but the document class provides `cvsp-thesis'.
+
+Document Class: cvsp-thesis 2003/02/01 1.0 LaTeX document class (Peter2322).
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen102
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen103
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen104
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks15
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks16
+\eqnshift@=\dimen105
+\alignsep@=\dimen106
+\tagshift@=\dimen107
+\tagwidth@=\dimen108
+\totwidth@=\dimen109
+\lineht@=\dimen110
+\@envbody=\toks17
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip44
+\f@nch@O@elh=\skip45
+\f@nch@O@erh=\skip46
+\f@nch@O@olh=\skip47
+\f@nch@O@orh=\skip48
+\f@nch@O@elf=\skip49
+\f@nch@O@erf=\skip50
+\f@nch@O@olf=\skip51
+\f@nch@O@orf=\skip52
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count92
+\c@chapter=\count93
+\c@section=\count94
+\c@subsection=\count95
+\c@subsubsection=\count96
+\c@paragraph=\count97
+\c@subparagraph=\count98
+\c@figure=\count99
+\c@table=\count100
+\abovecaptionskip=\skip53
+\belowcaptionskip=\skip54
+\bibindent=\dimen111
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel-greek/greek.ldf
+Language: greek 2016/09/07 v1.9g Greek support for the babel system
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count101
+\U@D=\dimen112
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count102
+)
+\bbl@monogreek=\count103
+\bbl@polygreek=\count104
+\bbl@ancientgreek=\count105
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/greek-fontenc/lgrenc.def
+File: lgrenc.def 2015/12/07 v0.13.1 LGR Greek font encoding definitions
+Now handling font encoding LGR ...
+... processing UTF-8 mapping file for font encoding LGR
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/greek-inputenc/lgrenc.dfu
+File: lgrenc.dfu 2015/08/05 1.6 UTF-8 support for Greek
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0259 (decimal 601)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+0374 (decimal 884)
+   defining Unicode char U+0375 (decimal 885)
+   defining Unicode char U+037A (decimal 890)
+   defining Unicode char U+037E (decimal 894)
+   defining Unicode char U+0384 (decimal 900)
+   defining Unicode char U+0385 (decimal 901)
+   defining Unicode char U+0386 (decimal 902)
+   defining Unicode char U+0387 (decimal 903)
+   defining Unicode char U+0388 (decimal 904)
+   defining Unicode char U+0389 (decimal 905)
+   defining Unicode char U+038A (decimal 906)
+   defining Unicode char U+038C (decimal 908)
+   defining Unicode char U+038E (decimal 910)
+   defining Unicode char U+038F (decimal 911)
+   defining Unicode char U+0390 (decimal 912)
+   defining Unicode char U+0391 (decimal 913)
+   defining Unicode char U+0392 (decimal 914)
+   defining Unicode char U+0393 (decimal 915)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+0395 (decimal 917)
+   defining Unicode char U+0396 (decimal 918)
+   defining Unicode char U+0397 (decimal 919)
+   defining Unicode char U+0398 (decimal 920)
+   defining Unicode char U+0399 (decimal 921)
+   defining Unicode char U+039A (decimal 922)
+   defining Unicode char U+039B (decimal 923)
+   defining Unicode char U+039C (decimal 924)
+   defining Unicode char U+039D (decimal 925)
+   defining Unicode char U+039E (decimal 926)
+   defining Unicode char U+039F (decimal 927)
+   defining Unicode char U+03A0 (decimal 928)
+   defining Unicode char U+03A1 (decimal 929)
+   defining Unicode char U+03A3 (decimal 931)
+   defining Unicode char U+03A4 (decimal 932)
+   defining Unicode char U+03A5 (decimal 933)
+   defining Unicode char U+03A6 (decimal 934)
+   defining Unicode char U+03A7 (decimal 935)
+   defining Unicode char U+03A8 (decimal 936)
+   defining Unicode char U+03A9 (decimal 937)
+   defining Unicode char U+03AA (decimal 938)
+   defining Unicode char U+03AB (decimal 939)
+   defining Unicode char U+03AC (decimal 940)
+   defining Unicode char U+03AD (decimal 941)
+   defining Unicode char U+03AE (decimal 942)
+   defining Unicode char U+03AF (decimal 943)
+   defining Unicode char U+03B0 (decimal 944)
+   defining Unicode char U+03B1 (decimal 945)
+   defining Unicode char U+03B2 (decimal 946)
+   defining Unicode char U+03B3 (decimal 947)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+03B5 (decimal 949)
+   defining Unicode char U+03B6 (decimal 950)
+   defining Unicode char U+03B7 (decimal 951)
+   defining Unicode char U+03B8 (decimal 952)
+   defining Unicode char U+03B9 (decimal 953)
+   defining Unicode char U+03BA (decimal 954)
+   defining Unicode char U+03BB (decimal 955)
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+03BD (decimal 957)
+   defining Unicode char U+03BE (decimal 958)
+   defining Unicode char U+03BF (decimal 959)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03C1 (decimal 961)
+   defining Unicode char U+03C2 (decimal 962)
+   defining Unicode char U+03C3 (decimal 963)
+   defining Unicode char U+03C4 (decimal 964)
+   defining Unicode char U+03C5 (decimal 965)
+   defining Unicode char U+03C6 (decimal 966)
+   defining Unicode char U+03C7 (decimal 967)
+   defining Unicode char U+03C8 (decimal 968)
+   defining Unicode char U+03C9 (decimal 969)
+   defining Unicode char U+03CA (decimal 970)
+   defining Unicode char U+03CB (decimal 971)
+   defining Unicode char U+03CC (decimal 972)
+   defining Unicode char U+03CD (decimal 973)
+   defining Unicode char U+03CE (decimal 974)
+   defining Unicode char U+03D0 (decimal 976)
+   defining Unicode char U+03D1 (decimal 977)
+   defining Unicode char U+03D5 (decimal 981)
+   defining Unicode char U+03D6 (decimal 982)
+   defining Unicode char U+03D8 (decimal 984)
+   defining Unicode char U+03D9 (decimal 985)
+   defining Unicode char U+03DA (decimal 986)
+   defining Unicode char U+03DB (decimal 987)
+   defining Unicode char U+03DC (decimal 988)
+   defining Unicode char U+03DD (decimal 989)
+   defining Unicode char U+03DF (decimal 991)
+   defining Unicode char U+03E0 (decimal 992)
+   defining Unicode char U+03E1 (decimal 993)
+   defining Unicode char U+03F0 (decimal 1008)
+   defining Unicode char U+03F1 (decimal 1009)
+   defining Unicode char U+03F4 (decimal 1012)
+   defining Unicode char U+03F5 (decimal 1013)
+   defining Unicode char U+1F00 (decimal 7936)
+   defining Unicode char U+1F01 (decimal 7937)
+   defining Unicode char U+1F02 (decimal 7938)
+   defining Unicode char U+1F03 (decimal 7939)
+   defining Unicode char U+1F04 (decimal 7940)
+   defining Unicode char U+1F05 (decimal 7941)
+   defining Unicode char U+1F06 (decimal 7942)
+   defining Unicode char U+1F07 (decimal 7943)
+   defining Unicode char U+1F08 (decimal 7944)
+   defining Unicode char U+1F09 (decimal 7945)
+   defining Unicode char U+1F0A (decimal 7946)
+   defining Unicode char U+1F0B (decimal 7947)
+   defining Unicode char U+1F0C (decimal 7948)
+   defining Unicode char U+1F0D (decimal 7949)
+   defining Unicode char U+1F0E (decimal 7950)
+   defining Unicode char U+1F0F (decimal 7951)
+   defining Unicode char U+1F10 (decimal 7952)
+   defining Unicode char U+1F11 (decimal 7953)
+   defining Unicode char U+1F12 (decimal 7954)
+   defining Unicode char U+1F13 (decimal 7955)
+   defining Unicode char U+1F14 (decimal 7956)
+   defining Unicode char U+1F15 (decimal 7957)
+   defining Unicode char U+1F18 (decimal 7960)
+   defining Unicode char U+1F19 (decimal 7961)
+   defining Unicode char U+1F1A (decimal 7962)
+   defining Unicode char U+1F1B (decimal 7963)
+   defining Unicode char U+1F1C (decimal 7964)
+   defining Unicode char U+1F1D (decimal 7965)
+   defining Unicode char U+1F20 (decimal 7968)
+   defining Unicode char U+1F21 (decimal 7969)
+   defining Unicode char U+1F22 (decimal 7970)
+   defining Unicode char U+1F23 (decimal 7971)
+   defining Unicode char U+1F24 (decimal 7972)
+   defining Unicode char U+1F25 (decimal 7973)
+   defining Unicode char U+1F26 (decimal 7974)
+   defining Unicode char U+1F27 (decimal 7975)
+   defining Unicode char U+1F28 (decimal 7976)
+   defining Unicode char U+1F29 (decimal 7977)
+   defining Unicode char U+1F2A (decimal 7978)
+   defining Unicode char U+1F2B (decimal 7979)
+   defining Unicode char U+1F2C (decimal 7980)
+   defining Unicode char U+1F2D (decimal 7981)
+   defining Unicode char U+1F2E (decimal 7982)
+   defining Unicode char U+1F2F (decimal 7983)
+   defining Unicode char U+1F30 (decimal 7984)
+   defining Unicode char U+1F31 (decimal 7985)
+   defining Unicode char U+1F32 (decimal 7986)
+   defining Unicode char U+1F33 (decimal 7987)
+   defining Unicode char U+1F34 (decimal 7988)
+   defining Unicode char U+1F35 (decimal 7989)
+   defining Unicode char U+1F36 (decimal 7990)
+   defining Unicode char U+1F37 (decimal 7991)
+   defining Unicode char U+1F38 (decimal 7992)
+   defining Unicode char U+1F39 (decimal 7993)
+   defining Unicode char U+1F3A (decimal 7994)
+   defining Unicode char U+1F3B (decimal 7995)
+   defining Unicode char U+1F3C (decimal 7996)
+   defining Unicode char U+1F3D (decimal 7997)
+   defining Unicode char U+1F3E (decimal 7998)
+   defining Unicode char U+1F3F (decimal 7999)
+   defining Unicode char U+1F40 (decimal 8000)
+   defining Unicode char U+1F41 (decimal 8001)
+   defining Unicode char U+1F42 (decimal 8002)
+   defining Unicode char U+1F43 (decimal 8003)
+   defining Unicode char U+1F44 (decimal 8004)
+   defining Unicode char U+1F45 (decimal 8005)
+   defining Unicode char U+1F48 (decimal 8008)
+   defining Unicode char U+1F49 (decimal 8009)
+   defining Unicode char U+1F4A (decimal 8010)
+   defining Unicode char U+1F4B (decimal 8011)
+   defining Unicode char U+1F4C (decimal 8012)
+   defining Unicode char U+1F4D (decimal 8013)
+   defining Unicode char U+1F50 (decimal 8016)
+   defining Unicode char U+1F51 (decimal 8017)
+   defining Unicode char U+1F52 (decimal 8018)
+   defining Unicode char U+1F53 (decimal 8019)
+   defining Unicode char U+1F54 (decimal 8020)
+   defining Unicode char U+1F55 (decimal 8021)
+   defining Unicode char U+1F56 (decimal 8022)
+   defining Unicode char U+1F57 (decimal 8023)
+   defining Unicode char U+1F59 (decimal 8025)
+   defining Unicode char U+1F5B (decimal 8027)
+   defining Unicode char U+1F5D (decimal 8029)
+   defining Unicode char U+1F5F (decimal 8031)
+   defining Unicode char U+1F60 (decimal 8032)
+   defining Unicode char U+1F61 (decimal 8033)
+   defining Unicode char U+1F62 (decimal 8034)
+   defining Unicode char U+1F63 (decimal 8035)
+   defining Unicode char U+1F64 (decimal 8036)
+   defining Unicode char U+1F65 (decimal 8037)
+   defining Unicode char U+1F66 (decimal 8038)
+   defining Unicode char U+1F67 (decimal 8039)
+   defining Unicode char U+1F68 (decimal 8040)
+   defining Unicode char U+1F69 (decimal 8041)
+   defining Unicode char U+1F6A (decimal 8042)
+   defining Unicode char U+1F6B (decimal 8043)
+   defining Unicode char U+1F6C (decimal 8044)
+   defining Unicode char U+1F6D (decimal 8045)
+   defining Unicode char U+1F6E (decimal 8046)
+   defining Unicode char U+1F6F (decimal 8047)
+   defining Unicode char U+1F70 (decimal 8048)
+   defining Unicode char U+1F71 (decimal 8049)
+   defining Unicode char U+1F72 (decimal 8050)
+   defining Unicode char U+1F73 (decimal 8051)
+   defining Unicode char U+1F74 (decimal 8052)
+   defining Unicode char U+1F75 (decimal 8053)
+   defining Unicode char U+1F76 (decimal 8054)
+   defining Unicode char U+1F77 (decimal 8055)
+   defining Unicode char U+1F78 (decimal 8056)
+   defining Unicode char U+1F79 (decimal 8057)
+   defining Unicode char U+1F7A (decimal 8058)
+   defining Unicode char U+1F7B (decimal 8059)
+   defining Unicode char U+1F7C (decimal 8060)
+   defining Unicode char U+1F7D (decimal 8061)
+   defining Unicode char U+1F80 (decimal 8064)
+   defining Unicode char U+1F81 (decimal 8065)
+   defining Unicode char U+1F82 (decimal 8066)
+   defining Unicode char U+1F83 (decimal 8067)
+   defining Unicode char U+1F84 (decimal 8068)
+   defining Unicode char U+1F85 (decimal 8069)
+   defining Unicode char U+1F86 (decimal 8070)
+   defining Unicode char U+1F87 (decimal 8071)
+   defining Unicode char U+1F88 (decimal 8072)
+   defining Unicode char U+1F89 (decimal 8073)
+   defining Unicode char U+1F8A (decimal 8074)
+   defining Unicode char U+1F8B (decimal 8075)
+   defining Unicode char U+1F8C (decimal 8076)
+   defining Unicode char U+1F8D (decimal 8077)
+   defining Unicode char U+1F8E (decimal 8078)
+   defining Unicode char U+1F8F (decimal 8079)
+   defining Unicode char U+1F90 (decimal 8080)
+   defining Unicode char U+1F91 (decimal 8081)
+   defining Unicode char U+1F92 (decimal 8082)
+   defining Unicode char U+1F93 (decimal 8083)
+   defining Unicode char U+1F94 (decimal 8084)
+   defining Unicode char U+1F95 (decimal 8085)
+   defining Unicode char U+1F96 (decimal 8086)
+   defining Unicode char U+1F97 (decimal 8087)
+   defining Unicode char U+1F98 (decimal 8088)
+   defining Unicode char U+1F99 (decimal 8089)
+   defining Unicode char U+1F9A (decimal 8090)
+   defining Unicode char U+1F9B (decimal 8091)
+   defining Unicode char U+1F9C (decimal 8092)
+   defining Unicode char U+1F9D (decimal 8093)
+   defining Unicode char U+1F9E (decimal 8094)
+   defining Unicode char U+1F9F (decimal 8095)
+   defining Unicode char U+1FA0 (decimal 8096)
+   defining Unicode char U+1FA1 (decimal 8097)
+   defining Unicode char U+1FA2 (decimal 8098)
+   defining Unicode char U+1FA3 (decimal 8099)
+   defining Unicode char U+1FA4 (decimal 8100)
+   defining Unicode char U+1FA5 (decimal 8101)
+   defining Unicode char U+1FA6 (decimal 8102)
+   defining Unicode char U+1FA7 (decimal 8103)
+   defining Unicode char U+1FA8 (decimal 8104)
+   defining Unicode char U+1FA9 (decimal 8105)
+   defining Unicode char U+1FAA (decimal 8106)
+   defining Unicode char U+1FAB (decimal 8107)
+   defining Unicode char U+1FAC (decimal 8108)
+   defining Unicode char U+1FAD (decimal 8109)
+   defining Unicode char U+1FAE (decimal 8110)
+   defining Unicode char U+1FAF (decimal 8111)
+   defining Unicode char U+1FB0 (decimal 8112)
+   defining Unicode char U+1FB1 (decimal 8113)
+   defining Unicode char U+1FB2 (decimal 8114)
+   defining Unicode char U+1FB3 (decimal 8115)
+   defining Unicode char U+1FB4 (decimal 8116)
+   defining Unicode char U+1FB6 (decimal 8118)
+   defining Unicode char U+1FB7 (decimal 8119)
+   defining Unicode char U+1FB8 (decimal 8120)
+   defining Unicode char U+1FB9 (decimal 8121)
+   defining Unicode char U+1FBA (decimal 8122)
+   defining Unicode char U+1FBB (decimal 8123)
+   defining Unicode char U+1FBC (decimal 8124)
+   defining Unicode char U+1FBD (decimal 8125)
+   defining Unicode char U+1FBE (decimal 8126)
+   defining Unicode char U+1FBF (decimal 8127)
+   defining Unicode char U+1FC0 (decimal 8128)
+   defining Unicode char U+1FC1 (decimal 8129)
+   defining Unicode char U+1FC2 (decimal 8130)
+   defining Unicode char U+1FC3 (decimal 8131)
+   defining Unicode char U+1FC4 (decimal 8132)
+   defining Unicode char U+1FC6 (decimal 8134)
+   defining Unicode char U+1FC7 (decimal 8135)
+   defining Unicode char U+1FC8 (decimal 8136)
+   defining Unicode char U+1FC9 (decimal 8137)
+   defining Unicode char U+1FCA (decimal 8138)
+   defining Unicode char U+1FCB (decimal 8139)
+   defining Unicode char U+1FCC (decimal 8140)
+   defining Unicode char U+1FCD (decimal 8141)
+   defining Unicode char U+1FCE (decimal 8142)
+   defining Unicode char U+1FCF (decimal 8143)
+   defining Unicode char U+1FD0 (decimal 8144)
+   defining Unicode char U+1FD1 (decimal 8145)
+   defining Unicode char U+1FD2 (decimal 8146)
+   defining Unicode char U+1FD3 (decimal 8147)
+   defining Unicode char U+1FD6 (decimal 8150)
+   defining Unicode char U+1FD7 (decimal 8151)
+   defining Unicode char U+1FD8 (decimal 8152)
+   defining Unicode char U+1FD9 (decimal 8153)
+   defining Unicode char U+1FDA (decimal 8154)
+   defining Unicode char U+1FDB (decimal 8155)
+   defining Unicode char U+1FDD (decimal 8157)
+   defining Unicode char U+1FDE (decimal 8158)
+   defining Unicode char U+1FDF (decimal 8159)
+   defining Unicode char U+1FE0 (decimal 8160)
+   defining Unicode char U+1FE1 (decimal 8161)
+   defining Unicode char U+1FE2 (decimal 8162)
+   defining Unicode char U+1FE3 (decimal 8163)
+   defining Unicode char U+1FE4 (decimal 8164)
+   defining Unicode char U+1FE5 (decimal 8165)
+   defining Unicode char U+1FE6 (decimal 8166)
+   defining Unicode char U+1FE7 (decimal 8167)
+   defining Unicode char U+1FE8 (decimal 8168)
+   defining Unicode char U+1FE9 (decimal 8169)
+   defining Unicode char U+1FEA (decimal 8170)
+   defining Unicode char U+1FEB (decimal 8171)
+   defining Unicode char U+1FEC (decimal 8172)
+   defining Unicode char U+1FED (decimal 8173)
+   defining Unicode char U+1FEE (decimal 8174)
+   defining Unicode char U+1FEF (decimal 8175)
+   defining Unicode char U+1FF2 (decimal 8178)
+   defining Unicode char U+1FF3 (decimal 8179)
+   defining Unicode char U+1FF4 (decimal 8180)
+   defining Unicode char U+1FF6 (decimal 8182)
+   defining Unicode char U+1FF7 (decimal 8183)
+   defining Unicode char U+1FF8 (decimal 8184)
+   defining Unicode char U+1FF9 (decimal 8185)
+   defining Unicode char U+1FFA (decimal 8186)
+   defining Unicode char U+1FFB (decimal 8187)
+   defining Unicode char U+1FFC (decimal 8188)
+   defining Unicode char U+1FFD (decimal 8189)
+   defining Unicode char U+1FFE (decimal 8190)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+10144 (decimal 65860)
+   defining Unicode char U+10145 (decimal 65861)
+   defining Unicode char U+10146 (decimal 65862)
+   defining Unicode char U+10147 (decimal 65863)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+File: greek-fontenc.def 2015/08/04 v0.13 Common Greek font encoding definitions
+
+))
+LaTeX Info: Composite with undeclared \< in encoding LGR on input line 418.
+LaTeX Info: Composite with undeclared \> in encoding LGR on input line 418.
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count106
+\Gm@cntv=\count107
+\c@Gm@tempcnt=\count108
+\Gm@bindingoffset=\dimen115
+\Gm@wd@mp=\dimen116
+\Gm@odd@mp=\dimen117
+\Gm@even@mp=\dimen118
+\Gm@layoutwidth=\dimen119
+\Gm@layoutheight=\dimen120
+\Gm@layouthoffset=\dimen121
+\Gm@layoutvoffset=\dimen122
+\Gm@dimlist=\toks22
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen123
+\Hy@linkcounter=\count109
+\Hy@pagecounter=\count110
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count111
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count112
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen124
+\Fld@menulength=\count113
+\Field@Width=\dimen125
+\Fld@charsize=\dimen126
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count114
+\c@Item=\count115
+\c@Hfootnote=\count116
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count117
+\c@bookmark@seq@number=\count118
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip55
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen127
+\enit@toks=\toks23
+\enit@inbox=\box29
+\enit@count@id=\count119
+\enitdp@description=\count120
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count121
+\calc@Bcount=\count122
+\calc@Adimen=\dimen128
+\calc@Bdimen=\dimen129
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count123
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count124
+\l_MT_multwidth_dim=\dimen130
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen131
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen132
+\l_MT_above_intertext_sep=\dimen133
+\l_MT_below_intertext_sep=\dimen134
+\l_MT_above_shortintertext_sep=\dimen135
+\l_MT_below_shortintertext_sep=\dimen136
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen137
+\captionmargin@=\dimen138
+\captionwidth=\dimen139
+\caption@tempdima=\dimen140
+\caption@indent=\dimen141
+\caption@parindent=\dimen142
+\caption@hangindent=\dimen143
+)
+\c@caption@flags=\count125
+\c@ContinuedFloat=\count126
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count127
+\c@subtable=\count128
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+)
+\XKV@depth=\count129
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box30
+)
+\tc@llx=\dimen144
+\tc@lly=\dimen145
+\tc@urx=\dimen146
+\tc@ury=\dimen147
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen148
+\adjbox@Height=\dimen149
+\adjbox@Depth=\dimen150
+\adjbox@Totalheight=\dimen151
+\adjbox@pwidth=\dimen152
+\adjbox@pheight=\dimen153
+\adjbox@pdepth=\dimen154
+\adjbox@ptotalheight=\dimen155
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count130
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box31
+\sift@deathcycles=\count131
+\@vwid@loff=\dimen156
+\@vwid@roff=\dimen157
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
+\LTchunksize=\count132
+\LTcapwidth=\dimen158
+\LT@head=\box32
+\LT@firsthead=\box33
+\LT@foot=\box34
+\LT@lastfoot=\box35
+\LT@cols=\count133
+\LT@rows=\count134
+\c@LT@tables=\count135
+\c@LT@chunks=\count136
+\LT@p@ftn=\toks26
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+\multirow@colwidth=\skip65
+\multirow@cntb=\count137
+\multirow@dima=\skip66
+\bigstrutjot=\dimen159
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/esvect/esvect.sty
+Package: esvect 
+\symesvector=\mathgroup7
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count138
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count139
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count140
+\c@listtotal=\count141
+\c@listcount=\count142
+\c@liststart=\count143
+\c@liststop=\count144
+\c@citecount=\count145
+\c@citetotal=\count146
+\c@multicitecount=\count147
+\c@multicitetotal=\count148
+\c@instcount=\count149
+\c@maxnames=\count150
+\c@minnames=\count151
+\c@maxitems=\count152
+\c@minitems=\count153
+\c@citecounter=\count154
+\c@maxcitecounter=\count155
+\c@savedcitecounter=\count156
+\c@uniquelist=\count157
+\c@uniquename=\count158
+\c@refsection=\count159
+\c@refsegment=\count160
+\c@maxextratitle=\count161
+\c@maxextratitleyear=\count162
+\c@maxextraname=\count163
+\c@maxextradate=\count164
+\c@maxextraalpha=\count165
+\c@abbrvpenalty=\count166
+\c@highnamepenalty=\count167
+\c@lownamepenalty=\count168
+\c@maxparens=\count169
+\c@parenlevel=\count170
+\blx@tempcnta=\count171
+\blx@tempcntb=\count172
+\blx@tempcntc=\count173
+\blx@maxsection=\count174
+\blx@maxsegment@0=\count175
+\blx@notetype=\count176
+\blx@parenlevel@text=\count177
+\blx@parenlevel@foot=\count178
+\blx@sectionciteorder@0=\count179
+\blx@entrysetcounter=\count180
+\labelnumberwidth=\skip67
+\labelalphawidth=\skip68
+\biblabelsep=\skip69
+\bibitemsep=\skip70
+\bibnamesep=\skip71
+\bibinitsep=\skip72
+\bibparsep=\skip73
+\bibhang=\skip74
+\blx@bcfin=\read1
+\blx@bcfout=\write3
+\c@mincomprange=\count181
+\c@maxcomprange=\count182
+\c@mincompwidth=\count183
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex citestyle data model...
+Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: Trying to load biblatex bibstyle data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count184
+\c@savedafterword=\count185
+\c@annotator=\count186
+\c@savedannotator=\count187
+\c@author=\count188
+\c@savedauthor=\count189
+\c@bookauthor=\count190
+\c@savedbookauthor=\count191
+\c@commentator=\count192
+\c@savedcommentator=\count193
+\c@editor=\count194
+\c@savededitor=\count195
+\c@editora=\count196
+\c@savededitora=\count197
+\c@editorb=\count198
+\c@savededitorb=\count199
+\c@editorc=\count266
+\c@savededitorc=\count267
+\c@foreword=\count268
+\c@savedforeword=\count269
+\c@holder=\count270
+\c@savedholder=\count271
+\c@introduction=\count272
+\c@savedintroduction=\count273
+\c@namea=\count274
+\c@savednamea=\count275
+\c@nameb=\count276
+\c@savednameb=\count277
+\c@namec=\count278
+\c@savednamec=\count279
+\c@translator=\count280
+\c@savedtranslator=\count281
+\c@shortauthor=\count282
+\c@savedshortauthor=\count283
+\c@shorteditor=\count284
+\c@savedshorteditor=\count285
+\c@labelname=\count286
+\c@savedlabelname=\count287
+\c@institution=\count288
+\c@savedinstitution=\count289
+\c@lista=\count290
+\c@savedlista=\count291
+\c@listb=\count292
+\c@savedlistb=\count293
+\c@listc=\count294
+\c@savedlistc=\count295
+\c@listd=\count296
+\c@savedlistd=\count297
+\c@liste=\count298
+\c@savedliste=\count299
+\c@listf=\count300
+\c@savedlistf=\count301
+\c@location=\count302
+\c@savedlocation=\count303
+\c@organization=\count304
+\c@savedorganization=\count305
+\c@origlocation=\count306
+\c@savedoriglocation=\count307
+\c@origpublisher=\count308
+\c@savedorigpublisher=\count309
+\c@publisher=\count310
+\c@savedpublisher=\count311
+\c@language=\count312
+\c@savedlanguage=\count313
+\c@origlanguage=\count314
+\c@savedoriglanguage=\count315
+\c@pageref=\count316
+\c@savedpageref=\count317
+\shorthandwidth=\skip75
+\shortjournalwidth=\skip76
+\shortserieswidth=\skip77
+\shorttitlewidth=\skip78
+\shortauthorwidth=\skip79
+\shorteditorwidth=\skip80
+\locallabelnumberwidth=\skip81
+\locallabelalphawidth=\skip82
+\localshorthandwidth=\skip83
+\localshortjournalwidth=\skip84
+\localshortserieswidth=\skip85
+\localshorttitlewidth=\skip86
+\localshortauthorwidth=\skip87
+\localshorteditorwidth=\skip88
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+\c@textcitecount=\count318
+\c@textcitetotal=\count319
+\c@textcitemaxnames=\count320
+\c@biburlnumpenalty=\count321
+\c@biburlucpenalty=\count322
+\c@biburllcpenalty=\count323
+\c@smartand=\count324
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count325
+\c@bbx:relatedtotal=\count326
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'greek'...
+Package biblatex Info: ... file 'greek.lbx' found.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/greek.lbx
+File: greek.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count327
+\@quotereset=\count328
+(./only_english.aux
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 29.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
+File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
+)
+(./chapter1.aux) (./chapter2_3.aux) (./chapter4.aux) (./chapter5.aux)
+(./chapter6.aux) (./chapter7.aux))
+\openout1 = `only_english.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count329
+\scratchdimen=\dimen160
+\scratchbox=\box36
+\nofMPsegments=\count330
+\nofMParguments=\count331
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen161
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
+\everyMPtoPDFconversion=\toks28
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=-0.56833pt
+* \evensidemargin=35.28255pt
+* \topmargin=-0.93083pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=115.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box37
+Package hyperref Info: Link coloring OFF on input line 64.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count335
+)
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
+
+(./only_english.out) (./only_english.out)
+\@outlinefile=\write4
+\openout4 = `only_english.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `only_english-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'only_english.bbl' found.
+
+(./only_english.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '784616':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'BobickAaron':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '990935':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1238378':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1467373':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1544882':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1570899':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1467296':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1541250':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '1541251':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Ryoo2006':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '4270510':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '4587727':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '5255236':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Kuehne11':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Jhuang:ICCV:2013':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'pmid:22392705':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Manen:2013:POP:2586117.2587333':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '6619185':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/GirshickDDM13':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '6909495':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '6909619':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '7410734':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'BMVC2015_177':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Girshick:2015:FR:2919332.2920125':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/GkioxariM14':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/NgHVVMT15':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '7410732':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Tran2014LearningSF':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/WeinzaepfelHS15':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '7298735':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '7420739':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/FeichtenhoferPZ16':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/HeZRS15':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/RedmonDGF15':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/abs-1802-08362':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/BodlaSCD17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/CarreiraZ17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/DonahueHGRVSD14':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/abs-1708-07632':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/HeGDG17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/HouCS17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/HuangLW16a':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'kalogeiton17iccv:hal-01519812':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '8099589':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/MettesS17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Ren:2015:FRT:2969239.2969250':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/SahaSC17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'singh2016online':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '8237344':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '8237881':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/ZolfaghariOSB17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/abs-1712-09184':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/GuSVPRTLRSSM17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Guo_2018_ECCV':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'hara3dcnns':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/HeIDM17':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/abs-1802-09232':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'DBLP:journals/corr/abs-1711-11248':
+(biblatex)                - Invalid format of field 'month'.
+
+)
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
+<pyroforos.pdf, id=332, 556.90388pt x 556.17007pt>
+File: pyroforos.pdf Graphic file (type pdf)
+<use pyroforos.pdf>
+Package pdftex.def Info: pyroforos.pdf  used on input line 67.
+(pdftex.def)             Requested size: 85.35826pt x 85.238pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 67.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 67.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 67.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+esvect on input line 67.
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/esvect/uesvect.fd
+File: uesvect.fd 
+)
+Overfull \hbox (8.53766pt too wide) in paragraph at lines 67--67
+ []$[]$ 
+ []
+
+[1
+
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pyrof
+oros.pdf>] [2
+
+]
+File: pyroforos.pdf Graphic file (type pdf)
+<use pyroforos.pdf>
+Package pdftex.def Info: pyroforos.pdf  used on input line 67.
+(pdftex.def)             Requested size: 85.35826pt x 85.238pt.
+
+Overfull \hbox (27.20844pt too wide) in paragraph at lines 67--67
+[]$[]$   $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]\OT1/cmr/m/n/10 Approved by the ex-am-in-ing com-mit-tee on the Novem-ber 6th
+, 2019.
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 67--67
+[]$[]$ 
+ []
+
+[3] [4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+
+ []
+
+[5] [6
+
+]
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textPi' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textepsilon' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textrho' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\acctonos' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textiota' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textlambda' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\texteta' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textpsi' on input line 72.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\texteta' on input line 72.
+
+[7] [8
+
+] [9] [10
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@hymapsel' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tw@' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\aftergroup' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\languagename' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@hymapsel' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tw@' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\aftergroup' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\languagename' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@language@stack' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 139.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\bbl@ifrestoring' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textEpsilon' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textupsilon' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textchi' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textalpha' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textrho' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textiota' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textsigma' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\texttau' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\ensuregreek' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\acctonos' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textiota' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textepsilon' on input line 139.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\textvarsigma' on input line 139.
+
+[11] [12
+
+] (./only_english.toc [13
+
+] [14])
+\tf@toc=\write5
+\openout5 = `only_english.toc'.
+
+ [15] [16
+
+] (./only_english.lot [17])
+\tf@lot=\write6
+\openout6 = `only_english.lot'.
+
+
+[18] (./only_english.lof [19
+
+])
+\tf@lof=\write7
+\openout7 = `only_english.lof'.
+
+ [20]
+\openout2 = `chapter1.aux'.
+
+ (./chapter1.tex
+Chapter 1.
+[21
+
+
+]
+<./theory/figures/open_example.png, id=716, 801.99625pt x 337.26pt>
+File: ./theory/figures/open_example.png Graphic file (type png)
+<use ./theory/figures/open_example.png>
+Package pdftex.def Info: ./theory/figures/open_example.png  used on input line 
+84.
+(pdftex.def)             Requested size: 240.60072pt x 101.17877pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22] [23 <./theory/figures/open_example.png>] [24]) [25]
+\openout2 = `chapter2_3.aux'.
+
+ (./chapter2_3.tex
+[26
+
+
+
+]
+Chapter 2.
+<./theory/figures/supervised_leaning_example2.png, id=768, 604.2575pt x 370.383
+74pt>
+File: ./theory/figures/supervised_leaning_example2.png Graphic file (type png)
+<use ./theory/figures/supervised_leaning_example2.png>
+Package pdftex.def Info: ./theory/figures/supervised_leaning_example2.png  used
+ on input line 57.
+(pdftex.def)             Requested size: 181.27864pt x 111.11597pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27]
+<./theory/figures/unsupervised_learning_example.png, id=778, 803.0pt x 312.1662
+4pt>
+File: ./theory/figures/unsupervised_learning_example.png Graphic file (type png
+)
+<use ./theory/figures/unsupervised_learning_example.png>
+Package pdftex.def Info: ./theory/figures/unsupervised_learning_example.png  us
+ed on input line 86.
+(pdftex.def)             Requested size: 240.90186pt x 93.65059pt.
+ [28 <./theory/figures/supervised_leaning_example2.png (PNG copy)> <./theory/fi
+gures/unsupervised_learning_example.png>]
+<./theory/figures/reinforment_learning_example.png, id=787, 604.2575pt x 431.61
+25pt>
+File: ./theory/figures/reinforment_learning_example.png Graphic file (type png)
+
+<use ./theory/figures/reinforment_learning_example.png>
+Package pdftex.def Info: ./theory/figures/reinforment_learning_example.png  use
+d on input line 107.
+(pdftex.def)             Requested size: 181.27864pt x 129.48474pt.
+<./theory/figures/perceptron.png, id=790, 285.065pt x 152.06813pt>
+File: ./theory/figures/perceptron.png Graphic file (type png)
+<use ./theory/figures/perceptron.png>
+Package pdftex.def Info: ./theory/figures/perceptron.png  used on input line 13
+0.
+(pdftex.def)             Requested size: 285.0643pt x 152.06775pt.
+ [29 <./theory/figures/reinforment_learning_example.png (PNG copy)>] [30 <./the
+ory/figures/perceptron.png>]
+<./theory/figures/activation_figures.png, id=805, 375.4025pt x 113.42375pt>
+File: ./theory/figures/activation_figures.png Graphic file (type png)
+<use ./theory/figures/activation_figures.png>
+Package pdftex.def Info: ./theory/figures/activation_figures.png  used on input
+ line 168.
+(pdftex.def)             Requested size: 375.40158pt x 113.42346pt.
+<./theory/figures/feedforwardnetwork.png, id=806, 249.93375pt x 184.69pt>
+File: ./theory/figures/feedforwardnetwork.png Graphic file (type png)
+<use ./theory/figures/feedforwardnetwork.png>
+Package pdftex.def Info: ./theory/figures/feedforwardnetwork.png  used on input
+ line 180.
+(pdftex.def)             Requested size: 249.93314pt x 184.68953pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31 <./theory/figures/activation_figures.png>]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 214.
+
+[32 <./theory/figures/feedforwardnetwork.png>]
+<./theory/figures/convolutional_neural_network_structure.png, id=818, 337.26pt 
+x 152.36925pt>
+File: ./theory/figures/convolutional_neural_network_structure.png Graphic file 
+(type png)
+<use ./theory/figures/convolutional_neural_network_structure.png>
+Package pdftex.def Info: ./theory/figures/convolutional_neural_network_structur
+e.png  used on input line 230.
+(pdftex.def)             Requested size: 236.08038pt x 106.65773pt.
+<./theory/figures/conv_1.png, id=820, 397.485pt x 279.0425pt>
+File: ./theory/figures/conv_1.png Graphic file (type png)
+<use ./theory/figures/conv_1.png>
+Package pdftex.def Info: ./theory/figures/conv_1.png  used on input line 246.
+(pdftex.def)             Requested size: 167.2989pt x 117.44826pt.
+<./theory/figures/conv_2.png, id=821, 397.485pt x 279.0425pt>
+File: ./theory/figures/conv_2.png Graphic file (type png)
+<use ./theory/figures/conv_2.png>
+Package pdftex.def Info: ./theory/figures/conv_2.png  used on input line 250.
+(pdftex.def)             Requested size: 167.2989pt x 117.44826pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33 <./theory/figures/convolutional_neural_network_structure.png>]
+<./theory/figures/max_pooling.png, id=828, 560.0925pt x 278.03876pt>
+File: ./theory/figures/max_pooling.png Graphic file (type png)
+<use ./theory/figures/max_pooling.png>
+Package pdftex.def Info: ./theory/figures/max_pooling.png  used on input line 2
+73.
+(pdftex.def)             Requested size: 196.03531pt x 97.31502pt.
+<./theory/figures/3d_conv.png, id=829, 672.5125pt x 682.55pt>
+File: ./theory/figures/3d_conv.png Graphic file (type png)
+<use ./theory/figures/3d_conv.png>
+Package pdftex.def Info: ./theory/figures/3d_conv.png  used on input line 291.
+(pdftex.def)             Requested size: 201.7553pt x 204.76657pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34 <./theory/figures/conv_1.png> <./theory/figures/conv_2.png> <./theory/figur
+es/max_pooling.png>]
+<./theory/figures/RPN_structure.png, id=834, 614.295pt x 361.35pt>
+File: ./theory/figures/RPN_structure.png Graphic file (type png)
+<use ./theory/figures/RPN_structure.png>
+Package pdftex.def Info: ./theory/figures/RPN_structure.png  used on input line
+ 328.
+(pdftex.def)             Requested size: 184.28992pt x 108.40584pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35 <./theory/figures/3d_conv.png>]
+<./theory/figures/anchors.png, id=850, 704.6325pt x 525.965pt>
+File: ./theory/figures/anchors.png Graphic file (type png)
+<use ./theory/figures/anchors.png>
+Package pdftex.def Info: ./theory/figures/anchors.png  used on input line 347.
+(pdftex.def)             Requested size: 211.39139pt x 157.79071pt.
+ [36 <./theory/figures/RPN_structure.png (PNG copy)> <./theory/figures/anchors.
+png>]
+<./theory/figures/roi_align_1.png, id=862, 376.40625pt x 377.41pt>
+File: ./theory/figures/roi_align_1.png Graphic file (type png)
+<use ./theory/figures/roi_align_1.png>
+Package pdftex.def Info: ./theory/figures/roi_align_1.png  used on input line 3
+74.
+(pdftex.def)             Requested size: 112.92273pt x 113.22386pt.
+<./theory/figures/roi_al_3.png, id=863, 374.39874pt x 382.42876pt>
+File: ./theory/figures/roi_al_3.png Graphic file (type png)
+<use ./theory/figures/roi_al_3.png>
+Package pdftex.def Info: ./theory/figures/roi_al_3.png  used on input line 381.
+
+(pdftex.def)             Requested size: 112.32048pt x 114.7295pt.
+<./theory/figures/roi_al_2.png, id=864, 334.24875pt x 237.88875pt>
+File: ./theory/figures/roi_al_2.png Graphic file (type png)
+<use ./theory/figures/roi_al_2.png>
+Package pdftex.def Info: ./theory/figures/roi_al_2.png  used on input line 388.
+
+(pdftex.def)             Requested size: 100.27539pt x 71.36716pt.
+<./theory/figures/roi_al_4.png, id=865, 331.2375pt x 235.88126pt>
+File: ./theory/figures/roi_al_4.png Graphic file (type png)
+<use ./theory/figures/roi_al_4.png>
+Package pdftex.def Info: ./theory/figures/roi_al_4.png  used on input line 395.
+
+(pdftex.def)             Requested size: 99.37201pt x 70.76491pt.
+<./theory/figures/roi_align_2.png, id=870, 448.67625pt x 450.68375pt>
+File: ./theory/figures/roi_align_2.png Graphic file (type png)
+<use ./theory/figures/roi_align_2.png>
+Package pdftex.def Info: ./theory/figures/roi_align_2.png  used on input line 4
+10.
+(pdftex.def)             Requested size: 157.03903pt x 157.74167pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37 <./theory/figures/roi_align_1.png> <./theory/figures/roi_al_3.png> <./theor
+y/figures/roi_al_2.png> <./theory/figures/roi_al_4.png>]
+<./theory/figures/soft_nms.jpeg, id=880, 1284.8pt x 1034.86626pt>
+File: ./theory/figures/soft_nms.jpeg Graphic file (type jpg)
+<use ./theory/figures/soft_nms.jpeg>
+Package pdftex.def Info: ./theory/figures/soft_nms.jpeg  used on input line 440
+.
+(pdftex.def)             Requested size: 256.95544pt x 206.96957pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[38 <./theory/figures/roi_align_2.png>] [39 <./theory/figures/soft_nms.jpeg>]
+<./theory/figures/c_entropy.png, id=909, 1172.38pt x 819.06pt>
+File: ./theory/figures/c_entropy.png Graphic file (type png)
+<use ./theory/figures/c_entropy.png>
+Package pdftex.def Info: ./theory/figures/c_entropy.png  used on input line 518
+.
+(pdftex.def)             Requested size: 199.15884pt x 128.0278pt.
+<./theory/figures/smooth_l1.png, id=910, 604.2575pt x 342.27875pt>
+File: ./theory/figures/smooth_l1.png Graphic file (type png)
+<use ./theory/figures/smooth_l1.png>
+Package pdftex.def Info: ./theory/figures/smooth_l1.png  used on input line 526
+.
+(pdftex.def)             Requested size: 204.9466pt x 116.0912pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./theory/figures/iou.png, id=916, 602.25pt x 248.93pt>
+File: ./theory/figures/iou.png Graphic file (type png)
+<use ./theory/figures/iou.png>
+Package pdftex.def Info: ./theory/figures/iou.png  used on input line 551.
+(pdftex.def)             Requested size: 331.23851pt x 136.91191pt.
+[40] [41 <./theory/figures/c_entropy.png> <./theory/figures/smooth_l1.png> <./t
+heory/figures/iou.png>] [42] [43]
+<./theory/figures/pr_curve.png, id=951, 576.1525pt x 424.58624pt>
+File: ./theory/figures/pr_curve.png Graphic file (type png)
+<use ./theory/figures/pr_curve.png>
+Package pdftex.def Info: ./theory/figures/pr_curve.png  used on input line 681.
+
+(pdftex.def)             Requested size: 230.45691pt x 169.83148pt.
+ [44 <./theory/figures/pr_curve.png>]
+<./theory/figures/pr_curve2.png, id=960, 584.1825pt x 431.6125pt>
+File: ./theory/figures/pr_curve2.png Graphic file (type png)
+<use ./theory/figures/pr_curve2.png>
+Package pdftex.def Info: ./theory/figures/pr_curve2.png  used on input line 707
+.
+(pdftex.def)             Requested size: 233.66885pt x 172.64194pt.
+ [45 <./theory/figures/pr_curve2.png>]
+<./theory/figures/mabo.png, id=970, 1040.88875pt x 787.94376pt>
+File: ./theory/figures/mabo.png Graphic file (type png)
+<use ./theory/figures/mabo.png>
+Package pdftex.def Info: ./theory/figures/mabo.png  used on input line 728.
+(pdftex.def)             Requested size: 260.22154pt x 196.98546pt.
+ [46 <./theory/figures/mabo.png>]
+Underfull \hbox (badness 1077) in paragraph at lines 770--782
+[]\OT1/cmr/m/n/10 Recent re-sults in deep ar-chi-tec-tures and es-pe-cially in 
+im-age clas-si-fi-ca-tion mo-ti-vated
+ []
+
+
+Underfull \vbox (badness 5787) has occurred while \output is active []
+
+ [47]
+Underfull \vbox (badness 2111) has occurred while \output is active []
+
+ [48]
+[49] [50]) [51]
+\openout2 = `chapter4.aux'.
+
+ (./chapter4.tex [52
+
+
+
+]
+Chapter 3.
+<./theory/figures/final_structure.png, id=1168, 595.22375pt x 847.165pt>
+File: ./theory/figures/final_structure.png Graphic file (type png)
+<use ./theory/figures/final_structure.png>
+Package pdftex.def Info: ./theory/figures/final_structure.png  used on input li
+ne 48.
+(pdftex.def)             Requested size: 249.99226pt x 355.80687pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[53] [54 <./theory/figures/final_structure.png>]
+<./figures/original_image.jpg, id=1189, 321.2pt x 240.9pt>
+File: ./figures/original_image.jpg Graphic file (type jpg)
+<use ./figures/original_image.jpg>
+Package pdftex.def Info: ./figures/original_image.jpg  used on input line 77.
+(pdftex.def)             Requested size: 146.39133pt x 109.79713pt.
+<./figures/original_image_rois.jpg, id=1190, 321.2pt x 240.9pt>
+File: ./figures/original_image_rois.jpg Graphic file (type jpg)
+<use ./figures/original_image_rois.jpg>
+Package pdftex.def Info: ./figures/original_image_rois.jpg  used on input line 
+83.
+(pdftex.def)             Requested size: 146.39133pt x 109.79713pt.
+<./figures/transformed_image.jpg, id=1191, 112.42pt x 112.42pt>
+File: ./figures/transformed_image.jpg Graphic file (type jpg)
+<use ./figures/transformed_image.jpg>
+Package pdftex.def Info: ./figures/transformed_image.jpg  used on input line 89
+.
+(pdftex.def)             Requested size: 146.39133pt x 146.40843pt.
+<./figures/transformed_image_rois.jpg, id=1192, 112.42pt x 112.42pt>
+File: ./figures/transformed_image_rois.jpg Graphic file (type jpg)
+<use ./figures/transformed_image_rois.jpg>
+Package pdftex.def Info: ./figures/transformed_image_rois.jpg  used on input li
+ne 95.
+(pdftex.def)             Requested size: 146.39133pt x 146.40843pt.
+<./theory/figures/anchor_6d.png, id=1196, 418.56375pt x 282.05376pt>
+File: ./theory/figures/anchor_6d.png Graphic file (type png)
+<use ./theory/figures/anchor_6d.png>
+Package pdftex.def Info: ./theory/figures/anchor_6d.png  used on input line 121
+.
+(pdftex.def)             Requested size: 209.28136pt x 141.02652pt.
+ [55 <./figures/original_image.jpg> <./figures/original_image_rois.jpg> <./figu
+res/transformed_image.jpg> <./figures/transformed_image_rois.jpg>]
+<./theory/figures/tpn_1_1.png, id=1205, 882.29625pt x 191.71625pt>
+File: ./theory/figures/tpn_1_1.png Graphic file (type png)
+<use ./theory/figures/tpn_1_1.png>
+Package pdftex.def Info: ./theory/figures/tpn_1_1.png  used on input line 144.
+(pdftex.def)             Requested size: 418.25368pt x 90.88185pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./theory/figures/output/img_0.jpg, id=1207, 128.48pt x 241.90375pt>
+File: ./theory/figures/output/img_0.jpg Graphic file (type jpg)
+<use ./theory/figures/output/img_0.jpg>
+Package pdftex.def Info: ./theory/figures/output/img_0.jpg  used on input line 
+158.
+(pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
+<./theory/figures/output/img_3.jpg, id=1208, 128.48pt x 241.90375pt>
+File: ./theory/figures/output/img_3.jpg Graphic file (type jpg)
+<use ./theory/figures/output/img_3.jpg>
+Package pdftex.def Info: ./theory/figures/output/img_3.jpg  used on input line 
+161.
+(pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
+<./theory/figures/output/img_5.jpg, id=1209, 128.48pt x 241.90375pt>
+File: ./theory/figures/output/img_5.jpg Graphic file (type jpg)
+<use ./theory/figures/output/img_5.jpg>
+Package pdftex.def Info: ./theory/figures/output/img_5.jpg  used on input line 
+164.
+(pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
+<./theory/figures/output/img_7.jpg, id=1210, 129.48375pt x 241.90375pt>
+File: ./theory/figures/output/img_7.jpg Graphic file (type jpg)
+<use ./theory/figures/output/img_7.jpg>
+Package pdftex.def Info: ./theory/figures/output/img_7.jpg  used on input line 
+167.
+(pdftex.def)             Requested size: 62.73549pt x 117.20505pt.
+<./theory/figures/output/img_11.jpg, id=1211, 128.48pt x 250.9375pt>
+File: ./theory/figures/output/img_11.jpg Graphic file (type jpg)
+<use ./theory/figures/output/img_11.jpg>
+Package pdftex.def Info: ./theory/figures/output/img_11.jpg  used on input line
+ 170.
+(pdftex.def)             Requested size: 62.73549pt x 122.53159pt.
+<./theory/figures/output/img_15.jpg, id=1212, 128.48pt x 241.90375pt>
+File: ./theory/figures/output/img_15.jpg Graphic file (type jpg)
+<use ./theory/figures/output/img_15.jpg>
+Package pdftex.def Info: ./theory/figures/output/img_15.jpg  used on input line
+ 173.
+(pdftex.def)             Requested size: 62.73549pt x 118.12045pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[56 <./theory/figures/anchor_6d.png>] [57 <./theory/figures/tpn_1_1.png> <./the
+ory/figures/output/img_0.jpg> <./theory/figures/output/img_3.jpg> <./theory/fig
+ures/output/img_5.jpg> <./theory/figures/output/img_7.jpg> <./theory/figures/ou
+tput/img_11.jpg> <./theory/figures/output/img_15.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[58]
+<./theory/figures/tpn_1_2.png, id=1233, 720.6925pt x 505.89pt>
+File: ./theory/figures/tpn_1_2.png Graphic file (type png)
+<use ./theory/figures/tpn_1_2.png>
+Package pdftex.def Info: ./theory/figures/tpn_1_2.png  used on input line 284.
+(pdftex.def)             Requested size: 360.34537pt x 252.94437pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[59] [60 <./theory/figures/tpn_1_2.png>] [61]
+<./theory/figures/regressor_1_1.png, id=1264, 720.6925pt x 308.15125pt>
+File: ./theory/figures/regressor_1_1.png Graphic file (type png)
+<use ./theory/figures/regressor_1_1.png>
+Package pdftex.def Info: ./theory/figures/regressor_1_1.png  used on input line
+ 413.
+(pdftex.def)             Requested size: 345.92847pt x 147.9109pt.
+ [62 <./theory/figures/regressor_1_1.png>]
+<./theory/figures/regressor_1_2.png, id=1276, 720.6925pt x 308.15125pt>
+File: ./theory/figures/regressor_1_2.png Graphic file (type png)
+<use ./theory/figures/regressor_1_2.png>
+Package pdftex.def Info: ./theory/figures/regressor_1_2.png  used on input line
+ 473.
+(pdftex.def)             Requested size: 345.92847pt x 147.9109pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./theory/figures/anchor_4k.png, id=1280, 399.4925pt x 320.19624pt>
+File: ./theory/figures/anchor_4k.png Graphic file (type png)
+<use ./theory/figures/anchor_4k.png>
+Package pdftex.def Info: ./theory/figures/anchor_4k.png  used on input line 528
+.
+(pdftex.def)             Requested size: 199.74576pt x 160.09772pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[63]
+<./theory/figures/tpn_2.png, id=1287, 717.68124pt x 546.04pt>
+File: ./theory/figures/tpn_2.png Graphic file (type png)
+<use ./theory/figures/tpn_2.png>
+Package pdftex.def Info: ./theory/figures/tpn_2.png  used on input line 543.
+(pdftex.def)             Requested size: 287.06741pt x 218.41212pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[64 <./theory/figures/regressor_1_2.png>] [65 <./theory/figures/anchor_4k.png>]
+[66 <./theory/figures/tpn_2.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[67] [68]
+<./theory/figures/proposals0_half.png, id=1339, 1283.79625pt x 321.2pt>
+File: ./theory/figures/proposals0_half.png Graphic file (type png)
+<use ./theory/figures/proposals0_half.png>
+Package pdftex.def Info: ./theory/figures/proposals0_half.png  used on input li
+ne 804.
+(pdftex.def)             Requested size: 334.6019pt x 59.1564pt.
+<./theory/figures/proposals1_half.png, id=1340, 1284.8pt x 321.2pt>
+File: ./theory/figures/proposals1_half.png Graphic file (type png)
+<use ./theory/figures/proposals1_half.png>
+Package pdftex.def Info: ./theory/figures/proposals1_half.png  used on input li
+ne 811.
+(pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
+<./theory/figures/proposals2_half.png, id=1341, 1284.8pt x 321.2pt>
+File: ./theory/figures/proposals2_half.png Graphic file (type png)
+<use ./theory/figures/proposals2_half.png>
+Package pdftex.def Info: ./theory/figures/proposals2_half.png  used on input li
+ne 818.
+(pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
+<./theory/figures/proposal_gt.png, id=1342, 1284.8pt x 321.2pt>
+File: ./theory/figures/proposal_gt.png Graphic file (type png)
+<use ./theory/figures/proposal_gt.png>
+Package pdftex.def Info: ./theory/figures/proposal_gt.png  used on input line 8
+25.
+(pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
+<./theory/figures/proposal_gt1.png, id=1343, 1284.8pt x 321.2pt>
+File: ./theory/figures/proposal_gt1.png Graphic file (type png)
+<use ./theory/figures/proposal_gt1.png>
+Package pdftex.def Info: ./theory/figures/proposal_gt1.png  used on input line 
+832.
+(pdftex.def)             Requested size: 334.58905pt x 59.1564pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [69] [70 <./theory/figures/proposals0_half.png> <./theory/figures/proposals1_
+half.png> <./theory/figures/proposals2_half.png> <./theory/figures/proposal_gt.
+png> <./theory/figures/proposal_gt1.png>]
+\openout2 = `chapter5.aux'.
+
+ (./chapter5.tex
+Chapter 4.
+[71
+
+
+
+]
+<./theory/figures/connection_algo.png, id=1377, 1441.385pt x 717.68124pt>
+File: ./theory/figures/connection_algo.png Graphic file (type png)
+<use ./theory/figures/connection_algo.png>
+Package pdftex.def Info: ./theory/figures/connection_algo.png  used on input li
+ne 51.
+(pdftex.def)             Requested size: 324.31963pt x 161.48225pt.
+ [72 <./theory/figures/connection_algo.png>] [73]
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 115--115
+[]|\OT1/cmr/m/n/10 combination|  
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 118.
+
+Underfull \vbox (badness 10000) detected at line 148
+ []
+
+
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 169--169
+[]|\OT1/cmr/m/n/10 combination|  
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 188
+ []
+
+[74]
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 197--197
+[]|\OT1/cmr/m/n/10 combination|  
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 219
+ []
+
+
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 234--234
+[]|\OT1/cmr/m/n/10 combination|  
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 252
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+Overfull \hbox (3.61118pt too wide) in paragraph at lines 259--259
+[]|\OT1/cmr/m/n/10 combination|  
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 280
+ []
+
+
+Overfull \hbox (2.86101pt too wide) in paragraph at lines 323--323
+\OMS/cmsy/b/n/10 f\OT1/cmr/bx/sc/10 16,\OMS/cmsy/b/n/10 g\OT1/cmr/m/n/10 17,18,
+...,23 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 338
+ []
+
+[76]
+Overfull \hbox (2.86101pt too wide) in paragraph at lines 370--370
+\OMS/cmsy/b/n/10 f\OT1/cmr/bx/sc/10 16,\OMS/cmsy/b/n/10 g\OT1/cmr/m/n/10 17,18,
+...,23 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 386
+ []
+
+[77]
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 428--428
+\OT1/cmr/m/n/10 thresh|  
+ []
+
+
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 428--428
+[]|\OT1/cmr/m/n/10 PreNMS 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 449
+ []
+
+[78]
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 458--458
+\OT1/cmr/m/n/10 thresh|  
+ []
+
+
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 458--458
+[]|\OT1/cmr/m/n/10 PreNMS 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 478
+ []
+
+
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 502--502
+\OT1/cmr/m/n/10 thresh|  
+ []
+
+
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 502--502
+[]|\OT1/cmr/m/n/10 PreNMS 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 523
+ []
+
+
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 531--531
+\OT1/cmr/m/n/10 thresh|  
+ []
+
+
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 531--531
+[]|\OT1/cmr/m/n/10 PreNMS 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 552
+ []
+
+[79]
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 572--572
+\OT1/cmr/m/n/10 thresh|  
+ []
+
+
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 572--572
+[]|\OT1/cmr/m/n/10 PreNMS 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 583
+ []
+
+
+Overfull \hbox (2.30557pt too wide) in paragraph at lines 591--591
+\OT1/cmr/m/n/10 thresh|  
+ []
+
+
+Overfull \hbox (2.38892pt too wide) in paragraph at lines 591--591
+[]|\OT1/cmr/m/n/10 PreNMS 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 603
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+[81]
+Underfull \vbox (badness 10000) detected at line 691
+ []
+
+[82]
+Underfull \vbox (badness 10000) detected at line 735
+ []
+
+<./theory/figures/tube_ex2_half.png, id=1487, 1284.8pt x 1283.79625pt>
+File: ./theory/figures/tube_ex2_half.png Graphic file (type png)
+<use ./theory/figures/tube_ex2_half.png>
+Package pdftex.def Info: ./theory/figures/tube_ex2_half.png  used on input line
+ 750.
+(pdftex.def)             Requested size: 334.58905pt x 266.17706pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [83] [84 <./theory/figures/tube_ex2_half.png>]
+\openout2 = `chapter6.aux'.
+
+ (./chapter6.tex
+Chapter 5.
+<./theory/figures/model_withoutnms_v2.png, id=1498, 595.22375pt x 847.165pt>
+File: ./theory/figures/model_withoutnms_v2.png Graphic file (type png)
+<use ./theory/figures/model_withoutnms_v2.png>
+Package pdftex.def Info: ./theory/figures/model_withoutnms_v2.png  used on inpu
+t line 47.
+(pdftex.def)             Requested size: 249.99226pt x 355.80687pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[85
+
+
+
+] [86 <./theory/figures/model_withoutnms_v2.png>]
+<./theory/figures/rnn.jpeg, id=1516, 1333.98375pt x 417.56pt>
+File: ./theory/figures/rnn.jpeg Graphic file (type jpg)
+<use ./theory/figures/rnn.jpeg>
+Package pdftex.def Info: ./theory/figures/rnn.jpeg  used on input line 86.
+(pdftex.def)             Requested size: 418.25368pt x 130.92043pt.
+ [87 <./theory/figures/rnn.jpeg>] [88]
+Underfull \vbox (badness 10000) detected at line 233
+ []
+
+[89]
+Underfull \vbox (badness 10000) detected at line 281
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 320
+ []
+
+[90]
+Overfull \hbox (2.87468pt too wide) in paragraph at lines 336--336
+[]|\OT1/cmr/bx/sc/10 Temporal 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 352
+ []
+
+[91]
+Underfull \vbox (badness 10000) detected at line 413
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 460
+ []
+
+[92]
+Underfull \vbox (badness 10000) detected at line 514
+ []
+
+[93]
+Underfull \vbox (badness 10000) detected at line 559
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 592
+ []
+
+[94]
+<./theory/figures/mlp.png, id=1590, 720.6925pt x 313.17pt>
+File: ./theory/figures/mlp.png Graphic file (type png)
+<use ./theory/figures/mlp.png>
+Package pdftex.def Info: ./theory/figures/mlp.png  used on input line 605.
+(pdftex.def)             Requested size: 302.68878pt x 131.53049pt.
+ [95 <./theory/figures/mlp.png>]
+Underfull \vbox (badness 10000) detected at line 663
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 702
+ []
+
+[96]
+<./theory/figures/model_withnms.png, id=1612, 595.22375pt x 847.165pt>
+File: ./theory/figures/model_withnms.png Graphic file (type png)
+<use ./theory/figures/model_withnms.png>
+Package pdftex.def Info: ./theory/figures/model_withnms.png  used on input line
+ 727.
+(pdftex.def)             Requested size: 238.08528pt x 338.85999pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) detected at line 757
+ []
+
+[97]
+Underfull \vbox (badness 10000) detected at line 791
+ []
+
+[98 <./theory/figures/model_withnms.png>]
+Underfull \vbox (badness 10000) detected at line 823
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 858
+ []
+
+
+Overfull \vbox (2.66975pt too high) has occurred while \output is active []
+
+
+[99] [100]
+Underfull \vbox (badness 10000) detected at line 956
+ []
+
+[101]
+Underfull \vbox (badness 10000) detected at line 985
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1033
+ []
+
+[102]
+Underfull \vbox (badness 10000) detected at line 1087
+ []
+
+[103]
+Underfull \vbox (badness 10000) detected at line 1131
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1163
+ []
+
+[104]
+Underfull \vbox (badness 10000) detected at line 1199
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1244
+ []
+
+) [105]
+\openout2 = `chapter7.aux'.
+
+ (./chapter7.tex [106
+
+
+
+]
+Chapter 6.
+[107]) [108]
+Underfull \hbox (badness 1796) in paragraph at lines 179--179
+[]\OT1/cmr/m/n/10 Laptev and Lin-de-berg. ``Space-time in-ter-est points''. In:
+ \OT1/cmr/m/it/10 Pro-ceed-ings Ninth IEEE
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 mov-ing cam-eras''. In: \OT1/cmr/m/it/10 Tenth IEEE In-ter-na-t
+ional Con-fer-ence on Com-puter Vi-sion
+ []
+
+[109
+
+
+]
+Underfull \hbox (badness 2334) in paragraph at lines 179--179
+[]\OT1/cmr/m/n/10 H. Jhuang et al. ``To-wards Un-der-stand-ing Ac-tion Recog-ni
+-tion''. In: \OT1/cmr/m/it/10 2013 IEEE
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 179--179
+[]\OT1/cmr/m/n/10 A. Karpa-thy et al. ``Large-Scale Video Clas-si-fi-ca-tion wi
+th Con-vo-lu-tional Neu-ral
+ []
+
+[110] [111] [112]
+Underfull \hbox (badness 2277) in paragraph at lines 179--179
+[]\OT1/cmr/m/n/10 Jianwei Yang et al. ``A Faster Py-torch Im-ple-men-ta-tion of
+ Faster R-CNN''. In:
+ []
+
+[113]
+Underfull \hbox (badness 1931) in paragraph at lines 179--179
+[]\OT1/cmr/m/n/10 Michelle Guo et al. ``Neu-ral Graph Match-ing Net-works for F
+ew-shot 3D Ac-tion
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+[114]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+ (./only_english.aux (./chapter1.aux) (./chapter2_3.aux) (./chapter4.aux)
+(./chapter5.aux) (./chapter6.aux) (./chapter7.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package rerunfilecheck Info: File `only_english.out' has not changed.
+(rerunfilecheck)             Checksum: 93AC7AABC28EE1F338598035F0943008;5647.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package logreq Info: Writing requests to 'only_english.run.xml'.
+\openout1 = `only_english.run.xml'.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+ )
+(\end occurred when \iftrue on line 67 was incomplete) 
+Here is how much of TeX's memory you used:
+ 19524 strings out of 492616
+ 360996 string characters out of 6128968
+ 818829 words of memory out of 5000000
+ 22548 multiletter control sequences out of 15000+600000
+ 15595 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,17n,95p,951b,3993s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
+c/cbfonts/grmn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/c
+bfonts/grxn1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfo
+nts/grxn1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cbfonts
+/grxn2488.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/esvect
+/vect10.pfb>
+Output written on only_english.pdf (114 pages, 7794812 bytes).
+PDF statistics:
+ 2062 PDF objects out of 2073 (max. 8388607)
+ 1821 compressed objects within 19 object streams
+ 493 named destinations out of 1000 (max. 500000)
+ 937 words of extra memory for PDF output out of 10000 (max. 10000000)
+
